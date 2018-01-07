@@ -22,3 +22,26 @@
  publisher = {Now Publishers Inc.},
  address = {Hanover, MA, USA},
 }
+
+@article{Ghavamzadeh2015,
+  author    = {Mohammad Ghavamzadeh and
+               Shie Mannor and
+               Joelle Pineau and
+               Aviv Tamar},
+  title     = {Bayesian Reinforcement Learning: {A} Survey},
+  journal   = {Foundations and Trends in Machine Learning},
+  volume    = {8},
+  number    = {5-6},
+  pages     = {359--483},
+  year      = {2015}
+}
+
+@article{Taylor2009,
+  author    = {Matthew E. Taylor and
+               Peter Stone},
+  title     = {Transfer Learning for Reinforcement Learning Domains: {A} Survey},
+  journal   = {Journal of Machine Learning Research},
+  volume    = {10},
+  pages     = {1633--1685},
+  year      = {2009}
+}
