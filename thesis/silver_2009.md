@@ -8,24 +8,20 @@ Petr Musilek, Electrical and Computer Engineering, University of Alberta
 Andrew Ng, Computer Science, Stanford University
 
 ### abs
-Learning and planning are two fundamental problems in artificial intelligence.
-
-learning:
-    by RL, e.g. temporal diff learning
-
-planning:
+* Learning and planning are two fundamental problems in artificial intelligence.
+* learning:
+  by RL, e.g. temporal diff learning
+* planning:
     by simulation-based search, e.g. mcts
+* introduce
+    * temporal-difference search:
+    that combines elements of both
+    reinforcement learning and simulation-based search methods
+    * the Dyna-2 architecture:
+    which combines temporal-difference learning with temporal-difference search.
+* apply to the game of 9 × 9 Go.
 
-introduce
-* temporal-difference search:
-that combines elements of both
-reinforcement learning and simulation-based search methods
-* the Dyna-2 architecture:
-which combines temporal-difference learning with temporal-difference search.
-
-apply to the game of 9 × 9 Go.
-
-### intro
+### ch 1: intro
 So before we consider any broader challenges in artificial intelligence, and
 attempt to tackle continuous action, continuous state, partially observable, and infinite horizon problems, perhaps we
 should consider computer Go.
