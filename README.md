@@ -1,2 +1,6 @@
 # rl-foundation
-RL foundation
+
+Topics in RL:
+* Bayesian RL
+* Transfer learning in RL
+* Multiagent RL
