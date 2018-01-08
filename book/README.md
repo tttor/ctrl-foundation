@@ -7,13 +7,6 @@
 * Statistical Reinforcement Learning: Modern Machine Learning Approaches, 2015
   * Masashi Sugiyama
 
-### note
-Two dominant books (as said by Marco Wiering, Martijn van Otterlo): <br/>
-* Introduction to reinforcement learning by Rich Sutton and Andy Barto from 1998. 
-  From an artificial intelligence perspective.
-* Neuro-dynamic programming by Dimitri Bertsekas and John Tsitsiklis in 1996.
-  From the standpoint of operations research.
-
 ### todo
 @book{Szepesvari2010,
 author = {Szepesvari, Csaba},
