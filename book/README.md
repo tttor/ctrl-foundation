@@ -8,7 +8,7 @@
   * Masashi Sugiyama
 
 ### note
-Two dominant books by Marco Wiering, Martijn van Otterlo: <br/>
+Two dominant books (as said by Marco Wiering, Martijn van Otterlo): <br/>
 * Introduction to reinforcement learning by Rich Sutton and Andy Barto from 1998. 
   From an artificial intelligence perspective.
 * Neuro-dynamic programming by Dimitri Bertsekas and John Tsitsiklis in 1996.
