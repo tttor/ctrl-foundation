@@ -1,4 +1,6 @@
-# richard_suton_book.md
+# sutton_2017.md
+* http://www.incompleteideas.net/book/the-book-2nd.html
+* https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
 
 ### ch 1
 * Most distinguishing features of RL:
