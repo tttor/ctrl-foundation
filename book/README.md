@@ -8,6 +8,14 @@
   * Masashi Sugiyama
 
 ### todo
+@book{Wiering2014,
+ author = {Wiering, Marco and van Otterlo, Martijn},
+ title = {Reinforcement Learning: State-of-the-Art},
+ year = {2014},
+ isbn = {364244685X, 9783642446856},
+ publisher = {Springer Publishing Company, Incorporated},
+} 
+
 @book{Szepesvari2010,
 author = {Szepesvari, Csaba},
 title = {Algorithms for Reinforcement Learning},
