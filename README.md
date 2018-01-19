@@ -9,6 +9,10 @@ Inverse RL (imitation/apprenticeship learning),
 Multiagent RL,
 Evolutionary RL,
 
+## Major taxonomy
+* model-based vs model-free
+* value-iteration vs policy-search
+
 ## Quotes
 Sutton: <br />
 "Just as reinforcement learning present took a step away from the ultimate goal of reward to
@@ -40,18 +44,22 @@ RL: learning through interaction with the environment with limited prior knowled
 
 ## People
 ### young: >= 2008
-hanna kur,
-david silver, 2009
-arthur quez, 2015
-stephane ross
-pieter abbeel, 2008
-joelle pineau
+* Hanna Kurniawati, 2008
+* David Silver, 2009: sampling-based planning (for go games)
+* Arthur Quez, 2015
+* Stephane Ross, 2013
+* Jens Kober, 2012
+* Pieter Abbeel, 2008: inverse rl (for flying helicopters)
+* Todd Hester, 2012
 
 ### old: < 2008
-* richard sutton
-* andrew barto
-* csaba szepesvári
-* andrew ng, 2003
-* michael littman
-* sebastian thrun
-* leslie kaebling
+* Richard Sutton
+* Andrew Barto
+* Csaba Szepesvári
+* Andrew Ng, 2003
+* Michael Littman
+* Sebastian Thrun
+* Leslie Kaebling
+* Joelle Pineau, 2004
+* Jan Peters
+
