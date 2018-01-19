@@ -1,6 +1,6 @@
 # rl-foundation
 
-### Topics in RL:
+## Topics in RL:
 Bayesian RL,
 Transfer learning in RL,
 Hierarchical RL,
@@ -9,7 +9,7 @@ Inverse RL (imitation/apprenticeship learning),
 Multiagent RL,
 Evolutionary RL,
 
-### Quotes
+## Quotes
 Sutton: <br />
 "Just as reinforcement learning present took a step away from the ultimate goal of reward to
 focus on value functions, so reinforcement learning future may take a further step
@@ -25,7 +25,7 @@ Two dominant books:
 * Neuro-dynamic programming by Dimitri Bertsekas and John Tsitsiklis in 1996.
   From the standpoint of operations research.
 
-### Misc, anonymous, untracked, unknown sources
+## Misc, anonymous, untracked, unknown sources
 RL is formalized as MDP, but in which agents only knows about the sets of possible states and actions.
 The dynamics, $P(s'|s,a)$, and the reward function, $R(s,a,s')$ are initially unknown; otherwise we have planning problems.
 
@@ -37,3 +37,21 @@ RL is difficult because:
 * the explore-exploit dilemma
 
 RL: learning through interaction with the environment with limited prior knowledge and guidance
+
+## People
+### young: >= 2008
+hanna kur,
+david silver, 2009
+arthur quez, 2015
+stephane ross
+pieter abbeel, 2008
+joelle pineau
+
+### old: < 2008
+* richard sutton
+* andrew barto
+* csaba szepesvári
+* andrew ng, 2003
+* michael littman
+* sebastian thrun
+* leslie kaebling
