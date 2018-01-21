@@ -7,4 +7,5 @@
 * [D Silver, Deep RL, RDLM 2015](http://videolectures.net/rldm2015_silver_reinforcement_learning/)
 * [John Schulman, MLSS, 2016](https://www.youtube.com/watch?v=aUrX-rP_ss4)
 * [Berkeley: CS 294: Deep Reinforcement Learning](http://rll.berkeley.edu/deeprlcourse/)
+* [CMU: Deep Reinforcement Learning and Control, 2017](https://katefvision.github.io/)
 * [Ng: Lecture 16 | Machine Learning (Stanford)](https://www.youtube.com/watch?v=RtxI449ZjSc)
