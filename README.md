@@ -15,7 +15,8 @@ Evolutionary RL,
 * value-iteration vs policy-search
 
 ## Quotes
-Sutton: <br />
+Richard S. Sutton: <br />
+Reinforcement Learning: Past, Present and Future?:
 "Just as reinforcement learning present took a step away from the ultimate goal of reward to
 focus on value functions, so reinforcement learning future may take a further step
 away to focus on the structures that enable value function estimation [...] In psy-
