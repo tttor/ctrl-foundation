@@ -3,6 +3,7 @@
 ## Topics in RL:
 Deep RL,
 Bayesian RL,
+RL in POMDP,
 Transfer learning in RL,
 Hierarchical RL,
 Curriculum learning,
