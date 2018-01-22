@@ -95,10 +95,9 @@ much too dangerous for many realistic tasks. An important goal is the developmen
 of practical strategies for safely exploring in tasks with substantial risk of catas-
 trophic failure.
 
-## comments
-* priority:
-  * 19 Conclusions, Future Directions and Outlook
-  * 18 Reinforcement Learning in Robotics: A Survey
-  * 11 Bayesian Reinforcement Learning
-  * 4 Learning and Using Models
-  * 7 Reinforcement Learning in Continuous State and Action Spaces
+## priority:
+* 19 Conclusions, Future Directions and Outlook
+* 18 Reinforcement Learning in Robotics: A Survey
+* 11 Bayesian Reinforcement Learning
+* 4 Learning and Using Models
+* 7 Reinforcement Learning in Continuous State and Action Spaces

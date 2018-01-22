@@ -2,7 +2,7 @@
 * http://www.incompleteideas.net/book/the-book-2nd.html
 * https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
 
-### ch 1
+## ch 1
 * Most distinguishing features of RL:
   * being a close loop
   * no direct instruction on what action to take
@@ -38,7 +38,7 @@ or if a lot of time is available for the search.
 * In Tic-Tac-Toe, one learns a model of the opponent’s behavior, up to some level of confidence,
 and then apply dynamic programming to compute an optimal solution given the approximate opponent model.
 
-### ch 6
+## ch 6
 * The simplest TD update is
 \begin{equation}
 V(S_t) \leftarrow V(S_t) + \alpha [ R_{t+1} + \gamma V(S_{t+1}) - V(S_t) ]
@@ -52,7 +52,7 @@ Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha [R_{t+1} + \gamma~Q(S_{t+1},A_{t+1}) -
 Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha [R_{t+1} + \gamma~max_a Q(S_{t+1},a) - Q(S_{t},A_{t})]
 \end{equation}
 
-### ch 8
+## ch 8
 Model-based RL requires a model of the environment, model-free RL does not.
 Model-based methods rely on planning as their primary component, while model-free methods primarily rely on learning.
 Model here refers to anything that an agent can use to predict how the environment will respond to its actions.
@@ -109,3 +109,7 @@ That is a supervised learning problem, where:
 $(S_1, A_1) \mapsto (S_2, R_2), (S_2, A_2) \mapsto (S_3, R_3), \ldots, (S_{t-1}, A_{t-1}) \mapsto (S_t, R_t)$.
 Learning $s, a \mapsto r$ is a regression problem, whereas
 learning $s, a \mapsto s'$ is a density estimation problem.
+
+## priority
+* 13 Policy Gradient Methods
+
