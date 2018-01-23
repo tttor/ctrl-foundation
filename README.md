@@ -14,6 +14,7 @@ Evolutionary RL,
 ## Major taxonomy
 * model-based vs model-free
 * value-iteration vs policy-search
+* episodic and continuing tasks
 
 ## Quotes
 Richard S. Sutton: <br />
