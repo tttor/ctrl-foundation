@@ -147,6 +147,14 @@ Inthe episodic case,
 the performance measure:
 the value of the start state of the episode.
 
+the policy gradient theorem provides
+an analytic expression for the gradient of performance with respect to the
+policy parameter (which is what we need to approximate for gradient ascent (13.1))
+that does not involve the derivative of the state distribution.
+The policy gradient theorem establishes that...where
+the gradients are column vectors of partial derivatives with respect to the components of θ,
+and π denotes the policy corresponding to parameter vector θ.
+
 NEXT:
 13.3 REINFORCE: Monte Carlo Policy Gradient
 p270
