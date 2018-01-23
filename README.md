@@ -65,4 +65,5 @@ RL: learning through interaction with the environment with limited prior knowled
 * Leslie Kaebling
 * Joelle Pineau, 2004
 * Jan Peters
+* Masashi Sugiyama
 
