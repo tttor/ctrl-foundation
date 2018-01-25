@@ -12,9 +12,10 @@ Multiagent RL,
 Evolutionary RL,
 
 ## Major taxonomy
-* model-based vs model-free
-* value-iteration vs policy-search
-* episodic and continuing tasks
+* model-based **vs** model-free
+* value-iteration **vs** policy-search
+* episodic **vs** continuing tasks
+* cumulative discounted rewards **vs** average rewards
 
 ## Quotes
 Richard S. Sutton: <br />
