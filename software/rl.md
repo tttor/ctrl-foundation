@@ -12,7 +12,7 @@
 * BURLAP: http://burlap.cs.brown.edu/
 
 ## ROS-enable
-Available packages in ROS for model-based and model-free RL:
+Available packages in ROS for model-based and model-free RL: <br/>
 (Surely, any package can be used in ROS with some efforts.)
 * rl-texplore-ros-pkg: https://github.com/toddhester/rl-texplore-ros-pkg
 * OpenAI Gym with ros-bridge
