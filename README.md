@@ -15,7 +15,7 @@ Evolutionary RL,
 * model-based **vs** model-free
 * value-iteration **vs** policy-search
 * episodic **vs** continuing tasks
-* cumulative discounted rewards **vs** average rewards
+* cumulative discounted **vs** average rewards
 
 ## Quotes
 Richard S. Sutton: <br />
