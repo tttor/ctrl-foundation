@@ -1,6 +1,5 @@
 # RL software
 
-See also a curated list in awesome-rl\footnote{\url{https://github.com/aikorea/awesome-rl}}.
 Software includes:
 \begin{itemize}
 \item BURLAP \cite{MacGlashan2017}
