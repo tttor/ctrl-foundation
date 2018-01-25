@@ -3,7 +3,10 @@
 * 2013: Kober: Survey on RL in robotics
 * 1996: Kaebling: Reinforcement Learning: A Survey
 
-### todo
+## link
+* https://github.com/aikorea/awesome-rl
+
+## todo
 [Deep Reinforcement Learning: An Overview](https://arxiv.org/abs/1701.07274)
 
 @article{Deisenroth2013,
