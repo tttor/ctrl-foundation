@@ -1,14 +1,15 @@
 # RL software
 
-* BURLAP: http://burlap.cs.brown.edu/
-* OpenAI Gym
-  * https://github.com/openai/gym
-  * https://openai.com/
+* OpenAI: https://openai.com/
   * https://github.com/openai/baselines
+  * https://github.com/openai/gym
+  * https://github.com/openai/universe
+  * https://github.com/openai/roboschool
+* rllab: https://github.com/rll/rllab
 * PyBrain: http://pybrain.org/
 * RL-Glue: http://glue.rl-community.org/wiki/Main_Page
 * AI-Toolbox: https://github.com/Svalorzen/AI-Toolbox
-* rllab: https://github.com/rll/rllab
+* BURLAP: http://burlap.cs.brown.edu/
 
 ## ROS-enable
 Available packages in ROS for model-based and model-free RL:
