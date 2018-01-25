@@ -56,6 +56,7 @@ RL: learning through interaction with the environment with limited prior knowled
 * Jens Kober, 2012
 * Pieter Abbeel, 2008: inverse rl (for flying helicopters)
 * Todd Hester, 2012
+* George Konidaris, 2011
 
 ### old: < 2008
 * Richard Sutton
