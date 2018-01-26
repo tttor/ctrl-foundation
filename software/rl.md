@@ -7,9 +7,9 @@
   * https://github.com/openai/roboschool
 * rllab: https://github.com/rll/rllab
 * PyBrain: http://pybrain.org/
-* RL-Glue: http://glue.rl-community.org/wiki/Main_Page
 * AI-Toolbox: https://github.com/Svalorzen/AI-Toolbox
 * BURLAP: http://burlap.cs.brown.edu/
+* RL-Glue: http://glue.rl-community.org/wiki/Main_Page
 
 ## ROS-enable
 Available packages in ROS for model-based and model-free RL: <br/>
