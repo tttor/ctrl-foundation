@@ -21,7 +21,7 @@ Andrew Ng, Computer Science, Stanford University
     which combines temporal-difference learning with temporal-difference search.
 * apply to the game of 9 × 9 Go.
 
-## ch 1: intro
+## 1: intro
 So before we consider any broader challenges in artificial intelligence, and
 attempt to tackle continuous action, continuous state, partially observable, and infinite horizon problems, perhaps we
 should consider computer Go.
@@ -76,7 +76,7 @@ ising between the value of the same move in similar situations (Chapter 8).
 the simulations (Chapters 6 and 7).
 * The rollout policy is learnt and optimised automatically by simulation balancing (Chapter 9).
 
-## Chapter 2: Reinforcement Learning
+## 2: Reinforcement Learning
 This thesis is concerned primarily with fully observable tasks;
 unless otherwise specified all states s are assumed to be Markov. It is also primarily concerned with
 MDPs in which both the state space S and the action space A are finite.
@@ -131,7 +131,7 @@ agent’s policy, and a critic that updates the action value function.
 approach to balancing exploration with exploitation:
 epsilon-greedy, softmax policy, to apply the principle of optimism in the face of uncertainty: UCB1
 
-## Chapter 3: Search and Planning
+## 3: Search and Planning
 Planning is
 the process of computation by which the agent updates its action selection policy phi(s,a).
 
@@ -197,6 +197,52 @@ count N (s, a) for each action a
 The UCT algorithm (Kocsis and Szepesvari, 2006) is
 a Monte-Carlo tree search that treats each state of the search tree as a multi-armed bandit.
 The tree policy selects actions by using the UCB1 algorithm.
+
+## 10: Discussion
+
+this thesis, using Go as a case study for:
+* reinforcement learning
+* simulation-based search
+
+discussion on:
+* representation:
+State abstraction is used to compress the state into features, and the value function is approximated in terms of these features.
+* Combining Dyna-2 with Heuristic MC-RAVE:
+two separate approaches to computer Go based on the Dyna-2 framework:
+    * first: uses local shape features and temporal-difference search, in RLGO.
+    * second: uses the RAVE algorithm and heuristic Monte-Carlo tree search, in MoGo
+* Adaptive Temporal-Difference Search
+To realise the potential of these methods, we believe that two key issues must be addressed:
+    * First, the algorithm must adapt its learning rate appropriately to
+    a wide array of features occurring at very different frequencies and levels of generality.
+    * Second, the algorithm must adapt its exploration rate so as to improve the policy as efficiently as possible.
+* Second Order Reinforcement Learning:
+Simulation-based search can be viewed as reinforcement learning applied to simulated experience.
+We desire reinforcement learning algorithms that achieve the
+best combined computational and data efficiency.
+    * First order algorithms, such as TD(0), are com-
+putationally efficient, requiring just O(n) computation per time-step for n features.
+    * Second order algorithms, such as least-squares temporal-difference learning (LSTD) (Bradtke and Barto, 1996),
+    are generally more data efficient, but are also more computationally expensive, requiring O(n 2 ) computation per time-step
+
+Continuous action spaces could in principle be addressed by using policy gradient methods
+(see Chapter 2) instead of value-based reinforcement learning algorithms. The temporal-difference
+search algorithm could be extended to use an actor-critic algorithm, using an appropriately parame-
+terised policy, and using temporal-difference learning to evaluate the policy.
+
+It may also be possible to apply simulation-based search to partially observable environments.
+For example, a simple recurrent network could be used to approximate the value function.
+
+The key contributions of this thesis are to combine simulation-based
+search with state abstraction, with bootstrapping, and with long-term learning. Each of these ideas is
+very general: given an appropriate model and state representation, they could be applied to any MDP.
+The Dyna-2 algorithm brings all of these ideas together, providing a general-purpose framework for
+learning and search in large environments.
+
+<!--  -->
+## comments
+* sim-based search is planning with generative models
+* in discussion, we mention many of the ideas that we tried that were not successful
 
 ## comments
 * the idea of the temporality is similar to that of online planning
