@@ -1,7 +1,7 @@
 # talk
+* [David Silver, Deep RL, ICLR 2015](https://iclr.cc/archive/www/doku.php%3Fid=iclr2015:main.html)
+* [David Silver, Deep RL, RDLM 2015](http://videolectures.net/rldm2015_silver_reinforcement_learning/)
 * [RI Seminar: Sergey Levine : Deep Robotic Learning](https://www.youtube.com/watch?v=eKaYnXQUb2g)
 
 ## todo
-* [D Silver, Deep RL, ICLR 2015](https://iclr.cc/archive/www/doku.php%3Fid=iclr2015:main.html)
-* [D Silver, Deep RL, RDLM 2015](http://videolectures.net/rldm2015_silver_reinforcement_learning/)
-
+* ?
