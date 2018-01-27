@@ -8,6 +8,208 @@
 }
 
 ## 18: Reinforcement Learning in Robotics: A Survey
+Reinforcement Learning in Robotics: A Survey
+
+To apply reinforcement learning to behavior generation for real robots.
+a particular focus of our chapter lies on
+the choice between model-based and model-free as well as between value function-
+based and policy search methods.
+
+(a) The OBELIX robot is a wheeled mobile robot that learned to push
+boxes (Mahadevan and Connell, 1992) with a value function-based approach (Picture reprint
+with permission of Sridhar Mahadevan). (b) The Zebra Zero robot is a robot arm that learned a
+peg-in-hole insertion task (Gullapalli et al, 1994) with a model-free policy gradient approach
+(Picture reprint with permission of Rod Grupen). (c) The control of such autonomous blimps
+(Picture reprint with permission of Axel Rottmann) was learned with both a value function
+based approach (Rottmann et al, 2007) and model-based policy search (Ko et al, 2007). (d)
+The Sacros humanoid DB learned a pole-balancing task (Schaal, 1997) using forward models
+(Picture reprint with permission of Stefan Schaal).
+
+Robotics is characterized by high dimensionality due to the many degrees of free-
+dom of modern anthropomorphic robots. Experience on the real system is costly and
+often hard to reproduce. However, it usually cannot be replaced by simulations, at
+least for highly dynamic tasks, as even small modeling errors accumulate to sub-
+stantially different dynamic behavior. Another challenge faced in robot reinforce-
+ment learning is the generation of appropriate reward functions. Good rewards that
+lead the systems quickly to success are needed to cope with the cost of real-world
+experience but are a substantial manual contribution.
+Many real-world problems in robotics are best represented with high-dimensional,
+continuous states and actions. Every single trial run is costly.
+A robot requires that the algorithm
+runs in real-time and that it is capable of dealing with delays in the sensing and
+execution which are inherent in physical systems
+
+In fact, many of the methods that scale to more interesting tasks
+are model-based (Atkeson et al, 1997; Abbeel et al, 2007) and often employ pol-
+icy search rather than value function-based approaches (Gullapalli et al, 1994;
+Miyamoto et al, 1996; Kohl and Stone, 2004; Tedrake et al, 2005; Peters and Schaal,
+2008a,b; Kober and Peters, 2009).
+Kaelbling et al (1996): "we must give up tabula rasa learning techniques and
+begin to incorporate bias that will give leverage to the learning process"
+
+18.2.1 Curse of Dimensionality:
+In robotics, tasks with such problems are often made more accessible to the robot
+engineer by shifting some of the complexity to a lower layer of functionality. In
+the ball paddling example, we can simplify by controlling the robot in racket space
+(which is lower-dimensional as the racket is orientation-invariant around the string’s
+mounting point) with an operational space control law (Nakanishi et al, 2008). Many
+commercial robot systems also encapsulate some of the state and action components
+in an embedded control system (e.g., trajectory fragments are frequently used as
+actions for industrial robots); however, this form of a state dimensionality reduction
+severely limits the dynamic capabilities of the robot according to our experience
+(Schaal et al, 2002; Peters et al, 2010b).
+The reinforcement learning community has a long history of dealing with dimen-
+sionality using computational abstractions. It offers a larger set of applicable tools
+ranging from adaptive discretizations (Buşoniu et al, 2010) over function approxi-
+mation approaches (Sutton and Barto, 1998) to macro actions or options (Barto and
+Mahadevan, 2003). Macro actions would allow decomposing a task in elementary
+components and quite naturally translate to robotics. For example, a macro action
+“move one meter to the left” could be achieved by a lower level controller that takes
+care of accelerating, moving, and stopping while ensuring the precision. Using a
+limited set of manually generated macro actions, standard reinforcement learning
+approaches can be made tractable for navigational tasks for mobile robots. How-
+ever, the automatic generation of such sets of macro actions is the key issue in order
+to enable such approaches
+
+18.2.2 Curse of Real-World Samples:
+to apply reinforcement learning in
+robotics, safe exploration becomes a key issue of the learning process; a problem
+often neglected in the general reinforcement learning community.
+As the dynamics of a robot can change due to many external factors ranging
+from temperature to wear, the learning process may never fully converge, i.e., it
+needs a ‘tracking solution’ (Sutton et al, 2007).
+For such reasons, real-world samples are expensive in terms of time, labor and,
+potentially, finances. Thus, sample efficient algorithms that are able to learn from
+a small number of trials are essential.
+
+18.2.3 Curse of Real-World Interactions:
+On physical systems there are always delays in sensing and actuation.
+Usually the robot needs to
+get commands at fixed frequency and for dynamic tasks the movement cannot be
+paused. Thus, the agent has to select actions in real-time.
+More critically there are also communica-
+tion delays in the actuation as well as delays due to the fact that a physical cannot
+instantly change its movement.
+
+18.2.5 Curse of Goal Specification
+Inverse reinforcement learning, also known as apprenticeship learning, is a
+promising alternative to specifying the reward function manually. Instead, it as-
+sumes that the reward function can be reconstructed from a set of expert demon-
+strations.
+
+Challenges in Robot Reinforcement Learning
+* Curse of Dimensionality
+* Curse of Real-World Samples
+* Curse of Real-World Interactions
+* Curse of Model Errors
+* Curse of Goal Specification
+
+in real-world domains the average reward is often more suitable than a discounted
+formulation due to its stability properties (Peters et al, 2004). In order to incor-
+porate exploration, the policy is considered a conditional probability distribution
+π(s,a) = f(a|s,θ) with parameters θ .
+
+Value function based approaches often do not translate well into high dimensional robotics as
+proper representations for the value function become intractable and even finding the
+optimal action can already be a hard problem. A particularly drastic problem is the
+error propagation in value functions where a small change in the policy may cause
+a large change in the value function which again causes a large change in the policy.
+While this may lead faster to good, possibly globally optimal solutions, such a learn-
+ing process is considerably more dangerous when applied on real systems where it is
+likely to cause significant damage.
+
+Policy search (the primal formulation) appears more natural to robotics.
+* allows a natural integration of expert knowledge, e.g., through initializations of the policy.
+* allows domain-appropriate pre-structuring of the policy in an approximate form
+without changing the original problem.
+* Optimal policies often have a lot less parameters than optimal value functions,
+e.g., in linear quadratic control, the value function has quadratically many parameters
+while the policy only requires linearly many parameters.
+* Extensions to continuous state and action spaces follow straightforwardly.
+* Local search in policy space can directly lead to good results as exhibited by
+early hill-climbing approaches (Kirk, 1970).
+* Additional constraints can be incorporated naturally
+
+General reinforcement learning has yielded three kinds of policy search approaches that
+have translated particularly well into the domain of robotics:
+* policy gradients approaches based on likelihood-ratio estimation (Sutton et al, 2000),
+REINFORCE (Williams, 1992)
+* policy updates inspired by expectation maximization (Toussaint et al, 2010),
+e.g., reward-weighted regression (Peters and Schaal, 2008a), PoWER (Kober and Peters,
+2009), MCEM (Vlassis et al, 2009) and cost-regularized kernel regression (Kober
+et al, 2010).
+* the path integral methods (Kappen, 2005), PI 2 (Theodorou et al, 2010)
+
+Policy search methods require a choice of policy representation that limits the number
+of representable policies to enhance learning speed,
+
+Having lower-dimensional states or actions eases most reinforcement learning prob-
+lems significantly, particularly in the context of robotics.
+Approaches: Hand Crafted, Learned from Data, Meta-Actions, Relational Representatio,
+
+Function Approximation
+* Neural networks as function approximators for continuous states
+and actions have been used by various groups
+* As neural networks are globally affected from
+local errors, much work has focused on simply generalizing from neighboring cells.
+* Locally weighted regression is known to be a particularly efficient function approximator
+* Using GPs as function approximator for the value function
+
+Prior knowledge can be included in the form of initial policies, initial models, or a predefined
+structure of the task. These approaches significantly reduce the search space and,
+thus, speed up the learning process.
+* Prior Knowledge through Demonstrations:
+Demonstrations by a Teacher, remote controlling the robot, kinesthetic teach-in (taking it by the hand and moving it), Demonstrations obtained by motion capture
+* Prior Knowledge through Task Structuring
+(Often a task can be decomposed hierarchically into basic components or
+in a sequence of increasingly difficult tasks.):
+Hierarchical Reinforcement Learning, Progressive Tasks.
+* Directing Exploration with Prior Knowledge:
+
+A popular approach is to combine simulations and
+real evaluations by only testing promising policies on the real system and using it
+to collect new data to refine the simulation
+
+Model-free algorithms try to directly learn the value function or the policy. Model-
+based approaches jointly learn a model of the system and the value function or the
+policy.
+
+In model-based:
+If the learning methods require predicting the future or using derivatives, the
+inaccuracies may accumulate quickly, and, thus, significantly amplify noise and er-
+rors. These effects lead to value functions or policies that work well in the model
+but poorly on the real system.
+A solution is to overestimate the noise, to introduce a
+controlled amount of inconsistency (Atkeson, 1998), or to use a crude model to find
+a policy that compensates the derivative of the behavior in the model and on the real
+system (Abbeel et al, 2006).
+
+The idea of combining learning in simulation and in the real environment has been
+popularized by the Dyna-architecture (Sutton, 1990) in reinforcement learning.
+
+Bakker, B., Zhumatiy, V., Gruener, G., Schmidhuber, J.: Quasi-online reinforcement learning
+for robots. In: IEEE International Conference on Robotics and Automation, ICRA (2006)
+
+Nemec, B., Tamošiūnaitė, M., Wörgötter, F., Ude, A.: Task adaptation through exploration
+and action sequencing. In: IEEE-RAS International Conference on Humanoid Robots,
+Humanoids (2009)
+
+Gräve, K., Stückler, J., Behnke, S.: Learning motion skills from expert demonstrations and
+own experience using gaussian process regression. In: Joint International Symposium on
+Robotics (ISR) and German Conference on Robotics, ROBOTIK (2010)
+
+Kroemer, O., Detry, R., Piater, J., Peters, J.: Active learning using mean shift optimization for
+robot grasping. In: IEEE/RSJ International Conference on Intelligent Robots and Systems
+(IROS) (2009)
+Kroemer, O., Detry, R., Piater, J., Peters, J.: Combining active learning and reactive control
+for robot grasping. Robotics and Autonomous Systems 58(9), 1105–1116 (2010)
+
+Pastor, P., Kalakrishnan, M., Chitta, S., Theodorou, E., Schaal, S.: Skill learning and task
+outcome prediction for manipulation. In: IEEE International Conference on Robotics and
+Automation (ICRA) (2011)
+
+Wang, B., Li, J., Liu, H.: A heuristic reinforcement learning for robot approaching objects.
+In: IEEE Conference on Robotics, Automation and Mechatronics (2006)
 
 ## 19: Conclusions, Future Directions and Outlook
 Online planning:
