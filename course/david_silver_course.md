@@ -1,6 +1,6 @@
 # [david_silver_course](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
 
-### 01: intro
+## 01: intro
 * in engineering, rl is close to optimal control
 * rl has similar principles with active learning,
 where agent actions affect the subsequent data it receives
@@ -37,7 +37,7 @@ a) rl (the agent interacts with the environment,
 the environment is initially unknown)
 b) planning (given model, (without any external real interaction)
 
-### 02: Markov Decision Processes
+## 02: Markov Decision Processes
 *  any pomdp problems can be converted to mdp
 *  a state $S_t$ is Markov if $P(S_{t+1}|S_t) = P(S_{t+1}|S_1,\ldots,S_t)$
 *  state transition matrix, each row sums to one, either stationary or non-stationary
@@ -93,7 +93,7 @@ a) Infinite and continuous MDPs,
 b) Partially observable MDPs,
 c) Undiscounted, average reward MDPs
 
-### 03: Planning by DP
+## 03: Planning by DP
 * intro
   * planning vs rl: are just different problem setting
   * dynamic: sequential
@@ -150,7 +150,7 @@ Then solution v∗ (s) can be found by one-step lookahead
     use real-experience (real states that the robot ends with) to select state to back up
 * dp uses full-width backup
 
-### 04:  Model-Free Prediction
+## 04:  Model-Free Prediction
 * model-free prediction
     monte carlo learning
     TD
@@ -208,7 +208,7 @@ Then solution v∗ (s) can be found by one-step lookahead
 * TD(lamda=0) is TD(0)
   TD(lamda=1) is MC
 
-### 05: model-free control
+## 05: model-free control
 * dychotomy:
   on policy: learn a policy phi from expericen sampled from phi
   off policy
@@ -288,7 +288,7 @@ Then solution v∗ (s) can be found by one-step lookahead
 
 * dp uses full-width backup
 
-### 06: value func approx
+## 06: value func approx
 
 * incremetal/online method
 * batch method
@@ -358,7 +358,7 @@ In practice, our “training data” must use noisy or biased samples of v t π
 
 * Least Squares Policy Iteration Algorithm
 
-### 07: Policy Gradient Methods
+## 07: Policy Gradient Methods
 * policy gradient
 method that optimze policy directly
 adjust the policy in the direction of gradient to make it better
@@ -444,7 +444,7 @@ A good baseline is the state value function
 * natural policy gradient
 * natural actor critic
 
-### 08: integrated planning and learning
+## 08: integrated planning and learning
 model:
 something that describes transition dynamic T, and reward fn R
 (here, assume S, A are known)
@@ -528,7 +528,133 @@ the agent stores two sets of feature weights
     is updated from simulated experience
 Over value function is sum of long and short-term memories
 
-### Comments:
+## 09: exploration, exploitation
+
+how can rl balance exploration vs exploitation,
+naive: epsilon-greedy
+
+agenda:
+multi-arm bandit (as simplified version of RL),
+contextual bandit,
+mdps
+
+exploitation: make the best decision given current info;
+exploration: gather more info
+
+xx approaches:
+a) random exploration: eps-greedy, softmax;
+b) optimism in the face of uncertainty:
+estimate uncertainty,
+xplore the one with highest uncertainty;
+c) information state space
+(theoretically careful,correct approach, but computationally expensive):
+agent's info as state description,
+lookeahead to see how info helps rewards
+
+state-action exploration vs parameter exploration;
+now focus on the former
+
+multi-arm bandits:
+* a tuple (A, R)
+* q(a) = E[R|A=a]
+* optimal value: v_star = q(a_star) = max q(a)
+* regret (=opportunity loss), l_t = E[v_star - q(A_t)]
+* total regret: L_t = \sum_{t=1}^t (v_star - q(A_t))
+* max cumulative reward == minimise total regret
+* regret is a fn of gaps and counts
+* good algo: small counts for large gaps (problem: gap is unknown)
+* (greedy, optimistic greedy) have a total linear total regret
+* decaying epsilon-greedy has logarichmic asymptotic total reward,
+* hard problems have similiar looking arms with different means
+
+Optimism in the Face of Uncertainty:
+The more uncertain we are about an action-value,
+The more important it is to explore that action
+
+upper confidence bounds:
+* estimate upper confidence for each action
+* Select action maximising Upper Confidence Bound (UCB):
+A_t = argmax_a \hat{Q_t}(a) + \hat{U_t}(a)
+
+Hoeffding's Inequality,
+apply Hoeffding’s Inequality to rewards of the bandit,
+leads to UCB1 algorithm,
+
+Theorem:
+The UCB algorithm achieves logarithmic asymptotic total regret
+
+UCB can use other inequalities:
+Bernstein, Chernoff, Azuma, ...
+
+Bayesian bandits:
+* exploit prior knowledge about rewards
+* consider a distrib p(Q|w) over Q with param w
+* compute posterior distribution over w
+* Use posterior to guide exploration:
+    UCB,
+    proba matching
+
+Probability matching:
+selects action a according to probability that a is the optimal action;
+Thompson sampling (TS) implements probability matching,
+TS does not take into account sequence of actions
+
+Value of Information:
+Exploration is useful because it gains information
+
+Information state space:
+This defines MDP  in augmented information state space
+
+Solving Information State Space Bandits:
+* Model-free reinforcement learning,
+e.g. Q-learning (Duff, 1994)
+* Bayesian model-based reinforcement learning (aka Bayes-adaptive RL),
+e.g. Gittins indices (Gittins, 1979)
+
+XX in multi-arm bandit
+* random exploration
+    * eps-greedy
+    * softmax
+    * gaussian noise
+* optimism in the face of uncertainty
+    * optimistic initialization
+    * ucb
+    * thompshon sampling
+* information state
+    * gittin-indices
+    * bayes-adaptive mdp
+
+Drawback of optimism in the face of uncertainty
+* inifinite action, will end up exploring actions only, no exploitation
+* catastopic action, will eventually try catastropic actions
+
+Contextual bandit problem
+* multi-arm bandit with states,
+* a tuple (A,S,R)
+
+Generalized UCB to full MDP:
+* A_t = argmax Q(S_t,a) + U(S_t,a)
+    ... which is an optimism in the face of uncertainty,
+    where U is a bonus to encourage exploring the least-explored actions,
+* example: Kaebling's interval estimation,
+* drawback:
+    * ignore the fact that the policy is likely to improve,
+    and the Q value is getting better
+    * the uncertainty should take into account how much more a policy can improve
+
+XX in model-based RL,
+e.g. R-max algorithm
+
+Bayes-adaptive MDP
+* augment information state I to MDP, \hat{S} = (S,I)
+* Solve this MDP to find optimal exploration/exploitation trade-off (with respect to prior)
+
+Progressively more complicated setting to deal with XX:
+* random exploration
+* optimism in the face of uncertainty
+* information state space
+
+## Comments:
 * rl is essentially trial-and-error learning, the question then is
 how much the accumulative reward is achieved eventually, and
 how fast (how long) the agent achieves such rewards.
