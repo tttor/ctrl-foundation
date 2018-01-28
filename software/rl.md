@@ -1,5 +1,6 @@
 # RL software
 
+* DeepMind Control Suite: https://github.com/deepmind/dm_control
 * OpenAI: https://openai.com/
   * https://github.com/openai/baselines
   * https://github.com/openai/gym
