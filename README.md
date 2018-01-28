@@ -46,28 +46,3 @@ RL is difficult because:
 * the explore-exploit dilemma
 
 RL: learning through interaction with the environment with limited prior knowledge and guidance
-
-## People
-### young: >= 2008
-* Hanna Kurniawati, 2008
-* David Silver, 2009: sampling-based planning (for go games)
-* Arthur Quez, 2015
-* Stephane Ross, 2013
-* Jens Kober, 2012
-* Pieter Abbeel, 2008: inverse rl (for flying helicopters)
-* Todd Hester, 2012
-* George Konidaris, 2011
-
-### old: < 2008
-* Richard Sutton
-* Andrew Barto
-* Csaba Szepesvári
-* Andrew Ng, 2003
-* Michael Littman
-* Sebastian Thrun
-* Leslie Kaebling
-* Joelle Pineau, 2004
-* Jan Peters
-* Masashi Sugiyama
-* Satinder Singh
-
