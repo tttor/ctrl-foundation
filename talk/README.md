@@ -4,4 +4,4 @@
 * [RI Seminar: Sergey Levine : Deep Robotic Learning](https://www.youtube.com/watch?v=eKaYnXQUb2g)
 
 ## todo
-* ?
+* [David Silver, Deep Reinforcement Learning, ICML 2016](http://techtalks.tv/talks/deep-reinforcement-learning/62360/)
