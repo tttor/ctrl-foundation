@@ -11,7 +11,7 @@
 * Havok
 
 ## Full-blown simulators:
-* [TORCS](http://torcs.sourceforge.net/)
+* [TORCS](http://torcs.sourceforge.net/), (gym_torcs)[https://github.com/ugo-nama-kun/gym_torcs]
 * [Gazebo](http://gazebosim.org/)
 * [V-REP](http://www.coppeliarobotics.com/)
 
