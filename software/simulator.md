@@ -15,7 +15,7 @@
 * [Gazebo](http://gazebosim.org/)
 * [V-REP](http://www.coppeliarobotics.com/)
 
-### Survey
+## Survey
 @article{Erez2015,
 author = {Erez, Tom and Tassa, Yuval and Todorov, Emanuel},
 file = {:home/tor/people/xother/simulator/07139807.pdf:pdf},
