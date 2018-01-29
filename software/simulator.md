@@ -1,35 +1,21 @@
 # simulators
 
-### Physics engines:
-This includes
-Bullet, MuJoCo, ODE, DART, box2d, Simbody, PhysX, and Havok.
+## Physics engines
+* MuJoCo
+* Bullet 
+* ODE
+* DART
+* Box2d, 
+* Simbody
+* PhysX
+* Havok
 
-Survey papers include
-\cite{Erez2015, Ivaldi2015, Roennau2013}.
+## Full-blown simulators:
+* [TORCS](http://torcs.sourceforge.net/)
+* [Gazebo](http://gazebosim.org/)
+* [V-REP](http://www.coppeliarobotics.com/)
 
-In \cite{Erez2015}: MuJoCo wins the robotics-related tests.
-MuJoCo was both the fastest and the most accurate on constrained sys-
-tems relevant to robotics, and was capable of stable grasping
-at a much larger time step.
-On systems composed of many disconnected bodies it was the slowest in term of raw CPU
-speed (while ODE was the fastest), however it remained the
-most accurate overall.
-In grasping, Mujoco produces qualitatively accurate simulation (in terms of not
-dropping the object) with large time steps, i.e 16 ms.
-
-DARPA Virtual Robotics Challenge (VRC):
-a real-
-time simulation of the Atlas robot was implemented in ODE
-and accessed by the research teams through Gazebo.
-Grasping with a high-DOF hand
-remained problematic. Grasping, even though it is not difficult with a
-physical system, in the VRC it proved difficult to accomplish
-in simulation.
-
-### Full-blown simulators:
-This includes Gazebo, VRep, ...
-
-### ref
+### Survey
 @article{Erez2015,
 author = {Erez, Tom and Tassa, Yuval and Todorov, Emanuel},
 file = {:home/tor/people/xother/simulator/07139807.pdf:pdf},
@@ -38,6 +24,15 @@ pages = {4397--4404},
 title = {{Simulation Tools for Model-Based Robotics : Comparison of Bullet , Havok , MuJoCo , ODE and PhysX}},
 year = {2015}
 }
+In \cite{Erez2015}: MuJoCo wins the robotics-related tests.
+MuJoCo was both the fastest and the most accurate on constrained sys-
+tems relevant to robotics, and was capable of stable grasping
+at a much larger time step.
+On systems composed of many disconnected bodies it was the slowest in term of raw CPU
+speed (while ODE was the fastest), however it remained the
+most accurate overall.
+In grasping, Mujoco produces qualitatively accurate simulation (in terms of not
+dropping the object) with large time steps, i.e 16 ms
 
 @article{Ivaldi2015,
 archivePrefix = {arXiv},
