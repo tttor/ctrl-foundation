@@ -9,6 +9,7 @@
 * Pieter Abbeel, 2008: inverse rl (for flying helicopters)
 * Todd Hester, 2012
 * George Konidaris, 2011
+* Marc Deisenroth, 2010
 * Hanna Kurniawati, 2008
 
 ## Old, t < 2008
