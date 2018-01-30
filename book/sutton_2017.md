@@ -1,5 +1,6 @@
 # sutton_2017.md
-* http://www.incompleteideas.net/book/the-book-2nd.html
+* 2nd-edition: http://www.incompleteideas.net/book/the-book-2nd.html
+* 1st-edition: http://incompleteideas.net/book/ebook/the-book.html or [via UQ Lib](https://ebookcentral-proquest-com.ezproxy.library.uq.edu.au/lib/uql/detail.action?docID=3338821)
 * https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
 * https://github.com/dennybritz/reinforcement-learning
 
@@ -189,7 +190,7 @@ the values and policy are specific to the current state and the action choices a
 so much so that the values and policy created by the planning process are typically discarded after
 being used to select the current action.
 
-In model learning, the goal is to estimate a model from experience $\{S_1, A_1, R_2, ..., S_t \}$.
+In model learning, the goal is to estimate a model from experience $$ \{S_1, A_1, R_2, ..., S_t \} $$.
 That is a supervised learning problem, where:
 $(S_1, A_1) \mapsto (S_2, R_2), (S_2, A_2) \mapsto (S_3, R_3), \ldots, (S_{t-1}, A_{t-1}) \mapsto (S_t, R_t)$.
 Learning $s, a \mapsto r$ is a regression problem, whereas
