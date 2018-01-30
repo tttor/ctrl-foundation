@@ -1,7 +1,5 @@
 # Planning software
 
-Software includes:
-\begin{itemize}
 \item JuliaPOMDP \cite{Egorov2017}: \url{https://github.com/JuliaPOMDP/POMDPs.jl}
 \item APPL \cite{Hsu2017}
 \item Tapir \cite{Klimenko2014}
@@ -10,7 +8,7 @@ Software includes:
 \item BRRL: \url{https://github.com/mcastron/BBRL}
 \item OPPT: \url{http://robotics.itee.uq.edu.au/~oppt/}
 \item Symbolic Perseus: \url{https://cs.uwaterloo.ca/~ppoupart/software.html#symbolic-perseus}
-\end{itemize}
+https://github.com/pemami4911/POMDPy
 
 ### APPL
 APPL\footnote{\url{http://bigbird.comp.nus.edu.sg/pmwiki/farm/appl}}
