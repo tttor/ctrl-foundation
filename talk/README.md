@@ -8,3 +8,5 @@
 * [David Silver, Deep Reinforcement Learning, ICML 2016](http://techtalks.tv/talks/deep-reinforcement-learning/62360/)
 * [David Silver, Deep Reinforcement Learning, UAI 2015](https://www.youtube.com/watch?v=qLaDWKd61Ig&t=238s)
 * [Sergey Levine, Deep Learning for Decision Making and Control, UWTV 2015](https://www.youtube.com/watch?v=EtMyH_--vnU&t=981s)
+* http://karpathy.github.io/2016/05/31/rl/
+* https://ai.intel.com/demystifying-deep-reinforcement-learning/
