@@ -17,6 +17,9 @@ Evolutionary RL,
 * episodic **vs** continuing tasks
 * cumulative discounted **vs** average rewards
 
+## People
+Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
+
 ## Quotes
 Richard S. Sutton: <br />
 Reinforcement Learning: Past, Present and Future?:
@@ -44,6 +47,3 @@ RL is difficult because:
 * the explore-exploit dilemma
 
 RL: learning through interaction with the environment with limited prior knowledge and guidance
-
-## People
-Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
