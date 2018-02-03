@@ -29,10 +29,8 @@ forcement learning will be focused on constructivism."
 
 Marco Wiering, Martijn van Otterlo: <br/>
 Two dominant books:
-* Introduction to reinforcement learning by Rich Sutton and Andy Barto from 1998.
-  From an artificial intelligence perspective.
-* Neuro-dynamic programming by Dimitri Bertsekas and John Tsitsiklis in 1996.
-  From the standpoint of operations research.
+(1) From an artificial intelligence perspective: Introduction to reinforcement learning by Rich Sutton and Andy Barto from 1998, and
+(2) From the standpoint of operations research: Neuro-dynamic programming by Dimitri Bertsekas and John Tsitsiklis in 1996.
 
 ## Misc, anonymous, untracked, unknown sources
 RL is formalized as MDP, but in which agents only knows about the sets of possible states and actions.
