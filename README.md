@@ -7,7 +7,7 @@ RL in POMDP,
 Transfer learning in RL,
 Hierarchical RL,
 Curriculum learning,
-Inverse RL (imitation/apprenticeship learning),
+Inverse RL,
 Multiagent RL,
 Evolutionary RL,
 
