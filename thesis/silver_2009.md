@@ -198,6 +198,45 @@ The UCT algorithm (Kocsis and Szepesvari, 2006) is
 a Monte-Carlo tree search that treats each state of the search tree as a multi-armed bandit.
 The tree policy selects actions by using the UCB1 algorithm.
 
+## 7: Dyna-2: Integrating Long and Short-Term Memories
+Learning algorithms extract knowledge, from the complete history of training data, that
+applies very generally throughout the domain. Search algorithms both use and extend this knowl-
+edge, so as to evaluate local states more accurately. Learning and search often interact in a complex
+and surprising fashion, and the most successful approaches integrate both processes together (Scha-
+effer, 2000; Fürnkranz, 2001).
+
+In computer Go,
+* the most successful learning methods have used reinforcement learning algorithms to
+extract domain knowledge from games of self-play
+* the most successful search methods in computer Go are simulation based, for example using
+the Monte-Carlo tree search algorithm
+
+Dyna-2, that
+combines both reinforcement learning and simulation-based search.
+The new idea is to maintain two separate memories.
+* a long-term memory that is learnt from real experience;
+  to represent general knowledge about the domain, i.e.
+  knowledge that is independent of the agent’s current state
+* a short-term memory that is used during search, and is updated from simulated experience;
+  to represent local knowledge about the domain, i.e.
+  knowledge that is specific to the agent’s current region of the state space
+
+Both memories use
+* use linear function approximation to form a compact representation of the state space, and
+  * The long-term value function uses only the long-term memory to approximate the true value function
+  * The short-term value function, uses both memories to approximate the true value function,
+    by forming a linear combination of both feature vectors with both parameter vectors,
+* are updated by temporal-difference learning.
+
+The core idea of Dyna-2 is to combine temporal-difference learning with temporal-difference search,
+using long and short-term memories. The long-term memory is updated from real experience, and
+the short-term memory is updated from simulated experience, in both cases using the TD(λ) algo-
+rithm.
+* If there is no short-term memory, then the search procedure has no effect and may be skipped. This
+results in the linear Sarsa algorithm (see Chapter 2).
+* If there is no long-term memory, then
+Dyna-2 reduces to the temporal-difference search algorithm.
+
 ## 10: Discussion
 
 this thesis, using Go as a case study for:
@@ -243,8 +282,6 @@ learning and search in large environments.
 ## comments
 * sim-based search is planning with generative models
 * in discussion, we mention many of the ideas that we tried that were not successful
-
-## comments
 * the idea of the temporality is similar to that of online planning
 * rl in partially observable states
 * interesting taxonomy, in ch 2:
@@ -254,4 +291,4 @@ learning and search in large environments.
 this becomes apparent in using physics engine in planning,
 a) sample transition from the engine to recover/learn/estimate T, or
 b) use it as generative model in every planning step
-* next: ch 10, ch 7
+* ch 7: why not mcts for planning (which is indeed a search)
