@@ -10,3 +10,4 @@
 
 ## web
 * https://github.com/aikorea/awesome-rl
+* https://github.com/dennybritz/reinforcement-learning
