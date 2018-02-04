@@ -1,5 +1,8 @@
 # thesis
 
+## Hot
+* [Riashat Islam](https://riashatislam.com/), 2017
+
 ## Young, t >= 2015 
 * John Schulman: Optimizing expectations: from deep reinforcement learning to stochastic computation graphs, 2016
 * Arthur Guez: Sample-based search methods for bayes-adaptive planning, 2015
