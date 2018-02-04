@@ -10,12 +10,15 @@ Curriculum learning,
 Inverse RL,
 Multiagent RL,
 Evolutionary RL,
+Safe RL, 
+...
 
 ## Major taxonomy
-* model-based **vs** model-free
-* value-iteration **vs** policy-search
-* episodic **vs** continuing tasks
-* cumulative discounted **vs** average rewards
+model-based **vs** model-free,
+value-iteration **vs** policy-search,
+episodic **vs** continuing tasks,
+cumulative discounted **vs** average rewards,
+...
 
 ## People
 Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
