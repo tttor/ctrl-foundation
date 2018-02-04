@@ -1,6 +1,8 @@
 # method
 
 ## Policy-based, Policy search
+* TRPO: Trust Region Policy Optimization (Schulman, 2017)
+* TNPG: Truncated Natural Policy Gradient
 * DPG, DDPG
 * PILCO
 * PEGASUS
