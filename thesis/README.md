@@ -2,6 +2,7 @@
 
 ## Hot
 * [Riashat Islam](https://riashatislam.com/), 2017
+* [Yan Duan](http://rockyduan.com/)
 
 ## Young, t >= 2015 
 * John Schulman: Optimizing expectations: from deep reinforcement learning to stochastic computation graphs, 2016
