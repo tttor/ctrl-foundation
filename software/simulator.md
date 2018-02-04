@@ -12,7 +12,8 @@
 
 ## Full-blown simulators:
 * [TORCS](http://torcs.sourceforge.net/), [gym_torcs](https://github.com/ugo-nama-kun/gym_torcs)
-* [ALE](https://github.com/mgbellemare/Arcade-Learning-Environment)
+* [ALE](https://github.com/mgbellemare/Arcade-Learning-Environment): 
+  tasks with high-dimensional state inputs and discrete actions
 * [Gazebo](http://gazebosim.org/)
 * [V-REP](http://www.coppeliarobotics.com/)
 
