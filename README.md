@@ -14,10 +14,11 @@ Safe RL,
 ...
 
 ## Major taxonomy
-model-based **vs** model-free,
-value-iteration **vs** policy-search,
-episodic **vs** continuing tasks,
-cumulative discounted **vs** average rewards,
+model-based _vs_ model-free,
+value-iteration _vs_ policy-search,
+episodic _vs_ continuing tasks,
+cumulative discounted _vs_ average rewards,
+on-policy _vs_ off-policy,
 ...
 
 ## People
