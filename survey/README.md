@@ -11,3 +11,5 @@
 ## web
 * https://github.com/aikorea/awesome-rl
 * https://github.com/dennybritz/reinforcement-learning
+* http://www-anw.cs.umass.edu/rlr/
+* http://www.wildml.com/2016/10/learning-reinforcement-learning/
