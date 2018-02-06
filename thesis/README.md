@@ -1,6 +1,6 @@
 # thesis
 
-## Hot
+## On going
 * [Riashat Islam](https://riashatislam.com/), 2017
 * [Yan Duan](http://rockyduan.com/)
 
@@ -19,6 +19,7 @@
 * Hanna Kurniawati, 2008
 
 ## Old, t < 2008
+* Andrew Bagnell, 2004
 * Andrew Ng: Shaping and policy search in reinforcement learning, 2003
 * Richard Sutton
 * Andrew Barto
