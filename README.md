@@ -19,6 +19,7 @@ value-based _vs_ policy-based,
 episodic _vs_ continuing tasks,
 cumulative discounted rewards _vs_ average rewards,
 on-policy _vs_ off-policy,
+gradient-based _vs_ gradient-free,
 ...
 
 ## People
