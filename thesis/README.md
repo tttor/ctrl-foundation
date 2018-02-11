@@ -1,8 +1,9 @@
 # thesis
 
 ## On going
-* [Riashat Islam](https://riashatislam.com/), 2017
+* [Riashat Islam](https://riashatislam.com/)
 * [Yan Duan](http://rockyduan.com/)
+* [Junhyuk Oh](https://sites.google.com/a/umich.edu/junhyuk-oh/)
 
 ## Young, t >= 2015 
 * John Schulman: Optimizing expectations: from deep reinforcement learning to stochastic computation graphs, 2016
