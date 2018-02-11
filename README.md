@@ -4,13 +4,13 @@
 Deep RL,
 Bayesian RL,
 RL in POMDP,
-Transfer learning in RL,
 Hierarchical RL,
-Curriculum learning,
 Inverse RL,
+Safe RL, 
+Transfer learning in RL,
+Curriculum learning,
 Multiagent RL,
 Evolutionary RL,
-Safe RL, 
 ...
 
 ## Major taxonomy
