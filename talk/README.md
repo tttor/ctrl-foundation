@@ -9,3 +9,4 @@
 * http://karpathy.github.io/2016/05/31/rl/
 * https://ai.intel.com/demystifying-deep-reinforcement-learning/
 * https://sites.google.com/view/deeprl-symposium-nips2017
+* https://sites.google.com/site/deeprlnips2016/
