@@ -1,8 +1,9 @@
 # thesis
 
 ## On going
-* [Riashat Islam](https://riashatislam.com/)
+* [Chelsea Finn](http://people.eecs.berkeley.edu/~cbfinn/)
 * [Yan Duan](http://rockyduan.com/)
+* [Riashat Islam](https://riashatislam.com/)
 * [Junhyuk Oh](https://sites.google.com/a/umich.edu/junhyuk-oh/)
 
 ## Young, t >= 2015 
