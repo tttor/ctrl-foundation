@@ -22,6 +22,25 @@ on-policy _vs_ off-policy,
 gradient-based _vs_ gradient-free,
 ...
 
+## (Rough) dimensions of challenges:
+* onlinePlanning _to_ (onlinePlanning + modelLearning + modelFreeRL)
+* modelFreeRL _to_ (onlinePlanning + modelLearning + modelFreeRL)
+* long _to_ short planning time (hard realtime constrainst)
+* discrete (small) _to_ continuous (large numbers of) states, actions, observations
+* MDP (fully observable states) _to_ POMDP (partially observable states) model/formulations
+* stationary (fixed) _to_ non-stationary (changing) models
+* shallow _to_ deep learning
+* without-prior (non-Bayesian) _to_ with-prior (Bayesian)
+* kinematic _to_ dynamic (physics-intensive) environments
+* single _to_ multi agents
+* single _to_ multi (similar but not same) tasks
+* plain _to_ hierarchical (multi-level) structure
+* discrete _to_ continuous time
+* low _to_ high cumulative rewards
+* noObstacle _to_ fullObstacle (clutter) workspace
+* on low _to_ high dof robots
+* short _to_ long planning horizon
+
 ## People
 Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
 
