@@ -40,6 +40,7 @@ gradient-based _vs_ gradient-free,
 * noObstacle _to_ fullObstacle (clutter) workspace
 * on low _to_ high dof robots
 * short _to_ long planning horizon
+* on simulated _to_ real robots/world
 
 ## People
 Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
