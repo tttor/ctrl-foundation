@@ -17,7 +17,7 @@ Evolutionary RL,
 model-based _vs_ model-free,
 value-based _vs_ policy-based,
 episodic _vs_ continuing tasks,
-cumulative discounted rewards _vs_ average rewards,
+average _vs_ cumulative discounted rewards,
 on-policy _vs_ off-policy,
 gradient-based _vs_ gradient-free,
 ...
