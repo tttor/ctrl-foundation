@@ -5,6 +5,7 @@
 [Yan Duan](http://rockyduan.com/),
 [Riashat Islam](https://riashatislam.com/),
 [Junhyuk Oh](https://sites.google.com/a/umich.edu/junhyuk-oh/),
+[Alex Irpan](https://www.alexirpan.com/)
 ...
 
 ## Young, t >= 2015 
