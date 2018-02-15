@@ -9,6 +9,7 @@
 * [2017: Deep Reinforcement Learning: An Overview](https://arxiv.org/abs/1701.07274)
 
 ## web
+* https://www.alexirpan.com/2018/02/14/rl-hard.html
 * https://github.com/aikorea/awesome-rl
 * https://github.com/dennybritz/reinforcement-learning
 * http://www-anw.cs.umass.edu/rlr/
