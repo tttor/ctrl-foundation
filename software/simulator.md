@@ -15,6 +15,7 @@
 * [ALE](https://github.com/mgbellemare/Arcade-Learning-Environment): 
   tasks with high-dimensional state inputs and discrete actions
 * [DeepMindLab](https://github.com/deepmind/lab)
+* [ai2thor](http://ai2thor.allenai.org/): Photorealistic Interactive Environments for AI Agents
 * [ELF](https://github.com/facebookresearch/ELF)
 * [Gazebo](http://gazebosim.org/)
 * [V-REP](http://www.coppeliarobotics.com/)
