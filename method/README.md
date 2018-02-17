@@ -24,3 +24,6 @@
 * model-based and model-free
   * Dyna-2, 2007
   * Dyna, 1990
+
+## misc
+* model-free: sample-inefficient
