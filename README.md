@@ -13,16 +13,7 @@ Multiagent RL,
 Evolutionary RL,
 ...
 
-## Major taxonomy
-model-based _vs_ model-free,
-value-based _vs_ policy-based,
-episodic _vs_ continuing tasks,
-average _vs_ cumulative discounted rewards,
-on-policy _vs_ off-policy,
-gradient-based _vs_ gradient-free,
-...
-
-## (Rough) dimensions of challenges:
+## (Rough) dimensions of challenges (problems):
 * onlinePlanning _to_ (onlinePlanning + modelLearning + modelFreeRL)
 * modelFreeRL _to_ (onlinePlanning + modelLearning + modelFreeRL)
 * long _to_ short planning time (hard realtime constrainst)
@@ -41,6 +32,8 @@ gradient-based _vs_ gradient-free,
 * on low _to_ high dof robots
 * short _to_ long planning horizon
 * on simulated _to_ real robots/world
+* episodic _vs_ continuing tasks,
+* average _vs_ cumulative discounted rewards,
 
 ## People
 Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
