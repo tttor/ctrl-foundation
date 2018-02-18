@@ -1,6 +1,6 @@
 # method
 
-## dim1
+## dim1: policy-based, value-based, ...
 * policy-based (policy-seach)
   * TRPO: Trust Region Policy Optimization (Schulman, 2017)
   * TNPG: Truncated Natural Policy Gradient
@@ -13,7 +13,7 @@
 * policy- and value-based
   * Actor-critic
 
-## dim2
+## dim2: model-free, model-based, ...
 * model-free
 * model-based
   * model learning
@@ -27,3 +27,8 @@
 
 ## misc
 * model-free: sample-inefficient
+* other dims: 
+on-policy _vs_ off-policy,
+gradient-based _vs_ gradient-free,
+...
+
