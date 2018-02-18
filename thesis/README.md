@@ -2,6 +2,7 @@
 
 ## On going
 [Chelsea Finn](http://people.eecs.berkeley.edu/~cbfinn/),
+[Yevgen Chebotar](http://www-clmc.usc.edu/Main/YevgenChebotar),
 [Yan Duan](http://rockyduan.com/),
 [Riashat Islam](https://riashatislam.com/),
 [Junhyuk Oh](https://sites.google.com/a/umich.edu/junhyuk-oh/),
