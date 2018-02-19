@@ -1,34 +1,6 @@
 # method
 
-## dim1: policy-based, value-based, ...
-* policy-based (policy-seach)
-  * TRPO: Trust Region Policy Optimization (Schulman, 2017)
-  * TNPG: Truncated Natural Policy Gradient
-  * DPG, DDPG
-  * PILCO
-  * GPS: Guided Policy Search, 2013
-  * PEGASUS, 2000
-* value-based
-  * Deep Q-network
-* policy- and value-based
-  * Actor-critic
-
-## dim2: model-free, model-based, ...
-* model-free
-* model-based
-  * model learning
-  * planning
-    * DESPOT, 2017
-    * POMCP, 2010
-    * AEMS 
-* model-based and model-free
-  * Dyna-2, 2007
-  * Dyna, 1990
-
-## misc
-* model-free: sample-inefficient
-* other dims: 
-on-policy _vs_ off-policy,
-gradient-based _vs_ gradient-free,
-...
-
+* [dim1: policy-based, value-based, ...](https://github.com/tttor/rl-foundation/blob/master/method/dim1.md)
+* [dim2: model-free, model-based, ...](https://github.com/tttor/rl-foundation/blob/master/method/dim2.md)
+* on-policy _vs_ off-policy,
+* gradient-based _vs_ gradient-free,
