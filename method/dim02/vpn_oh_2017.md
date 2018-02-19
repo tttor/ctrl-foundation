@@ -9,8 +9,19 @@ building an accurate observation-prediction model is difficult
 * Value Prediction Network (VPN) that
   * learn to predict values via Q-learning and rewards via supervised learning
   * perform lookahead planning to choose actions and compute bootstrapped target Q-values.
-* VPN: a value-prediction model that can directly generate/predict the value/reward of future states 
-without  generating future observations.
+* VPN learns:
+  * an option-value function $Q_{\theta} (x_t, o_t)$ through a neural network parameterized by $\theta$ like model-free RL, 
+  * the dynamics of the rewards/values to perform planning.
+* VPN's 4 modules parameterized by $\theta$:
+  * encoding: maps the observation (x) to the abstract state (s) using neural networks
+  * value: estimates the value of the abstract-state
+  * outcome: predicts the option-reward $r$ for executing the option $o$ at abstract-state $s$
+  * transition: transforms the abstract-state to the next abstract-state
 
 ## setup
-* Atari games
+* task: 2d navigation, Atari games
+* model-free baseline: DQN, VPN(1)
+
+## comment
+* everything is predicted via  deep-network, see VPN modules
+* why not implement mcts for planning?
