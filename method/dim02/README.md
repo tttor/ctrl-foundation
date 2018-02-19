@@ -5,7 +5,7 @@
 * have the advantage of handling arbitrary dynamical systems with minimal bias
 
 ### cons
-  * less sample-efficient
+ * less sample-efficient, high sample complexity
 
 ### methods
 ?
@@ -21,14 +21,14 @@
 ?
 
 ### method: planning
-DESPOT, 2017,
-POMCP, 2010,
+DESPOT_2017,
+POMCP_2010,
 AEMS
 
 ## model-based and model-free
 
 ### method
-[PILQR, 2017](https://github.com/tttor/rl-foundation/blob/master/method/dim02/pilqr_chebotar_2017.md),
-[VPN, 2017](https://github.com/tttor/rl-foundation/blob/master/method/dim02/vpn_oh_2017.md),
-[Dyna-2, 2008](https://github.com/tttor/rl-foundation/blob/master/method/dim02/dyna2_silver_2008.md),
-Dyna, 1990
+[PILQR_2017](https://github.com/tttor/rl-foundation/blob/master/method/dim02/pilqr_chebotar_2017.md),
+[VPN_2017](https://github.com/tttor/rl-foundation/blob/master/method/dim02/vpn_oh_2017.md),
+[Dyna2_2008](https://github.com/tttor/rl-foundation/blob/master/method/dim02/dyna2_silver_2008.md),
+Dyna_1990
