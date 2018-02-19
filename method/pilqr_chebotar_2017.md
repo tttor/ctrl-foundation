@@ -8,13 +8,24 @@
 the final performance of model-free algorithms in a method that
 we can practically use on real-world physical systems?
 
-## ideas
-* PILQR: a procedure for optimizing TVLG (time-varying linear-Gaussian) policies that integrates both 
+## ideas: PILQR
+* a procedure for optimizing TVLG (time-varying linear-Gaussian) policies that integrates both 
   * fast model-based updates via iterative linear-Gaussian model fitting and 
   * corrective model-free updates via the PI2 framework.
-
+* hybrid-ism: 
+  * for model-based, based on iLQR, KL-constrained LQR (LQR-FLM)
+  * for model-free, based on PI2
+* Integrating Model-Based Updates into PI2
+  * the PI2 update can be broken up into two parts, 
+    * one part using a model-based cost approximation and 
+    * another part using the residual cost error after this approximation. 
+  * integrating model-based updates into PI2 by 
+    * using our extension of LQR-FLM to optimize the linear-quadratic cost approximation and 
+    * performing a subsequent update with PI2 on the residual cost.
+    
 ## setups
-* complex tasks, such as hockey and power plug plugging
+* simulated: gripper pusher, door opening, reacher
+* real: hockey, power plug plugging
 
 ## results
 * PILQR prop:
@@ -27,4 +38,4 @@ we can practically use on real-world physical systems?
   * both the model-based and model-free update requires a continuous action space
   
 ## comments
-?
+* essentially the integration of PI2 and LQR-FLM
