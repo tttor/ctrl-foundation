@@ -5,8 +5,8 @@
 building an accurate observation-prediction model is difficult
 * What if we could predict future rewards and values directly without predicting future observations?
 
-## ideas
-* Value Prediction Network (VPN) that
+## ideas: Value Prediction Network (VPN)
+* VPN:
   * learn to predict values via Q-learning and rewards via supervised learning
   * perform lookahead planning to choose actions and compute bootstrapped target Q-values.
 * VPN learns:
