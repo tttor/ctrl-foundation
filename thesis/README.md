@@ -4,6 +4,7 @@
 [Chelsea Finn](http://people.eecs.berkeley.edu/~cbfinn/),
 [Yevgen Chebotar](http://www-clmc.usc.edu/Main/YevgenChebotar),
 [Yan Duan](http://rockyduan.com/),
+[Shane Gu](http://sg717.user.srcf.net/),
 [Riashat Islam](https://riashatislam.com/),
 [Junhyuk Oh](https://sites.google.com/a/umich.edu/junhyuk-oh/),
 [Alex Irpan](https://www.alexirpan.com/)
