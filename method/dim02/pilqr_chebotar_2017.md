@@ -8,7 +8,7 @@
 the final performance of model-free algorithms in a method that
 we can practically use on real-world physical systems?
 
-## ideas, contribs
+## ideas
 * PILQR: a procedure for optimizing TVLG (time-varying linear-Gaussian) policies that integrates both 
   * fast model-based updates via iterative linear-Gaussian model fitting and 
   * corrective model-free updates via the PI2 framework.
