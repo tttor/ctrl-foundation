@@ -1,6 +1,6 @@
 # method
 
-# dim: policy-based, value-based
+# [policy-based, value-based]
 
 ## policy-based (policy-seach)
 ### policy representation
@@ -22,7 +22,7 @@
 ## value-based
 * Deep Q-network
 
-# dim: model-free, model-based
+# [model-free, model-based]
 
 ## model-free
 ### pros
@@ -56,11 +56,11 @@ AEMS
 [Dyna2_2008](https://github.com/tttor/rl-foundation/blob/master/method/dim02/dyna2_silver_2008.md),
 Dyna_1990
 
-# dim: hybrids: methods that combine 2 (or more) methods
+# [hybrids: methods that combine 2 (or more) methods]
 * Temporal Difference (TD)
   * MonteCarlo and DynamicsProgramming
 * Actor-critic
   * value-based and policy-based
 
-# misc
+# [misc]
 * on-policy _vs_ off-policy,
