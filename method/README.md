@@ -35,27 +35,24 @@
 ## model-based
 ### pros
 * sample-efficient
-* Model learning transfers across tasks and environment configurations (learning physics)
-
+* model learning transfers across tasks and environment configurations (learning physics)
 ### cons
 * suffer from significant bias, since complex unknown dynamics cannot always be modeled accurately enough
-* Two sources of approximation error: learn model, estimate a value function using the learned model: 
+* 2 sources of approximation error: learn model, estimate a value function using the learned model
 
 ### method: 
 * sample-efficient:
-PILCO_2015, 
+PILCO_2015, TEXPLORE_2013,
 ...
 
 ### method: planning
 * online: 
-DESPOT_2017,
-POMCP_2010,
-AEMS_2007, ...
+DESPOT_2017, POMCP_2010, AEMS_2007, ...
 * offline:
-SARSOP, PBVI_2003, Perseus_2005, HSVI, ..., 
-most are point-based approaches that
+SARSOP, PBVI_2003, Perseus_2005, HSVI, ...
+(most are point-based approaches that
 sample belief states by simulating some random interactions of the agent with the environment and 
-then maintain at most one $\alpha$-vector per sampled belief state.
+then maintain at most one $\alpha$-vector per sampled belief state)
 
 ### combining offline and online planning approaches, 
 By using policies computed offline
