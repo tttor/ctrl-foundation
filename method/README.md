@@ -45,9 +45,23 @@
 ?
 
 ### method: planning
+* online: 
 DESPOT_2017,
 POMCP_2010,
-AEMS
+AEMS, ...
+* offline:
+SARSOP, ...
+
+### combining offline and online approaches, 
+By using policies computed offline
+* as macro actions to shorten the search horizon or
+* as default policies at the leaves of the search tree in online planning or
+* to provide (tight) lower and upper bounds (as heuristics) used in online search.
+
+Most offline methods used in combination with online methods are based on approximation in that
+they use the underlying MDP (the $(S, A, T, R)$ components of the POMDP model) to
+compute lower bounds (e.g. Blind policy, point-based algorithms) and
+upper bounds (e.g. MDP, QMDP, FIB) on the exact value function.
 
 ## model-based and model-free
 ### method
