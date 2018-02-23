@@ -50,9 +50,12 @@ DESPOT_2017,
 POMCP_2010,
 AEMS, ...
 * offline:
-SARSOP, ...
+SARSOP, PBVI_2003, Perseus_2005, HSVI, ..., 
+most are point-based approaches that
+sample belief states by simulating some random interactions of the agent with the environment and 
+then maintain at most one $\alpha$-vector per sampled belief state.
 
-### combining offline and online approaches, 
+### combining offline and online planning approaches, 
 By using policies computed offline
 * as macro actions to shorten the search horizon or
 * as default policies at the leaves of the search tree in online planning or
