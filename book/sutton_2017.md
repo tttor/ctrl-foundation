@@ -1,8 +1,47 @@
 # sutton_2017.md
 * 2nd-edition: http://www.incompleteideas.net/book/the-book-2nd.html
-* 1st-edition: http://incompleteideas.net/book/ebook/the-book.html or [via UQ Lib](https://ebookcentral-proquest-com.ezproxy.library.uq.edu.au/lib/uql/detail.action?docID=3338821)
+* 1st-edition: http://incompleteideas.net/book/ebook/the-book.html or 
+[via UQ Lib](https://ebookcentral-proquest-com.ezproxy.library.uq.edu.au/lib/uql/detail.action?docID=3338821)
 * https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
 * https://github.com/dennybritz/reinforcement-learning
+
+## 6: Temporal-Difference Learning
+* TD is a combination of _Monte Carlo_ and _dynamic programming (DP)_ ideas
+  *  Like Monte Carlo methods, TD methods can learn directly from raw experience without 
+  a model of the environment’s dynamics
+  * Like DP, TD methods update estimates based in part on other learned estimates, without 
+  waiting for a final outcome (they bootstrap)
+* TD methods combine the sampling of Monte Carlo with the bootstrapping of DP.
+
+### TD Prediction
+* the policy evaluation or prediction problem:
+  * the problem of estimating the value function for a given policy
+* Monte Carlo (MC) vs DP vs TD(0)
+  * target in value fn updates:
+    * MC: $G_t$, the actual return following time t
+    * TD: $R_{t+1} + \gamma V(S_{t+1})
+  * target is an estimate:
+    * MC target is an estimate because the expected value in (6.3) is not known; 
+      a sample return is used in place of the real expected return. 
+    * DP target is an estimate not because of the expected values, 
+      which are assumed to be completely provided by model of the environment, but 
+      because $v(S_{t+1}) is not known and the current estimate, $V(St+1)$, is used instead. 
+    * TD target is an estimate for both reasons: 
+      * it samples the expected values in (6.4) and 
+      * it uses the current estimate V instead of the true .
+    
+* The simplest TD update is
+\begin{equation}
+V(S_t) \leftarrow V(S_t) + \alpha [ R_{t+1} + \gamma V(S_{t+1}) - V(S_t) ]
+\end{equation}
+
+* The SARSA (on-policy) and Q-learning (off-policy) are as follows, respectively:
+\begin{equation}
+Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha [R_{t+1} + \gamma~Q(S_{t+1},A_{t+1}) - Q(S_{t},A_{t})]
+\end{equation}
+\begin{equation}
+Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha [R_{t+1} + \gamma~max_a Q(S_{t+1},a) - Q(S_{t},A_{t})]
+\end{equation}
 
 ## 13: Policy Gradient Methods
 In this chapter we consider methods that instead learn a parameterized policy that
@@ -97,7 +136,7 @@ affected by the policy parameter that does not involve derivatives of the state 
 accordingly the former is termed the critic and the latter the actor, and
 these overall methods are sometimes termed actor–critic methods.
 
-## ch 1
+## 1: intro
 * Most distinguishing features of RL:
   * being a close loop
   * no direct instruction on what action to take
@@ -132,21 +171,7 @@ or if a lot of time is available for the search.
 * In Tic-Tac-Toe, one learns a model of the opponent’s behavior, up to some level of confidence,
 and then apply dynamic programming to compute an optimal solution given the approximate opponent model.
 
-## ch 6
-* The simplest TD update is
-\begin{equation}
-V(S_t) \leftarrow V(S_t) + \alpha [ R_{t+1} + \gamma V(S_{t+1}) - V(S_t) ]
-\end{equation}
-
-* The SARSA (on-policy) and Q-learning (off-policy) are as follows, respectively:
-\begin{equation}
-Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha [R_{t+1} + \gamma~Q(S_{t+1},A_{t+1}) - Q(S_{t},A_{t})]
-\end{equation}
-\begin{equation}
-Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha [R_{t+1} + \gamma~max_a Q(S_{t+1},a) - Q(S_{t},A_{t})]
-\end{equation}
-
-## ch 8
+## 8: 
 Model-based RL requires a model of the environment, model-free RL does not.
 Model-based methods rely on planning as their primary component, while model-free methods primarily rely on learning.
 Model here refers to anything that an agent can use to predict how the environment will respond to its actions.
