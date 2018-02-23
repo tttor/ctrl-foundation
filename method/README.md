@@ -41,14 +41,16 @@
 * suffer from significant bias, since complex unknown dynamics cannot always be modeled accurately enough
 * Two sources of approximation error: learn model, estimate a value function using the learned model: 
 
-### method: model learning
-?
+### method: 
+* sample-efficient:
+PILCO_2015, 
+...
 
 ### method: planning
 * online: 
 DESPOT_2017,
 POMCP_2010,
-AEMS, ...
+AEMS_2007, ...
 * offline:
 SARSOP, PBVI_2003, Perseus_2005, HSVI, ..., 
 most are point-based approaches that
