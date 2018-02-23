@@ -28,20 +28,37 @@
       because $v(S_{t+1}) is not known and the current estimate, $V(St+1)$, is used instead. 
     * TD target is an estimate for both reasons: 
       * it samples the expected values in (6.4) and 
-      * it uses the current estimate V instead of the true .
-    
-* The simplest TD update is
-\begin{equation}
-V(S_t) \leftarrow V(S_t) + \alpha [ R_{t+1} + \gamma V(S_{t+1}) - V(S_t) ]
-\end{equation}
+      * it uses the current estimate V instead of the true
+  * update
+    * MC, TD do sample updates:
+    involve looking ahead to a sample successor state (or state–action pair), 
+    using the value of the successor and the reward along the way to compute a backed-up value, and 
+    then updating the value of the original state (or state–action pair) accordingly. 
+    The simplest TD update is: $V(S_t) \leftarrow V(S_t) + \alpha [ R_{t+1} + \gamma V(S_{t+1}) - V(S_t) ]$
+    * DP does expected update:
+     based on a single sample successor rather than on a complete distribution of all possible successors.
+   * need model? (of the environment, of its reward and next-state probability distributions)
+     * TD: not require
+     * DPL require
+* TD-error: $\delta_t = R_{t+1} + \gamma V(S_{t+1}) - V(S_t)$
+  * available at t+1
+  * if the array V does not change during the episode (as it does not in Monte Carlo methods), then
+    the Monte Carlo error can be written as a sum of TD errors
 
-* The SARSA (on-policy) and Q-learning (off-policy) are as follows, respectively:
-\begin{equation}
-Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha [R_{t+1} + \gamma~Q(S_{t+1},A_{t+1}) - Q(S_{t},A_{t})]
-\end{equation}
-\begin{equation}
-Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha [R_{t+1} + \gamma~max_a Q(S_{t+1},a) - Q(S_{t},A_{t})]
-\end{equation}
+### Advantages of TD Prediction Methods
+* For any fixed policy π, TD(0) has been proved to converge to $v_{\pi}$ , ....
+*  In practice, TD methods have usually been found to converge faster than constant-α MC methods on stochastic tasks,
+
+### Optimality of TD(0)
+*  batch updating:
+  * Given a finite amount of experience, to present the experience repeatedly until the method converges upon an answer.
+  * updates are made only after processing each complete batch of training data.
+
+###  Sarsa: On-policy TD Control
+* The SARSA (on-policy) 
+  * Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha [R_{t+1} + \gamma~Q(S_{t+1},A_{t+1}) - Q(S_{t},A_{t})]
+* Q-learning (off-policy)
+  * Q(S_t,A_t) \leftarrow Q(S_t,A_t) + \alpha [R_{t+1} + \gamma~max_a Q(S_{t+1},a) - Q(S_{t},A_{t})]
 
 ## 13: Policy Gradient Methods
 In this chapter we consider methods that instead learn a parameterized policy that
