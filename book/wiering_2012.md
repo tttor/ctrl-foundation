@@ -7,6 +7,41 @@
  publisher = {Springer Publishing Company, Incorporated},
 }
 
+## 7: Reinforcement Learning in Continuous State and Action Spaces (Hado van Hasselt)
+To update the parameters:
+* gradient-based and
+* gradient-free ways
+
+This chapter covers:
+* gradient-based temporal-difference learning,
+* evolutionary strategies,
+* policy-gradient algorithms and
+* (natural) actor-critic methods.
+
+Taxonomy of problems:
+* the problem of control, which
+means we want to find action-selection policies that yield high returns,
+* the problem of prediction, which
+aims to estimate the value of a given policy.
+
+Methodologies to Solve a Continuous MDP
+* Model Approximation:
+Since S, A and $\gamma$ are assumed to be known,
+this amounts to learning an approximation for the functions T and R.
+Because of the Markov property, these functions only depend on local data.
+The problem of estimating these functions then translates to a fairly standard supervised learning problem.
+Learning the model may not be trivial, but in general it is easier than
+learning the value of a policy or optimizing the policy directly.
+However, if the accuracy of the model is debatable, the resulting policy may not be
+better than a policy that is based directly on the samples that were used to construct the approximate model.
+Even so, it may be easier to approximate the value directly than to infer the values from an approximate
+model. For reasons of space, we will not consider model approximation further.
+* Value Approximation.
+* Policy Approximation.
+
+next: 7.2 Function Approximation
+p212
+
 ## 18: Reinforcement Learning in Robotics: A Survey
 Reinforcement Learning in Robotics: A Survey
 
