@@ -75,6 +75,68 @@ how we can reduce the variance of policy gradient estimation through the use of 
 * to unify reinforcement learning and these other problems that involve optimizing expectations
   * the formalism of stochastic computation graphs,
 
+## 2: background
+The episodic setting of reinforcement learning:
+where the agent’s experience is broken up into a series of episodes, i.e.
+sequences with a finite number of states, actions and rewards.
+The episode ends when a terminal state s T is reached.
+
+In certain problem settings, we will also be concerned with an initial state distribution
+μ(s), which is the probability distribution that the initial state $s_0$ is sampled from.
+
+The goal is to find a policy that optimizes the expected total reward per episode.
+
+The partially-observed setting is equivalent to the fully-observed setting because
+we can call the observation history $h_t$ the state of the system.
+That is, a POMDP can be written as an MDP (with infinite state space).
+When using function approximation, the partially observed setting is
+not much different conceptually from the fully-observed setting.
+
+parameterized stochastic policies: $\pi_{\theta}(a|s)$;
+$\theta \in \mathbb{R}^d$ is a parameter vector that specifies the policy.
+So $max_{\pi} E[R | \pi]$ becomes $max_{\theta} E[R | \pi_{\theta}]$, i.e.
+an optimization problem with respect to $\theta \in \mathbb{R}^d$.
+
+The parameterization of the policy:
+* With a discrete action space, we use a neural network that outputs
+  action probabilities, i.e., the final layer is a softmax layer.
+* With a continuous action space, we use a neural network that outputs
+the mean of a Gaussian distribution, with a separate set of parameters
+specifying a diagonal covariance matrix.
+
+Derivative-free optimization, e.g.
+Cross entropy method (CEM) is a simple but effective evolutionary algorithm,
+which works with Gaussian distributions, repeatedly updating the mean and
+variance of a distribution over candidate parameters.
+
+Policy gradient methods:
+repeatedly estimating the gradient of the policy’s performance with respect to its parameters.
+
+next: 2.6!!
+policy gradients
+
+## 3: trust region policy optimization (TRPO)
+To update the policy, we should improve a certain surrogate
+objective as much as possible, while changing the policy as little as possible, where this
+change is measured as a KL divergence between action distributions.
+
+We show that by
+bounding the size of the policy update, we can bound the change in state distributions,
+guaranteeing policy improvement despite non-trivial step sizes
+
+next: 3.2 preliminaries
+
+## 4: geralized advantage estimator (GAE)
+Two main challenges with policy gradient methods:
+* the large number of samples typically required, and
+* the difficulty of obtaining monotonic improvement despite the nonstationarity of the incoming data.
+
+GAE:
+significantly
+reduce variance of the policy gradient estimators while maintaining a tolerable level of bias
+
+next: 4.2 preliminaries
+
 ## 6: conclusion
 stochastic computation graphs make the point that policy
 gradient methods for reinforcement learning are an instance of a more general class of
