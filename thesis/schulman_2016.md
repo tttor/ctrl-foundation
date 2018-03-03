@@ -137,6 +137,18 @@ reduce variance of the policy gradient estimators while maintaining a tolerable 
 
 next: 4.2 preliminaries
 
+## 5: stochastic computation graphs
+Success of neural networks
+* the simplicity of the backpropagation algorithm, which
+  allows one to efficiently compute the gradient of any loss function defined as a composition of differentiable functions
+* the backpropagation algorithm is only sufficient when the loss function is a deterministic,
+  differentiable function of the parameter vector.
+* convolutional neural networks in vision [LeC+98] and LSTMs for sequence data
+
+a combination of stochastic and deterministic operations yields recent models of attention [Mni+14] and memory [ZS15]
+* (1) likelihood maximization in probabilistic models with latent variables [Nea90; NH98], and
+* (2) policy gradients in reinforcement learning [Gly90; Sut+99;Wil92].
+
 ## 6: conclusion
 stochastic computation graphs make the point that policy
 gradient methods for reinforcement learning are an instance of a more general class of
