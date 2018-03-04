@@ -1,6 +1,7 @@
-# survey, benchmark, review
+# Survey, benchmark, review
 
-## paper
+## Paper
+* [2017: Henderson: https://arxiv.org/abs/1709.06560](https://arxiv.org/abs/1709.06560)
 * [2017: Deep Reinforcement Learning: An Overview](https://arxiv.org/abs/1701.07274)
 * [2016: Duan: Benchmarking Deep Reinforcement Learning for Continuous Control](https://arxiv.org/abs/1604.06778)
 * [2016: Benchmarking for Bayesian Reinforcement Learning](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157088)
@@ -11,7 +12,7 @@
 * [2009: Transfer Learning for Reinforcement Learning Domains: A Survey](http://www.jmlr.org/papers/v10/taylor09a.html)
 * 1996: Kaebling: Reinforcement Learning: A Survey
 
-## web
+## Web
 * https://www.alexirpan.com/2018/02/14/rl-hard.html
 * https://github.com/aikorea/awesome-rl
 * https://github.com/dennybritz/reinforcement-learning
