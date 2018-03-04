@@ -1,7 +1,7 @@
 # Survey, benchmark, review
 
 ## Paper
-* [2017: Henderson: https://arxiv.org/abs/1709.06560](https://arxiv.org/abs/1709.06560)
+* [2017: Henderson: Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
 * [2017: Deep Reinforcement Learning: An Overview](https://arxiv.org/abs/1701.07274)
 * [2016: Duan: Benchmarking Deep Reinforcement Learning for Continuous Control](https://arxiv.org/abs/1604.06778)
 * [2016: Benchmarking for Bayesian Reinforcement Learning](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157088)
