@@ -28,3 +28,22 @@ https://arxiv.org/abs/1709.06560
   * the necessity
     * that implementation details be enumerated, codebases packaged with publications, and 
     * that performance of baseline experiments in novel works matches the original baseline publication code
+
+## Evaluation metrics
+* common metrics:
+  * average returns
+  * maximum reward achieved over a fixed number of timesteps
+* suggested metrics:
+  * bootstrap power analysis    
+  * confidence bound (95% confidence interval)
+    * Generally a bootstrap estimator is obtained by resampling with replacement many times to 
+      generate a statistically relevant mean and confidence bound.
+    * In cases where confidence bounds are exceedingly large, it may be necessary to 
+      run more trials (i.e. increase the sample size).
+  * significance testing (of the reported gains based on a given metric)
+    * to investigate proper corrected significance tests for RL?
+    * consider 
+      * the simple 2-sample t-test (sorting all final evaluation returns across N random trials with different random seeds);
+      * the Kolmogorov-Smirnov test (Wilcox 2005); and 
+      * bootstrap percent differences with 95% confidence in- tervals
+ 
