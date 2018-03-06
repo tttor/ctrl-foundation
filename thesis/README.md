@@ -40,3 +40,4 @@
 * Satinder Singh
 * Pascal Poupart, 2005
 * Gerald Tesauro
+* Sham M. Kakade, 2003
