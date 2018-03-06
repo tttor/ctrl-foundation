@@ -11,7 +11,7 @@
 * gradient-free
   * cross-entropy method
 * gradient-based
-  * TRPO: Trust Region Policy Optimization (Schulman, 2017)
+  * TRPO: Trust Region Policy Optimization (Schulman, 2015)
   * DPG, DDPG
 * misc:
   * TNPG: Truncated Natural Policy Gradient
@@ -73,10 +73,8 @@ upper bounds (e.g. MDP, QMDP, FIB) on the exact value function.
 Dyna_1990
 
 # [hybrids: methods that combine 2 (or more) methods]
-* Temporal Difference (TD)
-  * MonteCarlo and DynamicsProgramming
-* Actor-critic
-  * value-based and policy-based
+* Temporal Difference (TD): MonteCarlo and DynamicsProgramming
+* Actor-critic: value-based and policy-based
 
 # [misc]
 * on-policy _vs_ off-policy,
