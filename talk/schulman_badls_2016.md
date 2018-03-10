@@ -1,4 +1,4 @@
-# Deep Reinforcement Learning: Policy Gradients and Q-Learning
+# Deep RL: Policy Gradients and Q-Learning
 John Schulman,
 Bay Area Deep Learning School,
 (September 24, 2016)
@@ -67,5 +67,5 @@ the Current State of Affairs
   * Policy gradient methods easier to debug and understand
 
 Vanilla policy gradient:
-![Vanilla policy gradient](https://github.com/tttor/rl-foundation/blob/master/talk/fig/vanila_pol_grad.png)
+![Vanilla policy gradient](fig/vanila_pol_grad.png?raw=true)
 
