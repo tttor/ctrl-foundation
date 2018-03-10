@@ -6,7 +6,7 @@ Bayesian RL,
 RL in POMDP,
 Hierarchical RL,
 Inverse RL,
-Safe RL, 
+Safe RL,
 Transfer learning in RL,
 Curriculum learning,
 Multiagent RL,
@@ -47,7 +47,7 @@ Richard S. Sutton: Reinforcement Learning: Past, Present and Future?:
 > world is called constructivism. My prediction is that for the next tens of years rein-
 > forcement learning will be focused on constructivism
 
-Marco Wiering, Martijn van Otterlo: 
+Marco Wiering, Martijn van Otterlo:
 > Two dominant books:
 > (1) From an artificial intelligence perspective: Introduction to reinforcement learning by Rich Sutton and Andy Barto from 1998, and
 > (2) From the standpoint of operations research: Neuro-dynamic programming by Dimitri Bertsekas and John Tsitsiklis in 1996.
@@ -64,3 +64,12 @@ RL is difficult because:
 * the explore-exploit dilemma
 
 RL: learning through interaction with the environment with limited prior knowledge and guidance
+
+An RL algorithm has 3 main components, namely:
+1)~an estimator for the environments' structure,
+2)~a planning algorithm to compute the optimal policy wrt the estimated environments, and
+3)~a strategy to trade off between exploitation and exploration.
+
+One can view POMDP as an MDP over a belief states.
+Sondik (1978): there always exists a deteministic policy that maximizes $V^\phi$ for any belief states.
+A deterministic policy assigns a probability of 1 to a specific action in every belief state.
