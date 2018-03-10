@@ -63,5 +63,9 @@ the Current State of Affairs
   * SARSA: also found to perform well
 * Comparison Q-fn vs policy-grad:
   * Q-function methods are more sample efficient when they work but
-    don’t work as generally as policy gradient methods
+    don’t work as generally as policy gradient
   * Policy gradient methods easier to debug and understand
+
+Vanilla policy gradient:
+![Vanilla policy gradient](https://github.com/tttor/rl-foundation/blob/master/talk/fig/vanila_pol_grad.png)
+
