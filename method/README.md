@@ -17,7 +17,7 @@
   * TNPG: Truncated Natural Policy Gradient
   * PILCO
   * GPS: Guided Policy Search, 2013
-  * PEGASUS, 2000 
+  * PEGASUS, 2000
 
 ## value-based
 * Deep Q-network
@@ -40,21 +40,27 @@
 * suffer from significant bias, since complex unknown dynamics cannot always be modeled accurately enough
 * 2 sources of approximation error: learn model, estimate a value function using the learned model
 
-### method: 
+### method:
 * sample-efficient:
 PILCO_2015, TEXPLORE_2013,
 ...
 
 ### method: planning
-* online: 
+* online:
 DESPOT_2017, POMCP_2010, AEMS_2007, ...
+Real-Time Dynamic Programming (RTDP-BEL)~\cite{Geffner1998},
+Real-Time Belief Space Search (RTBSS)~\cite{Paquet2005},
+Randomized Belief-Space Replanning (RBSR)~\cite{Hauser2010},
+Planning under uncertainty with macro-actions (PUMA)~\cite{He2010},
+SOVI: Simple Online Value Iteration~\cite{Shani2005},
+Factored Hybrid Heuristic Online Planning (FHHOP)~\cite{Zhang2012}.
 * offline:
 SARSOP, PBVI_2003, Perseus_2005, HSVI, ...
 (most are point-based approaches that
-sample belief states by simulating some random interactions of the agent with the environment and 
-then maintain at most one $\alpha$-vector per sampled belief state)
+sample belief states by simulating some random interactions of the agent
+with the environment and then maintain at most one $\alpha$-vector per sampled belief state)
 
-### combining offline and online planning approaches, 
+### combining offline and online planning approaches,
 By using policies computed offline
 * as macro actions to shorten the search horizon or
 * as default policies at the leaves of the search tree in online planning or
