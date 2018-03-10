@@ -1,4 +1,5 @@
-# asmuth_2013.md
+# Model-based Bayesian Reinforcement Learning with Generalized Priors
+asmuth_2013
 
 In Bayesian approach, knowledge given to the algorithm before any action or from its own related experience is formalized into a prior.
 The Bayesian-based machine learning takes the prior and combined it with the observation to create a posterior.
