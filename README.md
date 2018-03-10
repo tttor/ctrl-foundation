@@ -39,19 +39,18 @@ Evolutionary RL,
 Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
 
 ## Quotes
-Richard S. Sutton: <br />
-Reinforcement Learning: Past, Present and Future?:
-"Just as reinforcement learning present took a step away from the ultimate goal of reward to
-focus on value functions, so reinforcement learning future may take a further step
-away to focus on the structures that enable value function estimation [...] In psy-
-chology, the idea of a developing mind actively creating its representations of the
-world is called constructivism. My prediction is that for the next tens of years rein-
-forcement learning will be focused on constructivism."
+Richard S. Sutton: Reinforcement Learning: Past, Present and Future?:
+> Just as reinforcement learning present took a step away from the ultimate goal of reward to
+> focus on value functions, so reinforcement learning future may take a further step
+> away to focus on the structures that enable value function estimation [...] In psy-
+> chology, the idea of a developing mind actively creating its representations of the
+> world is called constructivism. My prediction is that for the next tens of years rein-
+> forcement learning will be focused on constructivism
 
-Marco Wiering, Martijn van Otterlo: <br/>
-Two dominant books:
-(1) From an artificial intelligence perspective: Introduction to reinforcement learning by Rich Sutton and Andy Barto from 1998, and
-(2) From the standpoint of operations research: Neuro-dynamic programming by Dimitri Bertsekas and John Tsitsiklis in 1996.
+Marco Wiering, Martijn van Otterlo: 
+> Two dominant books:
+> (1) From an artificial intelligence perspective: Introduction to reinforcement learning by Rich Sutton and Andy Barto from 1998, and
+> (2) From the standpoint of operations research: Neuro-dynamic programming by Dimitri Bertsekas and John Tsitsiklis in 1996.
 
 ## Misc, anonymous, untracked, unknown sources
 RL is formalized as MDP, but in which agents only knows about the sets of possible states and actions.
