@@ -3,6 +3,7 @@
 ## Paper
 * [2017: Henderson: Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
 * [2017: Deep Reinforcement Learning: An Overview](https://arxiv.org/abs/1701.07274)
+* [2017: Polydoros: Survey of Model-Based Reinforcement Learning: Applications on Robotics](https://link.springer.com/article/10.1007/s10846-017-0468-y)
 * [2016: Duan: Benchmarking Deep Reinforcement Learning for Continuous Control](https://arxiv.org/abs/1604.06778)
 * [2016: Benchmarking for Bayesian Reinforcement Learning](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157088)
 * [2015: A Comprehensive Survey on Safe Reinforcement Learning](http://jmlr.org/papers/v16/garcia15a.html)
