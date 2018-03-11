@@ -1,6 +1,6 @@
 # method
 
-* policy-based (policy-search)
+* policy-based (policy-search, policy iteration)
   * gradient-free
     * cross-entropy method
   * gradient-based
@@ -12,7 +12,7 @@
     * GPS: Guided Policy Search, 2013
     * PEGASUS, 2000
 
-* value-based
+* value-based (value iteration)
   * Deep Q-network
 
 * model-free
