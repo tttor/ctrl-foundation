@@ -14,6 +14,7 @@
 
 * value-based (value iteration)
   * Deep Q-network
+  * UVFA_2015
 
 * model-free
 
