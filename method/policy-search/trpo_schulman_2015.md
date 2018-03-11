@@ -16,7 +16,13 @@ https://arxiv.org/abs/1502.05477
   there will be some states s for which the expected advantage is negative,
     * introduce a local approximation to the policy performance $\nu$, Equ.3
   * conservative policy iteration, for which they could provide explicit lower bounds on the improvement of $\nu$.
-
+* Monotonic Improvement Guarantee for General Stochastic Policies
+  * the policy improvement bound in Equation (6) can be extended to general stochastic policies, rather than 
+    just mixture polices, by replacing $\alpha$ with a distance measure between $\pi$ and $\tilde{\pi}$
+    (e.g. total variation distance), and changing the constant $\epsilon$ appropriately
+  * Trust region policy optimization is an approximation to Algorithm 1, which 
+    uses a constraint on the KL divergence rather than a penalty to robustly allow large updates.
+    
 ## Result
 * suggest:
   * The use of recurrent policies with hidden state, could further make it possible to roll state estimation and 
