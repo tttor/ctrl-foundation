@@ -22,7 +22,7 @@
     PILCO_2015, TEXPLORE_2013,...
   * planning
 
-* model-based and model-free
+* model-based and model-free (here, we call this `dyna`)
   * PILQR_2017, VPN_2017
   * Dyna2_2008, Dyna_1990
 
