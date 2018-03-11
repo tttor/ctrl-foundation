@@ -29,6 +29,7 @@
 * hybrids: methods that combine 2 (or more) methods
   * Temporal Difference (TD): MonteCarlo and DynamicsProgramming
   * Actor-critic: value-based and policy-based
+    * Async Advantage Actor-Critic (A3C)
 
 ## misc
 * on-policy _vs_ off-policy,
