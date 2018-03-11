@@ -11,6 +11,7 @@
 * [2013: Deisenroth: A Survey on Policy Search for Robotics](https://spiral.imperial.ac.uk/bitstream/10044/1/12051/7/fnt_corrected_2014-8-22.pdf)
 * [2009: Transfer Learning for Reinforcement Learning Domains: A Survey](http://www.jmlr.org/papers/v10/taylor09a.html)
 * 2008: Ross: Online planning algorithms for POMDPs
+* [2003: Barto: Recent Advances in Hierarchical Reinforcement Learning](https://link.springer.com/article/10.1023/A:1022140919877)
 * 1996: Kaebling: Reinforcement Learning: A Survey
 
 ## Web
