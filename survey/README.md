@@ -2,7 +2,6 @@
 
 ## Paper
 * [2017: Henderson: Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
-* [2017: Deep Reinforcement Learning: An Overview](https://arxiv.org/abs/1701.07274)
 * [2017: Polydoros: Survey of Model-Based Reinforcement Learning: Applications on Robotics](https://link.springer.com/article/10.1007/s10846-017-0468-y)
 * [2017: Arulkumaran: Deep Reinforcement Learning: A Brief Survey](http://ieeexplore.ieee.org/document/8103164/)
 * [2016: Duan: Benchmarking Deep Reinforcement Learning for Continuous Control](https://arxiv.org/abs/1604.06778)
