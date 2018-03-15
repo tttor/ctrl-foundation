@@ -30,7 +30,7 @@ Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA,
 ## setup
 * A motivating example: a bit-flipping environment
 * tasks: pushing, sliding, and pick-and-place (with MuJoCo)
-* use: DQN, DDPG, UVFA, 
+* use: DQN, DDPG, UVFA, Adam optimizer
 * policies are represented as Multi-Layer Perceptrons (MLPs) with Rectified Linear Unit (ReLU)
 * Goals is with some fixed tolerance
 * the initial position of the gripper is fixed, gripper orientation is fixed
