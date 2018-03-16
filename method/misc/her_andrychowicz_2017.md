@@ -34,10 +34,14 @@ Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA,
 * policies are represented as Multi-Layer Perceptrons (MLPs) with Rectified Linear Unit (ReLU)
 * Goals is with some fixed tolerance
 * the initial position of the gripper is fixed, gripper orientation is fixed
+* The **box position** was predicted using a separately trained CNN using **raw** fetch head camera images
 
 ## result
 * showed that the policy for the pick-and-place task performs well on the physical robot without any finetuning
 * training an agent to perform multiple tasks can be easier than training it to perform only one task
+* HER learns faster if training episodes contain multiple goals
+* Initially, it was not robust to small errors in the box position estimation because 
+  it was trained on perfect state coming from the simulation. After retraining the policy with gaussian noise (std=1cm) added to observations
 
 ## misc
 * HER may be seen as a form of implicit curriculum as the goals used for replay naturally shift from 
@@ -50,4 +54,5 @@ Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA,
 * again, essentially, this learn the dynamic model
 * for pickandplace task, it is said "....the target position is in the air and..."
   * well, this is not real pickandplace, it should place the obj back on tabletop :)
+* several experiment strategy: hard to understand
   
