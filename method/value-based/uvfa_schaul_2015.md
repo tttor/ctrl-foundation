@@ -20,5 +20,12 @@
   * to generate temporally abstract options
   * a universal option model
 
+## misc
+* **General** value functions $V_g(s)$ (Sutton et al., 2011) represent the utility of any state s in 
+  achieving a **given goal g** (e.g. a waypoint), represented by a **pseudo-reward** function that 
+  takes the place of the real rewards in the problem.
+* a **collection of value functions** can be used as a **predictive representation of state**, where 
+  the predicted values themselves are used as a feature vector (Sutton & Tanner, 2005; Schaul & Ring, 2013).
+
 ## comment
 * key is supervised learning (+ feature learning)
