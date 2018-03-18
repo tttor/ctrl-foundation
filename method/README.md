@@ -33,7 +33,7 @@
     * Async Advantage Actor-Critic (A3C)
 
 ## misc
-* on-policy _vs_ off-policy,
+* on-policy _vs_ off-policy, episodic _vs_ continuing tasks, average _vs_ cumulative discounted rewards,
 * model free
   * pros
     * have the advantage of handling arbitrary dynamical systems with minimal bias
