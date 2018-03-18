@@ -1,5 +1,5 @@
 # Applications
-Here, we focus on tabletop object manipulation, 
+Here, we focus on **tabletop object manipulation**, 
 including prehensile (grasping, pickandplace) and non-prehensile (pushing).
 See also [method](https://github.com/tttor/rl-foundation/tree/master/method).
 
