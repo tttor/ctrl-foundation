@@ -14,12 +14,13 @@ Evolutionary RL,
 ...
 
 ## (Rough) dimensions of challenges (problems):
-* onlinePlanning _to_ (onlinePlanning + modelLearning + modelFreeRL)
-* modelFreeRL _to_ (onlinePlanning + modelLearning + modelFreeRL)
-* long _to_ short planning time (hard realtime constrainst)
-* discrete (small) _to_ continuous (large numbers of) states, actions, observations
+* onlinePlanning, modelFreeRL _to_ (onlinePlanning + modelLearning + modelFreeRL)
 * MDP (fully observable states) _to_ POMDP (partially observable states) model/formulations
+* discrete (small) _to_ continuous (large numbers of) states, actions, observations
 * stationary (fixed) _to_ non-stationary (changing) models
+* short _to_ long planning horizon
+* simulated _to_ real robots/world
+* noObstacle _to_ fullObstacle (clutter) workspace
 * shallow _to_ deep learning
 * without-prior (non-Bayesian) _to_ with-prior (Bayesian)
 * kinematic _to_ dynamic (physics-intensive) environments
@@ -28,12 +29,8 @@ Evolutionary RL,
 * plain _to_ hierarchical (multi-level) structure
 * discrete _to_ continuous time
 * low _to_ high cumulative rewards
-* noObstacle _to_ fullObstacle (clutter) workspace
 * on low _to_ high dof robots
-* short _to_ long planning horizon
-* on simulated _to_ real robots/world
-* episodic _vs_ continuing tasks,
-* average _vs_ cumulative discounted rewards,
+* long _to_ short planning time (hard realtime constrainst)
 
 ## People
 Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
@@ -51,25 +48,3 @@ Marco Wiering, Martijn van Otterlo:
 > Two dominant books:
 > (1) From an artificial intelligence perspective: Introduction to reinforcement learning by Rich Sutton and Andy Barto from 1998, and
 > (2) From the standpoint of operations research: Neuro-dynamic programming by Dimitri Bertsekas and John Tsitsiklis in 1996.
-
-## Misc, anonymous, untracked, unknown sources
-RL is formalized as MDP, but in which agents only knows about the sets of possible states and actions.
-The dynamics, $P(s'|s,a)$, and the reward function, $R(s,a,s')$ are initially unknown; otherwise we have planning problems.
-
-RL is difficult because:
-* the blame attribution problem:
-  the responsible action may have occurred a long time before the reward was received
-* even if the dynamics of the world does not change,
-  the effect of an action of the agent depends on what the agent will do in the future.
-* the explore-exploit dilemma
-
-RL: learning through interaction with the environment with limited prior knowledge and guidance
-
-An RL algorithm has 3 main components, namely:
-1)~an estimator for the environments' structure,
-2)~a planning algorithm to compute the optimal policy wrt the estimated environments, and
-3)~a strategy to trade off between exploitation and exploration.
-
-One can view POMDP as an MDP over a belief states.
-Sondik (1978): there always exists a deteministic policy that maximizes $V^\phi$ for any belief states.
-A deterministic policy assigns a probability of 1 to a specific action in every belief state.
