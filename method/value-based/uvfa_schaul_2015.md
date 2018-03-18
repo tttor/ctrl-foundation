@@ -3,6 +3,7 @@
 
 ## observation
 * Value functions are a core component of rein- forcement learning systems
+* common structure between state and goal spaces
 
 ## idea: UVFA
 * to construct a single function approximator $V(s;\theta)$ that
@@ -12,6 +13,16 @@
 * efficient technique for **supervised learning** of UVFAs,
   * by factoring observed values into separate embedding vectors for state and goal, and
   * then learning a mapping from s and g to these factored embedding vectors.
+* decomposes the regression into two stages. 
+  * view the data as a sparse table of values that contains one row for each observed state s and 
+    one column for each ob- served goal g, and find a low-rank factorization of the table into 
+    state embeddings φ(s) and goal embeddings ψ(g). 
+  * learn non-linear mappings from states s to state embeddings φ(s), and from goals g to goal embeddings ψ(g), 
+    using standard regression techniques (e.g. gradient descent on a neural network).
+
+## setup
+* Pacman game
+* a non-linear function approximator such as a multi-layer perceptron (MLP).
 
 ## result
 * suggest: UVFAs can be used
