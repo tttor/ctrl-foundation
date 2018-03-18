@@ -11,7 +11,7 @@ https://xbpeng.github.io/projects/SimToReal/index.html
   * high sample complexities, very data inefficient
   * safety concerns in real-world deployment
 
-## idea: dynamics randomization (Dynamics Randomization with HER and RDPG)
+## idea: dynamics randomization (with HER and RDPG)
 * train a policy using an approximate dynamics model $\hat{p} \approx  p^{\star}$ that is easier to sample from.
   * $\hat{p}$ assumes the form of a physics simulation
 * train a policy that can perform a task under a variety of different dynamics models
