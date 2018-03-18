@@ -35,6 +35,7 @@ Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA,
 * Goals is with some fixed tolerance
 * the initial position of the gripper is fixed, gripper orientation is fixed
 * The **box position** was predicted using a separately trained CNN using **raw** fetch head camera images
+* evaluation metric: success rate (average, highest)
 
 ## result
 * showed that the policy for the pick-and-place task performs well on the physical robot without any finetuning
