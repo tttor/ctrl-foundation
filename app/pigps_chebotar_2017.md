@@ -3,14 +3,18 @@
 
 ## problem
 
-## idea
+## idea: path integral guided policy search
 * extend GPS in the following ways: 
   * the use of a model-free local optimizer based on path integral stochastic optimal control, which 
     enables us to learn local policies for tasks with highly discontinuous contact dynamics; and 
   * enable GPS to train on a new set of task instances in every iteration by using on-policy sampling: 
     this increases the diversity of the instances that the policy is trained on, and 
     is crucial for achieving good generalization. 
-    
+*  main contributions 
+  * a KL-constrained PI2 method for local pol icy optimization, 
+  * a global policy sampling scheme for guided policy search that allows new task instances to be sampled at each iteration, 
+    so as to increase the diversity of the data for training the global policy and thereby improve generalization.
+
 ## setup
 * door opening task and a pick-and-place task
 
