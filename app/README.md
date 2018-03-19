@@ -5,6 +5,7 @@ See also [method](https://github.com/tttor/rl-foundation/tree/master/method).
 
 ## Pickandplace
 * [2018: Hindsight Experience Replay](https://arxiv.org/abs/1707.01495)
+* 2017: Path Integral Guided Policy Search
 
 ## Grasping
 ?
