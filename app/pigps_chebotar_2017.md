@@ -39,5 +39,5 @@
 * for neural network policy, how do we use RL?
   * is it correct to say: that NN-policy is essentially supervised learning? where
     the training data are from demonstration and initial+final images from end-to-end runs
-* it is interesting to see that NN as func approximator is very powerful in that it can maps images to joint torques
+* it is interesting to see that NN as func approximator is very powerful in that it can map images to joint torques
 
