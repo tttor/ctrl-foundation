@@ -32,22 +32,25 @@
   * Actor-critic: value-based and policy-based
     * Async Advantage Actor-Critic (A3C)
 
+## model-free
+* pros
+  * have the advantage of handling arbitrary dynamical systems with minimal bias
+* cons
+  * less sample-efficient, high sample complexity
+  * require policies with carefully designed, low-dimensional parameterizations
+
+## model-based
+* pros
+  * sample-efficient
+  * model learning transfers across tasks and environment configurations (learning physics)
+* cons
+  * suffer from significant bias, since complex unknown dynamics cannot
+    always be modeled accurately enough
+  * 2 sources of approximation error: learn model, estimate a value function
+    using the learned model
+    
 ## misc
-* on-policy _vs_ off-policy, episodic _vs_ continuing tasks, average _vs_ cumulative discounted rewards,
-* model free
-  * pros
-    * have the advantage of handling arbitrary dynamical systems with minimal bias
-  * cons
-    * less sample-efficient, high sample complexity
-* model-based
-  * pros
-    * sample-efficient
-    * model learning transfers across tasks and environment configurations (learning physics)
-  * cons
-    * suffer from significant bias, since complex unknown dynamics cannot
-      always be modeled accurately enough
-    * 2 sources of approximation error: learn model, estimate a value function
-      using the learned model
+* on-policy _vs_ off-policy, episodic _vs_ continuing tasks, average _vs_ cumulative discounted rewards, 
 * policy representation
   * time-varying linear-Gaussian (TVLG)
   * deep neural networks, rbf networks
