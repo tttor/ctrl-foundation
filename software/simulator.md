@@ -1,16 +1,7 @@
 # simulators
 
-## Physics engines
-* MuJoCo
-* Bullet 
-* ODE
-* DART
-* Box2d, 
-* Simbody
-* PhysX
-* Havok
-
 ## Full-blown simulators:
+* https://github.com/openai/gym
 * [TORCS](http://torcs.sourceforge.net/), [gym_torcs](https://github.com/ugo-nama-kun/gym_torcs)
 * [ALE](https://github.com/mgbellemare/Arcade-Learning-Environment): 
   tasks with high-dimensional state inputs and discrete actions
@@ -21,6 +12,11 @@
 * [ELF](https://github.com/facebookresearch/ELF)
 * [Gazebo](http://gazebosim.org/)
 * [V-REP](http://www.coppeliarobotics.com/)
+
+## Physics engines
+* MuJoCo
+* Box2d, 
+* Others: Bullet, ODE, DART, Simbody, PhysX, Havok
 
 ## Survey
 @article{Erez2015,
