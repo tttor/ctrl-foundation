@@ -1,10 +1,6 @@
 # RL software
 
-* OpenAI: https://openai.com/
-  * https://github.com/openai/baselines
-  * https://github.com/openai/gym
-  * https://github.com/openai/universe
-  * https://github.com/openai/roboschool
+* https://github.com/openai/baselines
 * rllab: https://github.com/rll/rllab
 * PyBrain: http://pybrain.org/
 * AI-Toolbox: https://github.com/Svalorzen/AI-Toolbox
