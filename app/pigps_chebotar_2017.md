@@ -14,7 +14,18 @@
   * a KL-constrained PI2 method for local policy optimization, 
   * a global policy sampling scheme for guided policy search that allows new task instances to be sampled at each iteration, 
     so as to increase the diversity of the data for training the global policy and thereby improve generalization.
-
+* train the network (CNN layers) in two stages
+  * pre-trained with a proxy pose detection objective. 
+    * collect camera images while manually moving the object of interest into vari- ous poses, and 
+      automatically label each image by using a geometry-based pose estimator based on the point pair feature (PPF) algorithm 
+    * collect images of the robot learning the task with PI2 (without vision), and 
+      label these images with the pose of the robot end-effector obtained from forward kinematics. 
+      Each pose is represented as a 9- DoF vector, containing the positions of three points rigidly attached to 
+      the object (or robot), represented in the world frame. 
+    * trained using SGD with momentum to predict the end- effector and object poses, using a standard Euclidean loss.    
+  * trained using path integral guided policy search to produce the joint torques, while 
+    the weights in the convolutional layers are frozen. 
+        
 ## setup
 * tasks:
   * door opening task and 
