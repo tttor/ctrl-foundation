@@ -11,6 +11,7 @@
     * PILCO
     * GPS: Guided Policy Search, 2013
     * PEGASUS, 2000
+    * DMP: Dynamic Motion Primitives
 
 * value-based (value iteration)
   * Deep Q-network
