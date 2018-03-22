@@ -18,6 +18,7 @@
   * UVFA_2015
 
 * model-free
+  * TODO
 
 * model-based
   * sample-efficient:
@@ -30,7 +31,7 @@
 
 * hybrids: methods that combine 2 (or more) methods
   * Temporal Difference (TD): MonteCarlo and DynamicsProgramming
-  * Actor-critic: value-based and policy-based
+* Actor-critic: value-based and policy-based
     * Async Advantage Actor-Critic (A3C)
 
 ## model-free
@@ -52,6 +53,10 @@
     
 ## misc
 * on-policy _vs_ off-policy, episodic _vs_ continuing tasks, average _vs_ cumulative discounted rewards, 
+* hybrids: methods that combine 2 (or more) methods
+  * Temporal Difference (TD): MonteCarlo and DynamicsProgramming
+  * Actor-critic: value-based and policy-based
+  * Dyna: model-based and model-free
 * policy representation
   * time-varying linear-Gaussian (TVLG)
   * deep neural networks, rbf networks
