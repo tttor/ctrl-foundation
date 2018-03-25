@@ -2,13 +2,13 @@
 1st Conference on Robot Learning (CoRL 2017), Mountain View, United States;
 https://arxiv.org/abs/1610.04286
 
-## problem
-* Applying end-to-end learning to solve complex, interactive, pixel-driven control tasks (pixel-to-action scenarios) on a robot
-* Deep Reinforcement Learning algorithms are too slow to achieve performance on a real robot, but
-  their potential has been demonstrated in simulated environments
+## problem* 
+* Deep RL are 
+  * too slow to achieve performance on a real robot, 
+  * but their potential has been demonstrated in simulated environments
 
 ## observation
-* to fulfill the potential of deep reinforcement learning applied in real-world robotic domains,
+* to fulfill the potential of deep RL applied in real-world robotic domains,
   * learning needs to become many times more efficient.
   * One route to achieving this is via transfer learning from simulation-trained agents.
 *  to use transfer learning methods to bridge the reality gap that separates simulation from real world domains.
@@ -25,21 +25,22 @@ https://arxiv.org/abs/1610.04286
   * each column is trained to solve a particular Markov Decision Process (MDP):
   * the k-th column thus defines a policy $\pi(k)(a | s)$ taking as input a state s given
     by the environment, and generating probabilities over actions
- (s).
 
 ## setup
-* tasks are learned using end-to-end deep RL, with RGB inputs and joint velocity output actions.
-* compare A3C to DQN
-* Jaco arm, the agent policy controls 9 degrees(6 DOF arm + 3 actuated fingers) of freedom
-  using velocity commands
+* task: 
+  * reaching to a visual target
+  * are learned using end-to-end deep RL, with 
+    * input: RGB 
+    * output: joint velocity actions.
+* robot: Jaco arm, 9 degrees(6 DOF arm + 3 actuated fingers) of freedom
 * Each joint policy i has three actions
   * a fixed positive velocity,
   * a fixed negative velocity, and
   * a zero velocity
+* use both feedforward and recurrent neural networks;
+  Both have convolutional input layers followed by either a fully connected layer or 
+  an LSTM (Long Short Term Memory networks)
 * MuJoCo physics simulator
-* both feedforward and recurrent neural networks;
-  Both have convolutional input layers followed by either a fully connected layer or an LSTM (Long Short Term Memory networks)
-* task: reaching to a visual target
 
 ## result
 * rather than relying on model-based trajectory optimisation, the task learning is
@@ -49,7 +50,7 @@ https://arxiv.org/abs/1610.04286
 * A3C has been shown to converge faster than DQN
 
 ## comment
+* on model-free
 * this is full of neural-networks
 * no obstacle in reaching task
-* too big to implement by ourselves;
-  first, needs to have our own working code on deeplearning and deeprl
+* big implementation; needs to have our own working code on deeplearning and deeprl
