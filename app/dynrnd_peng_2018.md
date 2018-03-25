@@ -19,15 +19,13 @@ https://xbpeng.github.io/projects/SimToReal/index.html
 *  to maximize the expected return across a distribution of dynamics models
 
 ## setup
+* task: a puck pushing task using a 7-DOF Fetch Robotics arm
+* action: target joint angles for a position controller, for each DOF, size= 7
+* simulators: MuJoCo physics engine (timestep of 0.002s)
 * method:
   * Hindsight Experience Relay (HER)
   * Recurrent Deterministic Policy Gradient (RDPG)
-* task:
-  * a puck pushing task using a 7-DOF Fetch Robotics arm
-* action:
-  * target joint angles for a position controller, for each DOF
-  * size= 7
-* randomize include:
+* randomization includes:
   * Mass of each link in the robot’s body
   * Damping of each joint
   * Mass, friction, and damping of the puck
@@ -35,7 +33,6 @@ https://xbpeng.github.io/projects/SimToReal/index.html
   * Gains for the position controller
   * Timestep between actions
   * Observation noise
-* simulations: MuJoCo physics engine (timestep of 0.002s)
 
 ## result
 * the use of dynamics randomization
