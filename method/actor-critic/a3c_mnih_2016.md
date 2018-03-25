@@ -53,7 +53,13 @@
       discouraging premature convergence to suboptimal deterministic policies
 
 ## setup
-* task: Atari domain, exploring 3D mazes purely from visual inputs
+* task: 
+  * Atari domain (via ALE), 
+  * TORCS 3D car racing simulator
+  * Continuous Action Control Using the MuJoCo: 
+    pole swing-up, quadruped locomotion, planar biped walking, balancing, 2D target reaching, and 3D manipulation
+  * exploring 3D mazes purely from visual inputs via Deepmind's Labyrinth
+  
 * 3 different optimization algorithms in our asynchronous framework
   * SGD with momentum, 
   * RMSProp (Tieleman & Hinton, 2012) without shared statistics, and 
@@ -65,7 +71,15 @@
   half the time on **a single multi-core CPU** instead of a GPU.
 * using parallel actorlearners to update a shared model had
   a stabilizing effect on the learning process of the three value-based methods
-
+* asynchronous one-step Q-learning and Sarsa algorithms exhibit superlinear speedups that 
+  cannot be explained by purely computational gains. 
+  * one-step methods (one-step Q and one-step Sarsa) often require less data to 
+    achieve a particular score when using more parallel actor-learners;
+    due to positive effect of multiple threads to reduce the bias in one-step methods. 
+* our proposed framework 
+  * scales well with the number of parallel workers, making efficient use of resources.
+  * stable and do not collapse or diverge once they are learning
+  
 ## misc
 * unstability of deepNN on RL caused by
   * the sequence of observed data encountered by an online RL agent is non-stationary, and 
@@ -85,3 +99,8 @@
       the relevant preceding states and actions.
   * One way of propagating rewards faster is by using **n-step returns**
     * a single reward r directly affecting the values of n preceding state action pairs.
+    
+ ## comment
+ * promising way to use multi-threading
+ * now struggle from implementation!
+ 
