@@ -10,3 +10,6 @@
 * https://ai.intel.com/demystifying-deep-reinforcement-learning/
 * https://sites.google.com/view/deeprl-symposium-nips2017
 * https://sites.google.com/site/deeprlnips2016/
+
+## forum
+* https://discuss.openai.com/
