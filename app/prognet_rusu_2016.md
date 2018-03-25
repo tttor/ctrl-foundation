@@ -2,7 +2,7 @@
 1st Conference on Robot Learning (CoRL 2017), Mountain View, United States;
 https://arxiv.org/abs/1610.04286
 
-## problem* 
+## problem
 * Deep RL are 
   * too slow to achieve performance on a real robot, 
   * but their potential has been demonstrated in simulated environments
