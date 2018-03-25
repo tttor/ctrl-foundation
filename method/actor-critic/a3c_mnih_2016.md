@@ -29,9 +29,35 @@
   * obtain a reduction in training time that is roughly linear in the number of parallel actor-learners
   * able to use on-policy reinforcement learning methods such as Sarsa and actor-critic to 
     train neural networks in a stable way (since we no longer rely on experience replay for stabilizing learning)
+* 4 multi-threaded asynchronous variants
+  * Asynchronous one-step Q-learning
+    * Each thread interacts with its own copy of the environment and 
+      at each step computes a gradient of the Q-learning loss.
+    * accumulate gradients over multiple timesteps before they are applied
+      * reduces the chances of multiple actor learners overwriting each other’s updates. 
+      * provides some ability to trade off computational efficiency for data efficiency
+    * giving each thread a different exploration policy helps improve robustness  
+  * Asynchronous one-step Sarsa
+    * same as asynchronous one-step Q-learning except that it uses a different target value for Q(s, a).
+  * Asynchronous n-step Q-learning
+    * operates in the forward view by explicitly computing n-step returns
+  * Asynchronous advantage actor-critic (A3C)
+    * maintains a policy and an estimate of the value function
+    * operates in the forward view and uses the same mix of n-step returns to update both the policy and the value-function.
+    * while the parameters θ of the policy and θv of the value function are shown as being separate for generality, 
+      always share some of the parameters in practice    
+    * typically use a convolutional neural network that has (with all non-output layers shared)
+      * one softmax output for the policy π(at|st; θ) and 
+      * one linear output for the value function V (st; θv)
+    * adding the entropy of the policy π to the objective function to improve exploration by 
+      discouraging premature convergence to suboptimal deterministic policies
 
 ## setup
 * task: Atari domain, exploring 3D mazes purely from visual inputs
+* 3 different optimization algorithms in our asynchronous framework
+  * SGD with momentum, 
+  * RMSProp (Tieleman & Hinton, 2012) without shared statistics, and 
+  * RMSProp with shared statistics.
 
 ## result
 * The best performing method, **an asynchronous variant of actor-critic**, surpasses
