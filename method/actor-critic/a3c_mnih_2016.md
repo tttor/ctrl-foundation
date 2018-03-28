@@ -105,5 +105,4 @@ Tim Harley, David Silver, Koray Kavukcuoglu
     
  ## comment
  * promising way to use multi-threading
- * now struggle from implementation!
  
