@@ -20,8 +20,7 @@
 * Others: Bullet, ODE, DART, Simbody, PhysX, Havok
 
 ## Survey
-* Simulation Tools for Model-Based Robotics : Comparison of Bullet , Havok , MuJoCo , ODE and PhysX;
-  Erez, Tom and Tassa, Yuval and Todorov, Emanuel; 2015
+* Simulation Tools for Model-Based Robotics : Comparison of Bullet , Havok , MuJoCo , ODE and PhysX (Erez, 2015)
   * MuJoCo wins the robotics-related tests.
   * MuJoCo was both the fastest and the most accurate on constrained sys tems relevant to robotics, and 
     was capable of stable grasping at a much larger time step.
@@ -29,7 +28,5 @@
     however it remained the most accurate overall.
   * In grasping, Mujoco produces qualitatively accurate simulation (in terms of not dropping the object) with 
     large time steps, i.e 16 ms
-* Tools for simulating humanoid robot dynamics: A survey based on user feedback;
-  Ivaldi, Serena and Peters, Jan and Padois, Vincent and Nori, Francesco; 2015
-* Evaluation of Physics Engines for Robotic Simulations with a Special Focus on the Dynamics of Walking Robots;
-  Roennau, A and Sutter, F and Heppner, G and Oberlaender, J and Dillmann, R; 2013
+* Tools for simulating humanoid robot dynamics: A survey based on user feedback (Ivaldi, 2015)
+* Evaluation of Physics Engines for Robotic Simulations with a Special Focus on the Dynamics of Walking Robots (Roennau, 2013)
