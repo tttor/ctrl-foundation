@@ -10,7 +10,7 @@
 * [2015: Ghavamzadeh: Bayesian Reinforcement Learning: A Survey](https://arxiv.org/abs/1609.04436)
 * 2013: Kober: Survey on RL in robotics
 * [2013: Deisenroth: A Survey on Policy Search for Robotics](https://spiral.imperial.ac.uk/bitstream/10044/1/12051/7/fnt_corrected_2014-8-22.pdf)
-* [2012: A Survey of Actor-Critic Reinforcement Learning: Standard and Natural Policy Gradients](http://ieeexplore.ieee.org/abstract/document/6392457/)
+* [2012: Grondman: A Survey of Actor-Critic Reinforcement Learning: Standard and Natural Policy Gradients](http://ieeexplore.ieee.org/abstract/document/6392457/)
 * [2009: Taylor: Transfer Learning for Reinforcement Learning Domains: A Survey](http://www.jmlr.org/papers/v10/taylor09a.html)
 * 2008: Ross: Online planning algorithms for POMDPs
 * [2003: Barto: Recent Advances in Hierarchical Reinforcement Learning](https://link.springer.com/article/10.1023/A:1022140919877)
