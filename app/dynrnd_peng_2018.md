@@ -5,7 +5,7 @@ https://xbpeng.github.io/projects/SimToReal/index.html
 
 ## problem
 * reality gap:
-  strategies that are successful in simulation may not
+  strategies that are successful in simulation may **not**
   transfer to their real world counterparts
 * most DeepRL algorithms
   * high sample complexities, very data inefficient
@@ -16,7 +16,7 @@ https://xbpeng.github.io/projects/SimToReal/index.html
   * $\hat{p}$ assumes the form of a physics simulation
 * train a policy that can perform a task under a variety of different dynamics models
 * introduce a set of dynamics parameters $\mu$ that parameterizes the dynamics of the simulation $\hat{p}$
-*  to maximize the expected return across a distribution of dynamics models
+* maximize the expected return across a distribution of dynamics models
 
 ## setup
 * task: a puck pushing task using a 7-DOF Fetch Robotics arm
