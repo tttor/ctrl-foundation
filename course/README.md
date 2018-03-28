@@ -1,6 +1,7 @@
 # courses
 
 * [UCL: David_Silver, 2015](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html)
+* [UCL: Hado van Hasselt, 2016](https://hadovanhasselt.com/2016/01/12/ucl-course/)
 * [Mila: Reinforcement Learning Summer School, 2017](http://videolectures.net/deeplearning2017_montreal/)
 * [Deep RL Bootcamp Berkeley, 2017](https://sites.google.com/view/deep-rl-bootcamp)
 * [John Schulman, MLSS, 2016](https://www.youtube.com/watch?v=aUrX-rP_ss4)
