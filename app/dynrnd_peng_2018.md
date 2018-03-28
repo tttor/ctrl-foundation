@@ -33,6 +33,9 @@ https://xbpeng.github.io/projects/SimToReal/index.html
   * Gains for the position controller
   * Timestep between actions
   * Observation noise
+* eval metric: success rate;
+  compared on the simulated and real robot for the pushing task;
+  Policies are trained using only data from simulation.
 
 ## result
 * the use of dynamics randomization
