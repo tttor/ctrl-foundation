@@ -11,8 +11,9 @@
   * https://github.com/dennybritz/reinforcement-learning/tree/master/PolicyGradient/a3c
 * [Natural Actor-Critic (Peters, 2008)](https://www.sciencedirect.com/science/article/pii/S0925231208000532)
 
-## application
-* 2016: Progressive Nets, prognet_rusu_2016.md
+## actor-critic based
+* 2016: Progressive Nets (model-free)
+* 2015: Deep DPG (model-free)
 
 ## foundation
 ### book
