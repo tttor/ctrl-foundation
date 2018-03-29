@@ -28,11 +28,10 @@ https://arxiv.org/abs/1610.04286
     by the environment, and generating probabilities over actions
 
 ## setup
-* task: 
-  * reaching to a visual target
-  * are learned using end-to-end deep RL, with 
-    * input: RGB 
-    * output: joint velocity actions.
+* task: reaching to a visual target
+* end-to-end deep RL, with 
+  * input: RGB 
+  * output: joint velocity actions.
 * robot: Jaco arm, 9 degrees(6 DOF arm + 3 actuated fingers) of freedom
 * Each joint policy has three actions
   * a fixed positive velocity,
@@ -54,5 +53,6 @@ https://arxiv.org/abs/1610.04286
 ## comment
 * on model-free
 * this is full of neural-networks
-* no obstacle in reaching task
-* big implementation; needs to have our own working code on deeplearning and deeprl
+* no obstacle in reaching task, 
+  if there is no uncertainty in reaching, then deterministic motion planners should be more appropriate
+* huge implementation; working code on deeplearning and deeprl
