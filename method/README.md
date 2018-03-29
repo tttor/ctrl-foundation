@@ -25,14 +25,13 @@
     PILCO_2015, TEXPLORE_2013,...
   * planning
 
-* model-based and model-free (here, we call this `dyna`)
-  * PILQR_2017, VPN_2017
-  * Dyna2_2008, Dyna_1990
-
 * hybrids: methods that combine 2 (or more) methods
   * Temporal Difference (TD): MonteCarlo and DynamicsProgramming
-* Actor-critic: value-based and policy-based
+  * Actor-critic: value-based and policy-based
     * Async Advantage Actor-Critic (A3C)
+  * model-based and model-free (here, we call this `dyna`)
+   * PILQR_2017, VPN_2017
+   * Dyna2_2008, Dyna_1990
 
 ## model-free
 * pros
@@ -53,6 +52,7 @@
     
 ## misc
 * on-policy _vs_ off-policy, episodic _vs_ continuing tasks, average _vs_ cumulative discounted rewards, 
+* actor-only, critic-only, and actor-critic methods
 * hybrids: methods that combine 2 (or more) methods
   * Temporal Difference (TD): MonteCarlo and DynamicsProgramming
   * Actor-critic: value-based and policy-based
