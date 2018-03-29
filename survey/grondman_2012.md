@@ -6,6 +6,53 @@ IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART C: APPLICATIONS AND RE
 * focus on methods that can work in an **online setting** and use **function approximation** in order to 
   deal with **continuous** state and action spaces.
   
+## intro
+* actor-only
+  * typically work with a parameterized family of policies overwhich optimization procedures can be used directly. 
+  * benefit of a parameterized policy: 
+    * a spectrum of continuous actions can be generated, 
+    * **but** the optimization methods used (typically policy gradient methods) suffer from 
+      high variance in the estimates of the gradient, leading to slow learning [1]–[5].
+* critic-only
+  * use temporal difference (TD) learning have a **lower variance** in the estimates of expected returns [3], [5], [6].
+  * way of deriving a policy: by selecting greedy actions [7]: 
+  * usually discretize the continuous action space, after which 
+    the optimization over the action space becomes a matter of enumeration. 
+* Actor-critic 
+  * the parameterized actor brings the advantage of computing continuous actions without 
+    the need for optimization procedures on a value function, 
+  * the critic supplies the actor with low-variance knowledge of the performance. 
+    * the critic’s estimate of the expected return allows for the actor to update with gradients that 
+      have lower variance, speeding up the learning process.
+    * The lower variance is traded for a larger bias at the start of learning when 
+      the critic’s estimates are far from accurate [5].
+  * usually have good convergence properties, in contrast with critic-only methods [1].
+* focus is put on actor-critic algorithms based on policy gradients, distinction is made between algorithms that use 
+  * a standard (sometimes also called vanilla) gradient and 
+  * the natural gradient
+
+## actor-critic in the context of reinforcement learning
+* critic-only methods
+  * Q-learning, SARSA
+* Actor-Only Methods and the Policy Gradient Policy
+  * the SRV [32] and Williams’ REINFORCE algorithms
+  * A policy gradient method is generally obtained by parameterizing the policy by the parameter vector
+  * main advantage: 
+    * strong convergence property, which is naturally inherited from gradient descent methods
+  * drawback:
+    * the estimated gradient may have a large variance [19], [43]. 
+    * every gradient is calculated without using any knowledge of past estimates [1], [44]
+* Actor-Critic Algorithms Actor-critic
+  * the large variance in the policy gradients of actor-only methods is countered by adding a critic
+  * usually preserve the desirable convergence properties of policy gradient methods, cf critic-only methods
+  * the policy is **not** directly inferred from the value function by using (11),
+    **Instead**, the policy is updated in the policy gradient direction using only a small step size
+  * the critic
+    * to evaluate the current policy prescribed by the actor;
+      evaluation by any policy evaluation method, such as TD or residual gradients [25].
+    * approximates and updates the value function using samples;
+      which is then used to update the actor’s policy parameters in the direction of performance improvement
+      
 ## discussion + outlook
 * rules of thumb should help in selecting: whether a critic-only, actor-only, or actor-critic algorithm
   * type of control policy that should be learned
@@ -38,4 +85,4 @@ IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART C: APPLICATIONS AND RE
   it does not always showsuperior performance compared with other methods.    
 
 ## comment
-* seems not include the deep-net as fn approx
+* seems not include the deep-net as fn approx, but indeed emphasize fn approx
