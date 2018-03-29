@@ -14,5 +14,5 @@ See also [method](https://github.com/tttor/rl-foundation/tree/master/method).
 ?
 
 ## Sim2Real
-* 2018: dynamics randomization, dynrnd_peng_2018.md
-* 2016: Progressive Nets, prognet_rusu_2016.md
+* 2018: dynamics randomization (dynrnd_peng_2018.md)
+* 2016: Progressive Nets (prognet_rusu_2016.md)
