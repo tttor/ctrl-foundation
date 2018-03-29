@@ -11,7 +11,7 @@
 
 ## foundation
 ### book
-?
+* [Survey: 2012: Grondman: A Survey of Actor-Critic Reinforcement Learning: Standard and Natural Policy Gradients](http://ieeexplore.ieee.org/abstract/document/6392457/), see [survey](https://github.com/tttor/rl-foundation/tree/master/survey)
 
 ### talk, lecture, tutorial
 * http://mi.eng.cam.ac.uk/~mg436/LectureSlides/MLSALT7/L5.pdf
