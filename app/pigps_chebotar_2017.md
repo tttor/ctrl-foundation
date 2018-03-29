@@ -36,7 +36,7 @@
 * a camera mounted behind the arm looking over the shoulder
 * ctrl: torque commands to all seven joints
 * eval metric: success rate
-* training is initialized from 5 demonstrations, and 
+* training is initialized from 5 **demonstrations**, and 
 * the convolutional layers are trained using 
   * 2708 images with object poses and 
   * 14070 task execution images with end-effector poses
@@ -49,6 +49,7 @@
 * essentially GPS + PI^2
 * for neural network policy, how do we use RL?
   * is it correct to say: that NN-policy is essentially supervised learning? where
-    the training data are from demonstration and initial+final images from end-to-end runs
+    the training data are in the form of demonstration and initial+final images from end-to-end runs
+* note the use of **demonstration** to initilize training
 * it is interesting to see that NN as func approximator is very powerful in that it can map images to joint torques
 
