@@ -7,6 +7,8 @@
   * https://github.com/openai/baselines/tree/master/baselines/a2c
   * https://github.com/chainer/chainerrl/blob/master/examples/gym/train_a3c_gym.py
   * https://github.com/NVlabs/GA3C  
+  * https://github.com/miyosuda/async_deep_reinforce
+  * https://github.com/dennybritz/reinforcement-learning/tree/master/PolicyGradient/a3c
 * [Natural Actor-Critic (Peters, 2008)](https://www.sciencedirect.com/science/article/pii/S0925231208000532)
 
 ## application
