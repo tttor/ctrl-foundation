@@ -42,3 +42,5 @@
 * Pascal Poupart, 2005
 * Gerald Tesauro
 * Sham M. Kakade, 2003
+* Chris Watkins, 1989: Learning from delayed rewards
+
