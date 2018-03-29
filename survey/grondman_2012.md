@@ -27,10 +27,10 @@ IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART C: APPLICATIONS AND RE
     * The lower variance is traded for a larger bias at the start of learning when 
       the critic’s estimates are far from accurate [5].
   * usually have good convergence properties, in contrast with critic-only methods [1].
-* focus is put on actor-critic algorithms based on policy gradients, distinction is made between algorithms that use 
-  * a standard (sometimes also called vanilla) gradient and 
-  * the natural gradient
-
+* focus is put on actor-critic algorithms based on policy gradients;
+  * gradient type: **standard** (==vanilla) and **natural** gradients
+  * return type: discounted and averaged returns
+  
 ## actor-critic in the context of reinforcement learning
 * critic-only methods
   * Q-learning, SARSA
@@ -58,14 +58,28 @@ IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART C: APPLICATIONS AND RE
     * responsible for generating a control input u,given the current state x. 
     * After a number of policy evaluation steps by the critic, the actor is updated by using information from the critic.
 
-## standard gradient actor-critic algorithms
+## _standard_ gradient actor-critic algorithms
 * fuzzy actor-critic reinforcement learning network (FACRLN),
   * uses only one fuzzy neural network based on radial basis functions for both the actor and the critic.
 * consolidated actor-critic model (CACM)    
   * that there is redundancy in learning separate networks for the actor and critic
   * set up a single neural network, using sigmoid functions instead of fuzzy rules, and 
     use it for both the actor and the critic
-    
+* Standard gradient descent
+  * most useful for cost functions that have a single minimum and 
+    whose gradients are isotropic in magnitude with respect to any direction away from its minimum [73]. 
+  * the performance of methods that use standard gradients relies heavily on the choice of a coordinate system over which
+    the cost function is defined.
+
+## _natural_ gradient actor-critic algorithms
+* natural gradient
+  * incorporates knowledge about the curvature of the space into the gradient. 
+  * points in the “right” direction, by taking into account the Riemannian structure of the parameterized space over which
+    the cost function is defined; cf Standard gradient descent for the new parameters would define 
+    the steepest descent with respect to the norm ...
+  * takes into account the structure of the manifold over which the cost function is defined, 
+    locally characterized by the Riemannian metric tensor.
+
 ## discussion + outlook
 * rules of thumb should help in selecting: whether a critic-only, actor-only, or actor-critic algorithm
   * type of control policy that should be learned
