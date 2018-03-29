@@ -9,6 +9,9 @@
   * https://github.com/NVlabs/GA3C  
 * [Natural Actor-Critic (Peters, 2008)](https://www.sciencedirect.com/science/article/pii/S0925231208000532)
 
+## application
+* 2016: Progressive Nets, prognet_rusu_2016.md
+
 ## foundation
 ### book
 * [Survey: 2012: Grondman: A Survey of Actor-Critic Reinforcement Learning: Standard and Natural Policy Gradients](http://ieeexplore.ieee.org/abstract/document/6392457/), see [survey](https://github.com/tttor/rl-foundation/tree/master/survey)
