@@ -53,4 +53,4 @@ https://xbpeng.github.io/projects/SimToReal/index.html
 ## comments
 * rely on HER and RDPG
 * model-free with generative models (physics engine)
-
+  * by using generative models for model-free, then this is essentially planning
