@@ -30,8 +30,8 @@
   * Actor-critic: value-based and policy-based
     * Async Advantage Actor-Critic (A3C)
   * model-based and model-free (here, we call this `dyna`)
-   * PILQR_2017, VPN_2017
-   * Dyna2_2008, Dyna_1990
+    * PILQR_2017, VPN_2017
+    * Dyna2_2008, Dyna_1990
 
 ## model-free
 * pros
