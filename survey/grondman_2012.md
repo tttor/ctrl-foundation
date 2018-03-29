@@ -52,7 +52,20 @@ IEEE TRANSACTIONS ON SYSTEMS, MAN, AND CYBERNETICS—PART C: APPLICATIONS AND RE
       evaluation by any policy evaluation method, such as TD or residual gradients [25].
     * approximates and updates the value function using samples;
       which is then used to update the actor’s policy parameters in the direction of performance improvement
-      
+    * responsible for processing the rewards it receives, i.e., 
+      evaluating the quality of the current policy by adapting the value function estimate.
+  * the actor
+    * responsible for generating a control input u,given the current state x. 
+    * After a number of policy evaluation steps by the critic, the actor is updated by using information from the critic.
+
+## standard gradient actor-critic algorithms
+* fuzzy actor-critic reinforcement learning network (FACRLN),
+  * uses only one fuzzy neural network based on radial basis functions for both the actor and the critic.
+* consolidated actor-critic model (CACM)    
+  * that there is redundancy in learning separate networks for the actor and critic
+  * set up a single neural network, using sigmoid functions instead of fuzzy rules, and 
+    use it for both the actor and the critic
+    
 ## discussion + outlook
 * rules of thumb should help in selecting: whether a critic-only, actor-only, or actor-critic algorithm
   * type of control policy that should be learned
