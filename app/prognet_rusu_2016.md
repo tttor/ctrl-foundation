@@ -1,4 +1,5 @@
 # Sim-to-Real Robot Learning from Pixels with Progressive Nets
+Andrei A. Rusu, Matej Vecerik, Thomas Rothörl, Nicolas Heess, Razvan Pascanu, Raia Hadsell;
 1st Conference on Robot Learning (CoRL 2017), Mountain View, United States;
 https://arxiv.org/abs/1610.04286
 
@@ -33,13 +34,14 @@ https://arxiv.org/abs/1610.04286
     * input: RGB 
     * output: joint velocity actions.
 * robot: Jaco arm, 9 degrees(6 DOF arm + 3 actuated fingers) of freedom
-* Each joint policy i has three actions
+* Each joint policy has three actions
   * a fixed positive velocity,
   * a fixed negative velocity, and
   * a zero velocity
 * use both feedforward and recurrent neural networks;
   Both have convolutional input layers followed by either a fully connected layer or 
   an LSTM (Long Short Term Memory networks)
+* For training in simulation, we use the Async Advantage Actor-Critic (A3C)
 * MuJoCo physics simulator
 
 ## result
