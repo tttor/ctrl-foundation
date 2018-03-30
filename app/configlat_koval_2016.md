@@ -9,15 +9,17 @@
 ## idea
 * formulate the problem of planar contact manipulation under uncertainty as a POMDP
   in the joint space of robot configurations and poses of the movable object;
-  * state $s = (q, x_o) \in S$ is the configuration of the robot $q \in Q$
-    and the pose of the movable object $x_o \in X_o = SE(3)$
-  * an action $a = (\xi, t) \in a$ is a trajectory $\xi: [0, t ] \mapsto q$ that
-    starts in configuration $\xi(0)$ and ends configuration $\xi(t)$ at time $t$,
-    which means joint-position controller with time contraint~$T$;
-    restrict to actions that are instantiated from one of a finite set of action templates;
-  *  observation $o \in \{0, 1\}^{n_o}$ from its $n_o$ binary contact sensors
-  *  goal is to push the movable object into a hand-relative goal region
-  *  the stochastic transition model in terms of a deterministic quasistatic physics model
+  * state $s = (q, x_o) \in S$ is 
+    * the configuration of the robot $q \in Q$
+    * the pose of the movable object $x_o \in X_o = SE(3)$
+  * an action $a = (\xi, t) \in a$ is 
+    * a trajectory $\xi: [0, t ] \mapsto q$ that starts in configuration $\xi(0)$ and 
+      ends configuration $\xi(t)$ at time $t$,
+      which means joint-position controller with time contraint~$T$;
+      restrict to actions that are instantiated from one of a finite set of action templates;
+  * observation $o \in \{0, 1\}^{n_o}$ from its $n_o$ binary contact sensors
+  * goal is to push the movable object into a hand-relative goal region
+  * the stochastic transition model in terms of a deterministic quasistatic physics model
     by introducing noise into its parameters
   * an observation model is assumed available
   * reward function that assigns $R(s, a) = 0$ for states  in the goal region and $R(s, a) = −1$ otherwise.
