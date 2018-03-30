@@ -56,3 +56,4 @@ https://xbpeng.github.io/projects/SimToReal/index.html
   * by using generative models for model-free, then this is essentially planning
   * the randomization of dynamics is a way to deal with uncertain MDP models, 
     another way is to formulate such uncertainty in POMDP models, e.g. Bayesian-RL
+* on full observability, dealing with world dynamics (transition fn, no observation fn)
