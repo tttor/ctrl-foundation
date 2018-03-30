@@ -54,4 +54,5 @@ https://xbpeng.github.io/projects/SimToReal/index.html
 * rely on HER and RDPG
 * model-free with generative models (physics engine)
   * by using generative models for model-free, then this is essentially planning
-  * the randomization of dynamics is a way to deal with uncertain MDP models, another way is to formulate in POMDP models
+  * the randomization of dynamics is a way to deal with uncertain MDP models, 
+    another way is to formulate such uncertainty in POMDP models, e.g. Bayesian-RL
