@@ -21,20 +21,20 @@
   * goal is to push the movable object into a hand-relative goal region
   * the stochastic transition model in terms of a deterministic quasistatic physics model
     by introducing noise into its parameters
-  * an observation model is assumed available
   * reward function that assigns $R(s, a) = 0$ for states  in the goal region and $R(s, a) = −1$ otherwise.
 * simplify the problem by constraining the end effector to a fixed transformation
   relative to the support surface and build a lattice in configuration space
+  (represents the robot’s configuration space as a state lattice)
 * configurations in the lattice are connected by action templates that start and end on lattice points
   and are penalized if rendered infeasible by kinematic constraints
-* to construct this lattice, we select a configuration qlat (xr) using
-  an iterative inverse kinematics solver initialized with the solution of an adjacent lattice point.
-  then, we use a cartesian motion planner to find a trajectory that connects adjacent points while satisfying the action template.
-* lazily construct a discrete lattice in the robot’s configuration space;
-  to defer collision checking until an action is queried by the planner.
+* to construct this lattice, 
+  (lazily construct a discrete lattice in the robot’s configuration space;
+  to defer collision checking until an action is queried by the planner)
+  * select a configuration qlat (xr) using an iterative inverse kinematics solver initialized with 
+    the solution of an adjacent lattice point.
+  * use a cartesian motion planner to find a trajectory that connects adjacent points while satisfying the action template.
 * guide the search with heuristics derived from an unconstrained relaxation of the problem.
 * plan to take information gathering actions to force the bottle into contact with one of its sensors
-* represents the robot’s configuration space as a state lattice
 * theorem: an optimal policy of Lat-POMDP will not execute an infeasible action in belief $b$ if ...
 
 ## assumption
@@ -53,7 +53,8 @@
   $\emptyset$ if no such solution exists, because not reachable or in collision
 * movable object only contacts the end effector, not other parts of the
   robot or the environment
-
+* an observation model is assumed available
+  
 ## setups
 * solve the POMDP using DESPOT,
   guided with upper and lower bounds derived from a relaxation of the
