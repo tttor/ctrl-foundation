@@ -1,5 +1,6 @@
 # Actor-Critic Algorithms
 * Vijay R. Konda, John N. Tsitsiklis
+* https://papers.nips.cc/paper/1786-actor-critic-algorithms
 
 ## idea: Actor-critic methods
 * two-time-scale algorithms in which
