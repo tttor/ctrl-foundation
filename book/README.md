@@ -5,3 +5,9 @@
 * Statistical Reinforcement Learning: Modern Machine Learning Approaches, Masashi Sugiyama, 2015
 * Algorithms for Reinforcement Learning, Csaba Szepesvari, 2010
 * [Monte Carlo theory, methods and examples](http://statweb.stanford.edu/~owen/mc/), Art B. Owen, 2013 
+
+## misc
+Marco Wiering, Martijn van Otterlo:
+> Two dominant books:
+> (1) From an artificial intelligence perspective: Introduction to reinforcement learning by Rich Sutton and Andy Barto from 1998, and
+> (2) From the standpoint of operations research: Neuro-dynamic programming by Dimitri Bertsekas and John Tsitsiklis in 1996.
