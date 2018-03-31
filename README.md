@@ -23,7 +23,6 @@ Evolutionary RL,
 * noObstacle _...to..._ fullObstacle (clutter) workspace
 * single _...to..._ multi agents
 * single _...to..._ multi (similar but not same) tasks
-* plain _...to..._ hierarchical (multi-level) structure
 * discrete _...to..._ continuous time
 * low _...to..._ high dof robots
 
