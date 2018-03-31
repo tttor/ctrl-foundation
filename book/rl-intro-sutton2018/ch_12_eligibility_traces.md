@@ -72,5 +72,54 @@ TD(1) is a way of implementing Monte Carlo algorithms
     control methods based on TD(1) can learn immediately and
     alter their behavior on that same episode.
 
-## 12.3 n-step Truncated λ-return Methods
+## 12.3 n-step Truncated λ-return Methods, Truncated TD(λ), or TTD(λ)
+* to truncate the sequence after some number of steps
+* updates are delayed by n steps and
+  only take into account the first n rewards, but
+  now all the k-step returns are included for `1 \le k \le n`
+  (whereas the earlier n-step algorithms used only the n-step return)
+
+## 12.4 Redoing Updates: The Online λ-return Algorithm
+tradeoff on choosing the truncation parameter n in Truncated TD(λ)
+* n should be large so that the method closely approximates the off-line λ-return algorithm, but
+* it should also be small so that the updates can be made sooner and can influence behavior sooner
+
+The idea
+* on each time step (as you gather a new increment of data),
+  you go back and redo all the updates since the beginning of the current episode.
+* The new updates will be better than the ones you previously made because
+  now they can take into account the time step’s new data.
+* the updates are always towards an n-step truncated λ-return target, but
+  they always use the latest horizon.
+* In each pass over that episode you can use a slightly longer horizon and
+  obtain slightly better results.
+
+The online λ-return algorithm is
+* fully online,
+* determining a new weight vector `w_t` at each step t during an episode,
+  using only information available at time `t`.
+* main drawback is
+  * it is computationally complex,
+    passing over the entire episode so far on every step.
+  * it is strictly more complex than the off-line λ-return algorithm,
+    (which passes through all the steps at the time of termination but
+    does not make any updates during the episode).
+* can be expected to perform better than the off-line one,
+  **not only** during the episode when it makes an update while
+  the off-line algorithm makes none, **but also** at the end of the episode because the weight
+  vector used in bootstrapping (in `G^{\lambda}_{t:h}` ) has had a greater number of informative updates.
+
+## 12.5 True Online TD(λ)
+Idea
+* The sequence of weight vectors produced by the on-line λ-return algorithm can be arranged in a triangle:...
+* One row of this triangle is produced on each time step
+* It turns out that only the weight vectors on the diagonal, the `w_t^t`, are really needed
+* The first, `w_0^0` , is the input, the last, `w_T^T` , is the output, and
+  each weight vector along the way, `w_t^t` , plays a role in bootstrapping in the n-step returns of the updates.
+* The strategy then is to find a compact, efficient way of computing each `w_t^t` from the one before
+
+The eligibility trace (12.11) used in true online TD(λ) is called a **dutch trace** to
+distinguish it from the trace (12.5) used in TD(λ), which is called an **accumulating trace**.
+
+## 12.6 Dutch Traces in Monte Carlo Learning
 TODO
