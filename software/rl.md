@@ -4,6 +4,7 @@
 * rllab: https://github.com/rll/rllab
 * Ray RLlib: http://ray.readthedocs.io/en/latest/rllib.html
 * ChainerRL: https://github.com/chainer/chainerrl
+* Tensorlayer: https://github.com/tensorlayer/tensorlayer
 * PyBrain: http://pybrain.org/
 * AI-Toolbox: https://github.com/Svalorzen/AI-Toolbox
 * BURLAP: http://burlap.cs.brown.edu/
