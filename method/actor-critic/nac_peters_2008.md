@@ -35,9 +35,9 @@
   * As the natural gradient analytically averages out the influence of the stochastic policy 
     (including the baseline of the function approximator), it requires **fewer data point** for 
     a good gradient estimate than ‘vanilla gradients’.
-     
+* Properties of NAC: TODO
 ## setup
-* baseball swing robot
+* Cart-Pole Balancing, baseball swing robot (the learning system is initialized by imitation learning)
 
 ## result
 * actor improvements with **natural policy gradients** are particularly appealing as
