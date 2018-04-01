@@ -111,5 +111,5 @@
     
  ## comment
  * promising way to use multi-threading
- * plots and tables are all from Atari game setup
+ * plots and tables are all from Atari game setup, although there are experiments in Mujoco/robots
  
