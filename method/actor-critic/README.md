@@ -2,7 +2,7 @@
 
 ## variant
 * [ACKTR: Actor Critic using Kronecker-Factored Trust Region (Wu,2017)](https://arxiv.org/abs/1708.05144)
-* [Reactor: A Sample-Efficient Actor-Critic Architecture](https://arxiv.org/abs/1704.04651)
+* [Reactor: A Sample-Efficient Actor-Critic Architecture (Gruslys, 2017)](https://arxiv.org/abs/1704.04651)
 * [A3C: Asynchronous(Synchronous) advantage actor-critic (Mnih, 2016)](https://arxiv.org/pdf/1602.01783.pdf)
   * https://github.com/MG2033/A2C
   * https://github.com/openai/baselines/tree/master/baselines/a2c
