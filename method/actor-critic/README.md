@@ -12,6 +12,9 @@
   * https://github.com/muupan/async-rl
   * https://github.com/dennybritz/reinforcement-learning/tree/master/PolicyGradient/a3c
   * https://github.com/liampetti/A3C-LSTM
+  * https://github.com/ikostrikov/pytorch-a3c
+  * https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_bipedalwalker_a3c_continuous_action.py
+  * https://github.com/rlcode/reinforcement-learning/blob/master/2-cartpole/5-a3c/cartpole_a3c.py
   * [Arthur Juliani @medium.com](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2)
   * https://jaromiru.com/2017/02/16/lets-make-an-a3c-theory/
   * https://cgnicholls.github.io/reinforcement-learning/2017/03/27/a3c.html
