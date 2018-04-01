@@ -99,7 +99,7 @@
   * Aggregating over memory in this way reduces non-stationarity and decorrelates updates, but 
     at the same time limits the methods to off-policy reinforcement learning algorithms.
 * One-step Q-learning
-  * updates the action value $Q(s, a)$ toward the one-step return $r + \lambda max_{a'} Q(s', a'; \theta)$. 
+  * updates the action value `$Q(s, a)$` toward the one-step return `$r + \lambda max_{a'} Q(s', a'; \theta)$`. 
   * One drawback:
     * that obtaining a reward r only directly affects the value of the state action pair s, a that led to the reward. 
     * The values of other state action pairs are affected only indirectly through the updated value Q(s, a). 
@@ -107,6 +107,7 @@
       the relevant preceding states and actions.
   * One way of propagating rewards faster is by using **n-step returns**
     * a single reward r directly affecting the values of n preceding state action pairs.
+  * Advantage fn: `$A_{\pi}(s,a) = Q_{\pi}(s,a) - V_{\pi}(s)$`
     
  ## comment
  * promising way to use multi-threading
