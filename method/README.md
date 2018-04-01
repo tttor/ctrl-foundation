@@ -51,8 +51,14 @@
     using the learned model
     
 ## misc
-* on-policy _vs_ off-policy, episodic _vs_ continuing tasks, average _vs_ cumulative discounted rewards, 
-* actor-only, critic-only, and actor-critic methods
+* on-policy _vs_ off-policy, 
+  episodic _vs_ continuing tasks, 
+  average _vs_ cumulative discounted rewards, 
+  actor-/citic-only _vs_ actor-critic,
+  shallow _vs_ deep learning,
+  without-prior (non-Bayesian) _vs_ with-prior (Bayesian),
+  plain _vs_ hierarchical structure,
+  (onlinePlanning or modelFreeRL) _vs_ (onlinePlanning + modelLearning + modelFreeRL)
 * hybrids: methods that combine 2 (or more) methods
   * Temporal Difference (TD): MonteCarlo and DynamicsProgramming
   * Actor-critic: value-based and policy-based
