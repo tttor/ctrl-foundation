@@ -9,7 +9,12 @@
   * https://github.com/chainer/chainerrl/blob/master/examples/gym/train_a3c_gym.py
   * https://github.com/NVlabs/GA3C  
   * https://github.com/miyosuda/async_deep_reinforce
+  * https://github.com/muupan/async-rl
   * https://github.com/dennybritz/reinforcement-learning/tree/master/PolicyGradient/a3c
+  * https://github.com/liampetti/A3C-LSTM
+  * [Arthur Juliani @medium.com](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2)
+  * https://jaromiru.com/2017/02/16/lets-make-an-a3c-theory/
+  * https://cgnicholls.github.io/reinforcement-learning/2017/03/27/a3c.html
 * [Natural Actor-Critic (Peters, 2008)](https://www.sciencedirect.com/science/article/pii/S0925231208000532)
 
 ## actor-critic based
@@ -23,5 +28,4 @@
 ### talk, lecture, tutorial
 * http://mi.eng.cam.ac.uk/~mg436/LectureSlides/MLSALT7/L5.pdf
 * http://www.inf.ed.ac.uk/teaching/courses/rl/slides15/rl12.pdf
-* [Arthur Juliani @medium.com](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2)
-* https://jaromiru.com/2017/02/16/lets-make-an-a3c-theory/
+
