@@ -21,6 +21,10 @@
   * [Arthur Juliani @medium.com](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2)
   * https://jaromiru.com/2017/02/16/lets-make-an-a3c-theory/
   * https://cgnicholls.github.io/reinforcement-learning/2017/03/27/a3c.html
+    * use a feedforward convolutional neural network, not includes a recurrent layer
+    * focus on the discrete action
+    * ATARI game: Space Invaders
+    * https://github.com/cgnicholls/reinforcement-learning/tree/master/a3c
 * [Natural Actor-Critic (Peters, 2008)](https://www.sciencedirect.com/science/article/pii/S0925231208000532)
 
 ## actor-critic based
