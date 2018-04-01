@@ -1,6 +1,7 @@
 # RL software
 
 * https://github.com/openai/baselines
+* https://github.com/rlcode/reinforcement-learning
 * rllab: https://github.com/rll/rllab
 * Ray RLlib: http://ray.readthedocs.io/en/latest/rllib.html
 * ChainerRL: https://github.com/chainer/chainerrl
