@@ -14,7 +14,6 @@ Evolutionary RL,
 ...
 
 ## (Rough) dimensions of challenges:
-* (onlinePlanning or modelFreeRL) _...to..._ (onlinePlanning + modelLearning + modelFreeRL)
 * MDP (fully observable states) _...to..._ POMDP (partially observable states) model/formulations
 * discrete (small) _...to..._ continuous (large numbers of) states, actions, observations
 * stationary (fixed) _...to..._ non-stationary (changing) models
@@ -23,8 +22,8 @@ Evolutionary RL,
 * noObstacle _...to..._ fullObstacle (clutter) workspace
 * single _...to..._ multi agents
 * single _...to..._ multi (similar but not same) tasks
-* discrete _...to..._ continuous time
 * low _...to..._ high dof robots
+* discrete _...to..._ continuous time
 
 ## People
 Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
