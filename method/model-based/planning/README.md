@@ -1,20 +1,22 @@
 # Planning
-In planning, the model is \emph{known} and, by default, stationary.
-If the model is unknown, then we have reinforcement learning (RL) problem.
-In model-based RL, we learn the model and plan with respect to the learned model.
-Generally, the model refers to the POMDP model consisting of 7 components, namely: $(S, A, T, R, O, Z, \lambda)$.
+We plan with respect to the given model.
+In the context of RL, planning is part of model-based RL, where
+we learn the model and plan with respect to the learned model, 
+see also 
+[ref](https://www.quora.com/What-is-the-difference-between-reinforcement-learning-and-planning),
+[ref2](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching_files/dyna.pdf).
+Typically in planning, the model refers to the POMDP model consisting of 7 components: `$(S, A, T, R, O, Z, \lambda)$`.
 
 There are two (+ 1 hybrid) approaches in POMDP planning,
 * offline
   * plan before execution.
   * consider all contingencies.
   * does not scale up well.
-* online planners.
+* online planners
   * interleave planning with execution.
   * typically plans each step from the current belief.
     * potentially can handle large-scale planning.
-* hybrid: combination of both approaches.
-
+* hybrid: combination of both online and offline planning approaches.
 
 ## online planning
 DESPOT_2017, POMCP_2010, AEMS_2007, ...
