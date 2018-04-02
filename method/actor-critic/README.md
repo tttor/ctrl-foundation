@@ -6,6 +6,7 @@
 * [A3C: Asynchronous(Synchronous) advantage actor-critic (Mnih, 2016)](https://arxiv.org/pdf/1602.01783.pdf)
   * https://github.com/MG2033/A2C
   * https://github.com/openai/baselines/tree/master/baselines/a2c
+  * https://github.com/openai/universe-starter-agent/blob/master/a3c.py
   * https://github.com/chainer/chainerrl/blob/master/examples/gym/train_a3c_gym.py
   * https://github.com/NVlabs/GA3C  
   * https://github.com/miyosuda/async_deep_reinforce
@@ -19,10 +20,14 @@
   * https://github.com/andreimuntean/A3C
   * https://github.com/Grzego/async-rl
   * [Arthur Juliani @medium.com](https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2)
+    * Tensorflow,  3D Doom environment
+    * based on DennyBritz and OpenAI.
+    * classes: AC_Network, Worker
+    * https://github.com/awjuliani/DeepRL-Agents/blob/master/A3C-Doom.ipynb
   * https://jaromiru.com/2017/03/26/lets-make-an-a3c-implementation/
     * Python, Keras and OpenAI Gym (CartPole)
-    * https://github.com/jaara/AI-blog/blob/master/CartPole-A3C.py
     * implement 4 classes: Environment, Agent, Brain and Optimizer.
+    * https://github.com/jaara/AI-blog/blob/master/CartPole-A3C.py
   * https://cgnicholls.github.io/reinforcement-learning/2017/03/27/a3c.html
     * use a feedforward convolutional neural network, not includes a recurrent layer
     * focus on the discrete action
