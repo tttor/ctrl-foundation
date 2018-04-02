@@ -110,6 +110,6 @@
   * Advantage fn: `$A_{\pi}(s,a) = Q_{\pi}(s,a) - V_{\pi}(s)$`
     
  ## comment
- * promising way to use multi-threading
- * plots and tables are all from Atari game setup, although there are experiments in Mujoco/robots
+ * promising way to use multi-threading in planning where we can simulate multiple env+agent interactions
+ * plots and tables are all from Atari game setup, although there are experiments in/with Mujoco/robots
  
