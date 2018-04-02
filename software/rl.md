@@ -5,6 +5,7 @@
 * Ray RLlib: http://ray.readthedocs.io/en/latest/rllib.html
 * ChainerRL: https://github.com/chainer/chainerrl
 * Tensorlayer: https://github.com/tensorlayer/tensorlayer
+* Tensorforce: https://github.com/reinforceio/tensorforce
 
 ## type 1
 * https://github.com/rlcode/reinforcement-learning
