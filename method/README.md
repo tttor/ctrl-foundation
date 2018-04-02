@@ -19,11 +19,11 @@
 
 * model-free
   * most methods are arguably model-free
-  * note that in robotics, we have to be aware of
+  * in robotics (cf Atari games), be aware of
     * _true_ model-free:
-      the training is with the **real** world
+      trained with the **real** world
     * _pseudo_ model-free:
-      the training is with a **generative** model
+      trained with a **generative** model
 
 * model-based
   * sample-efficient:
