@@ -18,7 +18,12 @@
   * UVFA_2015
 
 * model-free
-  * TODO
+  * most methods are arguably model-free
+  * note that in robotics, we have to be aware of
+    * _true_ model-free:
+      the training is with the **real** world
+    * _pseudo_ model-free:
+      the training is with a **generative** model
 
 * model-based
   * sample-efficient:
@@ -49,15 +54,16 @@
     always be modeled accurately enough
   * 2 sources of approximation error: learn model, estimate a value function
     using the learned model
-    
+
 ## misc
-* on-policy _vs_ off-policy, 
-  episodic _vs_ continuing tasks, 
-  average _vs_ cumulative discounted rewards, 
+* on-policy _vs_ off-policy,
+  episodic _vs_ continuing tasks,
+  average _vs_ cumulative discounted rewards,
   actor-/citic-only _vs_ actor-critic,
   shallow _vs_ deep learning,
   without-prior (non-Bayesian) _vs_ with-prior (Bayesian),
   plain _vs_ hierarchical structure,
+  offline _vs_ online planning,
   (onlinePlanning or modelFreeRL) _vs_ (onlinePlanning + modelLearning + modelFreeRL)
 * hybrids: methods that combine 2 (or more) methods
   * Temporal Difference (TD): MonteCarlo and DynamicsProgramming
@@ -67,3 +73,4 @@
   * time-varying linear-Gaussian (TVLG)
   * deep neural networks, rbf networks
   * dynamic movement primitives
+  * belief tree
