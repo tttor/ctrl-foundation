@@ -1,7 +1,7 @@
 # Asynchronous Methods for Deep Reinforcement Learning
 * 33rd International Conference on Machine Learning, New York, NY, USA, 2016;
-* Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Timothy P. Lillicrap, 
- Tim Harley, David Silver, Koray Kavukcuoglu
+* Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Timothy P. Lillicrap, Tim Harley, 
+  David Silver, Koray Kavukcuoglu
 * https://arxiv.org/abs/1602.01783
 * http://proceedings.mlr.press/v48/mniha16.html
 * https://www.youtube.com/watch?v=Ajjc08-iPx8&feature=youtu.be (goto: 0:44)
@@ -126,7 +126,7 @@
  ## comment
  * promising way to use multi-threading in planning where we do simulate multiple env+agent interactions,
    note, from Figure S4: the training time is in the order of hours, meaning **no way** for online planning, 
-   but what if for offline planning?
+   but what if for offline planning? 
  * plots and tables (on the paper, not the appendix) with analysis are all from Atari game setup, 
    although there are experiments in/with Mujoco/robots (shown in the appendix)
  
