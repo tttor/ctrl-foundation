@@ -8,13 +8,13 @@
 * [2016: Castronovo: Benchmarking for Bayesian Reinforcement Learning](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157088)
 * [2015: Garcia: A Comprehensive Survey on Safe Reinforcement Learning](http://jmlr.org/papers/v16/garcia15a.html)
 * [2015: Ghavamzadeh: Bayesian Reinforcement Learning: A Survey](https://arxiv.org/abs/1609.04436)
-* 2013: Kober: Survey on RL in robotics
+* [2013: Kober: Reinforcement learning in robotics: A survey](http://journals.sagepub.com/doi/abs/10.1177/0278364913495721)
 * [2013: Deisenroth: A Survey on Policy Search for Robotics](https://spiral.imperial.ac.uk/bitstream/10044/1/12051/7/fnt_corrected_2014-8-22.pdf)
 * [2012: Grondman: A Survey of Actor-Critic Reinforcement Learning: Standard and Natural Policy Gradients](http://ieeexplore.ieee.org/abstract/document/6392457/)
 * [2009: Taylor: Transfer Learning for Reinforcement Learning Domains: A Survey](http://www.jmlr.org/papers/v10/taylor09a.html)
-* 2008: Ross: Online planning algorithms for POMDPs
+* [2008: Ross: Online planning algorithms for POMDPs](http://www.jair.org/papers/paper2567.html)
 * [2003: Barto: Recent Advances in Hierarchical Reinforcement Learning](https://link.springer.com/article/10.1023/A:1022140919877)
-* 1996: Kaebling: Reinforcement Learning: A Survey
+* [1996: Kaebling: Reinforcement Learning: A Survey](https://www.jair.org/media/301/live-301-1562-jair.pdf)
 
 ## Web
 * https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
