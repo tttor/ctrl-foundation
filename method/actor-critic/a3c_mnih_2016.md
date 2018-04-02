@@ -60,10 +60,24 @@
 ## setup
 * task: 
   * Atari domain (via ALE), 
+    * int the discrete action domain, the action output is a Softmax
   * TORCS 3D car racing simulator
   * Continuous Action Control Using the MuJoCo: 
-    a set of rigid body physics domains with contact dynamics,
-    pole swing-up, quadruped locomotion, planar biped walking, balancing, 2D/3D target reaching
+    * a set of rigid body physics domains with contact dynamics:
+      pole swing-up, quadruped locomotion, planar biped walking, balancing, 2D/3D target reaching
+    * input for nets: 
+      * the physical state: joint positions and velocities, the target position
+      * RGB pixel inputs
+    * two outputs of the policy network are two real number vectors which we treat as 
+      the mean vector `$\mu$` and scalar variance `$\sigma^2$`of a multidimensional normal distribution with 
+      a spherical covariance. 
+      * To act, the input is passed through the model to the output layer where 
+        we sample from the normal distribution determined by `$\mu$` and `$\sigma^2$`    
+     * In our experiments with continuous control problems, 
+       the networks for policy network and value network do **not share** any parameters
+       Finally, since the episodes were typically at most several hundred time steps long,
+     * did not use any bootstrapping in the policy or value function updates and 
+       batched each episode into a single update.
   * exploring 3D mazes purely from visual inputs via Deepmind's Labyrinth
 * 3 different optimization algorithms in our asynchronous framework
   * SGD with momentum, 
@@ -110,6 +124,9 @@
   * Advantage fn: `$A_{\pi}(s,a) = Q_{\pi}(s,a) - V_{\pi}(s)$`
     
  ## comment
- * promising way to use multi-threading in planning where we can simulate multiple env+agent interactions
- * plots and tables are all from Atari game setup, although there are experiments in/with Mujoco/robots
+ * promising way to use multi-threading in planning where we do simulate multiple env+agent interactions,
+   note, from Figure S4: the training time is in the order of hours, meaning **no way** for online planning, 
+   but what if for offline planning?
+ * plots and tables (on the paper, not the appendix) with analysis are all from Atari game setup, 
+   although there are experiments in/with Mujoco/robots (shown in the appendix)
  
