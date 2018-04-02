@@ -47,16 +47,3 @@
   * to sample a representative set of points from the belief space B and
   * compute an approximately optimal value function by performing backup operations
     over the sampled points rather than the entire B.
-
-
-<!-- M. Hauskrecht, “Value-function approximations for partially observable
-Markov decision processes,” J. Artificial Intelligence Research, vol. 13,
-pp. 33–94, 2000. -->
-
-<!-- L. Kaelbling, M. Littman, and A. Cassandra, “Planning and acting in
-partially observable stochastic domains,” Artificial Intelligence, vol. 101,
-no. 1–2, pp. 99–134, 1998. -->
-
-<!-- G. Shani, R. Brafman, and S. Shimony, “Adaptation for changing
-stochastic environments through online POMDP policy learning,” in
-Proc. Eur. Conf. on Machine Learning, 2005, pp. 61–70. -->
