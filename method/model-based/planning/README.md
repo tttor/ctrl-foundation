@@ -28,10 +28,8 @@ SOVI: Simple Online Value Iteration (Shani2005),
 Factored Hybrid Heuristic Online Planning (FHHOP) (Zhang2012).
 
 ## offline planning
-SARSOP, PBVI_2003, Perseus_2005, HSVI, ...
-(most are point-based approaches that
-sample belief states by simulating some random interactions of the agent
-with the environment and then maintain at most one `$\alpha$`-vector per sampled belief state)
+* point-based value-iteration: SARSOP_2008, PBVI_2003, Perseus_2005, HSVI, ...
+* monte carlo: [MCPOMDP](http://robots.stanford.edu/papers/thrun.mcpomdp.pdf), ...
 
 ## combining offline and online planning approaches,
 By using policies computed offline
