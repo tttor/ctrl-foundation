@@ -18,6 +18,12 @@
 * BURLAP: http://burlap.cs.brown.edu/
 * RL-Glue: http://glue.rl-community.org/wiki/Main_Page
 
+## environment
+see also: [simulator](https://github.com/tttor/rl-foundation/blob/master/software/simulator.md)
+* https://github.com/openai/gym
+* https://github.com/openai/universe
+* https://github.com/openai/roboschool
+
 ## ROS-enabled
 Available packages in ROS for model-based and model-free RL: <br/>
 (Surely, any package can be used in ROS with some efforts.)
