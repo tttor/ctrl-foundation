@@ -5,7 +5,7 @@
 ## problem
 * combine the advantages of both approaches.
   * UCT is a sample-based search algorithm (online)
-  * the TD(λ) algorithm (offline) with action-valur fn approximation
+  * the TD(λ) algorithm (offline) with action-value fn approximation
 
 ## idea
 * 3 approaches for combining offline and online value functions in the UCT algorithm.
@@ -18,8 +18,7 @@
 * combine
   * the general knowledge accumulated by an offline reinforcement learning algorithm, with
   * the local knowledge found online by sample-based search.
-* UCT-RAVE, which forms a rapid action value estimate for action a in state s, and
-  combines this online knowledge into UCT.
+* UCT-RAVE forms a rapid action value estimate for action a in state s, and combines this online knowledge into UCT.
   * average the returns of all episodes in which a is selected at any subsequent time.
     (Normally, Monte-Carlo methods estimate the value by
     averaging the return of all episodes in which a is selected immediately.)
