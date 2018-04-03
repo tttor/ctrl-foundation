@@ -14,6 +14,7 @@
 * [2009: Taylor: Transfer Learning for Reinforcement Learning Domains: A Survey](http://www.jmlr.org/papers/v10/taylor09a.html)
 * [2008: Ross: Online planning algorithms for POMDPs](http://www.jair.org/papers/paper2567.html)
 * [2003: Barto: Recent Advances in Hierarchical Reinforcement Learning](https://link.springer.com/article/10.1023/A:1022140919877)
+* [2000: Hauskreht: Value-Funtion Approximations for Partially Observable Markov Deision Processes](https://www.jair.org/media/678/live-678-1858-jair.pdf)
 * [1998: Kaebling: Planning and acting in partially observable stochastic domains](https://www.sciencedirect.com/science/article/pii/S000437029800023X)
 * [1996: Kaebling: Reinforcement Learning: A Survey](https://www.jair.org/media/301/live-301-1562-jair.pdf)
 
