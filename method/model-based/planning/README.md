@@ -7,29 +7,32 @@ see also
 [ref2](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching_files/dyna.pdf).
 Typically in planning, the model refers to the POMDP model consisting of 7 components: `$(S, A, T, R, O, Z, \lambda)$`.
 
-There are two (+ 1 hybrid) approaches in POMDP planning,
+There are two (+ 1 hybrid) approaches in terms of when the planning (heavy) computation is carried out:
 * offline planning
   * plan before execution.
   * consider all contingencies.
   * does not scale up well.
 * online planning
   * interleave planning with execution.
-  * typically plans each step from the current belief.
+  * typically plans **each** step from the **current** belief.
     * potentially can handle large-scale planning.
-* hybrid: combination of both online and offline planning approaches.
+  * handle model changes naturally
+* hybrid: 
+  * combination of both online and offline planning approaches
 
-## online planning
-DESPOT_2017, POMCP_2010, AEMS_2007, ...
-Real-Time Dynamic Programming (RTDP-BEL) (Geffner1998),
-Real-Time Belief Space Search (RTBSS) (Paquet2005),
-Randomized Belief-Space Replanning (RBSR) (Hauser2010),
-Planning under uncertainty with macro-actions (PUMA) (He2010),
-SOVI: Simple Online Value Iteration (Shani2005),
-Factored Hybrid Heuristic Online Planning (FHHOP) (Zhang2012).
-
-## offline planning
-* point-based value-iteration: SARSOP_2008, PBVI_2003, Perseus_2005, HSVI, ...
-* monte carlo: [MCPOMDP](http://robots.stanford.edu/papers/thrun.mcpomdp.pdf), ...
+## method
+* mcts-based (value iter):
+  DESPOT_2017, POMCP_2010, monte carlo: [MCPOMDP](http://robots.stanford.edu/papers/thrun.mcpomdp.pdf), ...
+* point-based (value iter):
+  SARSOP_2008, PBVI_2003, Perseus_2005, HSVI, ...
+* misc:
+  AEMS_2007, ...
+  Real-Time Dynamic Programming (RTDP-BEL) (Geffner1998),
+  Real-Time Belief Space Search (RTBSS) (Paquet2005),
+  Randomized Belief-Space Replanning (RBSR) (Hauser2010),
+  Planning under uncertainty with macro-actions (PUMA) (He2010),
+  SOVI: Simple Online Value Iteration (Shani2005),
+  Factored Hybrid Heuristic Online Planning (FHHOP) (Zhang2012).
 
 ## combining offline and online planning approaches,
 By using policies computed offline
