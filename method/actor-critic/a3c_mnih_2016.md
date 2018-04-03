@@ -4,7 +4,7 @@
   David Silver, Koray Kavukcuoglu
 * https://arxiv.org/abs/1602.01783
 * http://proceedings.mlr.press/v48/mniha16.html
-* https://www.youtube.com/watch?v=Ajjc08-iPx8&feature=youtu.be (goto: 0:44)
+* https://www.youtube.com/watch?v=Ajjc08-iPx8&feature=youtu.be (for robots, goto: 0:44)
 
 ## problem
 * drawbacks of Deep RL algorithms based on experience replay  
@@ -129,4 +129,5 @@
    but what if for offline planning? 
  * plots and tables (on the paper, not the appendix) with analysis are all from Atari game setup, 
    although there are experiments in/with Mujoco/robots (shown in the appendix)
+ * in the [demo vid on robots, 0:44](https://www.youtube.com/watch?v=Ajjc08-iPx8&feature=youtu.be), initial state is **fixed**, what if for any initial state?
  
