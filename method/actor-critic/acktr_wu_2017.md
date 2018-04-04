@@ -18,6 +18,21 @@
   assuming independence of the two output distributions, i.e., `$p(a, v|s) = \pi(a|s) p(v|s)$`, and
   construct the Fisher metric with respect to `$p(a, v|s)$`,
 * apply K-FAC to approximate the Fisher matrix to perform updates simultaneously.
+* computational challenges when applying natural gradient methods, mainly associated with 
+  efficiently storing the Fisher matrix as well as computing its inverse.
+  * For tractability: using the compatible function approximator (a linear function approximator). 
+  * To avoid the computational burden, Trust Region Policy Optimization (TRPO) [22] approximately solves 
+    the linear system using conjugate gradient with fast Fisher matrix-vector products; 
+    * but shortcomings:
+      * requires repeated computation of Fisher vector products, 
+        preventing it from scaling to the larger architectures typically used in experiments on learning from 
+         image observations in Atari and MuJoCo. 
+      * requires a large batch of rollouts in order to accurately estimate curvature. 
+      * generally less sample efficient (Although TRPO shows better per-iteration progress than 
+        policy gradient methods trained with first-order optimizers such as Adam)
+    * K-FAC avoids both issues by 
+      * using tractable Fisher matrix approximations and 
+      * keeping a running average of curvature statistics during training.  
 
 ## observation
 * One way to effectively reduce the sample size is to use more advanced optimization techniques for gradient updates
