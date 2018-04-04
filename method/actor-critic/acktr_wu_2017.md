@@ -43,17 +43,34 @@
   propose to optimize **both the actor and the critic** using Kronecker-factored approximate curvature (K-FAC) with trust region
   * K-FAC to approximate the natural gradient update for actor-critic methods, with trust region optimization for stability
   * optimizing both the actor and the critic using natural gradient updates
-
+* propose also applying a natural gradient update to the critic
+  (The previous natural policy gradient method applied a natural gradient update only to the actor)
+  
 ## setup
 * to avoid instability in training,
   it is often beneficial to use an architecture where the two networks share lower-layer representations but
   have distinct output layers
-* in the Atari environments [4] and the MuJoCo [27] tasks
-
+* env:
+  * discrete ctrl: Atari environments [4] and 
+  * continuous ctrl: the MuJoCo [27] tasks
+    * low-dimensional state-space representation 
+    * directly from pixel representation
+* baselines
+  * a synchronous and batched version of the asynchronous advantage actor critic model (A3C) [18], called A2C , and 
+  * TRPO [22].
+* plots on: episode reward vs number of timesteps
+  
 ## result
 * ACKTR substantially improves both sample efficiency and the final performance of the agent
   compared to the state-of-the-art on-policy actor-critic method A2C [18] and the famous trust region optimizer TRPO [22].
 * the per-update computation cost of ACKTR is only 10% to 25% higher than SGD-based methods.
+* regardless of which norm we use to optimize the critic, there are improvements brought by 
+  applying ACKTR to the actor compared to the baseline A2C
+  * improvements brought by using the Gauss-Newton norm for optimizing the critic are more substantial in terms of 
+    sample efficiency and episode rewards at the end of training. 
+  * the Gauss-Newton norm also helps stabilize the training, 
+    as we observe larger variance in the results over random seeds with the Euclidean norm.
+* the benefit increases substantially when using a larger batch size with ACKTR compared to with A2C.
 
 ## misc
 * Natural gradient methods follow the steepest descent direction that
