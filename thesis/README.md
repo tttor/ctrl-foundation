@@ -16,19 +16,19 @@
 * Jonathan Scholz: Physics-based reinforcement learning for autonomous manipulation, 2015
 
 ## Mid, 2008 <= t < 2015
-* David Silver: Reinforcement Learning and Simulation-Based Search in Computer Go, 2009
-* Jens Kober, Learning Motor Skills: From Algorithms to Robot Experiments, 2012
 * Stephane Ross, 2013
 * Volodymyr Mnih, 2013
-* Pieter Abbeel, 2008: inverse rl (for flying helicopters)
+* Jens Kober, Learning Motor Skills: From Algorithms to Robot Experiments, 2012
 * Todd Hester, 2012
 * George Konidaris, 2011
 * Marc Deisenroth, 2010
+* David Silver, 2009: Reinforcement Learning and Simulation-Based Search in Computer Go
 * Hanna Kurniawati, 2008
+* Pieter Abbeel, 2008: inverse rl (for flying helicopters)
 
 ## Old, t < 2008
+* Pascal Poupart, 2005
 * Andrew Bagnell, 2004
-* Andrew Ng: Shaping and policy search in reinforcement learning, 2003
 * Richard Sutton
 * Andrew Barto
 * Csaba Szepesvári
@@ -39,10 +39,10 @@
 * Jan Peters
 * Masashi Sugiyama
 * Satinder Singh
-* Pascal Poupart, 2005
 * Gerald Tesauro
 * Sham M. Kakade, 2003
-* Chris Watkins, 1989: Learning from delayed rewards
-* Vijaymohan Konda, 2002: Actor-Critic Algorithms
-
+* Andrew Ng: Shaping and policy search in reinforcement learning, 2003
+* Vijaymohan Konda: Actor-Critic Algorithms, 2002
+* Benjamin Van Roy: Learning and Value Function Approximation in Complex Decision Processes, 1998
+* Chris Watkins: Learning from delayed rewards, 1989
 
