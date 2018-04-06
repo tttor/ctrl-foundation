@@ -1,59 +1,54 @@
 # method
 
-* policy-based (policy-search, policy iteration)
-  * gradient-free
-    * cross-entropy method
-  * gradient-based
-    * TRPO: Trust Region Policy Optimization (Schulman, 2015)
-    * DPG, Deep DPG, Recurrent DPG
-  * misc:
-    * TNPG: Truncated Natural Policy Gradient
-    * PILCO
-    * GPS: Guided Policy Search, 2013
-    * PEGASUS, 2000
-    * DMP: Dynamic Motion Primitives
-
-* value-based (value iteration)
-  * Deep Q-network
-  * UVFA_2015
-
-* model-free
-  * most methods are arguably model-free
-  * in robotics (cf Atari games), be aware of
-    * _true_ model-free:
-      trained with the **real** world
-    * _pseudo_ model-free:
-      trained with a **generative** model
-
-* model-based
-  * sample-efficient:
-    PILCO_2015, TEXPLORE_2013,...
-  * planning
-
-* hybrids: methods that combine 2 (or more) methods
-  * Temporal Difference (TD): MonteCarlo and DynamicsProgramming
-  * Actor-critic: value-based and policy-based
-    * Async Advantage Actor-Critic (A3C)
-  * model-based and model-free (here, we call this `dyna`)
+## taxonomy
+* source of experience
+  * `source= realWorld`: model-free (direct RL)
+    * in robotics (cf Atari games), be aware of
+      * _true_ model-free:
+        trained with the **real** world
+      * _pseudo_ model-free:
+        trained with a **generative** model (typically offline, before execution)
+    * pros and cons
+      * (+) have the advantage of handling arbitrary dynamical systems with minimal bias
+      * (-) less sample-efficient, high sample complexity
+      * (-) require policies with carefully designed, low-dimensional parameterizations
+  * `source= model`: model-based (indirect RL)
+    * consists of: planning and model learning
+    * pros and cons
+      * (+) sample-efficient
+      * (+) model learning transfers across tasks and environment configurations (learning physics)
+      * (-) suffer from significant bias, since complex unknown dynamics cannot always be modeled accurately enough
+      * (-) 2 sources of approximation error: learn model, estimate a value function using the learned model
+    * sample-efficient:
+      PILCO_2015, TEXPLORE_2013,...
+  * hybrid: dyna (true model-free and model-based RL)
     * PILQR_2017, VPN_2017
     * Dyna2_2008, Dyna_1990
 
-## model-free
-* pros
-  * have the advantage of handling arbitrary dynamical systems with minimal bias
-* cons
-  * less sample-efficient, high sample complexity
-  * require policies with carefully designed, low-dimensional parameterizations
+* base for iteration
+  * policy-based (policy-search, policy iteration)
+    * gradient-free
+      * cross-entropy method
+    * gradient-based
+      * TRPO: Trust Region Policy Optimization (Schulman, 2015)
+      * DPG, Deep DPG, Recurrent DPG
+    * misc:
+      * TNPG: Truncated Natural Policy Gradient
+      * PILCO
+      * GPS: Guided Policy Search, 2013
+      * PEGASUS, 2000
+      * DMP: Dynamic Motion Primitives
+  * value-based (value iteration)
+    * Deep Q-network
+    * UVFA_2015
+  * hybrid: Actor-critic: value-based and policy-based
+    * Async Advantage Actor-Critic (A3C)
 
-## model-based
-* pros
-  * sample-efficient
-  * model learning transfers across tasks and environment configurations (learning physics)
-* cons
-  * suffer from significant bias, since complex unknown dynamics cannot
-    always be modeled accurately enough
-  * 2 sources of approximation error: learn model, estimate a value function
-    using the learned model
+* when policy compiled/learned with respect to execution/action time
+  * offline
+    * policy compiled/learned: before execution
+  * online
+    * policy compiled/learned: during execution (in paralel)
 
 ## misc
 * on-policy _vs_ off-policy,
@@ -65,12 +60,10 @@
   plain _vs_ hierarchical structure,
   offline _vs_ online planning,
   (onlinePlanning or modelFreeRL) _vs_ (onlinePlanning + modelLearning + modelFreeRL)
-* hybrids: methods that combine 2 (or more) methods
-  * Temporal Difference (TD): MonteCarlo and DynamicsProgramming
-  * Actor-critic: value-based and policy-based
-  * Dyna: model-based and model-free
 * policy representation
   * time-varying linear-Gaussian (TVLG)
   * deep neural networks, rbf networks
   * dynamic movement primitives
   * belief tree
+* Temporal Difference (TD):
+  MonteCarlo and DynamicsProgramming
