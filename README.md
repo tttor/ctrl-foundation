@@ -23,7 +23,7 @@ Evolutionary RL,
 * single _...to..._ multi agents
 * single _...to..._ multi (similar but not same) tasks
 * low _...to..._ high dof robots
-* discrete _...to..._ continuous time
+* discrete _...to..._ continuous time (discretization time-step decreases to 0)
 
 ## People
 Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
