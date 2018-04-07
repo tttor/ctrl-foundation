@@ -52,11 +52,3 @@
     * How long should updated values be retained?
     * Should they be retained permanently, or
       only while computing an action selection, as in heuristic search?
-
-<!--
-In model learning, the goal is to estimate a model from experience $$ \{S_1, A_1, R_2, ..., S_t \} $$.
-That is a supervised learning problem, where:
-$(S_1, A_1) \mapsto (S_2, R_2), (S_2, A_2) \mapsto (S_3, R_3), \ldots, (S_{t-1}, A_{t-1}) \mapsto (S_t, R_t)$.
-Learning $s, a \mapsto r$ is a regression problem, whereas
-learning $s, a \mapsto s'$ is a density estimation problem.
- -->
