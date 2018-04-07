@@ -17,32 +17,18 @@
     * pros and cons
       * (+) sample-efficient
       * (+) model learning transfers across tasks and environment configurations (learning physics)
-      * (-) suffer from significant bias, since complex unknown dynamics cannot always be modeled accurately enough
+      * (-) suffer from significant bias, complex unknown dynamics cannot always be modeled accurately enough
       * (-) 2 sources of approximation error: learn model, estimate a value function using the learned model
     * sample-efficient:
       PILCO_2015, TEXPLORE_2013,...
   * hybrid: dyna (true model-free and model-based RL)
-    * PILQR_2017, VPN_2017
-    * Dyna2_2008, Dyna_1990
 
 * base for iteration
   * policy-based (policy-search, policy iteration)
     * gradient-free
-      * cross-entropy method
     * gradient-based
-      * TRPO: Trust Region Policy Optimization (Schulman, 2015)
-      * DPG, Deep DPG, Recurrent DPG
-    * misc:
-      * TNPG: Truncated Natural Policy Gradient
-      * PILCO
-      * GPS: Guided Policy Search, 2013
-      * PEGASUS, 2000
-      * DMP: Dynamic Motion Primitives
   * value-based (value iteration)
-    * Deep Q-network
-    * UVFA_2015
   * hybrid: Actor-critic: value-based and policy-based
-    * Async Advantage Actor-Critic (A3C)
 
 * when policy compiled/learned with respect to execution/action time
   * offline
