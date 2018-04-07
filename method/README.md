@@ -2,7 +2,7 @@
 
 ## taxonomy
 * source of experience
-  * model-free (direct RL): `source= realWorld`
+  * `model-free` (direct RL): `source= realWorld`
     * in robotics (cf Atari games), be aware of
       * _true_ model-free:
         trained with the **real** world
@@ -12,28 +12,29 @@
       * (+) have the advantage of handling arbitrary dynamical systems with minimal bias
       * (-) less sample-efficient, high sample complexity
       * (-) require policies with carefully designed, low-dimensional parameterizations
-  * model-based (indirect RL): `source= model`
+  * `model-based` (indirect RL): `source= model`
     * consists of: planning and model learning
     * pros and cons
       * (+) sample-efficient
       * (+) model learning transfers across tasks and environment configurations (learning physics)
       * (-) suffer from significant bias, complex unknown dynamics cannot always be modeled accurately enough
       * (-) 2 sources of approximation error: learn model, estimate a value function using the learned model
-  * hybrid: dyna (true model-free and model-based RL)
+  * hybrid: dyna (`true model-free` + and `model-based`)
 
 * base for iteration
-  * policy-based (policy-search, policy iteration)
+  * `policy-based` (policy-search, policy iteration)
     * gradient-free
     * gradient-based
-  * value-based (value iteration)
-  * hybrid: Actor-critic: value-based and policy-based
+  * `value-based` (value iteration)
+  * hybrid: Actor-critic (`actor:policy-based` + `critic:value-based`) 
 
 * when policy compiled/learned with respect to execution/action time
-  * offline
+  * `offline`
     * policy compiled/learned: before execution
-  * online
+  * `online`
     * policy compiled/learned: during execution (in paralel)
-
+  * hybrid: (`online` + `offline`)
+  
 ## misc
 * on-policy _vs_ off-policy,
   episodic _vs_ continuing tasks,
