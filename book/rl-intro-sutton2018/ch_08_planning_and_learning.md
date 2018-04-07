@@ -84,6 +84,9 @@
     and yet always planning and model-learning in the background.
     (As the model changes, the ongoing planning process will gradually compute
     a different way of behaving to match the new model).
+* Planning, acting, and model-learning interact in a circular fashion,
+  * each producing what the other needs to improve;
+  * most natural approach is for all processes to proceed **asynchronously** and **in parallel**
 
 ## 8.3 When the Model Is Wrong
 * Models may be incorrect because
@@ -229,12 +232,75 @@
     one return to the same state later.
 
 # 8.9 Heuristic Search
+*  In heuristic search,
+  * for each state encountered, a large tree of possible continuations is considered.
+  * The approximate value function is applied to the leaf nodes and
+    then backed up toward the current state at the root.
+  * The backing up stops at the state–action nodes for the current state.
+  * Once the backed-up values of these nodes are computed, the best of them is chosen as the current action, and
+    then all backed-up values are discarded.
+* heuristic search can be viewed as an extension of the idea of a greedy policy beyond a single step
+  * searching deeper than one step is to obtain better action selections
+* Much of the effectiveness of heuristic search is due to
+  * its search tree being tightly focused on the states and actions that
+    might immediately follow the current state.
 
-<!--
-In model learning, the goal is to estimate a model from experience $$ \{S_1, A_1, R_2, ..., S_t \} $$.
-That is a supervised learning problem, where:
-$(S_1, A_1) \mapsto (S_2, R_2), (S_2, A_2) \mapsto (S_3, R_3), \ldots, (S_{t-1}, A_{t-1}) \mapsto (S_t, R_t)$.
-Learning $s, a \mapsto r$ is a regression problem, whereas
-learning $s, a \mapsto s'$ is a density estimation problem.
+## 8.10 Rollout Algorithms
+* Rollout algorithms
+  * are decision-time planning algorithms based on Monte Carlo control applied to
+    simulated trajectories that all begin at the current environment state.
+  * estimate action values for a given policy by averaging the returns of many simulated
+    trajectories that start with each possible action and then follow the given policy.
+  * goal:
+    * produce Monte Carlo estimates of action values only for each current state and
+      for a given policy usually called the rollout policy.
+      (to improve upon the rollout policy; not to find an optimal policy. )
+    * not to estimate a complete optimal action-value function, q∗, or
+      a complete action-value function for a given policy
+* not ordinarily think of rollout algorithms as learning algorithms because
+  they do not maintain long-term memories of values or policies.
 
- -->
+## 8.11 Monte Carlo Tree Search
+* MCTS:
+  * is a rollout algorithm, but
+    enhanced by the addition of a means for accumulating value estimates obtained from the
+    Monte Carlo simulations in order to successively direct simulations toward more highly-
+    rewarding trajectories.
+  * is a decision-time planning algorithm based on Monte Carlo control applied to
+    simulations that start from the root state;
+  * is executed after encountering each new state to select the agent’s action for that state;
+  * each execution is an iterative process that simulates many trajectories
+    starting from the current state and running to a terminal state (or until discounting
+    makes any further reward negligible as a contribution to the return).
+  * benefits from
+    online, incremental, sample-based value estimation and policy improvement
+  * avoids the problem of globally approximating an action-value function while
+    it retains the benefit of using past experience to guide exploration.
+  * focusing the Monte Carlo trials on trajectories whose initial segments are
+    common to high-return trajectories previously simulated.
+* idea
+  * to successively focus multiple simulations starting at the current state by
+    extending the initial portions of trajectories that have received high evaluations from
+    earlier simulations
+* policy:
+  * tree policy
+    * e.g eps-greedy or UCB selection rule
+  * rollout policy
+* 4 steps as illustrated in Figure 8.10:
+  * Selection.
+    * Starting at the root node, a tree policy based on the action values
+      attached to the edges of the tree traverses the tree to select a leaf node.
+  * Expansion.
+    * On some iterations (depending on details of the application), the tree
+      is expanded from the selected leaf node by adding one or more child nodes reached
+      from the selected node via unexplored actions.
+  * Simulation.
+    * From the selected node, or from one of its newly-added child nodes (if any),
+      simulation of a complete episode is run with actions selected by the rollout
+      policy.
+    * The result is a Monte Carlo trial with actions selected first by the tree
+      policy and beyond the tree by the rollout policy.
+  * Backup.
+    * The return generated by the simulated episode is backed up to update, or to initialize,
+      the action values attached to the edges of the tree traversed by the tree policy in this iteration of MCTS.
+    * No values are saved for the states and actions visited by the rollout policy beyond the tree.
