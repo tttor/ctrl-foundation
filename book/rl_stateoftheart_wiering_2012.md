@@ -1,11 +1,6 @@
-# wiering_2012.md
-@book{Wiering2012,
- author = {Wiering, Marco and van Otterlo, Martijn},
- title = {Reinforcement Learning: State-of-the-Art},
- year = {2012},
- isbn = {364244685X, 9783642446856},
- publisher = {Springer Publishing Company, Incorporated},
-}
+# Reinforcement Learning: State-of-the-Art
+* Wiering, Marco and van Otterlo, Martijn
+* Springer Publishing Company, Incorporated, 2012
 
 ## 7: Reinforcement Learning in Continuous State and Action Spaces (Hado van Hasselt)
 To update the parameters:

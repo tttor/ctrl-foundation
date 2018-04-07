@@ -1,6 +1,9 @@
-# masashi_sugiyama_book.md
+# Statistical reinforcement learning
+* Masashi Sugiyama
+* Chapman & Hall/CRC
+* 2015 by Taylor & Francis Group, LLC
 
-### Foreword
+## Foreword
 * in rl, the env is modeled as mdp that provides immediate reward and
   state info to the agent however, the agent does not have access to the
   transition structure and needs to choose actions to max its overal
@@ -9,12 +12,12 @@
   * policy search: manipulate policy params
   * policy iteration: estimate value func
 
-### Preface
+## Preface
 * reward to evaluate the validity of predicted output
 * reward is usually much easier, less costly than giving supervision
 * various supervised and unsupervised learning are also utilized in rl
 
-### ch 1: intro
+## ch 1: intro
 * rl
   * knowing transitions intuitively means knowing the map
   * knowing the reward intuitevely means knowing the location of the goal states
@@ -48,16 +51,16 @@
   * model-based is useful when data-colletion (trials) in real robots is expensive
   * but estimating the transiton model from limited amount of data and multi-dim cont space is also hard
 
-### part2: model free policy iter
+## part2: model free policy iter
 * policy iteration (= policy eval + policy improvement)
   vs policy search
 
-### ch 2: policy iter with value fn approx
+## ch 2: policy iter with value fn approx
 * learning value fn from data can actually be regarded as a regression problem: least-square policy iter
 * regression is formulated as minimization of goodness-of-fit and regularization terms, e.g
   l2-regularizer (ridge regression) and l1-regularization (lasso: least absolute shrinkage and selection operator)
 
-### ch 3: basis design for value fn approx
+## ch 3: basis design for value fn approx
 * alternative to gaussian kernel (that cannot approx discontinuous fn well):
   geodesic gaussian kernels,
   ordinary gaussian kernels
@@ -67,7 +70,6 @@
   $ED(s,s') = || x - x' ||$
 * geodesic (=shortest path (SP)):
   $K(s,s') = exp(- \frac{SP(s,s')}{2\sigma^2})$,
-
 
 * conditional density estimation
 via gaussian process estimation
@@ -90,7 +92,7 @@ comparison between model-based and model-free
 * remarks
 model based pgpe with lscde
 
-### ch?: dimensionality reduction for transition model estimation
+## ch?: dimensionality reduction for transition model estimation
 * for hi dim action and state spaces
 
 * sufficient dim red
@@ -100,7 +102,6 @@ to find a low-dimensional expression of input $(s,a)$ that contains "sufficient"
   * squared-loss conditional entropy (SCE) for dim red,
   this allows performing dim red and conditional density estimation simultaneously
 
-### comments
+## comments
 * perhaps, this book should be titled: machine learning methods for RL :)
 * this book is more on application of sugiyama's learning methods to rl
-* my own goal is in the dim of integrating model-free and model-based rl in a single loop
