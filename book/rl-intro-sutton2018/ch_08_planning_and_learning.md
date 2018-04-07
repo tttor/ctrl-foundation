@@ -102,6 +102,34 @@
     given on simulated experiences involving  these actions.
 
 ## 8.4 Prioritized Sweeping
+* to work back not just from goal states but from any state whose value has changed.
+* backward focusing of planning computations:
+  work backward from arbitrary states that have changed in value,
+  either performing useful updates or terminating the propagation.
+* prioritized sweeping:
+  * A queue is maintained of every state-action pair whose
+    estimated value would change nontrivially if updated,
+    prioritized by the size of the change.
+  * When the top pair in the queue is updated, the effect on each of
+    its predecessor pairs is computed.
+    * If the effect is greater than some small threshold, then
+      the pair is inserted in the queue with the new priority
+      (if there is a previous entry of the pair in the queue, then
+      insertion results in only the higher priority entry remaining in the queue).
+    * In this way the effects of changes are efficiently propagated backward until quiescence.
+* Extensions to stochastic environments
+  * The model is maintained by keeping counts of the number of times
+    each state-action pair has been experienced and of what the next states were.
+  * to update each pair not with a sample update, as we have been using so far, but
+    with an expected update, taking into account all possible next states and
+    their probabilities of occurring.
+* forward focusing:
+  * to focus on states according to how easily they can be reached from the states that
+    are visited frequently under the current policy
+
+## 8.5 Expected vs. Sample Updates
+
+
 
 <!--
 There are two ways of thinking about planning:
