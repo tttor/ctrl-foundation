@@ -1,7 +1,6 @@
 # Algorithms for Reinforcement Learning
-Csaba Szepesvári;
-University of Alberta;
-2010 by Morgan & Claypool
+* Csaba Szepesvári
+* 2010 by Morgan & Claypool
 
 ## abstract
 Distingushing factors of reinforcement learning from supervised learning:

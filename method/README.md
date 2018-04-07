@@ -26,15 +26,18 @@
     * gradient-free
     * gradient-based
   * `value-based` (value iteration)
-  * hybrid: Actor-critic (`actor:policy-based` + `critic:value-based`) 
+  * hybrid: Actor-critic (`actor:policy-based` + `critic:value-based`)
 
 * when policy compiled/learned with respect to execution/action time
   * `offline`
-    * policy compiled/learned: before execution
+    * policy learned: before execution
   * `online`
-    * policy compiled/learned: during execution (in paralel)
-  * hybrid: (`online` + `offline`)
-  
+    * policy learned: in between 2 execution (interleaved)
+    * aka: decision-time planning
+  * `background`
+    * policy learned: in paralel with execution
+  * hybrid: (`online` + `offline` + `background`)
+
 ## misc
 * on-policy _vs_ off-policy,
   episodic _vs_ continuing tasks,
