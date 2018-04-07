@@ -2,7 +2,7 @@
 
 ## taxonomy
 * source of experience
-  * `source= realWorld`: model-free (direct RL)
+  * model-free (direct RL): `source= realWorld`
     * in robotics (cf Atari games), be aware of
       * _true_ model-free:
         trained with the **real** world
@@ -12,15 +12,13 @@
       * (+) have the advantage of handling arbitrary dynamical systems with minimal bias
       * (-) less sample-efficient, high sample complexity
       * (-) require policies with carefully designed, low-dimensional parameterizations
-  * `source= model`: model-based (indirect RL)
+  * model-based (indirect RL): `source= model`
     * consists of: planning and model learning
     * pros and cons
       * (+) sample-efficient
       * (+) model learning transfers across tasks and environment configurations (learning physics)
       * (-) suffer from significant bias, complex unknown dynamics cannot always be modeled accurately enough
       * (-) 2 sources of approximation error: learn model, estimate a value function using the learned model
-    * sample-efficient:
-      PILCO_2015, TEXPLORE_2013,...
   * hybrid: dyna (true model-free and model-based RL)
 
 * base for iteration
