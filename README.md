@@ -28,5 +28,7 @@ Evolutionary RL,
 ## People
 Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
 
-## Related work
+## Related sources
 * https://deeplearning4j.org/deepreinforcementlearning
+* https://github.com/aikorea/awesome-rl
+* http://www-anw.cs.umass.edu/rlr/
