@@ -4,22 +4,22 @@
   * A value function may still be used to learn the policy parameter,
     but is **not required** for action selection.
 * notation:
-  * `\theta \in R^{d'}`: policy’s parameter vector
-    * `d'`: alternate dimensionality; the number of components of `\theta`
-  * `\pi(a|s,\theta) = Pr{A_t = a | S_t = s, \theta_t = \theta}`:
-    * the probability that action `a` is taken at time `t` given that
-      the environment is in state `s` at time t with parameter `\theta`
-  * `w \in R^{d}`: value function’s weight vector
-    * `d`: dimensionality; the number of components of w
-  * `\hat{v}(s,w)`: the learned value fn
 * goal of policy gradient methods:
   * learning the policy parameter based on the gradient of
     some performance measure `J(\theta)` with respect to the policy parameter.
   * to maximize performance, so their updates approximate gradient ascent in J:
-    * `\theta_{t+1} = \theta_t + \alpha \hat{ \grad J(\theta_t) }`
+    * `\theta_{t+1} = \theta_t + \alpha \hat{ \grad J(\theta_t) }` ...(13.1)
       * `\hat{ \grad J(\theta_t) }`:
         a **stochastic estimate** whose expectation approximates the gradient of the
         performance measure with respect to its argument
+      * `\theta \in R^{d'}`: policy’s parameter vector
+      * `d`: dimensionality; the number of components of w
+      * `d'`: alternate dimensionality; the number of components of `\theta`
+      * `\pi(a|s,\theta) = Pr{A_t = a | S_t = s, \theta_t = \theta}`:
+        the probability that action `a` is taken at time `t` given that
+        the environment is in state `s` at time t with parameter `\theta`
+      * `w \in R^{d}`: value function’s weight vector
+      * `\hat{v}(s,w)`: the learned value fn
 * actor-critic:
   Methods that learn approximations to **both** policy and value functions
   * `actor` is a reference to the learned policy, and
@@ -49,7 +49,7 @@
 * In the episodic case,
   * the performance measure:
     * the value of the start state of the episode.
-    * `J(\theta) = v_{ \pi_{\theta} } (s_0)`
+    * `J(\theta) = v_{ \pi_{\theta} } (s_0)` ...(13.4)
 * **challenge**:
   _How can we estimate the performance gradient with respect to
   the policy parameter when the gradient depends on
@@ -58,7 +58,7 @@
     * provides an analytic expression for the gradient of performance with respect to the policy parameter 
       * (which is what we need to approximate for gradient ascent (13.1))
       * that does **not involve** the derivative of the state distribution.
-    * `\nabla J(\theta) \propto \sum_s \mu(s) \sum_a q_{\pi}(s,a) \nabla \pi (a|s,\theta)`
+    * `\nabla J(\theta) \propto \sum_s \mu(s) \sum_a q_{\pi}(s,a) \nabla \pi (a|s,\theta)` ...(13.5)
       * the gradients are column vectors of partial derivatives with respect to the components of `\theta`
       * distribution `\mu` is the on-policy distribution under `\pi`
 
