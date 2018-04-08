@@ -5,6 +5,7 @@
 * Statistical Reinforcement Learning: Modern Machine Learning Approaches, Masashi Sugiyama, 2015
 * Algorithms for Reinforcement Learning, Csaba Szepesvari, 2010
 * [Monte Carlo theory, methods and examples](http://statweb.stanford.edu/~owen/mc/), Art B. Owen, 2013 
+* http://artint.info/html/ArtInt_262.html
 
 ## misc
 Marco Wiering, Martijn van Otterlo:
