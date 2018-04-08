@@ -6,6 +6,7 @@
 * ChainerRL: https://github.com/chainer/chainerrl
 * Tensorlayer: https://github.com/tensorlayer/tensorlayer
 * Tensorforce: https://github.com/reinforceio/tensorforce
+* KerasRL: https://github.com/keras-rl/keras-rl
 
 ## type 1
 * https://github.com/rlcode/reinforcement-learning
