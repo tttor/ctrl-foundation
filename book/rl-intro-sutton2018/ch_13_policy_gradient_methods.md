@@ -65,9 +65,16 @@
 ## 13.3 REINFORCE: Monte Carlo Policy Gradient
 * The **sample gradients** need only **be proportional to the gradient** 
   * because any constant of proportionality can be absorbed into the step size `\alpha`
-* if `\pi` is followed, then
-  * `\nabla J(\theta) = E_{\pi} [ \sum_a q_{\pi}(s,a) \nabla \pi (a|s,\theta) ]`
-    * `E_{\pi}` substitutes `\propto \sum_s \mu(s)`
+* Policy gradient's transformation
+  * if `\pi` is followed, then
+    * `\nabla J(\theta) = E_{\pi} [ \sum_a q_{\pi}(s,a) \nabla \pi (a|s,\theta) ]`
+      * `E_{\pi}` substitutes `\propto \sum_s \mu(s)`
+  * if only each term (of the remaining part of the expectation above) were weighted by 
+    the probability of selecting the actions according to `\pi (a|s,\theta)`, then
+    * `\nabla J(\theta) = E_{\pi} [ G_t \frac{\nabla \pi (A_t|S_t,\theta)}{\pi (A_t|S_t,\theta)} ]`
+      * replacing `a` by the sample `A_t \sim \pi`
+      * `q_{\pi}(A_t|S_t) = E_{\pi} [G_t | A_t|S_t]`
+      * `G_t` is the return
 
 REINFORCE uses the complete return from time t, which includes all future rewards up
 until the end of the episode. In this sense REINFORCE is a Monte Carlo algorithm and is well defined
