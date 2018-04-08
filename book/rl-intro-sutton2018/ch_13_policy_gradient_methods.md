@@ -1,14 +1,16 @@
 # 13: Policy Gradient Methods
 * consider methods that learn a parameterized policy that
-  can select actions without consulting a value function.
+  can select actions **without** consulting a value function.
   * A value function may still be used to learn the policy parameter,
-    but is not required for action selection.
+    but is **not required** for action selection.
 * notation:
   * `\theta \in R^{d'}`: policy’s parameter vector
+    * `d'`: alternate dimensionality; the number of components of `\theta`
   * `\pi(a|s,\theta) = Pr{A_t = a | S_t = s, \theta_t = \theta}`:
-    the probability that action a is taken at time t given that
-    the environment is in state s at time t with parameter \theta
-  * `w \in R^{d'}`: value function’s weight vector
+    * the probability that action `a` is taken at time `t` given that
+      the environment is in state `s` at time t with parameter `\theta`
+  * `w \in R^{d}`: value function’s weight vector
+    * `d`: dimensionality—the number of components of w
   * `\hat{v}(s,w)`: the learned value fn
 * goal of policy gradient methods:
   * learning the policy parameter based on the gradient of
@@ -16,26 +18,26 @@
   * to maximize performance, so their updates approximate gradient ascent in J:
     * `\theta_{t+1} = \theta_t + \alpha \hat{ \grad J(\theta_t) }`
       * `\hat{ \grad J(\theta_t) }`:
-        * a stochastic estimate whose expectation approximates the gradient of the
-          performance measure with respect to its argument
+        a **stochastic estimate** whose expectation approximates the gradient of the
+        performance measure with respect to its argument
 * actor-critic:
-  Methods that learn approximations to both policy and value functions
+  Methods that learn approximations to **both** policy and value functions
   * `actor` is a reference to the learned policy, and
   * `critic` refers to the learned value function
 
 ## 13.1 Policy Approximation and its Advantages
-* the policy can be parameterized in any way,
-  * as long as it is differentiable with respect to its parameters, that is,
-    as long as the gradient exists and is always finite.
+* the policy can be parameterized in any way,as long as 
+    * it is differentiable with respect to its parameters
+    * the gradient exists and is always finite.
 * soft-max in action preferences.
   * The actions with the highest preferences in each state are given the
     highest probabilities of being selected
   * advantage:
     * the approximate policy can approach a deterministic policy, cf eps-greedy
     * enables the selection of actions with arbitrary probabilities.
-* advantage that policy parameterization (over action-value parameterization)
+* advantage of policy parameterization (over action-value parameterization)
   * the policy may be a simpler function to approximate,
-  * a good way of injecting prior knowledge about the desired form of the policy into the reinforcement learning system.
+  * a good way of **injecting prior knowledge** about the desired form of the policy into the reinforcement learning system.
 
 ## 13.2 The Policy Gradient Theorem
 * advantages of policy parameterization over ε-greedy
@@ -46,17 +48,17 @@
       policy-gradient methods than for action-value methods.
 * In the episodic case,
   * the performance measure:
-    the value of the start state of the episode.
-  * `J(\theta) = v_{ \pi_{\theta} } (s_0)`
-* challenge:
-  How can we estimate the performance gradient with respect to
+    * the value of the start state of the episode.
+    * `J(\theta) = v_{ \pi_{\theta} } (s_0)`
+* **challenge**:
+  _How can we estimate the performance gradient with respect to
   the policy parameter when the gradient depends on
-  the unknown effect of policy changes on the state distribution?
-  * ans: policy gradient theorem:
-    * provides an analytic expression for the gradient of performance with respect to
-      the policy parameter (which is what we need to approximate for gradient ascent (13.1)) that
-      does **not involve** the derivative of the state distribution.
-    * `todo: eq 13.5`
+  the unknown effect of policy changes on the state distribution?_
+  * **Ans**: policy gradient theorem
+    * provides an analytic expression for the gradient of performance with respect to the policy parameter 
+      * (which is what we need to approximate for gradient ascent (13.1))
+      * that does **not involve** the derivative of the state distribution.
+    * `\nabla J(\theta) \propto \sum_s \mu(s) \sum_a q_{\pi}(s,a) \nabla \pi (a|s,\theta)`
       * the gradients are column vectors of partial derivatives with respect to the components of `\theta`
       * distribution `\mu` is the on-policy distribution under `\pi`
 
