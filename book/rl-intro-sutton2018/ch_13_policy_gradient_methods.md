@@ -79,7 +79,7 @@
      * a quantity that can be sampled on each time step whose **expectation is equal to** the gradient. 
    * Using this sample to instantiate our generic stochastic gradient ascent algorithm (13.1), yields the update
      * `\theta_{t+1} = \theta_t + \alpha G_t \frac{\nabla \pi (A_t|S_t,\theta)}{\pi (A_t|S_t,\theta)}`
-       * `[ G_t \frac{\nabla \pi (A_t|S_t,\theta)}{\pi (A_t|S_t,\theta)} ]` substitues `\hat{ \grad J(\theta_t) }` ...(13.6)
+       * `[ G_t \frac{...}{...} ]` substitutes `\hat{ \grad J(\theta_t) }` ...(13.6)
 
 REINFORCE uses the complete return from time t, which includes all future rewards up
 until the end of the episode. In this sense REINFORCE is a Monte Carlo algorithm and is well defined
