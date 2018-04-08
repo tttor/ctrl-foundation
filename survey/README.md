@@ -22,10 +22,8 @@
 
 ## Web
 * https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
-* https://github.com/aikorea/awesome-rl
 * https://github.com/dennybritz/reinforcement-learning
 * https://www.alexirpan.com/2018/02/14/rl-hard.html
-* http://www-anw.cs.umass.edu/rlr/
 * http://www.wildml.com/2016/10/learning-reinforcement-learning/
 
 ## misc
