@@ -10,7 +10,7 @@
     * the probability that action `a` is taken at time `t` given that
       the environment is in state `s` at time t with parameter `\theta`
   * `w \in R^{d}`: value function’s weight vector
-    * `d`: dimensionality—the number of components of w
+    * `d`: dimensionality; the number of components of w
   * `\hat{v}(s,w)`: the learned value fn
 * goal of policy gradient methods:
   * learning the policy parameter based on the gradient of
@@ -63,10 +63,11 @@
       * distribution `\mu` is the on-policy distribution under `\pi`
 
 ## 13.3 REINFORCE: Monte Carlo Policy Gradient
-
-Recall our overall strategy of stochastic gradient ascent (13.1), which
-requires a way to obtain samples such that the expectation of the
-sample gradient is proportional to the actual gradient of the performance measure as a function of the parameter.
+* The **sample gradients** need only **be proportional to the gradient** 
+  * because any constant of proportionality can be absorbed into the step size `\alpha`
+* if `\pi` is followed, then
+  * `\nabla J(\theta) = E_{\pi} [ \sum_a q_{\pi}(s,a) \nabla \pi (a|s,\theta) ]`
+    * `E_{\pi}` substitutes `\propto \sum_s \mu(s)`
 
 REINFORCE uses the complete return from time t, which includes all future rewards up
 until the end of the episode. In this sense REINFORCE is a Monte Carlo algorithm and is well defined
