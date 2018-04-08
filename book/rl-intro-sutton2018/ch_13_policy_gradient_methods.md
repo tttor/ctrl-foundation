@@ -75,6 +75,11 @@
       * replacing `a` by the sample `A_t \sim \pi`
       * `q_{\pi}(A_t|S_t) = E_{\pi} [G_t | A_t|S_t]`
       * `G_t` is the return
+   * The final expression in the brackets of `E_{\pi} [...]` is exactly what is needed, 
+     * a quantity that can be sampled on each time step whose **expectation is equal to** the gradient. 
+   * Using this sample to instantiate our generic stochastic gradient ascent algorithm (13.1), yields the update
+     * `\theta_{t+1} = \theta_t + \alpha G_t \frac{\nabla \pi (A_t|S_t,\theta)}{\pi (A_t|S_t,\theta)}`
+       * `[ G_t \frac{\nabla \pi (A_t|S_t,\theta)}{\pi (A_t|S_t,\theta)} ]` substitues `\hat{ \grad J(\theta_t) }` ...(13.6)
 
 REINFORCE uses the complete return from time t, which includes all future rewards up
 until the end of the episode. In this sense REINFORCE is a Monte Carlo algorithm and is well defined
@@ -120,7 +125,3 @@ affected by the policy parameter that does not involve derivatives of the state 
 accordingly the former is termed the critic and the latter the actor, and
 these overall methods are sometimes termed actor–critic methods.
 
-<!--
-* moveit motion plan as prior knowledge for policy grad
-* rl for postprocessing traj from moveit
- -->
