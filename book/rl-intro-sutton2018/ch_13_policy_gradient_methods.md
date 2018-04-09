@@ -136,30 +136,35 @@
     * replace one-step return in (13.10) by `G_{t}^{\lambda}`
 
 ## 13.6 Policy Gradient for Continuing Problems
+* For continuing problems without episode boundaries
+  * need to define performance in terms of the **average rate of reward** per time step.
+* TODO: more on sec 13.6
 
-For continuing problems without episode boundaries we need to define
-performance in terms of the average rate of reward per time step.
+## 13.7 Policy Parameterization for Continuous Actions
+* learn statistics of the probability distribution
+  (Instead of computing learned probabilities for each of the many actions)
+  * eg: the action set might be the real numbers, with actions chosen from a normal (Gaussian) distribution.
+* To produce a policy parameterization, 
+  * the policy can be defined as the normal proba bility density over a real-valued scalar action, 
+    with mean and standard deviation given by parametric function approximators that depend on the state
+  * divide the policy’s parameter vector into 2 parts, `\theta = [\theta_{\mu}, \theta_{\sigma}]`
+    * one part to be used for the approximation of the mean 
+      * can be approximated as a linear function
+    * one part for the approximation of the standard deviation. 
+      * must always be positive and 
+      * is better approximated as the exponential of a linear function.
 
-Policy-based methods offer practical ways of dealing with large actions spaces, even continuous spaces
-with an infinite number of actions. Instead of computing learned probabilities for each of the many
-actions, we instead learn statistics of the probability distribution. For example, the action set might be
-the real numbers, with actions chosen from a normal (Gaussian) distribution.
-
-## Summary:
-* A parameterized policy enables actions to be taken without consulting
-action-value estimates—though action-value estimates may still be learned and
-used to update the policy parameter.
-* policy-gradient methods—meaning methods that
-update the policy parameter on each step in the direction of an estimate of
-the gradient of performance with respect to the policy parameter.
-* Methods that learn and store a policy parameter have many advantages.
+## 13.8 Summary
+* policy-gradient methods:
+  * update the policy parameter on each step in the direction of an estimate of 
+    the gradient of performance with respect to the policy parameter.
+* advantages of methods that learn and store a policy parameter
   * can learn specific probabilities for taking the actions.
   * can learn appropriate levels of exploration and approach deterministic policies asymptotically
   * can naturally handle continuous state spaces
   * on some problems the policy is just simpler to represent parametrically than the value function;
-* policy gradient theorem gives an exact formula for how performance is
-affected by the policy parameter that does not involve derivatives of the state distribution
-*  The state-value function assigns credit to—critizes—the policy’s action selections, and
-accordingly the former is termed the critic and the latter the actor, and
-these overall methods are sometimes termed actor–critic methods.
-
+* Parameterized policy methods have an **theoretical advantage** over action-value methods 
+  * in the form of the policy gradient theorem, which 
+    * gives an exact formula for how performance is affected by the policy parameter that 
+      does **not involve** derivatives of the state distribution. 
+      
