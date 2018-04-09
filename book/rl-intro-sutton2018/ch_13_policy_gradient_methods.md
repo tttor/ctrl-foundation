@@ -109,22 +109,33 @@
     * uniformly zero (showing a strict generalization over REINFORCE)  
   * update rule becomes:
     * `\theta_{t+1}= \theta_t + \alpha \big( G_t - b(S_t) \big) \frac{...}{...}` ...(13.9)
+  * best value of the step size of policy param `\alpha^{\theta}` depends on 
+    the range of variation of the rewards and on the policy parameterization.
+* property
   * learn much faster than without baseline
-  * best value of the step size of policy param `\alpha^{\theta}`  
-    depends on the range of variation of the rewards and on the policy parameterization.
+  * is unbiased and will converge asymptotically to a local minimum, 
+  * but like all Monte Carlo methods it tends to learn slowly (produce estimates of high variance) and 
+    to be inconvenient to implement online or for continuing problems. 
 
 ## 13.5 Actor–Critic Methods
+* REINFORCE-with-baseline method is **not** an actor–critic method, because
+  * its state-value function is used only as a baseline, **not** as a critic. 
+  * it is not used for bootstrapping,  but only as a baseline for the state whose estimate is being updated.
+    * for bootstrapping: updating the value estimate for a state from the estimated values of subsequent states
+* only through bootstrapping 
+  * we introduce bias and an asymptotic dependence on the quality of the function approximation. 
+    * this bias is often beneficial because it reduces variance and accelerates learning. 
+* One-step actor–critic methods replace the full return of REINFORCE (13.9) with 
+  the one-step return (and use a learned state-value function as the baseline) as follows:
+  * `\theta_{t+1}= \theta_t + \alpha \delta \frac{...}{...}` ...(13.12)
+    * `\delta = R_{t+1} + \gamma \hat{v}(S_{t+1},w) - \hat{v}(S_{t+1},w)`
+* The generalizations to  
+  * the forward view of n-step methods:
+    * replace one-step return in (13.10) by `G_{t:t+n}`
+  * a `\lambda`-return
+    * replace one-step return in (13.10) by `G_{t}^{\lambda}`
 
-
-Although the REINFORCE-with-baseline method learns both a policy and a state-value function, we
-do not consider it to be an actor–critic method because its state-value function is used only as a
-baseline, not as a critic. That is, it is not used for bootstrapping (updating the value estimate for
-a state from the estimated values of subsequent states), but only as a baseline for the state whose
-estimate is being updated.
-REINFORCE with baseline is unbiased and
-will converge asymptotically to a local minimum, but like all Monte Carlo methods it tends to learn
-slowly (produce estimates of high variance) and to be inconvenient to implement online or for continuing
-problems.
+## 13.6 Policy Gradient for Continuing Problems
 
 For continuing problems without episode boundaries we need to define
 performance in terms of the average rate of reward per time step.
