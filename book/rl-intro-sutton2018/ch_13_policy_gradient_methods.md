@@ -28,7 +28,9 @@
 ## 13.1 Policy Approximation and its Advantages
 * the policy can be parameterized in any way,as long as 
     * it is differentiable with respect to its parameters
-    * the gradient exists and is always finite.
+    * the `\nable_{\pi} (a|s,\theta)` exists and is always finite for all `s \in S`, `a \in A(s)`, and `\theta`
+      * `\nable_{\pi} (a|s,\theta)`: 
+        the column vector of partial derivatives of `\pi(a|s,\theta)` with respect to the components of `\theta`
 * soft-max in action preferences.
   * The actions with the highest preferences in each state are given the
     highest probabilities of being selected
@@ -80,13 +82,22 @@
  * Using this sample to instantiate our generic stochastic gradient ascent algorithm (13.1), yields the update:
    * `\theta_{t+1}= \theta_t + \alpha G_t \frac{\nabla \pi(A_t|S_t,\theta)}{\pi(A_t|S_t,\theta)}` ...(13.6)
       * `[ G_t \frac{...}{...} ]` substitutes `\hat{ \grad J(\theta_t) }` 
+      * `[ G_t \frac{...}{...} ]` can be written as `\nabla ln \pi(A_t|S_t,\theta)` 
+        * since `\nabla ln x = \frac{\nabla x}{x}`
       * aka REINFORCE algor
-      
-uses the complete return from time t, which includes all future rewards up
-until the end of the episode. In this sense REINFORCE is a Monte Carlo algorithm and is well defined
-only for the episodic case with all updates made in retrospect after the episode is completed.
-As a Monte Carlo method REINFORCE may be of high variance and thus produce slow learning.
-As a stochastic gradient method, REINFORCE has good theoretical convergence properties.
+* REINFORCE
+  * Each increment is proportional to the product of 
+    * a return Gt and 
+    * a vector (aka eligibility vector): 
+      * the **gradient** of the probability of taking the action actually taken divided by 
+        the probability of taking that action. 
+      *  is the direction in parameter space that most increases the probability of 
+          repeating the action `A_t` on future visits to state `S_t`
+  * uses the complete return from time `t`, which 
+    includes all future rewards up until the end of the episode. 
+    * In this sense REINFORCE is a Monte Carlo algorithm 
+  * may be of high variance and thus produce slow learning (As a Monte Carlo method)
+  * has good theoretical convergence properties (As a stochastic gradient method)
 
 REINFORCE with Baseline:
 One natural choice for the baseline is an estimate of the state value.
