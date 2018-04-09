@@ -57,12 +57,13 @@
   the policy parameter when the gradient depends on
   the unknown effect of policy changes on the state distribution?_
   * **Ans**: policy gradient theorem
-    * provides an analytic expression for the gradient of performance with respect to the policy parameter 
-      * (which is what we need to approximate for gradient ascent (13.1))
-      * that does **not involve** the derivative of the state distribution.
-    * `\nabla J(\theta) \propto \sum_s \mu(s) \sum_a q_{\pi}(s,a) \nabla \pi (a|s,\theta)` ...(13.5)
-      * the gradients are column vectors of partial derivatives with respect to the components of `\theta`
-      * distribution `\mu` is the on-policy distribution under `\pi`
+* policy gradient theorem
+  * `\nabla J(\theta) \propto \sum_s \mu(s) \sum_a q_{\pi}(s,a) \nabla \pi (a|s,\theta)` ...(13.5)
+    * the gradients are column vectors of partial derivatives with respect to the components of `\theta`
+    * distribution `\mu` is the on-policy distribution under `\pi`
+  * provides an analytic expression for the gradient of performance with respect to the policy parameter 
+    * (which is what we need to approximate for gradient ascent (13.1))
+    * that does **not involve** the derivative of the state distribution.
 
 ## 13.3 REINFORCE: Monte Carlo Policy Gradient
 * The **sample gradients** need only **be proportional to the gradient** 
@@ -99,8 +100,22 @@
   * may be of high variance and thus produce slow learning (As a Monte Carlo method)
   * has good theoretical convergence properties (As a stochastic gradient method)
 
-REINFORCE with Baseline:
-One natural choice for the baseline is an estimate of the state value.
+## 13.4 REINFORCE with Baseline
+* to generalize the policy gradient theorem to 
+  include a comparison of the action value to an **arbitrary baseline** `b(s)`
+  * baseline can be **any function**, even a random variable, 
+    as long as it does **not vary** with `a`
+    * natural choice: an estimate of the state value, `\hat{v} (S_t ,w)` 
+    * uniformly zero (showing a strict generalization over REINFORCE)  
+  * update rule becomes:
+    * `\theta_{t+1}= \theta_t + \alpha \big( G_t - b(S_t) \big) \frac{...}{...}` ...(13.9)
+  * learn much faster than without baseline
+  * best value of the step size of policy param `\alpha^{\theta}`  
+    depends on the range of variation of the rewards and on the policy parameterization.
+
+## 13.5 Actor–Critic Methods
+
+
 Although the REINFORCE-with-baseline method learns both a policy and a state-value function, we
 do not consider it to be an actor–critic method because its state-value function is used only as a
 baseline, not as a critic. That is, it is not used for bootstrapping (updating the value estimate for
