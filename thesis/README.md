@@ -1,5 +1,8 @@
 # thesis
 
+## Labs
+[Reinforcement Learning and Artificial Intelligence at the University of Alberta](http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html), ...
+
 ## On going
 [Chelsea Finn](http://people.eecs.berkeley.edu/~cbfinn/),
 [Yevgen Chebotar](http://www-clmc.usc.edu/Main/YevgenChebotar),
