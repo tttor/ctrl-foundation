@@ -41,7 +41,7 @@
 
 ## foundation
 ### book
-TODO
+* RL Intro (Sutton, 2018): ch 13, 15
 
 ### talk, lecture, tutorial
 * http://mi.eng.cam.ac.uk/~mg436/LectureSlides/MLSALT7/L5.pdf
