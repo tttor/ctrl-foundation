@@ -8,6 +8,15 @@
 # "Xavier" initialization
 # RMSProp
 
+# Reward formulation
+# type 1: (n_episodes == n_rallys) (used here)
+# +1: ball is out in the opponent's area; a rally(==episode) ends
+# -1: ball is out in the own area; a rally(==episode) ends
+#  0: else
+# type 2: (n_episodes = n_rounds)
+# +1: win a round
+# -1: loose a round
+
 import sys
 import time
 
@@ -39,6 +48,7 @@ def main(argv):
 def test(n_episodes, model_fpath, render=True):
     model = pickle.load(open(model_fpath, 'rb'))
     D = 80 * 80 # input dimensionality: 80x80 grid
+    gamma = 0.99 # discount factor for reward
 
     for episode_idx in xrange(n_episodes):
         print('testing episode_idx= '+str(episode_idx)+': begin')
@@ -47,10 +57,10 @@ def test(n_episodes, model_fpath, render=True):
         env = gym.make("Pong-v0")
         observation = env.reset() # returns an initial observation
         prev_x = None # used in computing the difference frame
-        terminal = False
         episode_r = []
 
-        while not terminal:
+        step_idx = 0
+        while True:
             if render: env.render()
 
             ## prepro
@@ -72,9 +82,23 @@ def test(n_episodes, model_fpath, render=True):
                 action = 3
 
             ## step the environment and get new measurements
-            observation, reward, terminal, info = env.step(action)
+            observation, reward, end_of_round, info = env.step(action)
+            episode_r.append(reward)
+            print('step_idx= '+str(step_idx)+' -> r= '+str(reward))
 
+            ## check if terminal
+            if terminal(observation, reward, end_of_round, info):
+                break;
+
+            step_idx += 1
             time.sleep(1/60.0)
+
+        ## closure per episode
+        r_counter = {0: 0, 1: 0, -1: 0}
+        for r in episode_r: r_counter[r] += 1
+
+        print('n_steps= '+str(step_idx+1))
+        print('r_counter= '+str(r_counter))
         print('testing episode_idx= '+str(episode_idx)+': end')
 
     try:
@@ -102,7 +126,6 @@ def train(n_episodes, model_fpath, resume=False, render=False):
       model['W1'] = np.random.randn(H,D) / np.sqrt(D) # "Xavier" initialization
       model['W2'] = np.random.randn(H) / np.sqrt(H)
 
-
     grad_buffer = { k : np.zeros_like(v) for k,v in model.iteritems() } # for batch learning
     rmsprop_cache = { k : np.zeros_like(v) for k,v in model.iteritems() }
 
@@ -113,7 +136,6 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         env = gym.make("Pong-v0")
         observation = env.reset() # returns an initial observation
         prev_x = None # used in computing the difference frame
-        terminal = False
 
         ## init bookeeper for an episode
         episode_x = []
@@ -121,7 +143,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         episode_dlogp = []
         episode_r = []
 
-        while not terminal:
+        while True:
             if render: env.render()
 
             ## prepro
@@ -154,7 +176,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             dlogp = y - aprob
 
             ## step the environment and get new measurements
-            observation, reward, terminal, info = env.step(action)
+            observation, reward, end_of_round, info = env.step(action)
 
             ## record various intermediates (needed later for backprop)
             episode_x.append(x) # observation
@@ -162,7 +184,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             episode_dlogp.append(dlogp)
             episode_r.append(reward)
 
-            if terminal:
+            if terminal(observation, reward, end_of_round, info):
                 ## stack together all inputs, hidden states, action gradients, and rewards for this episode
                 episode_x = np.vstack(episode_x)
                 episode_h = np.vstack(episode_h)
@@ -170,16 +192,16 @@ def train(n_episodes, model_fpath, resume=False, render=False):
                 episode_r = np.vstack(episode_r)
 
                 ## compute the discounted reward backwards through time
-                episode_return = get_discounted_return(episode_r, gamma)
+                episode_discounted_r = get_discounted_rewards(episode_r, gamma)
 
                 ## standardize to be unit normal
                 ## (helps control the gradient estimator variance)
-                episode_return -= np.mean(episode_return)
-                episode_return /= np.std(episode_return)
+                episode_discounted_r -= np.mean(episode_discounted_r)
+                episode_discounted_r /= np.std(episode_discounted_r)
 
                 ## modulate the gradient with the episode return
                 ## (PG magic happens right here.)
-                episode_dlogp *= episode_return
+                episode_dlogp *= episode_discounted_r
 
                 ## compute grad
                 grad = policy_backward(episode_x, episode_h, episode_dlogp, model)
@@ -189,7 +211,8 @@ def train(n_episodes, model_fpath, resume=False, render=False):
                     grad_buffer[layer_key] += grad[layer_key]
 
                 ## perform rmsprop parameter update every batch_size episodes
-                if (episode_idx+1) % batch_size == 0:
+                if ( (episode_idx+1) % batch_size ) == 0:
+                    print('perform rmsprop parameter update...')
                     for k,v in model.iteritems():
                         g = grad_buffer[k] # gradient
                         rmsprop_cache[k] = decay_rate * rmsprop_cache[k] + (1 - decay_rate) * g**2
@@ -198,9 +221,18 @@ def train(n_episodes, model_fpath, resume=False, render=False):
 
                     pickle.dump(model, open(model_fpath, 'wb'))
 
+                ## end this episode(==rally)
+                break
+
         print('training episode_idx= '+str(episode_idx)+': end')
 
 ## util ########################################################################
+def terminal(observation, reward, end_of_round, info):
+    if end_of_round==True or reward != 0:
+        return True
+    else:
+        return False
+
 def prepro(I):
     """ prepro 210x160x3 uint8 frame into 6400 (80x80) 1D float vector """
     I = I[35:195] # crop
@@ -228,7 +260,7 @@ def policy_backward(epx, eph, epdlogp, model):
 def sigmoid(x):
     return 1.0 / (1.0 + np.exp(-x)) # sigmoid "squashing" function to interval [0,1]
 
-def get_discounted_return(r, gamma):
+def get_discounted_rewards(r, gamma):
     """ take 1D float array of rewards and compute discounted reward """
     discounted_r = np.zeros_like(r)
     running_add = 0
