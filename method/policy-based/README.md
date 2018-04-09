@@ -15,4 +15,6 @@
   
 ## tutor
 * http://karpathy.github.io/2016/05/31/rl/
+  * https://github.com/gameofdimension/policy-gradient-pong
+  * https://github.com/AbhishekAshokDubey/RL/tree/master/ping-pong
 * https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-2-ded33892c724
