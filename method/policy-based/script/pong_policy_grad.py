@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python2
 
 # Based on
 # http://karpathy.github.io/2016/05/31/rl/
@@ -8,18 +8,84 @@
 # "Xavier" initialization
 # RMSProp
 
+import sys
+import time
+
 import numpy as np
 import cPickle as pickle
-import time
 
 # https://github.com/tambetm/simple_dqn/issues/28
 # sudo -H pip install "gym[atari]"
 import gym
 
-def main():
-    train(n_episodes=3)
+def main(argv):
+    if len(argv)!=2:
+        print('USAGE:')
+        print('python2 pong_policy_grad <test/train>')
+        return
 
-def train(n_episodes, model_fpath='', render=False):
+    mode = argv[1]
+    model_fpath = '/home/tor/xprmt/tmp/pong_policy_grad.model'
+
+    if mode=='train':
+        train(n_episodes=3, model_fpath=model_fpath)
+    elif mode=='test':
+        test(n_episodes=1, model_fpath=model_fpath)
+    else:
+        print('unknown mode!')
+        return
+
+## test ########################################################################
+def test(n_episodes, model_fpath, render=True):
+    model = pickle.load(open(model_fpath, 'rb'))
+    D = 80 * 80 # input dimensionality: 80x80 grid
+
+    for episode_idx in xrange(n_episodes):
+        print('testing episode_idx= '+str(episode_idx)+': begin')
+
+        ## init env
+        env = gym.make("Pong-v0")
+        observation = env.reset() # returns an initial observation
+        prev_x = None # used in computing the difference frame
+        terminal = False
+        episode_r = []
+
+        while not terminal:
+            if render: env.render()
+
+            ## prepro
+            ## x: input
+            cur_x = prepro(observation)
+            if (prev_x is not None):
+                x = cur_x - prev_x
+            else:
+                x = np.zeros(D)
+            prev_x = cur_x
+
+            ## forward the policy network and
+            ## sample an action from the returned probability
+            ## aprob: probability of action 2
+            aprob, _ = policy_forward(x, model)
+            if np.random.uniform() < aprob:# roll the dice!
+                action = 2
+            else:
+                action = 3
+
+            ## step the environment and get new measurements
+            observation, reward, terminal, info = env.step(action)
+
+            time.sleep(1/60.0)
+        print('testing episode_idx= '+str(episode_idx)+': end')
+
+    try:
+        print('Waiting for ctrl+C ...')
+        while True:
+            pass
+    except KeyboardInterrupt:
+        pass
+
+## train #######################################################################
+def train(n_episodes, model_fpath, resume=False, render=False):
     ## init model (=neuralNet)
     D = 80 * 80 # input dimensionality: 80x80 grid
     H = 200 # number of hidden layer neurons
@@ -29,13 +95,13 @@ def train(n_episodes, model_fpath='', render=False):
     decay_rate = 0.99 # decay factor for RMSProp leaky sum of grad^2
     assert n_episodes > batch_size
 
-    if len(model_fpath) > 0:
+    if resume:
         model = pickle.load(open(model_fpath, 'rb'))
     else:
       model = {}
       model['W1'] = np.random.randn(H,D) / np.sqrt(D) # "Xavier" initialization
       model['W2'] = np.random.randn(H) / np.sqrt(H)
-      model_fpath = '/home/tor/xprmt/tmp/pong_policy_grab.model'
+
 
     grad_buffer = { k : np.zeros_like(v) for k,v in model.iteritems() } # for batch learning
     rmsprop_cache = { k : np.zeros_like(v) for k,v in model.iteritems() }
@@ -175,4 +241,4 @@ def get_discounted_return(r, gamma):
 
 ################################################################################
 if __name__ == '__main__':
-    main()
+    main(sys.argv)
