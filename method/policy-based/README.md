@@ -1,5 +1,6 @@
 # policy-based
 
+## taxonomy
 * gradient-free 
   * cross-entropy method
 * gradient-based
@@ -12,3 +13,6 @@
   * PEGASUS, 2000
   * DMP: Dynamic Motion Primitives
   
+## tutor
+* http://karpathy.github.io/2016/05/31/rl/
+* https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-2-ded33892c724
