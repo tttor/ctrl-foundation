@@ -103,6 +103,7 @@ def test(n_episodes, model_fpath, render=True):
 def train(n_episodes, model_fpath, resume=False, render=False):
     ## init model: 2-layer fully connected neural network
     ## https://karpathy.github.io/assets/rl/policy.png
+    ## https://raw.githubusercontent.com/AbhishekAshokDubey/RL/master/ping-pong/documentation_stuff/nn_diagram.PNG
     D = 80 * 80 # input dimensionality: 80x80 grid
     H = 200 # number of hidden layer neurons
     batch_size = 1 # every how many episodes to do a param update?
@@ -116,6 +117,8 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         ## "Xavier" initialization
         ## make sure that the weights are not too small, but
         ## not too big to propagate accurately the signals.
+        ## W1: Matrix that holds weights of pixels passing into hidden layer. Dimensions: [200 x 80 x 80] -> [200 x 6400]
+        ## W2: Matrix that holds weights of hidden layer passing into output. Dimensions: [1 x 200]
         model = {}
         model['W1'] = np.random.randn(H,D) / np.sqrt(D)
         model['W2'] = np.random.randn(H) / np.sqrt(H)
@@ -196,7 +199,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
                 episode_r = np.vstack(episode_r)
 
                 ## compute the discounted reward backwards through time
-                episode_discounted_r = get_discounted_rewards(episode_r, gamma)
+                episode_discounted_r = get_discounted_returns(episode_r, gamma)
 
                 ## modulate the gradient with the episode return
                 ## (PG magic happens right here.)
@@ -210,6 +213,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
                     grad_buffer[layer_key] += grad[layer_key] # element-wise add
 
                 ## perform rmsprop parameter update every batch_size episodes
+                ## Use rmsprop to move weights['1'] and weights['2'] in the direction of the gradient
                 if ( (episode_idx+1) % batch_size ) == 0:
                     print('perform rmsprop parameter update...')
                     for k,v in model.iteritems():
@@ -243,7 +247,7 @@ def prepro(I):
 
 def forward_propagation(x, model):
     h = np.dot(model['W1'], x)
-    h[h<0] = 0 # ReLU nonlinearity; f(x)=max(0,x), take max value, if less than 0, use 0
+    h = relu(h)
 
     logp = np.dot(model['W2'], h)
     p = sigmoid(logp)
@@ -257,7 +261,7 @@ def backward_propagation(epx, eph, epdlogp, model):
 
     ## compute derivative of hidden ?
     dh = np.outer(epdlogp, model['W2']) # Compute the outer product of two vectors.
-    dh[eph <= 0] = 0 # backprop ReLU
+    dh[eph <= 0] = 0 # backprop ReLU, is this equal dh = relu(dh) ?
 
     ## compute derivative with respect to weight 1
     dW1 = np.dot(dh.T, epx)
@@ -265,24 +269,34 @@ def backward_propagation(epx, eph, epdlogp, model):
     return {'W1':dW1, 'W2':dW2}
 
 def sigmoid(x):
-    return 1.0 / (1.0 + np.exp(-x)) # sigmoid "squashing" function to interval [0,1]
+    # sigmoid "squashing" function to interval [0,1]
+    return 1.0 / (1.0 + np.exp(-x))
 
-def get_discounted_rewards(r, gamma):
+def relu(x):
+    # ReLU nonlinearity; f(x)=max(0,x), take max value, if less than 0, use 0
+    x[x < 0] = 0
+    return x
+
+def get_discounted_returns(r, gamma):
     """ take 1D float array of rewards and compute discounted reward """
+    # https://github.com/AbhishekAshokDubey/RL/blob/master/ping-pong/tf_ping_pong_policyGradient.py
     # https://github.com/hunkim/ReinforcementZeroToAll/issues/1
-    discounted_r = np.zeros_like(r)
+    # input : np.array([1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0])
+    # output: np.array([ 1., 0.96059601, 0.970299, 0.9801, 0.99, 1., 0.9801, 0.99, 1.])
+    discounted_returns = np.zeros_like(r)
     running_add = 0
     for t in reversed(xrange(0, r.size)):
-        if r[t] != 0: running_add = 0 # reset the sum, since this was a game boundary (pong specific!)
+        if r[t] != 0:
+            running_add = 0 # reset the sum, since this was a game boundary (pong specific!)
         running_add = running_add * gamma + r[t]
-        discounted_r[t] = running_add
+        discounted_returns[t] = running_add
 
-    ## standardize to be unit normal
-    ## (helps control the gradient estimator variance)
-    discounted_r -= np.mean(discounted_r)
-    discounted_r /= np.std(discounted_r)
+    # standardize to be unit normal
+    # (helps control the gradient estimator variance)
+    discounted_returns -= np.mean(discounted_returns)
+    discounted_returns /= np.std(discounted_returns)
 
-    return discounted_r
+    return discounted_returns
 
 ################################################################################
 if __name__ == '__main__':

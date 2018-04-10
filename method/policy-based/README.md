@@ -17,5 +17,5 @@
 * http://karpathy.github.io/2016/05/31/rl/
   * https://www.youtube.com/watch?v=tqrcjHuNdmQ
   * https://www.youtube.com/watch?v=PDbXPBwOavc
-  * https://medium.com/@dhruvp/how-to-write-a-neural-network-to-play-pong-from-scratch-956b57d4f6e0
+  * https://medium.com/@dhruvp/956b57d4f6e0
 * https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-2-ded33892c724

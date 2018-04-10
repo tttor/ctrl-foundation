@@ -7,6 +7,7 @@
 ## concept
 * "Xavier" initialization
 * RMSProp
+  * http://ruder.io/optimizing-gradient-descent/index.html#rmsprop
 * Logit
 * outer (cross) product of two vectors, cf. inner (dot) product
 
@@ -29,9 +30,9 @@
 
 ## follow-up
 * https://github.com/llSourcell/Policy_Gradients_to_beat_Pong
+* https://github.com/dhruvp/atari-pong
 * https://github.com/gameofdimension/policy-gradient-pong
 * https://github.com/AbhishekAshokDubey/RL/tree/master/ping-pong
-* https://gist.github.com/bbartoldson/da1286fb5918afa92a0e242b67234f49#file-pong-playing-tensorflow-neural-network-ipynb
 * https://github.com/hunkim/ReinforcementZeroToAll/blob/master/08_4_softmax_pg_pong.py
 * https://github.com/hunkim/ReinforcementZeroToAll/blob/master/08_4_softmax_pg_pong_y.py
 
