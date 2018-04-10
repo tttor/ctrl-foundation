@@ -7,6 +7,7 @@
 * Tensorlayer: https://github.com/tensorlayer/tensorlayer
 * Tensorforce: https://github.com/reinforceio/tensorforce
 * KerasRL: https://github.com/keras-rl/keras-rl
+* FitML: https://github.com/FitMachineLearning/FitML
 
 ## type 1
 * https://github.com/rlcode/reinforcement-learning
