@@ -38,7 +38,7 @@ def main(argv):
 ## test ########################################################################
 def test(n_episodes, model_fpath, render=True):
     model = pickle.load(open(model_fpath, 'rb'))
-    D = 80 * 80 # input dimensionality: 80x80 grid
+    n_input_layer_neurons = 80 * 80 # input dimensionality: 80x80 grid
     gamma = 0.99 # discount factor for reward
 
     for episode_idx in xrange(n_episodes):
@@ -60,7 +60,7 @@ def test(n_episodes, model_fpath, render=True):
             if (prev_x is not None):
                 x = cur_x - prev_x
             else:
-                x = np.zeros(D)
+                x = np.zeros(n_input_layer_neurons)
             prev_x = cur_x
 
             ## forward the policy network and
@@ -101,11 +101,11 @@ def test(n_episodes, model_fpath, render=True):
 
 ## train #######################################################################
 def train(n_episodes, model_fpath, resume=False, render=False):
-    ## init model: 2-layer fully connected neural network
+    ## init model: 2(+1 input)-layer fully connected neural network
     ## https://karpathy.github.io/assets/rl/policy.png
     ## https://raw.githubusercontent.com/AbhishekAshokDubey/RL/master/ping-pong/documentation_stuff/nn_diagram.PNG
-    D = 80 * 80 # input dimensionality: 80x80 grid
-    H = 200 # number of hidden layer neurons
+    n_input_layer_neurons = 80 * 80 # input dimensionality: 80x80= 6400 grid
+    n_hidden_layer_neurons = 200
     batch_size = 1 # every how many episodes to do a param update?
     learning_rate = 1e-4
     gamma = 0.99 # discount factor for reward
@@ -117,11 +117,13 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         ## "Xavier" initialization
         ## make sure that the weights are not too small, but
         ## not too big to propagate accurately the signals.
-        ## W1: Matrix that holds weights of pixels passing into hidden layer. Dimensions: [200 x 80 x 80] -> [200 x 6400]
-        ## W2: Matrix that holds weights of hidden layer passing into output. Dimensions: [1 x 200]
+        ## W1: Matrix that holds weights of input(pixels) layer passing into hidden layers.
+        ##     Dimensions: [200 x 80 x 80] -> [200 x 6400]
+        ## W2: Matrix that holds weights of hidden layer passing into output layer.
+        ##     Dimensions: [1 x 200] (numpy stores data in row major order)
         model = {}
-        model['W1'] = np.random.randn(H,D) / np.sqrt(D)
-        model['W2'] = np.random.randn(H) / np.sqrt(H)
+        model['W1'] = np.random.randn(n_hidden_layer_neurons, n_input_layer_neurons) / np.sqrt(n_input_layer_neurons)
+        model['W2'] = np.random.randn(n_hidden_layer_neurons) / np.sqrt(n_hidden_layer_neurons)
 
     grad_buffer = { k : np.zeros_like(v) for k,v in model.iteritems() } # for batch learning
     rmsprop_cache = { k : np.zeros_like(v) for k,v in model.iteritems() }
@@ -148,14 +150,14 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             if (prev_x is not None):
                 x = cur_x - prev_x
             else:
-                x = np.zeros(D)
+                x = np.zeros(n_input_layer_neurons)
             prev_x = cur_x
 
             ## forward the policy network and
             ## sample an action from the returned probability
             ## up_prob: probability of taking UP action,
             ##          hence the probability to take DOWN is '1 - up_prob'.
-            ## h: hidden state (inside the net)
+            ## h: hidden state; hidden layer values
             up_prob, h = forward_propagation(x, model)
             if np.random.uniform() < up_prob:# roll the dice!
                 action = up_action
@@ -230,29 +232,16 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         print('training episode_idx= '+str(episode_idx)+': end')
 
 ## util ########################################################################
-def terminal(reward):
-    if reward != 0:
-        return True
-    else:
-        return False
-
-def prepro(I):
-    """ prepro 210x160x3 uint8 frame into 6400 (80x80) 1D float vector """
-    I = I[35:195] # crop
-    I = I[::2,::2,0] # downsample by factor of 2
-    I[I == 144] = 0 # erase background (background type 1)
-    I[I == 109] = 0 # erase background (background type 2)
-    I[I != 0] = 1 # everything else (paddles, ball) just set to 1
-    return I.astype(np.float).ravel()
-
 def forward_propagation(x, model):
-    h = np.dot(model['W1'], x)
+    h = np.dot(model['W1'], x) # matrix mul: [200 x 6400] x [6400 x 1] = [200 x 1]
     h = relu(h)
 
-    logp = np.dot(model['W2'], h)
+    logp = np.dot(model['W2'], h) # matrix mul: [1 x 200] x [200 x 1] = [1 x 1]
     p = sigmoid(logp)
 
-    return p, h # return probability of taking action 2, and hidden state
+    # p: probability of taking UP action
+    # h: hidden state
+    return p, h
 
 def backward_propagation(epx, eph, epdlogp, model):
     """ backward pass. (eph is array of intermediate hidden states) """
@@ -273,7 +262,8 @@ def sigmoid(x):
     return 1.0 / (1.0 + np.exp(-x))
 
 def relu(x):
-    # ReLU nonlinearity; f(x)=max(0,x), take max value, if less than 0, use 0
+    # ReLU nonlinearity
+    # f(x)=max(0,x), take max value, if less than 0, use 0
     x[x < 0] = 0
     return x
 
@@ -297,6 +287,21 @@ def get_discounted_returns(r, gamma):
     discounted_returns /= np.std(discounted_returns)
 
     return discounted_returns
+
+def terminal(reward):
+    if reward != 0:
+        return True
+    else:
+        return False
+
+def prepro(I):
+    """ prepro 210x160x3 uint8 frame into 6400 (80x80) 1D float vector """
+    I = I[35:195] # crop
+    I = I[::2,::2,0] # downsample by factor of 2
+    I[I == 144] = 0 # erase background (background type 1)
+    I[I == 109] = 0 # erase background (background type 2)
+    I[I != 0] = 1 # everything else (paddles, ball) just set to 1
+    return I.astype(np.float).ravel()
 
 ################################################################################
 if __name__ == '__main__':
