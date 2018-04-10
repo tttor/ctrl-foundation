@@ -20,6 +20,11 @@
 * BURLAP: http://burlap.cs.brown.edu/
 * RL-Glue: http://glue.rl-community.org/wiki/Main_Page
 
+## type 3
+* https://github.com/hunkim/ReinforcementZeroToAll
+* https://github.com/dennybritz/reinforcement-learning
+* https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
+
 ## environment
 see also: [simulator](https://github.com/tttor/rl-foundation/blob/master/software/simulator.md)
 * https://github.com/openai/gym
