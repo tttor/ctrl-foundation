@@ -66,7 +66,7 @@ def test(n_episodes, model_fpath, render=True):
             ## forward the policy network and
             ## sample an action from the returned probability
             ## up_prob: probability of action 2
-            up_prob, _ = policy_forward(x, model)
+            up_prob, _ = forward_propagation(x, model)
             if np.random.uniform() < up_prob:# roll the dice!
                 action = up_action
             else:
@@ -101,7 +101,8 @@ def test(n_episodes, model_fpath, render=True):
 
 ## train #######################################################################
 def train(n_episodes, model_fpath, resume=False, render=False):
-    ## init model (=neuralNet)
+    ## init model: 2-layer fully connected neural network
+    ## https://karpathy.github.io/assets/rl/policy.png
     D = 80 * 80 # input dimensionality: 80x80 grid
     H = 200 # number of hidden layer neurons
     batch_size = 1 # every how many episodes to do a param update?
@@ -112,9 +113,12 @@ def train(n_episodes, model_fpath, resume=False, render=False):
     if resume:
         model = pickle.load(open(model_fpath, 'rb'))
     else:
-      model = {}
-      model['W1'] = np.random.randn(H,D) / np.sqrt(D) # "Xavier" initialization
-      model['W2'] = np.random.randn(H) / np.sqrt(H)
+        ## "Xavier" initialization
+        ## make sure that the weights are not too small, but
+        ## not too big to propagate accurately the signals.
+        model = {}
+        model['W1'] = np.random.randn(H,D) / np.sqrt(D)
+        model['W2'] = np.random.randn(H) / np.sqrt(H)
 
     grad_buffer = { k : np.zeros_like(v) for k,v in model.iteritems() } # for batch learning
     rmsprop_cache = { k : np.zeros_like(v) for k,v in model.iteritems() }
@@ -149,7 +153,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             ## up_prob: probability of taking UP action,
             ##          hence the probability to take DOWN is '1 - up_prob'.
             ## h: hidden state (inside the net)
-            up_prob, h = policy_forward(x, model)
+            up_prob, h = forward_propagation(x, model)
             if np.random.uniform() < up_prob:# roll the dice!
                 action = up_action
             else:
@@ -194,17 +198,12 @@ def train(n_episodes, model_fpath, resume=False, render=False):
                 ## compute the discounted reward backwards through time
                 episode_discounted_r = get_discounted_rewards(episode_r, gamma)
 
-                ## standardize to be unit normal
-                ## (helps control the gradient estimator variance)
-                episode_discounted_r -= np.mean(episode_discounted_r)
-                episode_discounted_r /= np.std(episode_discounted_r)
-
                 ## modulate the gradient with the episode return
                 ## (PG magic happens right here.)
                 episode_dlogp *= episode_discounted_r
 
                 ## compute grad
-                grad = policy_backward(episode_x, episode_h, episode_dlogp, model)
+                grad = backward_propagation(episode_x, episode_h, episode_dlogp, model)
 
                 ## accumulate grad over batch
                 for layer_key in model:
@@ -242,19 +241,27 @@ def prepro(I):
     I[I != 0] = 1 # everything else (paddles, ball) just set to 1
     return I.astype(np.float).ravel()
 
-def policy_forward(x, model):
+def forward_propagation(x, model):
     h = np.dot(model['W1'], x)
-    h[h<0] = 0 # ReLU nonlinearity
+    h[h<0] = 0 # ReLU nonlinearity; f(x)=max(0,x), take max value, if less than 0, use 0
+
     logp = np.dot(model['W2'], h)
     p = sigmoid(logp)
+
     return p, h # return probability of taking action 2, and hidden state
 
-def policy_backward(epx, eph, epdlogp, model):
+def backward_propagation(epx, eph, epdlogp, model):
     """ backward pass. (eph is array of intermediate hidden states) """
+    ## compute derivative with respect to weight 2
     dW2 = np.dot(eph.T, epdlogp).ravel()
-    dh = np.outer(epdlogp, model['W2'])
-    dh[eph <= 0] = 0 # backprop relu
+
+    ## compute derivative of hidden ?
+    dh = np.outer(epdlogp, model['W2']) # Compute the outer product of two vectors.
+    dh[eph <= 0] = 0 # backprop ReLU
+
+    ## compute derivative with respect to weight 1
     dW1 = np.dot(dh.T, epx)
+
     return {'W1':dW1, 'W2':dW2}
 
 def sigmoid(x):
@@ -262,13 +269,19 @@ def sigmoid(x):
 
 def get_discounted_rewards(r, gamma):
     """ take 1D float array of rewards and compute discounted reward """
+    # https://github.com/hunkim/ReinforcementZeroToAll/issues/1
     discounted_r = np.zeros_like(r)
     running_add = 0
     for t in reversed(xrange(0, r.size)):
-        if r[t] != 0:
-            running_add = 0 # reset the sum, since this was a game boundary (pong specific!)
+        if r[t] != 0: running_add = 0 # reset the sum, since this was a game boundary (pong specific!)
         running_add = running_add * gamma + r[t]
         discounted_r[t] = running_add
+
+    ## standardize to be unit normal
+    ## (helps control the gradient estimator variance)
+    discounted_r -= np.mean(discounted_r)
+    discounted_r /= np.std(discounted_r)
+
     return discounted_r
 
 ################################################################################
