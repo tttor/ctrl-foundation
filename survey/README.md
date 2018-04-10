@@ -21,8 +21,6 @@
 * [1996: Kaebling: Reinforcement Learning: A Survey](https://www.jair.org/media/301/live-301-1562-jair.pdf)
 
 ## Web
-* https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
-* https://github.com/dennybritz/reinforcement-learning
 * https://www.alexirpan.com/2018/02/14/rl-hard.html
 * http://www.wildml.com/2016/10/learning-reinforcement-learning/
 
