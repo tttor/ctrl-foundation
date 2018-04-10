@@ -1,21 +1,8 @@
 #!/usr/bin/env python2
 
-# Based on
+# Based on:
 # http://karpathy.github.io/2016/05/31/rl/
 # https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5
-
-# Concept:
-# "Xavier" initialization
-# RMSProp
-
-# Reward formulation
-# type 1: (n_episodes == n_rallys) (used here)
-# +1: ball is out in the opponent's area; a rally(==episode) ends
-# -1: ball is out in the own area; a rally(==episode) ends
-#  0: else
-# type 2: (n_episodes = n_rounds)
-# +1: win a round
-# -1: loose a round
 
 import sys
 import time
@@ -26,6 +13,10 @@ import cPickle as pickle
 # https://github.com/tambetm/simple_dqn/issues/28
 # sudo -H pip install "gym[atari]"
 import gym
+
+## actions in pong
+up_action = 2 # 2 or 4
+down_action = 5 # 3 or 5
 
 def main(argv):
     if len(argv)!=2:
@@ -74,12 +65,12 @@ def test(n_episodes, model_fpath, render=True):
 
             ## forward the policy network and
             ## sample an action from the returned probability
-            ## aprob: probability of action 2
-            aprob, _ = policy_forward(x, model)
-            if np.random.uniform() < aprob:# roll the dice!
-                action = 2
+            ## up_prob: probability of action 2
+            up_prob, _ = policy_forward(x, model)
+            if np.random.uniform() < up_prob:# roll the dice!
+                action = up_action
             else:
-                action = 3
+                action = down_action
 
             ## step the environment and get new measurements
             observation, reward, end_of_round, info = env.step(action)
@@ -87,7 +78,7 @@ def test(n_episodes, model_fpath, render=True):
             print('step_idx= '+str(step_idx)+' -> r= '+str(reward))
 
             ## check if terminal
-            if terminal(observation, reward, end_of_round, info):
+            if terminal(reward):
                 break;
 
             step_idx += 1
@@ -117,7 +108,6 @@ def train(n_episodes, model_fpath, resume=False, render=False):
     learning_rate = 1e-4
     gamma = 0.99 # discount factor for reward
     decay_rate = 0.99 # decay factor for RMSProp leaky sum of grad^2
-    assert n_episodes > batch_size
 
     if resume:
         model = pickle.load(open(model_fpath, 'rb'))
@@ -138,16 +128,15 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         prev_x = None # used in computing the difference frame
 
         ## init bookeeper for an episode
-        episode_x = []
-        episode_h = []
+        episode_x = [] # x: input
+        episode_h = [] # h: hidden state
         episode_dlogp = []
-        episode_r = []
+        episode_r = [] # r: reward
 
         while True:
             if render: env.render()
 
-            ## prepro
-            ## x: input
+            ## preprocess x: input
             cur_x = prepro(observation)
             if (prev_x is not None):
                 x = cur_x - prev_x
@@ -157,23 +146,34 @@ def train(n_episodes, model_fpath, resume=False, render=False):
 
             ## forward the policy network and
             ## sample an action from the returned probability
-            ## aprob: probability of action 2
+            ## up_prob: probability of taking UP action,
+            ##          hence the probability to take DOWN is '1 - up_prob'.
             ## h: hidden state (inside the net)
-            aprob, h = policy_forward(x, model)
-            if np.random.uniform() < aprob:# roll the dice!
-                action = 2
+            up_prob, h = policy_forward(x, model)
+            if np.random.uniform() < up_prob:# roll the dice!
+                action = up_action
             else:
-                action = 3
+                action = down_action
 
             ## fake the label, y
-            if action==2:
+            ## Yugnaynehc commented on 3 Nov 2017 at https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5
+            ## When the taken action was UP, the probability is aprob, so the gradient is (1 - aprob), and
+            ## when the taken action was DOWN, the probability is (1 - aprob), so the gradient is 1 - (1-aprob) = 0 - aprob = -aprob.
+            ## MariaNivedha commented on 16 Feb at https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5
+            ## Suppose if we get aprob=0.4 and on random, we get to sample for DOWN action, then
+            ## we do gradient (0-0.4=-0.4) since this -ve 0.4 tells to move down to the lower boundary 0
+            ## (which is highest probability of taking the DOWN action).
+            ## Suppose if we get aprob=0.4 and on random, we get to sample for UP action, then
+            ## we do gradient(1-0.4=0.6) since this +ve 0.6 tells to move up to the upper boundary 1
+            ## (which is highest probability of taking the UP action)
+            if action == up_action:
                 y = 1
             else:
                 y = 0
 
             # compute grad that encourages the action that was taken to be taken
             # http://cs231n.github.io/neural-networks-2/#losses
-            dlogp = y - aprob
+            dlogp = y - up_prob
 
             ## step the environment and get new measurements
             observation, reward, end_of_round, info = env.step(action)
@@ -184,7 +184,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             episode_dlogp.append(dlogp)
             episode_r.append(reward)
 
-            if terminal(observation, reward, end_of_round, info):
+            if terminal(reward):
                 ## stack together all inputs, hidden states, action gradients, and rewards for this episode
                 episode_x = np.vstack(episode_x)
                 episode_h = np.vstack(episode_h)
@@ -227,8 +227,8 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         print('training episode_idx= '+str(episode_idx)+': end')
 
 ## util ########################################################################
-def terminal(observation, reward, end_of_round, info):
-    if end_of_round==True or reward != 0:
+def terminal(reward):
+    if reward != 0:
         return True
     else:
         return False
