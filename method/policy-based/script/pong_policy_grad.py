@@ -167,9 +167,9 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             ## we do gradient(1-0.4=0.6) since this +ve 0.6 tells to move up to the upper boundary 1
             ## (which is highest probability of taking the UP action)
             if action == up_action:
-                y = 1
+                y = 1.0
             else:
-                y = 0
+                y = 0.0
 
             # compute grad that encourages the action that was taken to be taken
             # http://cs231n.github.io/neural-networks-2/#losses
@@ -184,7 +184,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             episode_dlogp.append(dlogp)
             episode_r.append(reward)
 
-            if terminal(reward):
+            if terminal(reward): # does this episode end?
                 ## stack together all inputs, hidden states, action gradients, and rewards for this episode
                 episode_x = np.vstack(episode_x)
                 episode_h = np.vstack(episode_h)
@@ -208,7 +208,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
 
                 ## accumulate grad over batch
                 for layer_key in model:
-                    grad_buffer[layer_key] += grad[layer_key]
+                    grad_buffer[layer_key] += grad[layer_key] # element-wise add
 
                 ## perform rmsprop parameter update every batch_size episodes
                 if ( (episode_idx+1) % batch_size ) == 0:

@@ -30,6 +30,7 @@
 * https://github.com/llSourcell/Policy_Gradients_to_beat_Pong
 * https://github.com/gameofdimension/policy-gradient-pong
 * https://github.com/AbhishekAshokDubey/RL/tree/master/ping-pong
+* https://gist.github.com/bbartoldson/da1286fb5918afa92a0e242b67234f49#file-pong-playing-tensorflow-neural-network-ipynb
 
 ## support
 * https://ai.stackexchange.com/questions/2449/what-are-different-actions-in-action-space-of-environment-of-pong-v0-game-from/3422#3422
