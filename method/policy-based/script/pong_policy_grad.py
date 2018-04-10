@@ -164,7 +164,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             else:
                 action = down_action
 
-            ## fake the label, y
+            ## fake the true label, y
             ## Yugnaynehc commented on 3 Nov 2017 at https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5
             ## When the taken action was UP, the probability is aprob, so the gradient is (1 - aprob), and
             ## when the taken action was DOWN, the probability is (1 - aprob), so the gradient is 1 - (1-aprob) = 0 - aprob = -aprob.
@@ -180,9 +180,9 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             else:
                 y = 0.0
 
-            # compute grad that encourages the action that was taken to be taken
+            # compute grad (=: gradient per action) that encourages the action that was taken to be taken
             # http://cs231n.github.io/neural-networks-2/#losses
-            dlogp = y - up_prob
+            dlogp = (y - up_prob) # trueLabel - predictedLabel
 
             ## step the environment and get new measurements
             observation, reward, end_of_round, info = env.step(action)
@@ -207,7 +207,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
                 ## (PG magic happens right here.)
                 episode_dlogp *= episode_discounted_r
 
-                ## compute grad
+                ## compute grad, i.e. the direction we need to move our weights to improve
                 grad = backward_propagation(episode_x, episode_h, episode_dlogp, model)
 
                 ## accumulate grad over batch
@@ -243,17 +243,16 @@ def forward_propagation(x, model):
     # h: hidden state
     return p, h
 
-def backward_propagation(epx, eph, epdlogp, model):
-    """ backward pass. (eph is array of intermediate hidden states) """
+def backward_propagation(input_layer_values, hidden_layer_values, epdlogp, model):
     ## compute derivative with respect to weight 2
-    dW2 = np.dot(eph.T, epdlogp).ravel()
+    dW2 = np.dot(hidden_layer_values.T, epdlogp).ravel()
 
     ## compute derivative of hidden ?
     dh = np.outer(epdlogp, model['W2']) # Compute the outer product of two vectors.
-    dh[eph <= 0] = 0 # backprop ReLU, is this equal dh = relu(dh) ?
+    dh[hidden_layer_values <= 0] = 0 # backprop ReLU, is this equal dh = relu(dh) ?
 
     ## compute derivative with respect to weight 1
-    dW1 = np.dot(dh.T, epx)
+    dW1 = np.dot(dh.T, input_layer_values)
 
     return {'W1':dW1, 'W2':dW2}
 
