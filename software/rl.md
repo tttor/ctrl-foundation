@@ -24,6 +24,7 @@ see also: [simulator](https://github.com/tttor/rl-foundation/blob/master/softwar
 * https://github.com/openai/gym
 * https://github.com/openai/universe
 * https://github.com/openai/roboschool
+* https://github.com/openai/retro
 
 ## ROS-enabled
 Available packages in ROS for model-based and model-free RL: <br/>
