@@ -1,9 +1,10 @@
 # thesis
 
-## Labs
+## labs
 [Reinforcement Learning and Artificial Intelligence at the University of Alberta](http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html), ...
 
-## On going
+## people
+### On going
 [Chelsea Finn](http://people.eecs.berkeley.edu/~cbfinn/),
 [Yevgen Chebotar](http://www-clmc.usc.edu/Main/YevgenChebotar),
 [Yan Duan](http://rockyduan.com/),
@@ -13,14 +14,14 @@
 [Alex Irpan](https://www.alexirpan.com/)
 ...
 
-## Young, t >= 2015 
+### Young, t >= 2015 
 * John Schulman: Optimizing expectations: from deep reinforcement learning to stochastic computation graphs, 2016
 * Arthur Guez: Sample-based search methods for bayes-adaptive planning, 2015
 * Jonathan Scholz: Physics-based reinforcement learning for autonomous manipulation, 2015
 
-## Mid, 2008 <= t < 2015
+### Mid, 2008 <= t < 2015
 * Stephane Ross, 2013
-* Volodymyr Mnih, 2013
+* Volodymyr Mnih, 2013, with Geoffrey Hinton and  Csaba Szepesvari
 * Jens Kober, Learning Motor Skills: From Algorithms to Robot Experiments, 2012
 * Todd Hester, 2012
 * George Konidaris, 2011
@@ -29,7 +30,7 @@
 * Hanna Kurniawati, 2008
 * Pieter Abbeel, 2008: inverse rl (for flying helicopters)
 
-## Old, t < 2008
+### Old, t < 2008
 * Pascal Poupart, 2005
 * Andrew Bagnell, 2004
 * Richard Sutton
