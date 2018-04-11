@@ -164,7 +164,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             else:
                 action = down_action
 
-            ## fake the true label, y
+            ## fake the true label, y, treat the action we end up sampling from our probability as the correct action.
             ## Yugnaynehc commented on 3 Nov 2017 at https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5
             ## When the taken action was UP, the probability is aprob, so the gradient is (1 - aprob), and
             ## when the taken action was DOWN, the probability is (1 - aprob), so the gradient is 1 - (1-aprob) = 0 - aprob = -aprob.
@@ -182,7 +182,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
 
             # compute grad (=: gradient per action) that encourages the action that was taken to be taken
             # http://cs231n.github.io/neural-networks-2/#losses
-            dlogp = (y - up_prob) # trueLabel - predictedLabel
+            dlogp = (y - up_prob) # trueLabel - predictedLabel (as loss fn, error term in the output neuron)
 
             ## step the environment and get new measurements
             observation, reward, end_of_round, info = env.step(action)
@@ -236,25 +236,27 @@ def forward_propagation(x, model):
     h = np.dot(model['W1'], x) # matrix mul: [200 x 6400] x [6400 x 1] = [200 x 1]
     h = relu(h)
 
-    logp = np.dot(model['W2'], h) # matrix mul: [1 x 200] x [200 x 1] = [1 x 1]
-    p = sigmoid(logp)
+    p = np.dot(model['W2'], h) # matrix mul: [1 x 200] x [200 x 1] = [1 x 1]
+    p = sigmoid(p)
 
     # p: probability of taking UP action
     # h: hidden state
     return p, h
 
 def backward_propagation(input_layer_values, hidden_layer_values, epdlogp, model):
-    ## compute derivative with respect to weight 2
-    dW2 = np.dot(hidden_layer_values.T, epdlogp).ravel()
+    ## compute derivative of the cost fn with respect to weight 2
+    # need derivative of sigmoid?
+    d_output = epdlogp
+    dC_dW2 = np.dot(hidden_layer_values.T, d_output).ravel() # [200 x n_episodes] x [n_episodes x 1]= [200 x 1]
 
     ## compute derivative of hidden ?
-    dh = np.outer(epdlogp, model['W2']) # Compute the outer product of two vectors.
-    dh[hidden_layer_values <= 0] = 0 # backprop ReLU, is this equal dh = relu(dh) ?
+    d_hidden = np.outer(epdlogp, model['W2']) # [n_episodes x 1] x [1 x 200] = [n_episodes x]200]
+    d_hidden[hidden_layer_values <= 0] = 0 # backprop ReLU, is this equal d_hidden = relu(d_hidden) ?
 
-    ## compute derivative with respect to weight 1
-    dW1 = np.dot(dh.T, input_layer_values)
+    ## compute derivative of the cost fn with respect to weight 1
+    dC_dW1 = np.dot(d_hidden.T, input_layer_values)
 
-    return {'W1':dW1, 'W2':dW2}
+    return {'W1':dC_dW1, 'W2':dC_dW2}
 
 def sigmoid(x):
     # sigmoid "squashing" function to interval [0,1]
@@ -262,8 +264,13 @@ def sigmoid(x):
 
 def relu(x):
     # ReLU nonlinearity
-    # f(x)=max(0,x), take max value, if less than 0, use 0
+    # f(x)= max(0,x)
     x[x < 0] = 0
+    return x
+
+def relu_derivative(x):
+    # the derivative of ReLU
+    x[x <= 0] = 0
     return x
 
 def get_discounted_returns(r, gamma):
