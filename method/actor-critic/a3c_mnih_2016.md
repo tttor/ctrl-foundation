@@ -23,9 +23,9 @@
     (instead of experience replay)
     * parallelism **decorrelates** the agents’ data into a more stationary process, since 
       at any given time-step the parallel agents will be experiencing a variety of different states.
-* use multiple **CPU threads** on a single machine (instead of using separate machines and a parameter server)
-  * **removes** the communication costs of sending gradients and parameters over multiple machine, cf Gorila framework
-  * enables us to use **Hogwild!** (Recht et al., 2011) style updates for training
+    * multiple **CPU threads** on a single machine (instead of using separate machines and a parameter server)
+      * **removes** the communication costs of sending gradients and parameters over multiple machine, cf Gorila framework
+      * enables us to use **Hogwild!** (Recht et al., 2011) style updates for training
 * running different exploration policies in different threads, 
   * the overall changes being made to the parameters are likely to be less correlated in time 
     than a single agent applying online updates, hence
