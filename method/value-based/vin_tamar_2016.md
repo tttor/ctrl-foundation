@@ -48,18 +48,40 @@
     such as in the grid-world example above,
     * Thus, an attention module that outputs a vector of (attention modulated) values `\psi(s)`, 
       which is added as additional features to a reactive policy
+* VI Module
+  * is simply a NN architecture that has the capability of performing an approximate VI computation. 
+    * learning the MDP parameters and reward function by backpropagating through the network, similarly to a standard CNN. 
+  * is a NN that encodes a differentiable planning computation.
+  
+  * observation:
+     * each iteration of VI may be seen as passing the previous value function Vn and reward function R through 
+       a convolution layer and max-pooling layer. 
+     * In this analogy, each channel in the convolution layer corresponds to the Q-function for a specific action, and
+       convolution kernel weights correspond to the discounted transition probabilities. 
+     * Thus by recurrently applying a convolution layer K times, K iterations of VI are effectively performed.
+* Value Iteration Networks
+  * the reward, transitions, and attention can be defined by parametric functions, and trained with the whole policy
 
 ## setup
 * task:
   * on discrete and continuous path-planning domains,
+    * Grid-World Domain
+    * Mars Rover Navigation
+    * Continuous Control
   * on a natural-language based search task; WebNav challenge 
   
 ## result
 * by learning an explicit planning computation, VIN policies generalize better to new, unseen domains
-* "VIN policies learn an approximate planning computation" leads to better generalization in a diverse set of tasks, 
+* "VIN policies learn an approximate planning computation" leads to better **generalization in a diverse set of tasks**, 
   ranging from simple gridworlds that are amenable to value iteration, to continuous control, and 
   even to navigation of Wikipedia links.
-  
+* conjecture that by learning the optimal policy for several instances of this domain, 
+  a VIN policy would learn the planning computation required to solve a new, unseen, task.
+* VIN can learn to plan such a ‘high- level’ plan, and also exploit that plan within 
+  its ‘low-level’ continuous control policy. 
+  * with continuous states and continuous actions (which cannot be solved using VI) and therefore
+    a VIN perform ‘high-level’ planning on a discrete, coarse, grid-world representation of the continuous domain.
+
 ## misc
 * In MDPs where the state space is very large or continuous, or when the MDP transitions or rewards are 
   not known in advance, 
@@ -76,8 +98,9 @@
 * better generalization
 * learn to plan
 * RL for task and motion planning
-* is not this: plan to lean
-> @intro: ... The sequential nature of decision making in RL is inherently different than the one-step decisions
+* is not this: plan to lean? NO, VIN learns a planning computation using standard RL and IL algorithms
+  > @intro: ... The sequential nature of decision making in RL is inherently different than the one-step decisions
   in supervised learning, and in general **requires some form of planning**..
 * what kind of planning used in:
-> @sec 3: ... any standard planning algorithm can be used to obtain the value function
+  > @sec 3: ... any standard planning algorithm can be used to obtain the value function
+  * is it Q-learning in equ(1)
