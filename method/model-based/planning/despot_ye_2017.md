@@ -1,4 +1,6 @@
 # DESPOT: Determinized Sparse Partially Observable Tree
+* Nan Ye, Adhiraj Somani, David Hsu, Wee Sun Lee
+* https://arxiv.org/abs/1609.03250
 
 ## problems
 * online POMDP planning
