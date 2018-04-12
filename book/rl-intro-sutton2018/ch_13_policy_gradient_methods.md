@@ -98,19 +98,20 @@
 ## 13.4 REINFORCE with Baseline
 * to generalize the policy gradient theorem to 
   include a comparison of the action value to an **arbitrary baseline** `b(s)`
-  * baseline can be **any function**, even a random variable, 
-    as long as it does **not vary** with `a`
-    * natural choice: an estimate of the state value, `\hat{v} (S_t ,w)` 
+  * baseline can be **any function** as long as it does **not vary** with `a`
+    * a random variable,     
     * uniformly zero (showing a strict generalization over REINFORCE)  
+    * natural choice: an estimate of the state value, `\hat{v} (S_t ,w)` 
   * update rule becomes:
     * `\theta_{t+1}= \theta_t + \alpha \big( G_t - b(S_t) \big) \frac{...}{...}` ...(13.9)
-  * best value of the step size of policy param `\alpha^{\theta}` depends on 
+  * best value of the **step size** of policy param `\alpha^{\theta}` **depends on** 
     the range of variation of the rewards and on the policy parameterization.
 * property
-  * learn much faster than without baseline
-  * is unbiased and will converge asymptotically to a local minimum, 
-  * but like all Monte Carlo methods it tends to learn slowly (produce estimates of high variance) and 
-    to be inconvenient to implement online or for continuing problems. 
+  * **unbiased** 
+  * will converge asymptotically to a **local** minimum, 
+  * learn **much faster** than without baseline
+    * but (like all Monte Carlo methods) it tends to learn slowly (produce estimates of high variance) and 
+      to be inconvenient to implement online or for continuing problems. 
 
 ## 13.5 Actor–Critic Methods
 * REINFORCE-with-baseline method is **not** an actor–critic method, because
