@@ -1,44 +1,41 @@
 # 13: Policy Gradient Methods
-* consider methods that learn a parameterized policy that
+* methods that learn a parameterized policy that
   can select actions **without** consulting a value function.
   * A value function may still be used to learn the policy parameter,
     but is **not required** for action selection.
-* notation:
 * goal of policy gradient methods:
   * learning the policy parameter based on the gradient of
     some performance measure `J(\theta)` with respect to the policy parameter.
-  * to maximize performance, so their updates approximate gradient ascent in J:
-    * `\theta_{t+1} = \theta_t + \alpha \hat{ \grad J(\theta_t) }` ...(13.1)
+  * to maximize performance, so their updates approximate gradient ascent in `J(\theta)`:
+    * `\theta_{t+1} = \theta_t + \alpha \hat{ \nabla J(\theta_t) }` ...(13.1)
       * `\hat{ \grad J(\theta_t) }`:
         a **stochastic estimate** whose expectation approximates the gradient of the
         performance measure with respect to its argument
       * `\theta \in R^{d'}`: policy’s parameter vector
-      * `d`: dimensionality; the number of components of w
-      * `d'`: alternate dimensionality; the number of components of `\theta`
-      * `\pi(a|s,\theta) = Pr{A_t = a | S_t = s, \theta_t = \theta}`:
+      * `w \in R^{d}`: value function’s weight vector
+      * `d`: dimensionality; the number of components of a param vector `w`
+      * `d'`: alternate dimensionality; the number of components of param vector `\theta`
+      * `\pi(a | s,\theta) = Pr{A_t = a | S_t = s, \theta_t = \theta}`:
         the probability that action `a` is taken at time `t` given that
         the environment is in state `s` at time t with parameter `\theta`
-      * `w \in R^{d}`: value function’s weight vector
       * `\hat{v}(s,w)`: the learned value fn
-* actor-critic:
-  Methods that learn approximations to **both** policy and value functions
-  * `actor` is a reference to the learned policy, and
-  * `critic` refers to the learned value function
+* actor-critic methods learn approximations to **both** policy and value functions
+  * `actor`: the learned policy
+  * `critic`: the learned value function
 
 ## 13.1 Policy Approximation and its Advantages
-* the policy can be parameterized in any way,as long as 
-    * it is differentiable with respect to its parameters
-    * the `\nable_{\pi} (a|s,\theta)` exists and is always finite for all `s \in S`, `a \in A(s)`, and `\theta`
-      * `\nable_{\pi} (a|s,\theta)`: 
-        the column vector of partial derivatives of `\pi(a|s,\theta)` with respect to the components of `\theta`
+* the policy can be parameterized in any way, as long as  it is **differentiable** with respect to its parameters
+  * `\nabla_{\pi} (a|s,\theta)` exists and is always finite for all `s \in S`, `a \in A(s)`, and `\theta`
+    * `\nabla_{\pi} (a|s,\theta)`: 
+       the column vector of partial derivatives of `\pi(a | s,\theta)` with respect to the components of `\theta`
 * soft-max in action preferences.
   * The actions with the highest preferences in each state are given the
     highest probabilities of being selected
   * advantage:
     * the approximate policy can approach a deterministic policy, cf eps-greedy
     * enables the selection of actions with arbitrary probabilities.
-* advantage of policy parameterization (over action-value parameterization)
-  * the policy may be a simpler function to approximate,
+* **advantage** of policy parameterization (over action-value parameterization)
+  * the policy may be a **simpler** function to approximate,
   * a good way of **injecting prior knowledge** about the desired form of the policy into the reinforcement learning system.
 
 ## 13.2 The Policy Gradient Theorem
