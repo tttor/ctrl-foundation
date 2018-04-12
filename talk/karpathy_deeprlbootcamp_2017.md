@@ -1,5 +1,6 @@
-# (1) Deep RL Bootcamp Lecture 4B Policy Gradients Revisited -
-aug 2017
+# Deep RL Bootcamp Lecture 4B Policy Gradients Revisited
+* aug 2017
+* https://www.youtube.com/watch?v=tqrcjHuNdmQ
 
 * stoc policy:
   * allow to do exploration
