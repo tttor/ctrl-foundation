@@ -81,19 +81,19 @@
       * `G_t \frac{...}{...}` can be written as `\nabla ln \pi(A_t|S_t,\theta)` 
         * since `\nabla ln x = \frac{\nabla x}{x}`
       * aka REINFORCE algor
-* REINFORCE
+* **REINFORCE** algor
   * Each increment is proportional to the product of 
     * a return `G_t` and 
     * a vector (aka eligibility vector): 
-      * the **gradient** of the probability of taking the action actually taken divided by 
-        the probability of taking that action. 
-      *  is the direction in parameter space that most increases the probability of 
-          repeating the action `A_t` on future visits to state `S_t`
-  * uses the complete return from time `t`, which 
+      * the **gradient** of the _probability of taking the action actually taken_ divided by 
+        _the probability of taking that action_. 
+      * is the direction in parameter space that most increases the probability of 
+        repeating the action `A_t` on future visits to state `S_t`
+  * uses the complete return from time `t`, i.e. `G_t`. which 
     includes all future rewards up until the end of the episode. 
     * In this sense REINFORCE is a Monte Carlo algorithm 
-  * may be of high variance and thus produce slow learning (As a Monte Carlo method)
-  * has good theoretical convergence properties (As a stochastic gradient method)
+  * may be of **high variance** and thus produce **slow learning** (As a Monte Carlo method)
+  * has **good theoretical convergence** properties (as a stochastic gradient method)
 
 ## 13.4 REINFORCE with Baseline
 * to generalize the policy gradient theorem to 
