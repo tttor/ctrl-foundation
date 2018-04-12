@@ -95,10 +95,10 @@
        * the agent can act in the world and observe the rewards and state transitions its actions effect. 
 
 ## comment
-* better generalization
-* learn to plan
+* better generalization over  diverse set of tasks because 
+  reward, transitions, and attention can be defined by parametric functions, and trained with the whole policy
 * RL for task and motion planning
-* is not this: plan to lean? NO, VIN learns a planning computation using standard RL and IL algorithms
+* is not this: plan to leatn? NO, VIN learns a planning computation using standard RL and IL algorithms (learn to plan)
   > @intro: ... The sequential nature of decision making in RL is inherently different than the one-step decisions
   in supervised learning, and in general **requires some form of planning**..
 * what kind of planning used in:
