@@ -35,6 +35,7 @@
 * https://github.com/AbhishekAshokDubey/RL/tree/master/ping-pong
 * https://github.com/hunkim/ReinforcementZeroToAll/blob/master/08_4_softmax_pg_pong.py
 * https://github.com/hunkim/ReinforcementZeroToAll/blob/master/08_4_softmax_pg_pong_y.py
+* https://github.com/rlcode/reinforcement-learning/blob/master/3-atari/2-pong/pong_reinforce.py
 
 ## support
 * https://ai.stackexchange.com/questions/2449/what-are-different-actions-in-action-space-of-environment-of-pong-v0-game-from/3422#3422
