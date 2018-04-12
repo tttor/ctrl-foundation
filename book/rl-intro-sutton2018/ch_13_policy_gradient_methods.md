@@ -41,18 +41,16 @@
 ## 13.2 The Policy Gradient Theorem
 * advantages of policy parameterization over ε-greedy
   * the approximate policy can approach a deterministic policy
-  * with continuous policy parameterization the action probabilities change smoothly
-    as a function of the learned parameter;
-    * Largely because of this, stronger convergence guarantees are available for
+  * the action probabilities change smoothly as a function of the learned parameter, i
+    if with continuous policy parameterization 
+    * Largely because of this, **stronger convergence guarantees** are available for
       policy-gradient methods than for action-value methods.
 * In the episodic case,
   * the performance measure:
     * the value of the start state of the episode.
     * `J(\theta) = v_{ \pi_{\theta} } (s_0)` ...(13.4)
-* **challenge**:
-  _How can we estimate the performance gradient with respect to
-  the policy parameter when the gradient depends on
-  the unknown effect of policy changes on the state distribution?_
+* ? How can we estimate the performance gradient with respect to the policy parameter when the gradient depends on
+  the unknown effect of policy changes on the state distribution?
   * **Ans**: policy gradient theorem
 * policy gradient theorem
   * `\nabla J(\theta) \propto \sum_s \mu(s) \sum_a q_{\pi}(s,a) \nabla \pi (a|s,\theta)` ...(13.5)
@@ -77,15 +75,15 @@
       * `G_t` is the return
    * The final expression in the brackets of `E_{\pi} [...]` is exactly what is needed, 
      * a quantity that can be sampled on each time step whose **expectation is equal to** the gradient. 
- * Using this sample to instantiate our generic stochastic gradient ascent algorithm (13.1), yields the update:
+ * Using this sample to instantiate our generic stochastic gradient ascent algorithm (13.1), yields the **update**:
    * `\theta_{t+1}= \theta_t + \alpha G_t \frac{\nabla \pi(A_t|S_t,\theta)}{\pi(A_t|S_t,\theta)}` ...(13.6)
-      * `[ G_t \frac{...}{...} ]` substitutes `\hat{ \grad J(\theta_t) }` 
-      * `[ G_t \frac{...}{...} ]` can be written as `\nabla ln \pi(A_t|S_t,\theta)` 
+      * `G_t \frac{...}{...}` substitutes `\hat{ \grad J(\theta_t) }` 
+      * `G_t \frac{...}{...}` can be written as `\nabla ln \pi(A_t|S_t,\theta)` 
         * since `\nabla ln x = \frac{\nabla x}{x}`
       * aka REINFORCE algor
 * REINFORCE
   * Each increment is proportional to the product of 
-    * a return Gt and 
+    * a return `G_t` and 
     * a vector (aka eligibility vector): 
       * the **gradient** of the probability of taking the action actually taken divided by 
         the probability of taking that action. 
