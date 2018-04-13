@@ -1,4 +1,5 @@
 # talk
+
 * [David Silver, Deep RL, ICLR 2015](https://iclr.cc/archive/www/doku.php%3Fid=iclr2015:main.html)
 * [David Silver, Deep RL, RDLM 2015](http://videolectures.net/rldm2015_silver_reinforcement_learning/)
 * [Sergey Levine, Deep Robotic Learning, RI Seminar, 2017](https://www.youtube.com/watch?v=eKaYnXQUb2g)
@@ -8,9 +9,6 @@
 * [Sergey Levine, Deep Learning for Decision Making and Control, UWTV 2015](https://www.youtube.com/watch?v=EtMyH_--vnU&t=981s)
 
 ## web
-* http://karpathy.github.io/2016/05/31/rl/
-* https://cgnicholls.github.io/reinforcement-learning/2016/08/20/reinforcement-learning.html
-* https://ai.intel.com/demystifying-deep-reinforcement-learning/
 * https://sites.google.com/view/deeprl-symposium-nips2017
 * https://sites.google.com/site/deeprlnips2016/
 
