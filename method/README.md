@@ -23,9 +23,16 @@
 
 * base for iteration
   * `policy-based` (policy-search, policy iteration)
-    * gradient-free
-    * gradient-based
+    * pros and cons
+      * (+) apply to a wider range of problems, eg when Q-fn is too complex 
+      * (+) faster convergence rate 
+      * (+) easily applied to continuous action space, since capable of learning stochastic policies
+      * (-) high variance (due to monte carlo method) in estimating the gradient
+      * (-) tend to converge to a local optimal
   * `value-based` (value iteration)
+    * pros and cons
+      * (+) low variance, high bias (due to bootstrapping): more stable performance
+      * (-) need to discretize action for continuous action space
   * hybrid: Actor-critic (`actor:policy-based` + `critic:value-based`)
 
 * when policy compiled/learned with respect to execution/action time
