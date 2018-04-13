@@ -22,7 +22,7 @@
     * try bunch of stuff (use rollout policy), see what happens
     * in the future, do more stuff that workED
   * make fake dataset (with fake label) with rollout
-    * dataset is a set of (state, action)
+    * dataset is a set of (state `s`, action `a`, return `G(s)`)
     * for samples that eventually win:
       * pretend actions we took was the correct label
       * max `log p(y_i | x_i)`
