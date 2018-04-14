@@ -1,7 +1,7 @@
 # survey, benchmark, review
 
 ## paper
-* [2017: Machado: Revisiting the Arcade Learning Environment: Evaluation Protocols and Open Problems for General Agents](https://arxiv.org/abs/1709.06009)
+* [2017: Machado: Revisiting the ALE: Evaluation Protocols and Open Problems for General Agents](https://arxiv.org/abs/1709.06009)
 * [2017: Vodopivec: On Monte Carlo Tree Search and Reinforcement Learning](https://www.jair.org/media/5507/live-5507-10333-jair.pdf)
 * [2017: Henderson: Deep Reinforcement Learning that Matters](https://arxiv.org/abs/1709.06560)
 * [2017: Polydoros: Survey of Model-Based Reinforcement Learning: Applications on Robotics](https://link.springer.com/article/10.1007/s10846-017-0468-y)
