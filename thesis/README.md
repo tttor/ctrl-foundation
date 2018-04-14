@@ -45,7 +45,7 @@
 * Masashi Sugiyama
 * Satinder Singh
 * Gerald Tesauro
-* Sham M. Kakade, 2003
+* Sham M. Kakade: On the Sample Complexity of Reinforcement Learning, 2003
 * Andrew Ng: Shaping and policy search in reinforcement learning, 2003
 * Vijaymohan Konda: Actor-Critic Algorithms, 2002
 * Benjamin Van Roy: Learning and Value Function Approximation in Complex Decision Processes, 1998
