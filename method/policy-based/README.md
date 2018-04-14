@@ -6,8 +6,8 @@
 * gradient-based: policy-gradient
   * TRPO: Trust Region Policy Optimization (Schulman, 2015)
     * PPO: Proximal Policy Optimization (Schulman, 2017)
-  * DPG: Deterministic Policy Gradient
-    * Deep DPG, 
+  * DPG: Deterministic Policy Gradient (Silver, 2014)
+    * Deep DPG (Lilicrap, 2016) 
     * Recurrent DPG
   * GPS: Guided Policy Search (Levine, 2013)
 * misc:
