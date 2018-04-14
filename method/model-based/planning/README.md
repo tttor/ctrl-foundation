@@ -6,19 +6,7 @@ see also
 [ref](https://www.quora.com/What-is-the-difference-between-reinforcement-learning-and-planning),
 [ref2](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching_files/dyna.pdf).
 Typically in planning, the model refers to the POMDP model consisting of 7 components: `$(S, A, T, R, O, Z, \lambda)$`.
-
-There are two (+ 1 hybrid) approaches in terms of when the planning (heavy) computation is carried out:
-* offline planning
-  * plan before execution.
-  * consider all contingencies.
-  * does not scale up well.
-* online planning
-  * interleave planning with execution.
-  * typically plans **each** step from the **current** belief.
-    * potentially can handle large-scale planning.
-  * handle model changes naturally
-* hybrid: 
-  * combination of both online and offline planning approaches
+One important characteristics is the planning horizon.
 
 ## method
 * mcts-based (value iter):
