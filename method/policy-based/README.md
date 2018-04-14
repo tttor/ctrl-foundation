@@ -5,14 +5,17 @@
   * cross-entropy method
 * gradient-based: policy-gradient
   * TRPO: Trust Region Policy Optimization (Schulman, 2015)
-  * DPG, Deep DPG, Recurrent DPG
-  * * TNPG: Truncated Natural Policy Gradient
+    * PPO: Proximal Policy Optimization (Schulman, 2017)
+  * DPG: Deterministic Policy Gradient
+    * Deep DPG, 
+    * Recurrent DPG
+  * GPS: Guided Policy Search (Levine, 2013)
 * misc:
   * PILCO
-  * GPS: Guided Policy Search, 2013
   * PEGASUS, 2000
   * DMP: Dynamic Motion Primitives
-
+  * TNPG: Truncated Natural Policy Gradient
+  
 ## tutor
 * http://karpathy.github.io/2016/05/31/rl/
   * https://www.youtube.com/watch?v=tqrcjHuNdmQ
