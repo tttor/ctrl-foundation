@@ -18,6 +18,7 @@
 * John Schulman: Optimizing expectations: from deep reinforcement learning to stochastic computation graphs, 2016
 * Arthur Guez: Sample-based search methods for bayes-adaptive planning, 2015
 * Jonathan Scholz: Physics-based reinforcement learning for autonomous manipulation, 2015
+* Adam White: Developing a predictive approach to knowledge, 2015
 
 ### Mid, 2008 <= t < 2015
 * Stephane Ross, 2013
