@@ -37,10 +37,14 @@
 
 * when policy compiled/learned with respect to execution/action time
   * `offline`
-    * policy learned: before execution
+    * policy learned (planned) before execution
+    * consider all contingencies so does not scale up
   * `online`
-    * policy learned: in between 2 execution (interleaved)
     * aka: decision-time planning
+    * policy learned: in between 2 execution (interleaved)
+    * typically plans **each** step from the **current** belief, so
+      potentially can handle large-scale planning
+    * handle model changes naturally
   * `background`
     * policy learned: in paralel with execution
   * hybrid: (`online` + `offline` + `background`)
