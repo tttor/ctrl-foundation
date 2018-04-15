@@ -127,23 +127,25 @@ def train(n_episodes, model_fpath, resume=False, render=False):
     grad_buffer = { k : np.zeros_like(v) for k,v in model.iteritems() } # for batch learning
     rmsprop_cache = { k : np.zeros_like(v) for k,v in model.iteritems() }
 
-    game_idx = 0
-    episode_idx = 0 # rally_idx
+    ## init bookeeper for an episode
+    episode_x = [] # x: input
+    episode_h = [] # h: hidden state
+    episode_p = [] # p: probability of taking UP action
+    episode_y = [] # y: true label, which is here faked
+    episode_r = [] # r: reward
     step_idx = 0
+
+    ## init bookeeper across episodes(==rallies) and games
+    game_idx = 0
+    episode_idx = 0
+
     while True:
         ## init env
         env = gym.make("Pong-v0")
         observation = env.reset() # returns an initial observation
         prev_x = None # used in computing the difference frame
-
-        ## init bookeeper for an episode
-        episode_x = [] # x: input
-        episode_h = [] # h: hidden state
-        episode_p = [] # p: probability of taking UP action
-        episode_y = [] # y: true label, which is here faked
-        episode_r = [] # r: reward
-
         end_of_game = False
+
         while (not end_of_game):
             if render: env.render()
             print('training game_idx= '+str(game_idx)+' -> episode_idx= '+str(episode_idx)+' -> step_idx= '+str(step_idx))
@@ -222,6 +224,11 @@ def train(n_episodes, model_fpath, resume=False, render=False):
                     return
                 else:
                     step_idx = 0
+                    episode_x = []
+                    episode_h = []
+                    episode_p = []
+                    episode_y = []
+                    episode_r = []
                     episode_idx += 1
             else:
                 step_idx += 1
