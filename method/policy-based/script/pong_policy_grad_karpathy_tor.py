@@ -82,7 +82,7 @@ def test(n_episodes, model_fpath, render=True):
                 action = down_action
 
             ## step the environment and get new measurements
-            observation, reward, end_of_round, info = env.step(action)
+            observation, reward, end_of_game, info = env.step(action)
             episode_r.append(reward)
             print('step_idx= '+str(step_idx)+' -> r= '+str(reward))
 
@@ -127,9 +127,10 @@ def train(n_episodes, model_fpath, resume=False, render=False):
     grad_buffer = { k : np.zeros_like(v) for k,v in model.iteritems() } # for batch learning
     rmsprop_cache = { k : np.zeros_like(v) for k,v in model.iteritems() }
 
-    for episode_idx in xrange(n_episodes):
-        print('training episode_idx= '+str(episode_idx)+': begin')
-
+    game_idx = 0
+    episode_idx = 0 # rally_idx
+    step_idx = 0
+    while True:
         ## init env
         env = gym.make("Pong-v0")
         observation = env.reset() # returns an initial observation
@@ -142,8 +143,10 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         episode_y = [] # y: true label, which is here faked
         episode_r = [] # r: reward
 
-        while True:
+        end_of_game = False
+        while (not end_of_game):
             if render: env.render()
+            print('training game_idx= '+str(game_idx)+' -> episode_idx= '+str(episode_idx)+' -> step_idx= '+str(step_idx))
 
             ## preprocess x: input
             cur_x = prepro(observation)
@@ -156,7 +159,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             ## forward the policy network and
             ## sample an action from the returned probability
             ## p: up_prob: probability of taking UP action,
-            ##          hence the probability to take DOWN is '1 - up_prob'.
+            ##    hence the probability to take DOWN is '1 - up_prob'.
             ## h: hidden state; hidden layer values
             p, h = forward_propagation(x, model)
             if np.random.uniform() < p:# roll the dice!
@@ -182,7 +185,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
                 y = 0
 
             ## step the environment and get new measurements
-            observation, reward, end_of_round, info = env.step(action)
+            observation, reward, end_of_game, info = env.step(action)
 
             ## record various intermediates (needed later for backprop)
             episode_x.append(x) # observation
@@ -191,7 +194,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             episode_y.append(y)
             episode_r.append(reward)
 
-            if terminal(reward): # does this episode end?
+            if terminal(reward): # does this episode(=rally) end?
                 ## compute grad, i.e. the direction we need to move our weights to improve
                 grad = compute_gradient(episode_x, episode_h, episode_p, episode_y, episode_r, model)
 
@@ -211,10 +214,19 @@ def train(n_episodes, model_fpath, resume=False, render=False):
 
                     pickle.dump(model, open(model_fpath, 'wb'))
 
-                ## end this episode(==rally)
-                break
+                ## episode(==rally)
+                if episode_idx == (n_episodes-1):
+                    print('=== training: end ===')
+                    print('n_episodes= '+str(episode_idx+1))
+                    print('n_games= '+str(game_idx+1))
+                    return
+                else:
+                    step_idx = 0
+                    episode_idx += 1
+            else:
+                step_idx += 1
 
-        print('training episode_idx= '+str(episode_idx)+': end')
+        game_idx += 1
 
 ## util ########################################################################
 def compute_gradient(_x, _h, _p, _y, _r, model):
