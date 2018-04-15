@@ -49,18 +49,17 @@
     * policy learned: in paralel with execution
   * hybrid: (`online` + `offline` + `background`)
 
-## misc
 * other dimensions:
   on-policy _vs_ off-policy,
   episodic _vs_ continuing tasks,
   average _vs_ cumulative discounted rewards,
-  actor-/citic-only _vs_ actor-critic,
   shallow _vs_ deep learning,
   without-prior (non-Bayesian) _vs_ with-prior (Bayesian),
   plain _vs_ hierarchical structure,
-  offline _vs_ online planning,
   (onlinePlanning or modelFreeRL) _vs_ (onlinePlanning + modelLearning + modelFreeRL),
   see also [summary of part 1 in Intro to RL book](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro-sutton2018/part_01_summary.md)
+  
+## misc
 * policy representation
   * time-varying linear-Gaussian (TVLG)
   * deep neural networks, rbf networks
