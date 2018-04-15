@@ -1,15 +1,6 @@
-# scripts for policy gradient
-
 # atari pong from openai gym
 * https://gym.openai.com/envs/Pong-v0/
 * http://karpathy.github.io/2016/05/31/rl/
-
-## concept
-* "Xavier" initialization
-* RMSProp
-  * http://ruder.io/optimizing-gradient-descent/index.html#rmsprop
-* Logit
-* outer (cross) product of two vectors, cf. inner (dot) product
 
 ## env
 * Pong-v0

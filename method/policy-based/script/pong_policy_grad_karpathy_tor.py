@@ -18,6 +18,17 @@ import gym
 up_action = 2 # 2 or 4
 down_action = 5 # 3 or 5
 
+## init model: 2(+1 input)-layer fully connected neural network
+## https://karpathy.github.io/assets/rl/policy.png
+## https://raw.githubusercontent.com/AbhishekAshokDubey/RL/master/ping-pong/documentation_stuff/nn_diagram.PNG
+n_input_neurons = 80 * 80 # input dimensionality: 80x80= 6400 grid
+n_hidden_neurons = 200
+batch_size = 1 # every how many episodes to do a param update?
+learning_rate = 1e-4
+gamma = 0.99 # discount factor for reward
+decay_rate = 0.99 # decay factor for RMSProp leaky sum of grad^2
+
+## main ########################################################################
 def main(argv):
     if len(argv)!=2:
         print('USAGE:')
@@ -38,8 +49,6 @@ def main(argv):
 ## test ########################################################################
 def test(n_episodes, model_fpath, render=True):
     model = pickle.load(open(model_fpath, 'rb'))
-    n_input_layer_neurons = 80 * 80 # input dimensionality: 80x80 grid
-    gamma = 0.99 # discount factor for reward
 
     for episode_idx in xrange(n_episodes):
         print('testing episode_idx= '+str(episode_idx)+': begin')
@@ -60,7 +69,7 @@ def test(n_episodes, model_fpath, render=True):
             if (prev_x is not None):
                 x = cur_x - prev_x
             else:
-                x = np.zeros(n_input_layer_neurons)
+                x = np.zeros(n_input_neurons)
             prev_x = cur_x
 
             ## forward the policy network and
@@ -101,29 +110,19 @@ def test(n_episodes, model_fpath, render=True):
 
 ## train #######################################################################
 def train(n_episodes, model_fpath, resume=False, render=False):
-    ## init model: 2(+1 input)-layer fully connected neural network
-    ## https://karpathy.github.io/assets/rl/policy.png
-    ## https://raw.githubusercontent.com/AbhishekAshokDubey/RL/master/ping-pong/documentation_stuff/nn_diagram.PNG
-    n_input_layer_neurons = 80 * 80 # input dimensionality: 80x80= 6400 grid
-    n_hidden_layer_neurons = 200
-    batch_size = 1 # every how many episodes to do a param update?
-    learning_rate = 1e-4
-    gamma = 0.99 # discount factor for reward
-    decay_rate = 0.99 # decay factor for RMSProp leaky sum of grad^2
-
     if resume:
         model = pickle.load(open(model_fpath, 'rb'))
     else:
         ## "Xavier" initialization
-        ## make sure that the weights are not too small, but
+        ## to make sure that the weights are not too small, but
         ## not too big to propagate accurately the signals.
         ## W1: Matrix that holds weights of input(pixels) layer passing into hidden layers.
         ##     Dimensions: [200 x 80 x 80] -> [200 x 6400]
         ## W2: Matrix that holds weights of hidden layer passing into output layer.
         ##     Dimensions: [1 x 200] (numpy stores data in row major order)
         model = {}
-        model['W1'] = np.random.randn(n_hidden_layer_neurons, n_input_layer_neurons) / np.sqrt(n_input_layer_neurons)
-        model['W2'] = np.random.randn(n_hidden_layer_neurons) / np.sqrt(n_hidden_layer_neurons)
+        model['W1'] = np.random.randn(n_hidden_neurons, n_input_neurons) / np.sqrt(n_input_neurons)
+        model['W2'] = np.random.randn(n_hidden_neurons) / np.sqrt(n_hidden_neurons)
 
     grad_buffer = { k : np.zeros_like(v) for k,v in model.iteritems() } # for batch learning
     rmsprop_cache = { k : np.zeros_like(v) for k,v in model.iteritems() }
@@ -139,7 +138,8 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         ## init bookeeper for an episode
         episode_x = [] # x: input
         episode_h = [] # h: hidden state
-        episode_dlogp = []
+        episode_p = [] # p: probability of taking UP action
+        episode_y = [] # y: true label, which is here faked
         episode_r = [] # r: reward
 
         while True:
@@ -150,21 +150,22 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             if (prev_x is not None):
                 x = cur_x - prev_x
             else:
-                x = np.zeros(n_input_layer_neurons)
+                x = np.zeros(n_input_neurons)
             prev_x = cur_x
 
             ## forward the policy network and
             ## sample an action from the returned probability
-            ## up_prob: probability of taking UP action,
+            ## p: up_prob: probability of taking UP action,
             ##          hence the probability to take DOWN is '1 - up_prob'.
             ## h: hidden state; hidden layer values
-            up_prob, h = forward_propagation(x, model)
-            if np.random.uniform() < up_prob:# roll the dice!
+            p, h = forward_propagation(x, model)
+            if np.random.uniform() < p:# roll the dice!
                 action = up_action
             else:
                 action = down_action
 
-            ## fake the true label, y, treat the action we end up sampling from our probability as the correct action.
+            ## "fake" the true (binary) label, y, either 1 or 0
+            ## treat the action we end up sampling from our probability as the correct action.
             ## Yugnaynehc commented on 3 Nov 2017 at https://gist.github.com/karpathy/a4166c7fe253700972fcbc77e4ea32c5
             ## When the taken action was UP, the probability is aprob, so the gradient is (1 - aprob), and
             ## when the taken action was DOWN, the probability is (1 - aprob), so the gradient is 1 - (1-aprob) = 0 - aprob = -aprob.
@@ -176,13 +177,9 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             ## we do gradient(1-0.4=0.6) since this +ve 0.6 tells to move up to the upper boundary 1
             ## (which is highest probability of taking the UP action)
             if action == up_action:
-                y = 1.0
+                y = 1
             else:
-                y = 0.0
-
-            # compute grad (=: gradient per action) that encourages the action that was taken to be taken
-            # http://cs231n.github.io/neural-networks-2/#losses
-            dlogp = (y - up_prob) # trueLabel - predictedLabel (as loss fn, error term in the output neuron)
+                y = 0
 
             ## step the environment and get new measurements
             observation, reward, end_of_round, info = env.step(action)
@@ -190,27 +187,15 @@ def train(n_episodes, model_fpath, resume=False, render=False):
             ## record various intermediates (needed later for backprop)
             episode_x.append(x) # observation
             episode_h.append(h) # hidden state
-            episode_dlogp.append(dlogp)
+            episode_p.append(p)
+            episode_y.append(y)
             episode_r.append(reward)
 
             if terminal(reward): # does this episode end?
-                ## stack together all inputs, hidden states, action gradients, and rewards for this episode
-                episode_x = np.vstack(episode_x)
-                episode_h = np.vstack(episode_h)
-                episode_dlogp = np.vstack(episode_dlogp)
-                episode_r = np.vstack(episode_r)
-
-                ## compute the discounted reward backwards through time
-                episode_discounted_r = get_discounted_returns(episode_r, gamma)
-
-                ## modulate the gradient with the episode return
-                ## (PG magic happens right here.)
-                episode_dlogp *= episode_discounted_r
-
                 ## compute grad, i.e. the direction we need to move our weights to improve
-                grad = backward_propagation(episode_x, episode_h, episode_dlogp, model)
+                grad = compute_gradient(episode_x, episode_h, episode_p, episode_y, episode_r, model)
 
-                ## accumulate grad over batch
+                ## accumulate grad over episodes to form a batch
                 for layer_key in model:
                     grad_buffer[layer_key] += grad[layer_key] # element-wise add
 
@@ -232,6 +217,45 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         print('training episode_idx= '+str(episode_idx)+': end')
 
 ## util ########################################################################
+def compute_gradient(_x, _h, _p, _y, _r, model):
+    ## stack x: inputs, h: hidden states, p: fake label, and r: rewards of a single episode
+    x = np.vstack(_x)
+    h = np.vstack(_h)
+    r = np.vstack(_r)
+    y_true = np.vstack(_y)
+    y_pred = np.vstack(_p) # p: activation from output neurons, p = sigmoid(.)
+
+    ## compute the discounted returns backwards through time
+    ## a list of returns from all steps taken in an episode
+    returns = compute_returns(r, gamma)
+
+    # compute grad (=: gradient per action) that encourages the action that was taken to be taken
+    # http://cs231n.github.io/neural-networks-2/#losses
+    # https://www.youtube.com/watch?v=mUuCIMFQ1Zg&index=13&list=PLBAGcD3siRDguyYYzhVwZ3tLvOyyG5k6K
+    d_output = y_true - y_pred
+
+    ## modulate the gradient with the episode return
+    ## (PG magic happens right here.)
+    d_output *= returns
+
+    ## compute grad, i.e. the direction we need to move our weights to improve
+    grad = backward_propagation(x, h, d_output, model)
+
+    return grad
+
+def backward_propagation(x, h, d_output, model):
+    ## compute derivative of the cost fn with respect to weight 2
+    dC_dW2 = np.dot(h.T, d_output).ravel() # [200 x n_episodes] x [n_episodes x 1] = [200 x 1]
+
+    ## compute derivative of hidden units
+    d_hidden = np.outer(d_output, model['W2']) # [n_episodes x 1] x [1 x 200] = [n_episodes x 200]
+    d_hidden[h <= 0] = 0 # backprop ReLU, is this equal d_hidden = relu(d_hidden) ?
+
+    ## compute derivative of the cost fn with respect to weight 1
+    dC_dW1 = np.dot(d_hidden.T, x)
+
+    return {'W1':dC_dW1, 'W2':dC_dW2}
+
 def forward_propagation(x, model):
     h = np.dot(model['W1'], x) # matrix mul: [200 x 6400] x [6400 x 1] = [200 x 1]
     h = relu(h)
@@ -243,21 +267,6 @@ def forward_propagation(x, model):
     # h: hidden state
     return p, h
 
-def backward_propagation(input_layer_values, hidden_layer_values, epdlogp, model):
-    ## compute derivative of the cost fn with respect to weight 2
-    # need derivative of sigmoid?
-    d_output = epdlogp
-    dC_dW2 = np.dot(hidden_layer_values.T, d_output).ravel() # [200 x n_episodes] x [n_episodes x 1]= [200 x 1]
-
-    ## compute derivative of hidden ?
-    d_hidden = np.outer(epdlogp, model['W2']) # [n_episodes x 1] x [1 x 200] = [n_episodes x]200]
-    d_hidden[hidden_layer_values <= 0] = 0 # backprop ReLU, is this equal d_hidden = relu(d_hidden) ?
-
-    ## compute derivative of the cost fn with respect to weight 1
-    dC_dW1 = np.dot(d_hidden.T, input_layer_values)
-
-    return {'W1':dC_dW1, 'W2':dC_dW2}
-
 def sigmoid(x):
     # sigmoid "squashing" function to interval [0,1]
     return 1.0 / (1.0 + np.exp(-x))
@@ -268,12 +277,7 @@ def relu(x):
     x[x < 0] = 0
     return x
 
-def relu_derivative(x):
-    # the derivative of ReLU
-    x[x <= 0] = 0
-    return x
-
-def get_discounted_returns(r, gamma):
+def compute_returns(r, gamma):
     """ take 1D float array of rewards and compute discounted reward """
     # https://github.com/AbhishekAshokDubey/RL/blob/master/ping-pong/tf_ping_pong_policyGradient.py
     # https://github.com/hunkim/ReinforcementZeroToAll/issues/1
