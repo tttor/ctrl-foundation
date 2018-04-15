@@ -250,8 +250,8 @@ def compute_gradient(_x, _h, _p, _y, _r, model):
 
     ## compute grad in the output layer that encourages the action that was taken to be taken,
     ## i.e. logistic regression gradient descent
-    # http://cs231n.github.io/neural-networks-2/#losses
-    # https://www.youtube.com/watch?v=z_xiwjEdAC4
+    ## http://cs231n.github.io/neural-networks-2/#losses
+    ## Logistic Regression Gradient Descent (C1W2L09): https://www.youtube.com/watch?v=z_xiwjEdAC4
     d_output = (y_true - y_pred)
 
     ## modulate the gradient with the return
