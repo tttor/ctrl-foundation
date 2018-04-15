@@ -267,8 +267,9 @@ def backward_propagation(x, h, d_output, model):
     dC_dW2 = np.dot(h.T, d_output).ravel() # [200 x n_episodes] x [n_episodes x 1] = [200 x 1]
 
     ## compute derivative of hidden units
+    ## https://stats.stackexchange.com/questions/333394/what-is-the-derivative-of-the-relu-activation-function
     d_hidden = np.outer(d_output, model['W2']) # [n_episodes x 1] x [1 x 200] = [n_episodes x 200]
-    d_hidden[h <= 0] = 0 # backprop ReLU, is this equal d_hidden = relu(d_hidden) ?
+    d_hidden[h <= 0] = 0 # backprop ReLU
 
     ## compute derivative of the cost fn with respect to weight 1
     dC_dW1 = np.dot(d_hidden.T, x)
@@ -291,8 +292,7 @@ def sigmoid(x):
     return 1.0 / (1.0 + np.exp(-x))
 
 def relu(x):
-    # ReLU nonlinearity
-    # f(x)= max(0,x)
+    # ReLU nonlinearity, f(x)= max(0,x)
     x[x < 0] = 0
     return x
 
