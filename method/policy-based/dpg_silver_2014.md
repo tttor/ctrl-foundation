@@ -31,4 +31,24 @@
 ## misc
 * Policy gradient algorithms typically proceed by sampling this stochastic policy and 
   adjusting the policy parameters in the direction of greater cumulative reward.
-  
+* Stochastic Policy Gradient Theorem:
+  * reduces the computation of the performance gradient to a simple expectation;
+    eg: by forming a sample-based estimate of this expectation.
+  * One issue: how to estimate the action-value function `Q_{\pi}(s, a)`. 
+    * simplest approach is to use a sample return, 
+      which leads to a variant of the REINFORCE algorithm
+* It is often useful **to estimate** the policy gradient **off-policy** from trajectories sampled from 
+  a **distinct behaviour policy**, `\beta(a|s) \neq \pi_{\theta}(a|s)`. 
+  * In an off-policy setting, the performance objective is typically modified to be 
+    the **value function of the target policy**, averaged over the **state distribution of the behaviour policy**
+  * leads to 
+    * off-policy policy gradients, 
+    * Off-Policy Actor-Critic (OffPAC) algorithm: 
+      * uses a behaviour policy `\beta(a|s)` to generate trajectories
+      * A critic estimates a state-value function, V v(s) ≈ V π(s), **off-policy** from these trajectories, 
+        by gradient temporal-difference learning (Sutton et al., 2009). 
+      * An actor updates the policy parameters `\theta`, also **off-policy** from these trajectories, 
+        by stochastic gradient ascent of Equation 5.
+      * Both the actor and the critic use an **importance sampling ratio** to 
+        adjust for the fact that actions were selected according to `\pi` rather than `\beta`
+        
