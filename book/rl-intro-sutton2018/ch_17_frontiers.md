@@ -11,7 +11,7 @@
   * need a notion of course of action that
     * extends **over many time steps** and
     * includes a notion of termination.
-* define an **option** `\omega = < \pi{\omega}, \gamma_{\omega}`...
+* define an **option** `\omega = \langle \pi{\omega}, \gamma_{\omega} \rangle`...
 * a hierarchical policy:
   selects from options rather than actions, where
   options, when selected, execute until termination
@@ -98,7 +98,7 @@
   * on online and incremental algorithms, which we see as fundamental even to model-based methods, and
   * on how these can be applied in off-policy training situations.
 * six further issues for future research.
-* issue 1:
+* **issue 1:**
   powerful parametric function approximation methods that
   work well in fully incremental and online settings
   * Methods based on deep learning and artificial neural networks
@@ -110,39 +110,40 @@
       are most natural for the reinforcement learning
     * Most current deep learning research is directed toward working around
       this limitation rather than removing it.
-* issue 2:
+* **issue 2:**
   methods for learning features such that subsequent learning generalizes well.
   * an instance of a general problem variously called “representation learning,” “constructive induction,” and “meta-learning”
   * how can we use experience not just to learn a given desired function, but
     to learn inductive biases such that future learning generalizes better and is thus faster?
-* issue 3:
-  scalable methods for planning with learned environment models
+* **issue 3:**
+  scalable methods for **planning** with **learned environment models**
   * cases of full model-based reinforcement learning, in which
     the environment model is learned from data and then used for planning, are **rare**.
   * effective planning with learned models
   * the learning of the model needs to be selective because
     the scope of a model strongly affects planning efficiency.
-    * If a model focuses on the key consequences of the most important options, then
-      planning can be efficient and rapid,
-    * but if a model includes details of unimportant consequences of options that
-      are unlikely to be selected, then planning may be almost useless.
+    * If a model focuses on the key consequences of the most important options, 
+      * then planning can be efficient and rapid,
+    * (but) if a model includes details of unimportant consequences of options that
+      are unlikely to be selected, 
+      * then planning may be almost useless.
   * Environment models should be constructed judiciously with regard to
     both their states and dynamics with the goal of optimizing the planning process.
   * The various parts of the model should be continually monitored as to the degree
     to which they contribute to, or detract from, planning efficiency.
   * to design model-learning methods that take into account their implications.
-* issue 4:
+* **issue 4:**
   that of automating the choice of tasks on which an agent works and
   uses to structure its developing competence.
   * want the agent to make its own choices about what tasks it should try to master.
   * making these task choices automatically, particularly
     when they derive from what the agent has previously constructed as
     a result of representation learning or experience with previous subproblems.
-* issue 5:
+* **issue 5:**
   that of the interaction between behavior and learning via some computational analog of curiosity.
   * The actions taken will of course influence this stream of experience, which
     in turn will determine how much learning occurs and which tasks are learned.
-* issue 6:
+* **issue 6:**
   that of developing methods to make it acceptably safe to
   embed reinforcement learning agents into physical environments,
 
@@ -171,17 +172,3 @@
 * How do you make sure that an agent gets enough experience to learn a
   high-performing policy, all the while not harming its environment, other agents, or itself
   (or more realistically, while keeping the probability of harm acceptably low)?
-
-<!--
-Precup, D. (2000). Temporal Abstraction in Reinforcement Learning. Ph.D. thesis, University of
-Massachusetts, Amherst.
-
-April 4, 2018
-
-477
-and there is good reason to believe
-
-479
-ence. Still there are good reasons to believe that the
-benefits of artificial intelligence can outweigh the disruption it causes. As to
- -->
