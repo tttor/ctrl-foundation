@@ -8,14 +8,13 @@ Hierarchical RL,
 Inverse RL,
 Safe RL,
 Transfer learning in RL,
-Curriculum learning,
+Curriculum learning in RL,
 Multiagent RL,
 Evolutionary RL,
 ...
 
 ## (Rough) dimensions of challenges:
 * MDP (fully observable states) _...to..._ POMDP (partially observable states) model/formulations
-* discrete (small) _...to..._ continuous (large numbers of) states, actions, observations
 * stationary (fixed) _...to..._ non-stationary (changing) models
 * short _...to..._ long planning horizon
 * simulated (kinematic) _...to..._ real (dynamic,physics-intensive) evaluation/robot/world
@@ -24,9 +23,7 @@ Evolutionary RL,
 * single _...to..._ multi (similar but not same) tasks
 * low _...to..._ high dof robots
 * discrete _...to..._ continuous time (discretization time-step decreases to 0)
-
-## People
-Goto [thesis](https://github.com/tttor/rl-foundation/tree/master/thesis).
+* discrete (small) _...to..._ continuous (large numbers of) states, actions, observations
 
 ## Related sources
 * https://deeplearning4j.org/deepreinforcementlearning
