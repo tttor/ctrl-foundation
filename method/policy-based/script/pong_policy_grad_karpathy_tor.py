@@ -39,7 +39,7 @@ def main(argv):
     model_fpath = '/home/tor/xprmt/tmp/pong_policy_grad.model'
 
     if mode=='train':
-        train(n_episodes=3, model_fpath=model_fpath)
+        train(n_episodes=3, model_fpath=model_fpath, render=False)
     elif mode=='test':
         test(n_episodes=1, model_fpath=model_fpath)
     else:
@@ -139,87 +139,89 @@ def train(n_episodes, model_fpath, resume=False, render=False):
     game_idx = 0
     episode_idx = 0
 
-    while episode_idx < n_episodes:
-        ## init env
-        env = gym.make("Pong-v0")
-        observation = env.reset() # returns an initial observation
-        prev_x = None # used in computing the difference frame
-        end_of_game = False
+    ## init env
+    env = gym.make("Pong-v0")
+    observation = env.reset() # returns an initial observation
+    prev_x = None # used in computing the difference frame
+    end_of_game = False
 
-        while (not end_of_game):
-            if render: env.render()
-            print('training game_idx= '+str(game_idx)+' -> episode_idx= '+str(episode_idx)+' -> step_idx= '+str(step_idx))
+    while (episode_idx < n_episodes):
+        if render: env.render()
+        print('training game_idx= '+str(game_idx)+' -> episode_idx= '+str(episode_idx)+' -> step_idx= '+str(step_idx))
 
-            ## preprocess x: input
-            cur_x = prepro(observation)
-            if (prev_x is not None):
-                x = cur_x - prev_x
-            else:
-                x = np.zeros(n_input_units)
-            prev_x = cur_x
+        ## preprocess x: input
+        cur_x = prepro(observation)
+        if (prev_x is not None):
+            x = cur_x - prev_x
+        else:
+            x = np.zeros(n_input_units)
+        prev_x = cur_x
 
-            ## forward the policy network and
-            ## sample an action from the returned probability
-            ## p: up_prob: probability of taking UP action,
-            ##    hence the probability to take DOWN is '1 - up_prob'.
-            ## h: hidden state; hidden layer values
-            p, h = forward_propagation(x, model)
-            if np.random.uniform() < p:# roll the dice!
-                action = up_action
-            else:
-                action = down_action
+        ## forward the policy network and
+        ## sample an action from the returned probability
+        ## p: up_prob: probability of taking UP action,
+        ##    hence the probability to take DOWN is '1 - up_prob'.
+        ## h: hidden state; hidden layer values
+        p, h = forward_propagation(x, model)
+        if np.random.uniform() < p:# roll the dice!
+            action = up_action
+        else:
+            action = down_action
 
-            ## "fake" the true (binary) label, y, which is either 1 ( for up_action) or 0 (for down_action)
-            ## treat whatever action we end up sampling from our probability as the correct action.
-            ## note that later, the cost will be modulated by the advantage of taking this action, e.g return
-            if action == up_action:
-                y = 1
-            else:
-                y = 0
+        ## "fake" the true (binary) label, y, which is either 1 ( for up_action) or 0 (for down_action)
+        ## treat whatever action we end up sampling from our probability as the correct action.
+        ## note that later, the cost will be modulated by the advantage of taking this action, e.g return
+        if action == up_action:
+            y = 1
+        else:
+            y = 0
 
-            ## step the environment and get new measurements
-            observation, reward, end_of_game, info = env.step(action)
+        ## step the environment and get new measurements
+        observation, reward, end_of_game, info = env.step(action)
 
-            ## record various intermediates (needed later for backprop)
-            episode_x.append(x)
-            episode_h.append(h)
-            episode_p.append(p)
-            episode_y.append(y)
-            episode_r.append(reward)
+        ## record various intermediates (needed later for backprop)
+        episode_x.append(x)
+        episode_h.append(h)
+        episode_p.append(p)
+        episode_y.append(y)
+        episode_r.append(reward)
 
-            if terminal(reward): # does this episode(=rally) end? note: a game likely consists of multiple rallies
-                ## compute grad, i.e. the direction we need to move our weights to improve
-                grad = compute_gradient(episode_x, episode_h, episode_p, episode_y, episode_r, model)
+        if terminal(reward): # does this episode(=rally) end? note: a game likely consists of multiple rallies
+            ## compute grad, i.e. the direction we need to move our weights to improve
+            grad = compute_gradient(episode_x, episode_h, episode_p, episode_y, episode_r, model)
 
-                ## accumulate this episode's grad into a batch of episodes
-                for weight_key in model:
-                    grad_buffer[weight_key] += grad[weight_key] # element-wise add
+            ## accumulate this episode's grad into a batch of episodes
+            for weight_key in model:
+                grad_buffer[weight_key] += grad[weight_key] # element-wise add
 
-                ## perform rmsprop parameter update every batch_size episodes
-                ## Use rmsprop to move weights['1'] and weights['2'] in the direction of the gradient
-                if ( (episode_idx+1) % batch_size ) == 0:
-                    print('performing rmsprop parameter update...')
-                    for k,v in model.iteritems():
-                        g = grad_buffer[k] # gradient
-                        rmsprop_cache[k] = decay_rate * rmsprop_cache[k] + (1 - decay_rate) * g**2
-                        model[k] += learning_rate * g / (np.sqrt(rmsprop_cache[k]) + 1e-5)
-                        grad_buffer[k] = np.zeros_like(v) # reset batch gradient buffer
+            ## perform rmsprop parameter update every batch_size episodes
+            ## Use rmsprop to move weights['1'] and weights['2'] in the direction of the gradient
+            if ( (episode_idx+1) % batch_size ) == 0:
+                print('performing rmsprop parameter update...')
+                for k,v in model.iteritems():
+                    g = grad_buffer[k] # gradient
+                    rmsprop_cache[k] = decay_rate * rmsprop_cache[k] + (1 - decay_rate) * g**2
+                    model[k] += learning_rate * g / (np.sqrt(rmsprop_cache[k]) + 1e-5)
+                    grad_buffer[k] = np.zeros_like(v) # reset batch gradient buffer
 
-                    pickle.dump(model, open(model_fpath, 'wb'))
+                pickle.dump(model, open(model_fpath, 'wb'))
 
-                ## reset the episode bookeeper
-                step_idx = 0
-                episode_x = []
-                episode_h = []
-                episode_p = []
-                episode_y = []
-                episode_r = []
+            ## reset the episode bookeeper
+            step_idx = 0
+            episode_x = []
+            episode_h = []
+            episode_p = []
+            episode_y = []
+            episode_r = []
 
-                episode_idx += 1
-            else:
-                step_idx += 1
+            episode_idx += 1
+        else:
+            step_idx += 1
 
-        game_idx += 1
+        if end_of_game:
+            observation = env.reset() # reset env
+            prev_x = None
+            game_idx += 1
 
     print('=== training: end ===')
     print('episode_idx= '+str(episode_idx))
