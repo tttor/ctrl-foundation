@@ -168,7 +168,9 @@ def train(n_episodes, model_fpath, resume=False, render=False):
         else:
             action = down_action
 
-        ## "fake" the true (binary) label, y, which is either 1 ( for up_action) or 0 (for down_action)
+        ## "fake" the true label, y, for
+        ## a binary logistic regression classifier having only two classes (0,1),
+        ## which is here, either 1 (for up_action) or 0 (for down_action)
         ## treat whatever action we end up sampling from our probability as the correct action.
         ## note that later, the cost will be modulated by the advantage of taking this action, e.g return
         if action == up_action:
@@ -246,10 +248,11 @@ def compute_gradient(_x, _h, _p, _y, _r, model):
     ## a list of returns from all steps taken in an episode
     returns = compute_returns(r, gamma)
 
-    # compute grad in the output layer that encourages the action that was taken to be taken
+    ## compute grad in the output layer that encourages the action that was taken to be taken,
+    ## i.e. logistic regression gradient descent
     # http://cs231n.github.io/neural-networks-2/#losses
-    # https://www.youtube.com/watch?v=mUuCIMFQ1Zg&index=13&list=PLBAGcD3siRDguyYYzhVwZ3tLvOyyG5k6K
-    d_output = y_true - y_pred
+    # https://www.youtube.com/watch?v=z_xiwjEdAC4
+    d_output = (y_true - y_pred)
 
     ## modulate the gradient with the return
     ## (PG magic happens right here.)
