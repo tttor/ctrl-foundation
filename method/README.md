@@ -60,10 +60,17 @@
   see also [summary of part 1 in Intro to RL book](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro-sutton2018/part_01_summary.md)
   
 ## misc
+* Temporal Difference (TD):
+  MonteCarlo and DynamicsProgramming
 * policy representation
   * time-varying linear-Gaussian (TVLG)
   * deep neural networks, rbf networks
   * dynamic movement primitives
   * belief tree
-* Temporal Difference (TD):
-  MonteCarlo and DynamicsProgramming
+* generalised policy iteration: interleaving policy evaluation with policy improvement 
+  * Policy evaluation:
+    * estimate the action-value function, 
+    * eg, by Monte-Carlo evaluation or temporal-difference learning. 
+  * Policy improvement:
+    * update the policy with respect to the (estimated) action-value function
+    * eg, a greedy maximisation (or soft maximisation) of the action-value function
