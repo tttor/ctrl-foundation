@@ -1,10 +1,11 @@
 # Deterministic Policy Gradient Algorithms
 * David Silver et al
+* Proceedings of the 31st International Conference on Machine Learning, Beijing, China, 2014
 
 ## problem
 * computing the stochastic policy gradient may require more samples, especially if the action space has many dimensions.
 
-## idea: deterministic policy gradients
+## idea: deterministic policy gradients (theorem 1)
 * vs stochastic case
   * In the stochastic case: the policy gradient integrates over both state and action spaces, 
   * in the deterministic case: it only integrates over the state space.
@@ -15,6 +16,8 @@
   then updates the policy parameters in the direction of the approximate action-value gradient. 
 * introduce a notion of **compatible function approximation** for deterministic policy gradients, 
   to ensure that the approximation does not bias the policy gradient.
+* the theory below shows that, like the stochastic policy gradient theorem, 
+  there is no need to compute the gradient of the state distribution;
 
 ## setup
 * task
@@ -27,6 +30,8 @@
 * the deterministic policy gradient can be **estimated much more efficiently** than the usual stochastic policy gradient.
 * our algorithms require no more computation than prior methods: 
   the computational cost of each update is linear in the action dimensionality and the number of policy parameters
+* the deterministic policy gradient theorem is in fact a limiting case of the stochastic policy gradient theorem;
+  theorem 2
 
 ## misc
 * Policy gradient algorithms typically proceed by sampling this stochastic policy and 
@@ -51,4 +56,6 @@
         by stochastic gradient ascent of Equation 5.
       * Both the actor and the critic use an **importance sampling ratio** to 
         adjust for the fact that actions were selected according to `\pi` rather than `\beta`
-        
+* In continuous action spaces, greedy policy improvement becomes problematic, requiring a global maximisation at every step
+  * Instead, alternative is to move the policy in the direction of the gradient of Q, rather than globally maximising Q
+
