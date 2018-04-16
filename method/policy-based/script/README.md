@@ -22,10 +22,12 @@
 ## follow-up
 * https://github.com/llSourcell/Policy_Gradients_to_beat_Pong
 * https://github.com/dhruvp/atari-pong
+### tensorflow
 * https://github.com/gameofdimension/policy-gradient-pong
 * https://github.com/AbhishekAshokDubey/RL/tree/master/ping-pong
 * https://github.com/hunkim/ReinforcementZeroToAll/blob/master/08_4_softmax_pg_pong.py
 * https://github.com/hunkim/ReinforcementZeroToAll/blob/master/08_4_softmax_pg_pong_y.py
+### keras
 * https://github.com/rlcode/reinforcement-learning/blob/master/3-atari/2-pong/pong_reinforce.py
 
 ## support
