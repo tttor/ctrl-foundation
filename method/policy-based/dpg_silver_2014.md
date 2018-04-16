@@ -3,20 +3,19 @@
 * Proceedings of the 31st International Conference on Machine Learning, Beijing, China, 2014
 
 ## problem
-* computing the stochastic policy gradient may require more samples, especially if the action space has many dimensions.
+* computing the stochastic policy gradient may **require more samples**, 
+  especially if the action space has **many** dimensions.
 
 ## idea: deterministic policy gradients (theorem 1)
 * vs stochastic case
   * In the stochastic case: the policy gradient integrates over both state and action spaces, 
-  * in the deterministic case: it only integrates over the state space.
+  * in the deterministic case:  the policy gradient **only** integrates over the state space.
 * to choose actions according to a stochastic behaviour policy (to ensure adequate exploration), but 
-  to learn about a deterministic target policy (exploiting the ef- ficiency of the deterministic policy gradient)
-* use the deterministic policy gradient to derive an off-policy actor-critic algorithm that 
-  estimates the action-value function using a differentiable function approximator, and 
-  then updates the policy parameters in the direction of the approximate action-value gradient. 
-* introduce a notion of **compatible function approximation** for deterministic policy gradients, 
-  to ensure that the approximation does not bias the policy gradient.
-* the theory below shows that, like the stochastic policy gradient theorem, 
+  to **learn about a deterministic target policy** (exploiting the efficiency of the deterministic policy gradient)
+  * use the deterministic policy gradient to derive an off-policy actor-critic algorithm that 
+    estimates the action-value function using a differentiable function approximator, and 
+  * then updates the policy parameters in the direction of the approximate action-value gradient. 
+* present the theory that shows that, like the stochastic policy gradient theorem, 
   there is no need to compute the gradient of the state distribution;
 
 ## setup
@@ -58,4 +57,5 @@
         adjust for the fact that actions were selected according to `\pi` rather than `\beta`
 * In continuous action spaces, greedy policy improvement becomes problematic, requiring a global maximisation at every step
   * Instead, alternative is to move the policy in the direction of the gradient of Q, rather than globally maximising Q
-
+* the notion of **compatible function approximation** for deterministic policy gradients, 
+  to ensure that the approximation does not bias the policy gradient.
