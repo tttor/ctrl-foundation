@@ -3,6 +3,9 @@
 ## taxonomy
 * source of experience
   * `model-free` (direct RL): `source= realWorld`
+    * the agent directly learns an optimal (or good) action-selection strat- egy from the collected data.
+    * may be more efficient in cases where the solution space (e.g., policy space) exhibits more regularity than 
+      the underlying dynamics
     * in robotics (cf Atari games), be aware of
       * _true_ model-free:
         trained with the **real** world
@@ -13,9 +16,11 @@
       * (-) less sample-efficient, high sample complexity
       * (-) require policies with carefully designed, low-dimensional parameterizations
   * `model-based` (indirect RL): `source= model`
+    * the agent uses the collected data to first build a model of the domain’s dynamics and 
+      then uses this model to optimize its policy.
     * consists of: planning and model learning
     * pros and cons
-      * (+) sample-efficient
+      * (+) sample-efficient; better results with less data
       * (+) model learning transfers across tasks and environment configurations (learning physics)
       * (-) suffer from significant bias, complex unknown dynamics cannot always be modeled accurately enough
       * (-) 2 sources of approximation error: learn model, estimate a value function using the learned model
