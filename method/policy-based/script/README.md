@@ -6,6 +6,12 @@
 * Pong-v0
 * observation: Box(210, 160, 3)
 * action: Discrete(6)
+```
+>>> env.action_space.n
+6
+>>> env.unwrapped.get_action_meanings()
+['NOOP', 'FIRE', 'RIGHT', 'LEFT', 'RIGHTFIRE', 'LEFTFIRE']
+```
 
 ## reward formulation:
 * type 1: (n_episodes == n_rallies) (used here)
