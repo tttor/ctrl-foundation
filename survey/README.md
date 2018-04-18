@@ -22,9 +22,18 @@
 * [1998: Kaebling: Planning and acting in partially observable stochastic domains](https://www.sciencedirect.com/science/article/pii/S000437029800023X)
 * [1996: Kaebling: Reinforcement Learning: A Survey](https://www.jair.org/media/301/live-301-1562-jair.pdf)
 
-## web
-* https://www.alexirpan.com/2018/02/14/rl-hard.html
-* http://www.wildml.com/2016/10/learning-reinforcement-learning/
+## (rough) dimensions of challenges:
+* MDP (fully observable states) _...to..._ POMDP (partially observable states) model/formulations
+* stationary (fixed) _...to..._ non-stationary (changing) models
+* short _...to..._ long planning horizon
+* simulated (kinematic) _...to..._ real (dynamic,physics-intensive) evaluation/robot/world
+* noObstacle _...to..._ fullObstacle (clutter) workspace
+* single _...to..._ multiple agents
+* single _...to..._ multiple (similar but not same) tasks
+* single _...to..._ multiple goals/objectives
+* low _...to..._ high dof robots
+* discrete _...to..._ continuous time (discretization time-step decreases to 0)
+* discrete (small) _...to..._ continuous (large numbers of) states, actions, observations
 
 ## misc
 [1999: Richard S. Sutton: Reinforcement Learning: Past, Present and Future?](https://link.springer.com/chapter/10.1007/3-540-48873-1_26)
