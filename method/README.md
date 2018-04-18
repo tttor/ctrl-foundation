@@ -63,7 +63,20 @@
   plain _vs_ hierarchical structure,
   (onlinePlanning or modelFreeRL) _vs_ (onlinePlanning + modelLearning + modelFreeRL),
   see also [summary of part 1 in Intro to RL book](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro-sutton2018/part_01_summary.md)
-  
+
+## topics
+Deep RL,
+Bayesian RL,
+RL in POMDP,
+Hierarchical RL,
+Inverse RL,
+Safe RL,
+Transfer learning in RL,
+Curriculum learning in RL,
+Multiagent RL,
+Evolutionary RL,
+...
+
 ## misc
 * Temporal Difference (TD):
   MonteCarlo and DynamicsProgramming
