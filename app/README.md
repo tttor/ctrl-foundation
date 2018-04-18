@@ -1,5 +1,5 @@
 # applications
-Here, we focus on **tabletop object manipulation**, 
+Here, we focus on tabletop(to mobile) manipulation, 
 including prehensile (grasping, pickandplace) and non-prehensile (pushing).
 See also [method](https://github.com/tttor/rl-foundation/tree/master/method).
 
@@ -7,10 +7,7 @@ See also [method](https://github.com/tttor/rl-foundation/tree/master/method).
 * [2018: Hindsight Experience Replay](https://arxiv.org/abs/1707.01495)
 * 2017: Path Integral Guided Policy Search
 
-## grasping
-?
-
-## pushing
+## grasping + pushing
 ?
 
 ## sim2Real
