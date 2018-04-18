@@ -18,6 +18,9 @@
     * focus on the discrete action
     * ATARI game: Space Invaders
     * https://github.com/cgnicholls/reinforcement-learning/tree/master/a3c
+  * https://drive.google.com/file/d/1dFfDv-alQs6E_wyRmd3F2ZHKCVxhEIxY/view
+    * https://github.com/greydanus/baby-a3c
+    * https://github.com/ikostrikov/pytorch-a3c
   * https://github.com/openai/universe-starter-agent/blob/master/a3c.py
   * https://github.com/dennybritz/reinforcement-learning/tree/master/PolicyGradient/a3c
   * https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow/tree/master/contents/10_A3C
@@ -28,7 +31,6 @@
   * https://github.com/tensorlayer/tensorlayer/blob/master/example/tutorial_bipedalwalker_a3c_continuous_action.py
   * https://github.com/reinforceio/tensorforce/blob/master/examples/openai_gym_async.py 
   * https://github.com/liampetti/A3C-LSTM
-  * https://github.com/ikostrikov/pytorch-a3c
   * https://github.com/rlcode/reinforcement-learning/blob/master/2-cartpole/5-a3c/cartpole_a3c.py
   * https://github.com/andreimuntean/A3C
   * https://github.com/coreylynch/async-rl/blob/master/a3c.py
