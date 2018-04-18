@@ -9,6 +9,8 @@
 * [Sergey Levine, Deep Learning for Decision Making and Control, UWTV 2015](https://www.youtube.com/watch?v=EtMyH_--vnU&t=981s)
 
 ## web
+* https://www.alexirpan.com/2018/02/14/rl-hard.html
+* http://www.wildml.com/2016/10/learning-reinforcement-learning/
 * https://sites.google.com/view/deeprl-symposium-nips2017
 * https://sites.google.com/site/deeprlnips2016/
 
