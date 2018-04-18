@@ -11,8 +11,10 @@
 ## web
 * https://www.alexirpan.com/2018/02/14/rl-hard.html
 * http://www.wildml.com/2016/10/learning-reinforcement-learning/
-* https://sites.google.com/view/deeprl-symposium-nips2017
-* https://sites.google.com/site/deeprlnips2016/
+* https://greydanus.github.io/2017/11/01/visualize-atari/
+* nips deep rl
+  * https://sites.google.com/view/deeprl-symposium-nips2017
+  * https://sites.google.com/site/deeprlnips2016/
 
 ## forum
 * https://discuss.openai.com/
