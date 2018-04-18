@@ -114,9 +114,4 @@
 * limitation 4:
   the complexity of implementing the majority of BRL methods.
   * Thompson sampling style algorithms can pave the way to efficient algorithms
-    in terms of both sample complexity and computa- tional complexity. Such
-
-<!--
-Traditionally, RL algorithms have been categorized as being ei-
-ther model-based or model-free. In the former category, the agent uses the collected data to first build a model of the domain’s dynamics and then uses this model to optimize its policy. In the latter case, the agent directly learns an optimal (or good) action-selection strat- egy from the collected data. There is some evidence that the first method provides better results with less data [Atkeson and Santa- maria, 1997], and the second method may be more efficient in cases where the solution space (e.g., policy space) exhibits more regular- ity than the underlying dynamics, though there is some disagreement about this,.
- -->
+    in terms of both sample complexity and computa- tional complexity 
