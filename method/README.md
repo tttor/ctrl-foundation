@@ -77,14 +77,17 @@ Multiagent RL,
 Evolutionary RL,
 ...
 
+## policy representation
+* neural networks
+  * tutor: 
+    * https://github.com/tttor/TensorFlow-1x-Deep-Learning-Cookbook/blob/devel/ch09/02_nn_random_agent.py
+* belief tree
+* dynamic movement primitives
+* time-varying linear-Gaussian (TVLG)
+
 ## misc
 * Temporal Difference (TD):
   MonteCarlo and DynamicsProgramming
-* policy representation
-  * time-varying linear-Gaussian (TVLG)
-  * deep neural networks, rbf networks
-  * dynamic movement primitives
-  * belief tree
 * generalised policy iteration: interleaving policy evaluation with policy improvement 
   * Policy evaluation:
     * estimate the action-value function, 
