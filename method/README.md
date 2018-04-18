@@ -42,7 +42,7 @@
     * pros and cons
       * (+) low variance, high bias (due to bootstrapping): more stable performance
       * (-) need to discretize action for continuous action space
-  * hybrid: Actor-critic (`actor:policy-based` + `critic:value-based`)
+  * hybrid: actor-critic (`actor:policy-based` + `critic:value-based`)
 
 * when policy compiled/learned with respect to execution/action time
   * `offline`
@@ -50,13 +50,12 @@
     * consider all contingencies so does not scale up
   * `online`
     * aka: decision-time planning
-    * policy learned: in between 2 execution (interleaved)
-    * typically plans **each** step from the **current** belief, so
-      potentially can handle large-scale planning
-    * handle model changes naturally
-  * `background`
-    * policy learned: in paralel with execution
-  * hybrid: (`online` + `offline` + `background`)
+    * plan from the **current** belief (typically, each step), so
+      * potentially can handle large-scale planning
+      * handle model changes naturally
+    * policy learned: 
+      in between 2 execution (interleaved) and **in background** (in paralel with execution)
+  * hybrid: (`offline` + `online`)
 
 * other dimensions:
   on-policy _vs_ off-policy,
