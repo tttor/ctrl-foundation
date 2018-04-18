@@ -3,14 +3,18 @@
 ## taxonomy
 * source of experience
   * `model-free` (direct RL): `source= realWorld`
-    * the agent directly learns an optimal (or good) action-selection strat- egy from the collected data.
+    * the agent directly learns an optimal (or good) action-selection strategy from the collected data.
     * may be more efficient in cases where the solution space (e.g., policy space) exhibits more regularity than 
       the underlying dynamics
-    * in robotics (cf Atari games), be aware of
+    * in robotics (cf Atari games where there is no real world; both real and sim are in simulator)
       * _true_ model-free:
-        trained with the **real** world
+        * trained with the **real** world
+        * real experience is expensive
       * _pseudo_ model-free:
-        trained with a **generative** model (typically offline, before execution)
+        * trained with a **generative** model 
+        * typically offline, before execution
+        * aka planning because this also uses a generative model
+        * sim2real gap problem when deploying the trained policy to real world       
     * pros and cons
       * (+) have the advantage of handling arbitrary dynamical systems with minimal bias
       * (-) less sample-efficient, high sample complexity
