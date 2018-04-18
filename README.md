@@ -19,8 +19,9 @@ Evolutionary RL,
 * short _...to..._ long planning horizon
 * simulated (kinematic) _...to..._ real (dynamic,physics-intensive) evaluation/robot/world
 * noObstacle _...to..._ fullObstacle (clutter) workspace
-* single _...to..._ multi agents
-* single _...to..._ multi (similar but not same) tasks
+* single _...to..._ multiple agents
+* single _...to..._ multiple (similar but not same) tasks
+* single _...to..._ multiple goals/objectives
 * low _...to..._ high dof robots
 * discrete _...to..._ continuous time (discretization time-step decreases to 0)
 * discrete (small) _...to..._ continuous (large numbers of) states, actions, observations
