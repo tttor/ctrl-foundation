@@ -5,17 +5,20 @@ See also [method](https://github.com/tttor/rl-foundation/tree/master/method).
 
 ## pickandplace
 * [2018: Hindsight Experience Replay](https://arxiv.org/abs/1707.01495)
-* 2017: Path Integral Guided Policy Search
+* [pigps_chebotar_2017.md](pigps_chebotar_2017.md)
 
 ## grasping + pushing
-* [pushgraspsyn_zeng_2018.md](./pushgraspsyn_zeng_2018.md)
+* [pushgraspsyn_zeng_2018.md](pushgraspsyn_zeng_2018.md)
+* [configlat_koval_2016.md](configlat_koval_2016.md)
+* [dmpgrasp_stulp_2011.md](dmpgrasp_stulp_2011.md)
 
 ## sim2Real
-* 2018: dynamics randomization (dynrnd_peng_2018.md)
-* 2016: Progressive Nets (prognet_rusu_2016.md)
+* [dynrnd_peng_2018.md](dynrnd_peng_2018.md)
+* [modnatpol_lowrey_2018.md](modnatpol_lowrey_2018.md)
+* [prognet_rusu_2016.md](prognet_rusu_2016.md)
 
 ## games
-* 2016: Silver: Go games ... deep neural networks and tree search
+* [mctsdeepnet_silver_2016.md](mctsdeepnet_silver_2016.md)
 
 ## misc
 * Multimodal Manipulation Under Uncertainty 2015: https://www.dagstuhl.de/en/program/calendar/semhp/?semnr=15411
