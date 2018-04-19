@@ -8,7 +8,7 @@ See also [method](https://github.com/tttor/rl-foundation/tree/master/method).
 * 2017: Path Integral Guided Policy Search
 
 ## grasping + pushing
-?
+* [pushgraspsyn_zeng_2018.md](./pushgraspsyn_zeng_2018.md)
 
 ## sim2Real
 * 2018: dynamics randomization (dynrnd_peng_2018.md)
