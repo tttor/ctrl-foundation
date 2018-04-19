@@ -1,4 +1,4 @@
-# rl-foundation
+# reinforcement-learning foundation
 See also: https://github.com/tttor/dl-foundation
 
 ## related sources
