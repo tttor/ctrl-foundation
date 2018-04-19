@@ -198,7 +198,7 @@ def train(n_episodes, model_fpath, resume=False, render=False):
 
             ## perform rmsprop parameter update every batch_size episodes
             ## Use rmsprop to move weights['1'] and weights['2'] in the direction of the gradient
-            if ( (episode_idx+1) % batch_size ) == 0:
+            if (episode_idx % batch_size) == 0:
                 print('performing rmsprop parameter update...')
                 for k,v in model.iteritems():
                     g = grad_buffer[k] # gradient
