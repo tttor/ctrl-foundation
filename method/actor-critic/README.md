@@ -50,7 +50,3 @@
 * http://www.inf.ed.ac.uk/teaching/courses/rl/slides15/rl12.pdf
 * http://www.rage.net/~greg/2016-07-05-ActorCritic-with-OpenAI-Gym.html
 * [Survey: 2012: Grondman: A Survey of Actor-Critic Reinforcement Learning: Standard and Natural Policy Gradients](http://ieeexplore.ieee.org/abstract/document/6392457/), see [survey](https://github.com/tttor/rl-foundation/tree/master/survey)
-
-## misc
-* https://github.com/schinger/pong_actor-critic/blob/master/pg-pong-ac.py
-
