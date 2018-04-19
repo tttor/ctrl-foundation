@@ -15,7 +15,6 @@
 * rllab: https://github.com/rll/rllab
 * https://github.com/ikostrikov/pytorch-rl
 * https://github.com/hunkim/ReinforcementZeroToAll
-* https://github.com/dennybritz/reinforcement-learning
 * https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
 
 ## type 2: old
