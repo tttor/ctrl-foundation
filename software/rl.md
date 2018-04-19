@@ -1,6 +1,6 @@
 # RL software
 
-## type 0
+## type 0: big guy 
 * OpenAI: https://github.com/openai/baselines
 * Ray RLlib: http://ray.readthedocs.io/en/latest/rllib.html
 * ChainerRL: https://github.com/chainer/chainerrl
@@ -9,21 +9,20 @@
 * KerasRL: https://github.com/keras-rl/keras-rl
 * FitML: https://github.com/FitMachineLearning/FitML
 
-## type 1
+## type 1: people power
 * https://github.com/rlcode/reinforcement-learning
 * https://github.com/dennybritz/reinforcement-learning
 * rllab: https://github.com/rll/rllab
+* https://github.com/ikostrikov/pytorch-rl
+* https://github.com/hunkim/ReinforcementZeroToAll
+* https://github.com/dennybritz/reinforcement-learning
+* https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
 
-## type 2
+## type 2: old
 * PyBrain: http://pybrain.org/
 * AI-Toolbox: https://github.com/Svalorzen/AI-Toolbox
 * BURLAP: http://burlap.cs.brown.edu/
 * RL-Glue: http://glue.rl-community.org/wiki/Main_Page
-
-## type 3
-* https://github.com/hunkim/ReinforcementZeroToAll
-* https://github.com/dennybritz/reinforcement-learning
-* https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
 
 ## environment
 see also: [simulator](https://github.com/tttor/rl-foundation/blob/master/software/simulator.md)
