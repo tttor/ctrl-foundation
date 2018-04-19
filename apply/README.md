@@ -1,5 +1,5 @@
 # applications
-Here, we focus on tabletop(to mobile) manipulation, 
+Focus on tabletop(to mobile) robot manipulation, 
 including prehensile (grasping, pickandplace) and non-prehensile (pushing).
 See also [method](https://github.com/tttor/rl-foundation/tree/master/method).
 
