@@ -1,8 +1,10 @@
-# vpn_oh_2017
+# Value Prediction Network
+* Junhyuk Oh et al
+* 31st Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA
 
 ## problems
 * stochastic environment where careful planning is required but 
-building an accurate observation-prediction model is difficult
+  building an accurate observation-prediction model is difficult
 * What if we could predict future rewards and values directly without predicting future observations?
 
 ## ideas: Value Prediction Network (VPN)
