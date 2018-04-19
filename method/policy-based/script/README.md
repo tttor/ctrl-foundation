@@ -1,7 +1,6 @@
 # atari pong from openai gym
 * https://gym.openai.com/envs/Pong-v0/
 * http://karpathy.github.io/2016/05/31/rl/
-* https://github.com/tttor/TensorFlow-1x-Deep-Learning-Cookbook/blob/devel/ch09/05_policy_gradients_pong.py
 
 ## env
 * Pong-v0
@@ -32,6 +31,7 @@
 * https://github.com/dhruvp/atari-pong
 ### tensorflow
 * https://github.com/PacktPublishing/TensorFlow-1x-Deep-Learning-Cookbook/blob/master/Chapter09/policy_gradients_pong.py
+  * https://github.com/tttor/TensorFlow-1x-Deep-Learning-Cookbook/blob/devel/ch09/05_policy_gradients_pong.py
 * https://github.com/gameofdimension/policy-gradient-pong
 * https://github.com/AbhishekAshokDubey/RL/tree/master/ping-pong
 * https://github.com/hunkim/ReinforcementZeroToAll/blob/master/08_4_softmax_pg_pong.py
