@@ -1,6 +1,7 @@
 # atari pong from openai gym
 * https://gym.openai.com/envs/Pong-v0/
 * http://karpathy.github.io/2016/05/31/rl/
+* https://github.com/tttor/TensorFlow-1x-Deep-Learning-Cookbook/blob/devel/ch09/05_policy_gradients_pong.py
 
 ## env
 * Pong-v0
@@ -26,6 +27,7 @@
   * -1: loose a game
 
 ## follow-up
+### numpy
 * https://github.com/llSourcell/Policy_Gradients_to_beat_Pong
 * https://github.com/dhruvp/atari-pong
 ### tensorflow
