@@ -4,7 +4,6 @@ including prehensile (grasping, pickandplace) and non-prehensile (pushing).
 See also [method](https://github.com/tttor/rl-foundation/tree/master/method).
 
 ## pickandplace
-* [2018: Hindsight Experience Replay](https://arxiv.org/abs/1707.01495)
 * [pigps_chebotar_2017.md](pigps_chebotar_2017.md)
 
 ## grasping + pushing
