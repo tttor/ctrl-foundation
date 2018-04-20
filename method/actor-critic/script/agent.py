@@ -6,5 +6,7 @@ class ActorCriticAgent():
         self._actor_net = ActorNeuralNetwork()
         self._critic_net = CriticNeuralNetwork()
 
+        self.gamma = 0.999
+
     def action(self, obs):
-        self._actor_net.
+        self._actor_net...
