@@ -33,7 +33,14 @@
   * grasping: both fingers attempt to move x cm below q
 * learning fully convolutional action-value fn
   * huber loss
+  * extend vanilla deep Q-networks (DQN) [30] by modeling our Q-function as
+    two feed-forward fully convolutional networks (FCNs) [31];
+    one for each motion primitive behavior (pushing and grasping respectively).
 * reward
+  * `R_g(.) = 1` if a grasp is successful
+    (computed by thresholding on the antipodal distances between gripper fingers after a grasp attempt) and
+  * `R_p(.) = 0.5` for pushes that make detectable changes to the environment
+    (where changes are detected if the sum of differences between heightmaps exceeds some threshold).
 
 ## setup
 * two fully convolutional networks that
@@ -43,8 +50,9 @@
 * Both networks are trained jointly in a Q-learning framework and are entirely self-supervised by trial and error,
   where rewards are provided from successful grasps
 * experiments in both simulation and real-world
-* pytorch
+* pytorch, vrep
 * test time: greedy deterministic, small learning rate to avoid getting stuck
+* eval metric: success rate, completion
 
 ## result
 * the synergy between planning non-prehensile (pushing) and prehensile (grasping) actions **can be learned** from ex- perience.
