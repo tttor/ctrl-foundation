@@ -20,12 +20,16 @@
     expresses the level of uncertainty about the model itself.
 * explicitly incorporating model uncertainty into long-term planning and controller learning 
   (so that our approach reduces the effects of model errors)
+* PILCO is a policy search method and does **not require** state space discretization. 
+  * closed-form Bayesian averaging over infinitely many plausible dynamics models is possible by using non- parametric GPs.
 
 ## result
 * nonparametric Bayesian models can play a fundamental role in classical control set-ups, while 
   avoiding the typically excessive reliance on explicit models
 * a concrete example of the importance of Bayesian modeling and inference for **fast learning from scratch**
-
+* limitation:
+  * limited to episodic set-ups.
+  
 ## comment
 * neural nets for learning transition model?
 * seems strong relation with bayesian RL
