@@ -4,13 +4,18 @@ from actor import ActorNeuralNetwork
 from critic import CriticNeuralNetwork
 
 class ActorCriticAgent():
-    def __init__(self, action_space):
-        self._actor_net = ActorNeuralNetwork()
+    def __init__(self, action_space, initial_observation):
+        assert len(action_space)==2
+
+        input_dim = initial_observation.size
+        output_dim = 1 # as len(action_space)==2 (==len(action_labels))
+
+        self._actor_net = ActorNeuralNetwork(input_dim, output_dim)
         self._critic_net = CriticNeuralNetwork()
 
         self.gamma = 0.999
         self.action_space = action_space
-        assert len(action_space)==2
+
 
     def act(self, obs):
         idx = self._act_random()

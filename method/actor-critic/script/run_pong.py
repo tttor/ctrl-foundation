@@ -21,12 +21,12 @@ def main():
 def run(train, n_episodes, log_dir, render=False):
     ## init
     env = AtariPong()
-    agent = ActorCriticAgent( env.action_space() )
+    obs = env.initial_observation()
+    agent = ActorCriticAgent( env.action_space(), initial_observation=obs )
     step_idx = 0 # an episode consists of n>=1 steps
     episode_idx = 0 # "episode" refers to "rally"
     game_idx = 0 # a game consists of n>=1 episodes
     discounted_return = 0
-    obs = env.initial_observation()
 
     ## bookkeeper per game because training is done at then of a game
     if train == True:

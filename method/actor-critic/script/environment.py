@@ -32,7 +32,8 @@ class AtariPong():
         return (obs, reward, info)
 
     def initial_observation(self):
-        return self._env.reset()
+        img = self._env.reset()
+        return self._observation(img)
 
     def close(self):
         self._env.close()
