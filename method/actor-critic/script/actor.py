@@ -25,10 +25,10 @@ class ActorNeuralNetwork():## aka Policy Network
         self.W2 = tf.get_variable("W2", [hidden_dim, output_dim], initializer=xavier_l2)
 
         ## forward prop operator
-        self._forward_prop_op = self._policy_forward(self._x)
+        self._forward_prop_op = self._forward_prop(self._x)
 
         ## loss
-        loss = tf.nn.l2_loss(self._y - self.tf_aprob)
+        loss = tf.nn.l2_loss(self._y - self._forward_prop_op)
 
         # Define Optimizer, compute and apply gradients
         eta = 1e-3
@@ -55,9 +55,10 @@ class ActorNeuralNetwork():## aka Policy Network
         # to compute the probability:
         # because In TensorFlow, the network graph is computed only in the TensorFlow session,
         feed = {self._x: np.reshape(x, (1, -1))}
-        aprob = self.session.run(self._forward_prop_op, feed);
+        probs = self._session.run(self._forward_prop_op, feed)
 
-        return aprob
+        probs = probs[0] # from [[...]] to [...]
+        return probs
 
     def _forward_prop(self, x):
         h = tf.matmul(x, self.W1)
