@@ -46,68 +46,6 @@ def main(argv):
         print('unknown mode!')
         return
 
-## test ########################################################################
-def test(n_episodes, model_fpath, render=True):
-    model = pickle.load(open(model_fpath, 'rb'))
-
-    for episode_idx in xrange(n_episodes):
-        print('testing episode_idx= '+str(episode_idx)+': begin')
-
-        ## init env
-        env = gym.make("Pong-v0")
-        observation = env.reset() # returns an initial observation
-        prev_x = None # used in computing the difference frame
-        episode_r = []
-
-        step_idx = 0
-        while True:
-            if render: env.render()
-
-            ## prepro
-            ## x: input
-            cur_x = prepro(observation)
-            if (prev_x is not None):
-                x = cur_x - prev_x
-            else:
-                x = np.zeros(n_input_units)
-            prev_x = cur_x
-
-            ## forward the policy network and
-            ## sample an action from the returned probability
-            ## up_prob: probability of action 2
-            up_prob, _ = forward_propagation(x, model)
-            if np.random.uniform() < up_prob:# roll the dice!
-                action = up_action
-            else:
-                action = down_action
-
-            ## step the environment and get new measurements
-            observation, reward, end_of_game, info = env.step(action)
-            episode_r.append(reward)
-            print('step_idx= '+str(step_idx)+' -> r= '+str(reward))
-
-            ## check if terminal
-            if terminal(reward):
-                break;
-
-            step_idx += 1
-            time.sleep(1/60.0)
-
-        ## closure per episode
-        r_counter = {0: 0, 1: 0, -1: 0}
-        for r in episode_r: r_counter[r] += 1
-
-        print('n_steps= '+str(step_idx+1))
-        print('r_counter= '+str(r_counter))
-        print('testing episode_idx= '+str(episode_idx)+': end')
-
-    try:
-        print('Waiting for ctrl+C ...')
-        while True:
-            pass
-    except KeyboardInterrupt:
-        pass
-
 ## train #######################################################################
 def train(n_episodes, model_fpath, resume=False, render=False):
     if resume:
@@ -332,6 +270,68 @@ def prepro(I):
     I[I == 109] = 0 # erase background (background type 2)
     I[I != 0] = 1 # everything else (paddles, ball) just set to 1
     return I.astype(np.float).ravel()
+
+## test ########################################################################
+def test(n_episodes, model_fpath, render=True):
+    model = pickle.load(open(model_fpath, 'rb'))
+
+    for episode_idx in xrange(n_episodes):
+        print('testing episode_idx= '+str(episode_idx)+': begin')
+
+        ## init env
+        env = gym.make("Pong-v0")
+        observation = env.reset() # returns an initial observation
+        prev_x = None # used in computing the difference frame
+        episode_r = []
+
+        step_idx = 0
+        while True:
+            if render: env.render()
+
+            ## prepro
+            ## x: input
+            cur_x = prepro(observation)
+            if (prev_x is not None):
+                x = cur_x - prev_x
+            else:
+                x = np.zeros(n_input_units)
+            prev_x = cur_x
+
+            ## forward the policy network and
+            ## sample an action from the returned probability
+            ## up_prob: probability of action 2
+            up_prob, _ = forward_propagation(x, model)
+            if np.random.uniform() < up_prob:# roll the dice!
+                action = up_action
+            else:
+                action = down_action
+
+            ## step the environment and get new measurements
+            observation, reward, end_of_game, info = env.step(action)
+            episode_r.append(reward)
+            print('step_idx= '+str(step_idx)+' -> r= '+str(reward))
+
+            ## check if terminal
+            if terminal(reward):
+                break;
+
+            step_idx += 1
+            time.sleep(1/60.0)
+
+        ## closure per episode
+        r_counter = {0: 0, 1: 0, -1: 0}
+        for r in episode_r: r_counter[r] += 1
+
+        print('n_steps= '+str(step_idx+1))
+        print('r_counter= '+str(r_counter))
+        print('testing episode_idx= '+str(episode_idx)+': end')
+
+    try:
+        print('Waiting for ctrl+C ...')
+        while True:
+            pass
+    except KeyboardInterrupt:
+        pass
 
 ################################################################################
 if __name__ == '__main__':
