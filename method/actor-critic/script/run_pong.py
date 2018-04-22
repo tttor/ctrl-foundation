@@ -20,13 +20,15 @@ def main():
 
 def run(train, n_episodes, log_dir, render=False):
     ## init
-    env = AtariPong()
+    env = AtariPong(gamma=0.999)
+
     obs = env.initial_observation()
     agent = ActorCriticAgent( env.n_actions(), initial_observation=obs )
+
     step_idx = 0 # an episode consists of n>=1 steps
     episode_idx = 0 # "episode" refers to "rally"
     game_idx = 0 # a game consists of n>=1 episodes
-    discounted_return = 0
+    discounted_returns = [0]*n_episodes # from the start state of all episodes
 
     ## bookkeeper per game because training is done at then of a game
     if train == True:
@@ -34,10 +36,10 @@ def run(train, n_episodes, log_dir, render=False):
 
     ## main loop
     while (episode_idx < n_episodes):
+        ## msg
         print('episode_idx= '+str(episode_idx)+ \
               ' @step_idx= '+str(step_idx)+ \
               ' @game_idx= '+str(game_idx))
-
         if render:
             env.render()
             time.sleep(1/60.0)
@@ -46,7 +48,7 @@ def run(train, n_episodes, log_dir, render=False):
         action, label = agent.act(obs)
         obs, reward, info = env.step(action)
 
-        discounted_return += ((agent.gamma**step_idx) * reward)
+        discounted_return[episode_idx] += ((agent.gamma**step_idx) * reward)
 
         ## collect data for training
         if train == True:
@@ -54,19 +56,25 @@ def run(train, n_episodes, log_dir, render=False):
             training_data['rewards'].append(reward)
             training_data['labels'].append(label)
 
-        ## close episode
+        ## close an episode(== a rally)
         if info['end_of_episode']:
             print('episode_idx= '+str(episode_idx)+ \
-                  ': ended with G= '+str('%.3f'%discounted_return))
+                  ': ended with G= '+str('%.3f'%discounted_return[episode_idx]))
 
             episode_idx += 1
             step_idx = 0
-            discounted_return = 0
 
-            if info['end_of_game']  or (episode_idx == n_episodes):
+            if info['end_of_game'] or (episode_idx == n_episodes):
                 ## train
                 if train == True:
                     print('training...')
+
+                    ## finalize training data
+                    for k in training_data.keys():
+                        training_data[k] = np.vstack(training_data[k])
+                    training_data['returns'] = env.compute_returns(training_data['rewards'])
+
+                    ## train!
                     agent.train_critic(training_data)
                     agent.train_actor(training_data)
 

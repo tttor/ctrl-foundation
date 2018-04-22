@@ -2,9 +2,31 @@ import gym
 import numpy as np
 
 class AtariPong():
-    def __init__(self):
+    def __init__(self, gamma):
+        self.gamma = gamma
         self._env = gym.make('Pong-v0')
         self._prev_img = None
+
+    def compute_returns(self, r):
+        """ take 1D float array of rewards and compute discounted reward """
+        # https://github.com/AbhishekAshokDubey/RL/blob/master/ping-pong/tf_ping_pong_policyGradient.py
+        # https://github.com/hunkim/ReinforcementZeroToAll/issues/1
+        # input : np.array([1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0])
+        # output: np.array([ 1., 0.96059601, 0.970299, 0.9801, 0.99, 1., 0.9801, 0.99, 1.])
+        discounted_returns = np.zeros_like(r)
+        running_add = 0
+        for t in reversed(range(0, r.size)):
+            if r[t] != 0:
+                running_add = 0 # reset the sum, since this was a game boundary (pong specific!)
+            running_add = running_add * self.gamma + r[t]
+            discounted_returns[t] = running_add
+
+        # standardize to be unit normal
+        # (helps control the gradient estimator variance)
+        discounted_returns -= np.mean(discounted_returns)
+        discounted_returns /= np.std(discounted_returns)
+
+        return discounted_returns
 
     def step(self, action):
         img, reward, end_of_game, info = self._env.step(action)
@@ -30,6 +52,7 @@ class AtariPong():
 
     def render(self):
         self._env.render()
+
 
     def _end_of_episode(self, reward):
         return (reward != 0)
