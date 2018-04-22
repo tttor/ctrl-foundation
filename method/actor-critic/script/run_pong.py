@@ -28,7 +28,7 @@ def run(train, n_episodes, log_dir, render=False):
     step_idx = 0 # an episode consists of n>=1 steps
     episode_idx = 0 # "episode" refers to "rally"
     game_idx = 0 # a game consists of n>=1 episodes
-    discounted_returns = [0]*n_episodes # from the start state of all episodes
+    discounted_returns = [0]*n_episodes # from the start state of every episode
 
     ## bookkeeper per game because training is done at then of a game
     if train == True:

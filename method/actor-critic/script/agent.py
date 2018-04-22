@@ -25,14 +25,7 @@ class ActorCriticAgent():
         return (idx, labels)
 
     def train(self, data):
-        _train_critic(training_data)
-        _train_actor(training_data)
-
-    def _train_actor(self, data):
         self._actor_net.update(data)
-
-    def _train_critic(self, data):
-        pass
 
     def _act_random(self):
         return np.random.randint(0, self.n_actions, size=1)[0]
