@@ -131,5 +131,6 @@
    but what if for offline planning? 
  * plots and tables (on the paper, not the appendix) with analysis are all from Atari game setup, 
    although there are experiments in/with Mujoco/robots (shown in the appendix)
- * in the [demo vid on robots, 0:44](https://www.youtube.com/watch?v=Ajjc08-iPx8&feature=youtu.be), initial state is **fixed**, what if for any initial state?
- 
+ * in the [demo vid on robots, 0:44](https://www.youtube.com/watch?v=Ajjc08-iPx8&feature=youtu.be), 
+    initial state is **fixed**, what if **any** initial state?
+ * in a3c, for the critic: what if using Q or (Q-V), instead of V?
