@@ -11,34 +11,40 @@ class AtariPong():
 
     def step(self, action):
         img, reward, end_of_game, info = self._env.step(action)
-        obs = _observation(img)
+        obs = self._observation(img)
 
         info['end_of_game'] = end_of_game
-        info['end_of_episode'] = _end_of_episode(reward)
+        info['end_of_episode'] = self._end_of_episode(reward)
 
         if end_of_game:
-            prev_img = None
+            self._prev_img = None
 
         return (obs, reward, info)
 
     def initial_observation(self):
         return self._env.reset()
 
+    def close(self):
+        self._env.close()
+
+    def render(self):
+        self._env.render()
+
     def _end_of_episode(self, reward):
         return (reward != 0)
 
     def _observation(self, img):
-        img = _preprocess_image(img)
+        img = self._preprocess_image(img)
 
-        if self.prev_img is None:
+        if self._prev_img is None:
             obs =  np.zeros(img.size)
         else:
             obs = (img - prev_img)
-            self.prev_img = img
+            self._prev_img = img
 
         return obs
 
-    def _preprocess_image(I):
+    def _preprocess_image(self, I):
         """ prepro 210x160x3 uint8 frame into 6400 (80x80) 1D float vector """
         I = I[35:195] # crop
         I = I[::2,::2,0] # downsample by factor of 2
