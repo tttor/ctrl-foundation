@@ -6,8 +6,18 @@ class AtariPong():
         self._env = gym.make('Pong-v0')
         self._prev_img = None
 
-    def n_actions(self):
-        return self._env.action_space.n
+    def action_space(self):
+        '''
+        >>> env.action_space.n
+        6
+        >>> env.unwrapped.get_action_meanings()
+        ['NOOP', 'FIRE', 'RIGHT', 'LEFT', 'RIGHTFIRE', 'LEFTFIRE']
+
+        up_action:= 2 or 4
+        down_action:= 3 or 5
+        '''
+        action_space = {2: 'up', 3: 'down'}
+        return action_space
 
     def step(self, action):
         img, reward, end_of_game, info = self._env.step(action)
