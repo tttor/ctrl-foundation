@@ -26,10 +26,10 @@ class ActorNeuralNetwork():## aka Policy Network
         xavier_l2 = tf.truncated_normal_initializer(mean=0, stddev=1. / np.sqrt(hidden_dim), dtype=tf.float32)
         self.W2 = tf.get_variable("W2", [hidden_dim, output_dim], initializer=xavier_l2)
 
-        # Define Optimizer, compute and apply gradients
         self.tf_aprob = self._policy_forward(self._x)
-        loss = tf.nn.l2_loss(self._y - self.tf_aprob)
 
+        # Define Optimizer, compute and apply gradients
+        loss = tf.nn.l2_loss(self._y - self.tf_aprob)
         optimizer = tf.train.RMSPropOptimizer(eta, decay=decay)
         tf_grads = optimizer.compute_gradients(loss, var_list=tf.trainable_variables(), grad_loss=self._returns)
         self._train_op = optimizer.apply_gradients(tf_grads)

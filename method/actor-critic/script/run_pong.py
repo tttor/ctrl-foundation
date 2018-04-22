@@ -22,7 +22,7 @@ def run(train, n_episodes, log_dir, render=False):
     ## init
     env = AtariPong()
     obs = env.initial_observation()
-    agent = ActorCriticAgent( env.action_space(), initial_observation=obs )
+    agent = ActorCriticAgent( env.n_actions(), initial_observation=obs )
     step_idx = 0 # an episode consists of n>=1 steps
     episode_idx = 0 # "episode" refers to "rally"
     game_idx = 0 # a game consists of n>=1 episodes
