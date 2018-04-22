@@ -22,9 +22,12 @@ class ActorCriticAgent():
         return (idx, label)
 
     def train_actor(self, data):
-        data['returns'] = self._compute_returns(np.vstack(data['rewards']), self.gamma)
-        # self._actor_net.update(data)
-        pass
+        data['obss'] = np.vstack(data['obss'])
+        data['labels'] = np.vstack(data['labels'])
+        data['rewards'] = np.vstack(data['rewards'])
+        data['returns'] = self._compute_returns(data['rewards'], self.gamma)
+
+        self._actor_net.update(data)
 
     def train_critic(self, data):
         pass
