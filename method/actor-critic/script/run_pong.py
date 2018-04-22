@@ -75,8 +75,7 @@ def run(train, n_episodes, log_dir, render=False):
                     training_data['returns'] = env.compute_returns(training_data['rewards'])
 
                     ## train!
-                    agent.train_critic(training_data)
-                    agent.train_actor(training_data)
+                    agent.train(training_data)
 
                     ## reset training data
                     training_data = {'obss': [], 'rewards': [], 'labels': []}
