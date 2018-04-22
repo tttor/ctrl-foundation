@@ -31,9 +31,7 @@ class ActorNeuralNetwork():## aka Policy Network
         loss = tf.nn.l2_loss(self._y - self._forward_prop_op)
 
         # Define Optimizer, compute and apply gradients
-        eta = 1e-3
-        decay = 0.99
-        optimizer = tf.train.RMSPropOptimizer(eta, decay=decay)
+        optimizer = tf.train.RMSPropOptimizer(learning_rate=1e-3, decay=0.99)
 
         tf_grads = optimizer.compute_gradients(loss, var_list=tf.trainable_variables(), grad_loss=self._returns)
         self._train_op = optimizer.apply_gradients(tf_grads)
