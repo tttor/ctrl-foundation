@@ -1,10 +1,12 @@
-import gym
 import numpy as np
+import gym
 
 class AtariPong():
-    def __init__(self, gamma):
-        self.gamma = gamma
+    def __init__(self, gamma, seed):
         self._env = gym.make('Pong-v0')
+        self._env.seed(seed) # WARN: only seed the env, see https://github.com/openai/gym/issues/768
+
+        self.gamma = gamma
         self._prev_img = None
 
     def compute_returns(self, r):
@@ -52,7 +54,6 @@ class AtariPong():
 
     def render(self):
         self._env.render()
-
 
     def _end_of_episode(self, reward):
         return (reward != 0)

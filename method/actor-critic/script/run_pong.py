@@ -2,31 +2,34 @@
 import sys
 import time
 
+import numpy as np
+
 from agent import ActorCriticAgent
 from environment import AtariPong
 
 def main():
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         print('USAGE:')
-        print('python3 pong.py <train/test> <n_episodes> <log_dir>')
+        print('python3 pong.py <train/test> <n_episodes> <log_dir> <render/norender>')
         return
 
     mode = sys.argv[1]; assert mode in ['train', 'test']
     train = (True if mode=='train' else False)
     n_episodes = int(sys.argv[2])
     log_dir = sys.argv[3]
+    render = (True if sys.argv[4]=='render' else False)
 
-    run(train, n_episodes, log_dir, render=True)
+    run(train, n_episodes, log_dir, render)
 
 def run(train, n_episodes, log_dir, render=False):
     ## init
-    env = AtariPong(gamma=0.999)
+    env = AtariPong(gamma=0.999, seed=1)
 
     obs = env.initial_observation()
     agent = ActorCriticAgent( env.n_actions(), initial_observation=obs )
 
     step_idx = 0 # an episode consists of n>=1 steps
-    episode_idx = 0 # "episode" refers to "rally"
+    episode_idx = 0 # an "episode" refers to a "rally" in Pong
     game_idx = 0 # a game consists of n>=1 episodes
     discounted_returns = [0]*n_episodes # from the start state of every episode
 
@@ -48,7 +51,7 @@ def run(train, n_episodes, log_dir, render=False):
         action, label = agent.act(obs)
         obs, reward, info = env.step(action)
 
-        discounted_return[episode_idx] += ((agent.gamma**step_idx) * reward)
+        discounted_returns[episode_idx] += ((env.gamma**step_idx) * reward)
 
         ## collect data for training
         if train == True:
@@ -59,7 +62,7 @@ def run(train, n_episodes, log_dir, render=False):
         ## close an episode(== a rally)
         if info['end_of_episode']:
             print('episode_idx= '+str(episode_idx)+ \
-                  ': ended with G= '+str('%.3f'%discounted_return[episode_idx]))
+                  ': ended with G= '+str('%.3f'%discounted_returns[episode_idx]))
 
             episode_idx += 1
             step_idx = 0
@@ -86,7 +89,12 @@ def run(train, n_episodes, log_dir, render=False):
         else:
             step_idx += 1
 
+    ## closure
     env.close()
+
+    if train == True:
+        print('discounted_returns for the last 10 training episodes:')
+        print(str(discounted_returns[-10:]))
 
 if __name__ == '__main__':
     main()
