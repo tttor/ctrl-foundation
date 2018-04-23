@@ -30,3 +30,4 @@
   * https://github.com/cgnicholls/reinforcement-learning/blob/master/cartpole/vanillapolicygradient.py
 * https://github.com/dennybritz/reinforcement-learning/tree/master/PolicyGradient
 * https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow/tree/master/contents/7_Policy_gradient_softmax
+* https://www.oreilly.com/ideas/reinforcement-learning-with-tensorflow
