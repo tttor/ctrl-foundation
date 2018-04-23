@@ -4,7 +4,7 @@ import gym
 class AtariPong():
     def __init__(self, gamma, seed):
         self._env = gym.make('Pong-v0')
-        self._env.seed(seed)
+        self._env.seed(seed) # WARN: only seed the env, see https://github.com/openai/gym/issues/768
 
         self.gamma = gamma
         self._prev_img = None
