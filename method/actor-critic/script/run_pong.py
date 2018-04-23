@@ -23,7 +23,7 @@ def main():
 
 def run(train, n_episodes, log_dir, render=False):
     ## init
-    env = AtariPong(gamma=0.999)
+    env = AtariPong(gamma=0.999, seed=1)
 
     obs = env.initial_observation()
     agent = ActorCriticAgent( env.n_actions(), initial_observation=obs )
