@@ -7,40 +7,13 @@ os.environ['TF_CPP_MIN_LOG_LEVEL']='2'  ## To deactivate SSE Warnings
 
 class ActorNeuralNetwork():## aka Policy Network
     def __init__(self, input_dim, output_dim):
-        # Placeholders for passing:
-        # input state, self._x;
-        # predicted action, self.tf.y;
-        # corresponding reward, self.tf_r;
-        hidden_dim = 200 # := n_hidden_units
+        # built net
+        self._build_net(input_dim, output_dim)
 
-        self._x = tf.placeholder(dtype=tf.float32, shape=[None, input_dim], name="x")
-        self._y = tf.placeholder(dtype=tf.float32, shape=[None, output_dim], name="y")
-        self._returns = tf.placeholder(dtype=tf.float32, shape=[None, 1], name="returns")
-
-        ## Weights; initialized using Xavier initialization
-        xavier_l1 = tf.truncated_normal_initializer(mean=0, stddev=1. / np.sqrt(input_dim), dtype=tf.float32)
-        self.W1 = tf.get_variable("W1", [input_dim, hidden_dim], initializer=xavier_l1)
-
-        xavier_l2 = tf.truncated_normal_initializer(mean=0, stddev=1. / np.sqrt(hidden_dim), dtype=tf.float32)
-        self.W2 = tf.get_variable("W2", [hidden_dim, output_dim], initializer=xavier_l2)
-
-        ## forward prop operator
-        self._forward_prop_op = self._forward_prop(self._x)
-
-        ## loss
-        loss = tf.nn.l2_loss(self._y - self._forward_prop_op)
-
-        # Define Optimizer, compute and apply gradients
-        optimizer = tf.train.RMSPropOptimizer(learning_rate=1e-3, decay=0.99)
-
-        tf_grads = optimizer.compute_gradients(loss, var_list=tf.trainable_variables(), grad_loss=self._returns)
-        self._train_op = optimizer.apply_gradients(tf_grads)
-
-        # Initialize Variable
-        init = tf.global_variables_initializer()
-
-        # initiates an interactive TensorFlow session
+        # initiates an interactive TensorFlow session and initialize Variable
         self._session = tf.InteractiveSession()
+
+        init = tf.global_variables_initializer()
         self._session.run(init)
 
     def update(self, data):
@@ -66,3 +39,40 @@ class ActorNeuralNetwork():## aka Policy Network
         p = tf.nn.softmax(logp)
 
         return p
+
+    def _build_net(self, input_dim, output_dim):
+        # TODO
+        # # Placeholders for passing:
+        # # input state, self._x;
+        # # predicted action, self.tf.y;
+        # # corresponding reward, self.tf_r;
+        # self._x = tf.placeholder(dtype=tf.float32, shape=[None, input_dim], name="x")
+        # self._y = tf.placeholder(dtype=tf.float32, shape=[None, output_dim], name="y")
+        # self._returns = tf.placeholder(dtype=tf.float32, shape=[None, 1], name="returns")
+
+        # with tf.variable_scope('ActorNeuralNetwork'):
+        #     hidden_layer = tf.layers.dense( inputs=self._x,
+        #                                     units=200,
+        #                                     activation=tf.nn.relu,
+        #                                     kernel_initializer=tf.random_normal_initializer(0., .1),
+        #                                     bias_initializer=tf.constant_initializer(0.1),
+        #                                     name='hidden_layer' )
+        #     self._output_layer = tf.layers.dense( inputs=hidden_layer,
+        #                                           units=output_dim,
+        #                                           activation=tf.nn.softmax, # get action probabilities
+        #                                           kernel_initializer=tf.random_normal_initializer(0., .1),
+        #                                           bias_initializer=tf.constant_initializer(0.1),
+        #                                           name='output_layer' )
+
+
+        # ## forward prop operator
+        # self._forward_prop_op = self._forward_prop(self._x)
+
+        # ## loss
+        # loss = tf.nn.l2_loss(self._y - self._forward_prop_op)
+
+        # # Define Optimizer, compute and apply gradients
+        # optimizer = tf.train.RMSPropOptimizer(learning_rate=1e-3, decay=0.99)
+
+        # tf_grads = optimizer.compute_gradients(loss, var_list=tf.trainable_variables(), grad_loss=self._returns)
+        # self._train_op = optimizer.apply_gradients(tf_grads)
