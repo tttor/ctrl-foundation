@@ -8,3 +8,4 @@
 
 ## tutor
 * https://github.com/yukezhu/tensorflow-reinforce/blob/master/rl/pg_actor_critic.py
+* https://github.com/dennybritz/reinforcement-learning/blob/master/PolicyGradient/Continuous%20MountainCar%20Actor%20Critic%20Solution.ipynb
