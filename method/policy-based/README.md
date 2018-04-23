@@ -28,6 +28,4 @@
   * https://cgnicholls.github.io/reinforcement-learning/2016/08/21/reinforcement-learning-2.html
   * https://github.com/cgnicholls/reinforcement-learning/blob/master/cartpole/crossentropy.py
   * https://github.com/cgnicholls/reinforcement-learning/blob/master/cartpole/vanillapolicygradient.py
-* https://medium.com/@awjuliani/super-simple-reinforcement-learning-tutorial-part-2-ded33892c724
 * https://github.com/dennybritz/reinforcement-learning/tree/master/PolicyGradient
-
