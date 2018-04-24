@@ -1,7 +1,7 @@
 import numpy as np
 
-from actor import ActorNeuralNetwork
-from critic import CriticNeuralNetwork
+from actor_network import ActorNeuralNetwork
+from critic_network import CriticNeuralNetwork
 
 class ActorCriticAgent():
     def __init__(self, n_actions, initial_observation):

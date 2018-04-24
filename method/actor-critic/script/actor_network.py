@@ -12,9 +12,7 @@ class ActorNeuralNetwork():## aka Policy Network
 
         # initiates an interactive TensorFlow session and initialize Variable
         self._session = tf.InteractiveSession()
-
-        init = tf.global_variables_initializer()
-        self._session.run(init)
+        self._session.run( tf.global_variables_initializer() )
 
     def update(self, data):
         feed = {self._x: data['obss'], self._y: data['labels'],
