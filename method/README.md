@@ -51,9 +51,12 @@
       * (+) allows task-appropriate pre-structured policies, such as
         movement primitives to be integrated straightforwardly,
         imitation learning from an expert's demonstrations can be used to
-        obtain an initial estimate for the policy parameters [58].
+        obtain an initial estimate for the policy parameters
+      * (+) directly optimize the quantity of interest while remaining stable under function approximation 
+        (given a sufficiently small learning rate)
       * (-) high variance (due to monte carlo method) in estimating the gradient
       * (-) tend to converge to a local optimal
+      * (-) sample inefficiency: since policy gradients are estimated from rollouts the variance is often extreme
   * `value-based` (value iteration)
     * pros and cons
       * (+) low variance; more stable performance
@@ -80,8 +83,21 @@
       in between 2 execution (interleaved) and **in background** (in paralel with execution)
   * hybrid: (`offline` + `online`)
 
-* other dimensions:
-  on-policy _vs_ off-policy,
+* base policy for learning
+  * `on-policy`
+    * by estimating quantities defined by the **current policy**, either 
+      on-policy data must be used, or updating must be sufficiently slow to avoid significant bias.
+    * pros and cons
+      * (+) unbiasedness and stability
+      * (-) sample inefficient
+  * `off-policy`
+    * pros and cons      
+      * (+) able to exploit data from other sources, such as experts, 
+        making them inherently more sample efficient than on-policy methods 
+      * (-) does **not stably** interact with function approximation
+        (need extensive hyperparameter tuning can be required to obtain stable behavior)
+      
+* other dimensions:  
   episodic _vs_ continuing tasks,
   average _vs_ cumulative discounted rewards,
   shallow _vs_ deep learning,
