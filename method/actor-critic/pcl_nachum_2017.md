@@ -51,7 +51,7 @@
     the notion of temporal consistency proposed in this paper as a sound generalization of 
     the one-step temporal consistency given by hard-max Q-values.
   * A2C:
-    takes PCL with `\tau \mapsto 0` and omits the replay buffer
+    takes PCL with `\tau \rightarrow 0` and omits the replay buffer
   
 ## misc
 * Actor-critic methods have thus become popular [39, 40, 42], because 
