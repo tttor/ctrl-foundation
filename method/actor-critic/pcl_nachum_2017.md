@@ -23,17 +23,29 @@
   * policy optimization under entropy regularization and 
   * softmax value consistency to obtain a new form of stable off-policy learning.
 * PCL
-  * minimizes a notion of soft consistency error along multi-step action sequences extracted from both on- and off-policy traces
+  * minimizes a notion of soft consistency error along multi-step action sequences extracted from 
+    both on- and off-policy traces
   * can be interpreted as generalizing both actor-critic and Q-learning algorithms.
   * resembles actor-critic in that it maintains and jointly learns a model of the state values and a model of the policy, and 
   * is similar to Q-learning in that it minimizes a measure of temporal consistency error
+  * the multi-step path-wise consistencies which allow the resulting algorithms to 
+    utilize multi-step trajectories from off-policy samples in addition to on-policy samples
+  * easily amenable to incorporate expert trajectories
 * Unified PCL 
   * which maintains a single model for both the policy and the values
   * optimizes the same objective as PCL but differs by combining the policy and value function into a single model.
   * Merging the policy and value function models in this way is significant because 
     * it presents a new actor-critic paradigm where the policy (actor) is **not distinct** from the values (critic).
     * in practice, beneficial to apply updates to `\rho` from `V_{\rho}` and `\pi_{\rho}` using **different learning rates**
-    
+
+## setup
+* compare to: 
+  * A3C
+  * DQN with double Q-learning
+* experiment with seeding the replay buffer with 10 randomly sampled expert trajectories
+* average reward across 5 random training runs (10 for Synthetic Tree) after choosing best hyperparameters.
+* task: tasks such as Copy, Reverse, and RepeatCopy
+
 ## result
 * softmax consistent action values correspond to optimal entropy regularized policy probabilities along 
   any action sequence, regardless of provenance. 
@@ -63,4 +75,4 @@
 * the idea of merging actor and critic models roughly similar to 
   use the same network (shared params) for both actor and critic
   * unexpectedly, the authors suggest using diff learning rate to updates `\rho` from `V_{\rho}` and `\pi_{\rho}` in practice
-  
+* why use uncommon task: tasks such as Copy, Reverse, and RepeatCopy?
