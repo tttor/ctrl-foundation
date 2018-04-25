@@ -17,12 +17,14 @@
     * pros and cons
       * (+) have the advantage of handling arbitrary dynamical systems with minimal bias
       * (+) learning a policy is often easier than learning an accurate forward model;
-        may be more efficient in cases where the solution space (e.g., policy space)
-        exhibits more regularity than the underlying dynamics
+            may be more efficient in cases where the solution space (e.g., policy space)
+            exhibits more regularity than the underlying dynamics
       * (-) less sample-efficient, high sample complexity
       * (-) require policies with carefully designed, low-dimensional parameterizations
       * (-) necessary to interact with the (real(in true model-free)) robot,
-        which can be time consuming and challenging in practice
+            which can be time consuming and challenging in practice
+      * (-) brittle convergence properties,
+            which necessitate meticulous hyperparameter tuning.
   * `model-based` (indirect RL): `source= model`
     * the agent uses the collected data to first build a model of the domain’s dynamics and
       then uses this model to optimize its policy.
@@ -52,7 +54,7 @@
         movement primitives to be integrated straightforwardly,
         imitation learning from an expert's demonstrations can be used to
         obtain an initial estimate for the policy parameters
-      * (+) directly optimize the quantity of interest while remaining stable under function approximation 
+      * (+) directly optimize the quantity of interest while remaining stable under function approximation
         (given a sufficiently small learning rate)
       * (-) high variance (due to monte carlo method) in estimating the gradient
       * (-) tend to converge to a local optimal
@@ -85,19 +87,20 @@
 
 * base policy for learning
   * `on-policy`
-    * by estimating quantities defined by the **current policy**, either 
+    * by estimating quantities defined by the **current policy**, either
       on-policy data must be used, or updating must be sufficiently slow to avoid significant bias.
     * pros and cons
       * (+) unbiasedness and stability
-      * (-) sample inefficient
+      * (-) sample inefficient; poor sample complexity
   * `off-policy`
-    * pros and cons      
-      * (+) able to exploit data from other sources, such as experts, 
-        making them inherently more sample efficient than on-policy methods 
+    * pros and cons
+      * (+) able to exploit data from other sources, such as experts,
+            making them inherently more sample efficient than on-policy methods
       * (-) does **not stably** interact with function approximation
-        (need extensive hyperparameter tuning can be required to obtain stable behavior)
-      
-* other dimensions:  
+            (need extensive hyperparameter tuning can be required to obtain stable behavior)
+      * (-) require complex approximate inference procedures in continuous action spaces.
+
+* other dimensions:
   episodic _vs_ continuing tasks,
   average _vs_ cumulative discounted rewards,
   shallow _vs_ deep learning,
