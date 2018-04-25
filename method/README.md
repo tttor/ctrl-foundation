@@ -90,7 +90,8 @@
     * by estimating quantities defined by the **current policy**, either
       on-policy data must be used, or updating must be sufficiently slow to avoid significant bias.
     * pros and cons
-      * (+) unbiasedness and stability
+      * (+) unbiasedness
+      * (+) better stability
       * (-) sample inefficient; poor sample complexity
   * `off-policy`
     * pros and cons
@@ -107,7 +108,7 @@
   without-prior (non-Bayesian) _vs_ with-prior (Bayesian),
   plain _vs_ hierarchical structure,
   (onlinePlanning or modelFreeRL) _vs_ (onlinePlanning + modelLearning + modelFreeRL),
-  see also [summary of part 1 in Intro to RL book](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro-sutton2018/part_01_summary.md)
+  see also [this](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro-sutton2018/part_01_summary.md)
 
 ## topics
 Deep RL,
