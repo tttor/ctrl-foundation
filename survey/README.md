@@ -34,6 +34,7 @@
 * low _...to..._ high dof robots
 * discrete _...to..._ continuous time (discretization time-step decreases to 0)
 * discrete (small) _...to..._ continuous (large numbers of) states, actions, observations
+* deterministic _...to..._ stochastic target policy
 
 ## misc
 [1999: Richard S. Sutton: Reinforcement Learning: Past, Present and Future?](https://link.springer.com/chapter/10.1007/3-540-48873-1_26)

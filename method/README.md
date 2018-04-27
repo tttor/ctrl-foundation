@@ -64,12 +64,15 @@
       * (+) low variance; more stable performance
       * (-) high bias (due to bootstrapping)
       * (-) value function approximation turns out to be a very difficult problem
-        in high-dimensional state and action spaces;
-        need to discretize action for continuous action space
+            in high-dimensional state and action spaces;
+            need to discretize action for continuous action space
       * (-) often discontinuous, especially when the non-myopic policy differs
-        from a myopic policy; For instance, the value function of the under-powered pendulum swing-up is
-        discontinuous along the manifold where the applicable torque is
-        just not sufficient to swing the pendulum up
+            from a myopic policy; For instance, the value function of the under-powered pendulum swing-up is
+            discontinuous along the manifold where the applicable torque is
+            just not sufficient to swing the pendulum up
+      * (-)  a small change in the action-value function can cause large changes
+            in the policy, which creates difficulties for convergence proofs and
+            for some real-time applications.
   * hybrid: actor-critic (`actor:policy-based` + `critic:value-based`)
 
 * when policy compiled/learned with respect to execution/action time
@@ -89,14 +92,19 @@
   * `on-policy`
     * by estimating quantities defined by the **current policy**, either
       on-policy data must be used, or updating must be sufficiently slow to avoid significant bias.
+    * the agent learns only about the policy it is executing.
     * pros and cons
       * (+) unbiasedness
       * (+) better stability
       * (-) sample inefficient; poor sample complexity
   * `off-policy`
+    *  an agent learns about a policy or policies different from the one it is executing.
     * pros and cons
       * (+) able to exploit data from other sources, such as experts,
             making them inherently more sample efficient than on-policy methods
+      * (+) able to learn about an optimal policy while executing an exploratory policy
+      * (+) able to learn multiple tasks in parallel from
+            a single sensorimotor interaction with an environment
       * (-) does **not stably** interact with function approximation
             (need extensive hyperparameter tuning can be required to obtain stable behavior)
       * (-) require complex approximate inference procedures in continuous action spaces.

@@ -1,12 +1,16 @@
 # value-based
 
-## taxonomy
-* Q-learning
-  * multi-step Q-learning
-    * (-) theoretical justification is lacking, since 
-      rewards received after a non-optimal action no longer relate to the hard-max Q-values
-  * Deep Q-network
-    * double Q-learning with prioritized experience replay
+## Q-learning
+* as off-policy TD Control
+* is guaranteed to converge to the optimal policy for the tabular (non-approximate) case,
+* may diverge when using linear function approximation (Baird, 1995).
+
+### variant
+* multi-step Q-learning
+  * (-) theoretical justification is lacking, since
+    rewards received after a non-optimal action no longer relate to the hard-max Q-values
+* Deep Q-network
+  * double Q-learning with prioritized experience replay
 
 ## tutor
 * https://github.com/tttor/TensorFlow-1x-Deep-Learning-Cookbook/blob/devel/ch09/03_Q_learning_cartpole.py
