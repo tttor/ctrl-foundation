@@ -5,6 +5,13 @@
 ## problem
 * computing the stochastic policy gradient may **require more samples**, 
   especially if the action space has **many** dimensions.
+* the stochastic policy gradient harder to estimate, 
+  * because the policy gradient ∇θπθ(a|s) changes more rapidly near the mean
+    * the variance of the stochastic policy gradient for a Gaussian policy N(µ,σ2) is 
+      proportional to 1/σ2 (Zhao et al., 2012), 
+      which grows to infinity as the policy becomes deterministic
+  * because the policy becomes more deterministic as the algorithm homes in on a good strategy
+  * This problem is compounded in high dimensions, as illustrated by the continuous bandit task
 
 ## idea: deterministic policy gradients (theorem 1)
 * vs stochastic case
@@ -22,6 +29,10 @@
 * task
   * bandit with 50 continuous action dimensions
   * a high-dimensional task for controlling an octopus arm
+  * continuous-action variants: mountain car, pendulum and 2D puddle world.
+* experiment focuses on a direct comparison between 
+  * the stochastic policy gradient: stochastic actor-critic in the bandit task (SAC-B)
+  * the deterministic policy gradient: based on COPDAC
 
 ## result
 * show that the deterministic policy gradient does indeed exist, and 
@@ -31,6 +42,17 @@
   the computational cost of each update is linear in the action dimensionality and the number of policy parameters
 * the deterministic policy gradient theorem is in fact a limiting case of the stochastic policy gradient theorem;
   theorem 2
+* COPDAC-B still outperforms SAC-B by a very wide margin that grows larger with increasing dimension
+* COPDAC-Q slightly outper- formed both SAC and OffPAC in all three domains.
+* COPDAC-Q algorithm: the octopus arm converged to a good solution in all cases.
+* the deterministic policy gradient can be com- puted immediately in closed form
+* One may view our deterministic actor-critic as analogous, in a policy gradient context, to 
+  Q-learning (Watkins and Dayan, 1992). 
+  * Q-learning learns a deterministic greedy policy, off-policy, while executing a noisy version of the greedy policy
+  * analogous to asking whether Q-learning or Sarsa is more efficient
+* Our actor-critic algorithms are based on 
+  model-free, in- cremental, stochastic gradient updates; 
+  * suitable when the model is unknown, data is plentiful and computation is the bottleneck
 
 ## misc
 * Policy gradient algorithms typically proceed by sampling this stochastic policy and 
