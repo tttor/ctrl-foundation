@@ -36,6 +36,19 @@
 * discrete (small) _...to..._ continuous (large numbers of) states, actions, observations
 * deterministic _...to..._ stochastic target policy
 
+## topics
+Deep RL,
+Bayesian RL,
+RL in POMDP,
+Hierarchical RL,
+Inverse RL,
+Safe RL,
+Transfer learning in RL,
+Curriculum learning in RL,
+Multiagent RL,
+Evolutionary RL,
+...
+
 ## misc
 [1999: Richard S. Sutton: Reinforcement Learning: Past, Present and Future?](https://link.springer.com/chapter/10.1007/3-540-48873-1_26)
 > Just as reinforcement learning present took a step away from the ultimate goal of reward to
