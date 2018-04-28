@@ -109,11 +109,11 @@
       * (-) does **not stably** interact with function approximation
             (need extensive hyperparameter tuning can be required to obtain stable behavior)
       * (-) require complex approximate inference procedures in continuous action spaces.
+  * hybrid: `on-policy`+`off-policy`
 
 * other dimensions:
   episodic _vs_ continuing tasks,
   average _vs_ cumulative discounted rewards,
-  shallow _vs_ deep learning,
   without-prior (non-Bayesian) _vs_ with-prior (Bayesian),
   plain _vs_ hierarchical structure,
   (onlinePlanning or modelFreeRL) _vs_ (onlinePlanning + modelLearning + modelFreeRL),
