@@ -112,25 +112,13 @@
   * hybrid: `on-policy`+`off-policy`
 
 * other dimensions:
+  deterministic _vs_ stochastic policy,
   episodic _vs_ continuing tasks,
   average _vs_ cumulative discounted rewards,
   without-prior (non-Bayesian) _vs_ with-prior (Bayesian),
   plain _vs_ hierarchical structure,
   (onlinePlanning or modelFreeRL) _vs_ (onlinePlanning + modelLearning + modelFreeRL),
   see also [this](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro-sutton2018/part_01_summary.md)
-
-## topics
-Deep RL,
-Bayesian RL,
-RL in POMDP,
-Hierarchical RL,
-Inverse RL,
-Safe RL,
-Transfer learning in RL,
-Curriculum learning in RL,
-Multiagent RL,
-Evolutionary RL,
-...
 
 ## policy representation
 * neural networks
