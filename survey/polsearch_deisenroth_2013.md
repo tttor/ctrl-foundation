@@ -128,4 +128,7 @@ A. Kupcsik, M. P. Deisenroth, J. Peters, and G. Neumann. Data-
 Efficient Generalization of Robot Skills with Contextual Policy
 Search. In Proceedings of the AAAI Conference on Artificial In-
 telligence, 2013.
+
+Policy Gradient methods for planning
+doug aberdeen
  -->
