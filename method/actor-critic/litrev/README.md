@@ -6,6 +6,8 @@
   * Vanilla actor-critic methods are on-policy only
 * actorcritic vs criric as baseline
 * why actorcritic
+  * var in actor only
+  * bias in critic only
 * the timeline, history
 * data efficiency and stability
 
@@ -15,7 +17,7 @@
   * to use KL-divergence as a constraint on how much deviation is permitted from a prior policy
     (Bagnell & Schneider, 2003; Peters et al., 2010; Schulman et al., 2015; Fox et al., 2015).
 
-
+* taxonomy, differentiator
 
 <!--
 Matthew Hausknecht and Peter Stone. On-policy vs. off-policy updates for deep reinforcement
