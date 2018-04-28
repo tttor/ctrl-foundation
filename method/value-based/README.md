@@ -1,6 +1,6 @@
 # value-based
 
-## Q-learning
+## Q-learning (Watkins, 1989)
 * as off-policy TD Control
 * is guaranteed to converge to the optimal policy for the tabular (non-approximate) case,
 * may diverge when using linear function approximation (Baird, 1995).
@@ -11,6 +11,9 @@
     rewards received after a non-optimal action no longer relate to the hard-max Q-values
 * Deep Q-network
   * double Q-learning with prioritized experience replay
+
+## others
+* SARSA (Rummery & Niranjan, 1994)
 
 ## tutor
 * https://github.com/tttor/TensorFlow-1x-Deep-Learning-Cookbook/blob/devel/ch09/03_Q_learning_cartpole.py

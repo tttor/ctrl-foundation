@@ -74,6 +74,7 @@
             in the policy, which creates difficulties for convergence proofs and
             for some real-time applications.
   * hybrid: actor-critic (`actor:policy-based` + `critic:value-based`)
+    * vanilla actor-critic methods are **on-policy** only
 
 * when policy compiled/learned with respect to execution/action time
   * `offline`

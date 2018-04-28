@@ -13,6 +13,8 @@
 * a connection between the fixed points of the regularized policy gradient algorithm and the Q-values
   * allows us to estimate the Q-values from the action preferences of the policy,
     to which we apply Q-learning updates
+  *  allows us to derive an estimate of the Q-values from the current policy,
+    which we can refine using off-policy data and Q-learning.
 
 ## result
 * establish an equivalency between action-value fitting techniques and actor-critic algorithms,
