@@ -4,13 +4,13 @@
 ### openai
 * [ACKTR: Actor Critic using Kronecker-Factored Trust Region, 2017)](acktr_wu_2017.md)
 
-### deepmind (warn: lack of public code releases)
+### deepmind
 * [Reactor: A Sample-Efficient Actor-Critic Architecture, 2018)](reactor_gruslys_2018.md)
 * [ACER: Sample efficient actor-critic with experience replay](acer_wang_2017.md)
 * [PGQL: Combining policy gradient and q-learning, 2017](pgql_donoghue_2017.md)
 * [A3C: Asynchronous(Synchronous) advantage actor-critic, 2016)](a3c_mnih_2016.md)
 
-### others
+### other
 * [Dual-AC: Boosting the Actor with Dual Critic, 2017](dualac_dai_2017.md)
 * [PCL: Bridging the Gap Between Value and Policy Based Reinforcement Learning, 2017](pcl_nachum_2017.md)
 * [Soft Actor-Critic: Off-Policy Maximum Entropy Deep RL with a Stochastic Actor, 2017](sac_haarnoja_2017.md)
