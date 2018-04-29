@@ -1,6 +1,7 @@
 # Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation
 * Yuhuai Wu, et al
 * https://arxiv.org/abs/1708.05144
+* https://github.com/openai/baselines/tree/master/baselines/acktr
 
 ## problem
 * neural networks (to represent control policies) are still trained using simple variants of stochastic gradient descent (SGD).
