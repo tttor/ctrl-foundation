@@ -1,9 +1,11 @@
 # actor-critic
 
 ## variant
-* [ACKTR: Actor Critic using Kronecker-Factored Trust Region (Wu,2017)](https://arxiv.org/abs/1708.05144)
 * [Reactor: A Sample-Efficient Actor-Critic Architecture (Gruslys, 2018)](https://arxiv.org/abs/1704.04651)
+* [ACKTR: Actor Critic using Kronecker-Factored Trust Region (Wu,2017)](https://arxiv.org/abs/1708.05144)
 * [A3C: Asynchronous(Synchronous) advantage actor-critic (Mnih, 2016)](https://arxiv.org/pdf/1602.01783.pdf)
+
+### legend
 * [Natural Actor-Critic (Peters, 2008)](https://www.sciencedirect.com/science/article/pii/S0925231208000532)
 
 ## actor-critic based
