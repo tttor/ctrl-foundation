@@ -99,7 +99,8 @@
       * (+) better stability
       * (-) sample inefficient; poor sample complexity
   * `off-policy`
-    *  an agent learns about a policy or policies different from the one it is executing.
+    * an agent learns about a policy or policies different from the one it is executing.
+    * separate the evaluation policy from the behaviour policy
     * pros and cons
       * (+) able to exploit data from other sources, such as experts,
             making them inherently more sample efficient than on-policy methods
