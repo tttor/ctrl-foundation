@@ -16,6 +16,7 @@
 * https://github.com/ikostrikov/pytorch-rl
 * https://github.com/hunkim/ReinforcementZeroToAll
 * https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
+* https://github.com/vitchyr/rlkit
 
 ## type 2: old
 * PyBrain: http://pybrain.org/
