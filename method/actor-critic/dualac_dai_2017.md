@@ -1,5 +1,7 @@
 # Boosting the Actor with Dual Critic
-∗ Bo Dai1, Albert Shaw1, Niao He, Lihong Li, Le Song
+* Bo Dai1, Albert Shaw1, Niao He, Lihong Li, Le Song
+* https://arxiv.org/abs/1712.10282
+* https://openreview.net/forum?id=BkUp6GZRW
 
 ## problem
 * Lagrangian dual form yields a game-theoretic view for the roles of the actor and the dual critic
