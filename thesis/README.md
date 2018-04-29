@@ -5,13 +5,14 @@
 
 ## people
 ### On going
+[Alex Irpan](https://www.alexirpan.com/),
 [Chelsea Finn](http://people.eecs.berkeley.edu/~cbfinn/),
+[Junhyuk Oh](https://sites.google.com/a/umich.edu/junhyuk-oh/),
+[Riashat Islam](https://riashatislam.com/),
+[Shane Gu](http://sg717.user.srcf.net/),
+[Vitchyr Pong](https://people.eecs.berkeley.edu/~vitchyr/),
 [Yevgen Chebotar](http://www-clmc.usc.edu/Main/YevgenChebotar),
 [Yan Duan](http://rockyduan.com/),
-[Shane Gu](http://sg717.user.srcf.net/),
-[Riashat Islam](https://riashatislam.com/),
-[Junhyuk Oh](https://sites.google.com/a/umich.edu/junhyuk-oh/),
-[Alex Irpan](https://www.alexirpan.com/)
 ...
 
 ### Young, t >= 2015 
@@ -50,4 +51,3 @@
 * Vijaymohan Konda: Actor-Critic Algorithms, 2002
 * Benjamin Van Roy: Learning and Value Function Approximation in Complex Decision Processes, 1998
 * Chris Watkins: Learning from delayed rewards, 1989
-
