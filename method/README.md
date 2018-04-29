@@ -38,24 +38,25 @@
       * (-) suffer from significant bias, complex unknown dynamics cannot always be modeled accurately enough
       * (-) 2 sources of approximation error: learn model, estimate a value function using the learned model
       * (-) lead to control strategies that are not robust to model errors,
-        Since the learned policy is inherently based on internal simulations with the learned model, inaccurate models;
-        (can be alleviated by using models that explicitly account for model errors)
+            Since the learned policy is inherently based on internal simulations with the learned model, inaccurate models;
+            (can be alleviated by using models that explicitly account for model errors)
   * hybrid: dyna (`true model-free` + and `model-based`)
 
 * base for iteration
   * `policy-based` (policy-search, policy iteration)
     * pros and cons
-      * (+) apply to a wider range of problems, eg when Q-fn is too complex
+      * (+) a policy may be easier to learn than action values or action advantages;
+            apply to a wider range of problems, eg when Q-fn is too complex
       * (+) parametrized policies allows for scaling RL into
-        high dimensional continuous action spaces by reducing the search space of possible policies;
-        easily applied to continuous action space, since capable of learning stochastic policies
+            high dimensional continuous action spaces by reducing the search space of possible policies;
+            easily applied to continuous action space, since capable of learning stochastic policies
       * (+) faster convergence rate
       * (+) allows task-appropriate pre-structured policies, such as
-        movement primitives to be integrated straightforwardly,
-        imitation learning from an expert's demonstrations can be used to
-        obtain an initial estimate for the policy parameters
+            movement primitives to be integrated straightforwardly,
+            imitation learning from an expert's demonstrations can be used to
+            obtain an initial estimate for the policy parameters
       * (+) directly optimize the quantity of interest while remaining stable under function approximation
-        (given a sufficiently small learning rate)
+            (given a sufficiently small learning rate)
       * (-) high variance (due to monte carlo method) in estimating the gradient
       * (-) tend to converge to a local optimal
       * (-) sample inefficiency: since policy gradients are estimated from rollouts the variance is often extreme
