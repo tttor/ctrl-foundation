@@ -6,7 +6,7 @@
 
 ### deepmind
 * [Reactor: A Sample-Efficient Actor-Critic Architecture, 2018](reactor_gruslys_2018.md)
-* [ACER: Sample efficient actor-critic with experience replay](acer_wang_2017.md)
+* [ACER: Sample efficient actor-critic with experience replay, 2017](acer_wang_2017.md)
 * [PGQL: Combining policy gradient and q-learning, 2017](pgql_donoghue_2017.md)
 * [A3C: Asynchronous advantage actor-critic, 2016](a3c_mnih_2016.md)
 
