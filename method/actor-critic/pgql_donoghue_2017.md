@@ -1,6 +1,7 @@
 # Combining policy gradient and q-learning
 * Brendan O’Donoghue, Rémi Munos, Koray Kavukcuoglu & Volodymyr Mnih
 * Published as a conference paper at ICLR 2017
+* https://arxiv.org/abs/1611.01626
 
 ## problem
 * vanilla online variants are
