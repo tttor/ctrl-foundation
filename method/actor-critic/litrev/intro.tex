@@ -2,6 +2,7 @@
 
 One promising approach in RL is actor-critic.
 Briefly, it takes advantage of both value- and policy-based RL.
+One can view that actor-critic methods originate from policy-based RL, ie. REINFORCE.
 
 The REINFORCE-with-baseline algorithm learns both a policy and a state-value function.
 However, it does not belong to actor-critic becuase
@@ -20,13 +21,12 @@ TODO: iterate the diff.
 Challenges include:
 \begin{itemize}
 \item data/sample efficiency,
-\item off-policy learning:
-      that is stable and with good convergence
+\item stable, good convergence
 \end{itemize}
 
 The trend:
 \begin{itemize}
-\item use deep neural networks as function approximators.
+\item deep neural networks as function approximators.
 \item off-policy learning
 \item scales to both continuous and discrete action spaces
 \end{itemize}
