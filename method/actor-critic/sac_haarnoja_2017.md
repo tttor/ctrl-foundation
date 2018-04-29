@@ -33,8 +33,7 @@
   * though they may have other benefits, such as improved exploration and ease of finetuning.
 
 ## idea: soft actor-critic (SAC)
-* soft actor-critic,
-  an off-policy actor-critic deep RL algorithm based on
+* an off-policy actor-critic deep RL algorithm based on
   the maximum entropy reinforcement learning framework.
 * the actor aims to
   * maximize expected reward while also
@@ -47,6 +46,13 @@
 * combines off-policy actor-critic training with a stochastic actor, and
   further aims to maximize the entropy of this actor with an entropy maximization objective.
 
+## setup
+* task: 
+  * mujoco cont ctrl 
+* baseline
+  * TRPO
+  * DDPG
+
 ## result
 * SAC:
   * provides sample-efficient learning while
@@ -56,6 +62,9 @@
   * including the off-policy DDPG algorithm and the on-policy TRPO algorithm.
 * stochastic, entropy maximizing reinforcement learning algorithms can provide
   a promising avenue for improved robustness and stability,
+* The individual seeds attain much more consistent performance with SAC, 
+  * while DDPG exhibits very high variability across seeds, indicating substantially worse stability.
+* the inclusion of entropy regularization is a critical component
 
 ## misc
 * popular off-policy actor-critic variant is based on the deterministic
@@ -69,15 +78,9 @@
 
 ## comment
 * note that a2c implementation in openai baseline uses the idea of maximum entropy
+* which gradient update in `n gradient updates per step`?
+* is trpo actor-critic based? so to compare?
 * actor-critic as the core of dyna full rl loop?
   * actor: learn via direct RL
   * critic: learn via indirect RL: planning + model learning
-
-<!--
-B. O’Donoghue, R. Munos, K. Kavukcuoglu, and V. Mnih. PGQ: Combining policy gradient and
-Q-learning. arXiv preprint arXiv:1611.01626, 2016.
-
-J. Schulman, P. Abbeel, and X. Chen. Equivalence between policy gradients and soft Q-learning.
-arXiv preprint arXiv:1704.06440, 2017.
-
- -->
+* no eval on atari, why? focusing only on cont control?
