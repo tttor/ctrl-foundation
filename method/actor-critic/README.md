@@ -1,12 +1,24 @@
 # actor-critic
 
 ## variant
-* [Reactor: A Sample-Efficient Actor-Critic Architecture (Gruslys, 2018)](https://arxiv.org/abs/1704.04651)
-* [ACKTR: Actor Critic using Kronecker-Factored Trust Region (Wu,2017)](https://arxiv.org/abs/1708.05144)
-* [A3C: Asynchronous(Synchronous) advantage actor-critic (Mnih, 2016)](https://arxiv.org/pdf/1602.01783.pdf)
+### openai
+* [ACKTR: Actor Critic using Kronecker-Factored Trust Region, 2017)](acktr_wu_2017.md)
+
+### deepmind (warn: lack of public code releases)
+* [Reactor: A Sample-Efficient Actor-Critic Architecture, 2018)](reactor_gruslys_2018.md)
+* [ACER: Sample efficient actor-critic with experience replay](acer_wang_2017.md)
+* [PGQL: Combining policy gradient and q-learning, 2017](pgql_donoghue_2017.md)
+* [A3C: Asynchronous(Synchronous) advantage actor-critic, 2016)](a3c_mnih_2016.md)
+
+### others
+* [Dual-AC: Boosting the Actor with Dual Critic, 2017](dualac_dai_2017.md)
+* [PCL: Bridging the Gap Between Value and Policy Based Reinforcement Learning, 2017](pcl_nachum_2017.md)
+* [Soft Actor-Critic: Off-Policy Maximum Entropy Deep RL with a Stochastic Actor, 2017](sac_haarnoja_2017.md)
 
 ### legend
-* [Natural Actor-Critic (Peters, 2008)](https://www.sciencedirect.com/science/article/pii/S0925231208000532)
+* [Off-PAC: off-Policy Actor-Critic, 2012](offpac_degris_2012.md)
+* [Natural Actor-Critic, 2008)](nac_peters_2008.md)
+* [Actor-Critic Algorithms, 1999](ac_konda_1999.md)
 
 ## actor-critic based
 * 2016: Progressive Nets
