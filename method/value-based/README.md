@@ -9,8 +9,10 @@
 * multi-step Q-learning
   * (-) theoretical justification is lacking, since
     rewards received after a non-optimal action no longer relate to the hard-max Q-values
-* Deep Q-network
-  * double Q-learning with prioritized experience replay
+* Deep Q-network (DQN)
+  * (-) suffers from potentially slowlearning caused by single-step temporal difference updates,
+  * variants:
+    * double Q-learning with prioritized experience replay
 
 ## others
 * SARSA (Rummery & Niranjan, 1994)
