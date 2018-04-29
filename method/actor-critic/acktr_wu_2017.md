@@ -74,22 +74,30 @@
 * the benefit increases substantially when using a larger batch size with ACKTR compared to with A2C.
 
 ## misc
-* Natural gradient methods follow the steepest descent direction that
-  uses the Fisher metric as the underlying metric,
-  a metric that is based not on the choice of coordinates but rather on the manifold (i.e., the surface).
-* TRPO avoids explicitly storing and  inverting the Fisher matrix by using Fisher-vector products [21].
-* Kronecker-factored approximated curvature (K-FAC)
+* Natural gradient methods (cf standard gradients)
+  * follow the steepest descent direction that uses the Fisher metric as the underlying metric,
+    a metric that is based not on the choice of coordinates but rather on the manifold (i.e., the surface).
+  * constructs the norm using the Fisher information matrix F, a local quadratic approximation to the KL divergence.
+    * This norm is independent of the model parameterization `\theta` on the class of probability distributions,
+      providing a more stable and effective update.
+    * However, since modern neural networks may contain millions of parameters,
+      computing and storing the exact Fisher matrix and its inverse is impractical, so we have to resort to approximations.
+  * if performed with SGD-like updates, it can result in large updates to the policy, causing
+    the algorithm to prematurely converge to a near-deterministic policy.
+    * advocate instead using a trust region approach, whereby
+      the update is scaled down to modify the policy distribution (in terms of KL divergence) by 
+      at most a specified amount.
+    
+* Kronecker-factored approximate curvature (K-FAC) [16] 
+  * uses a Kronecker-factored approximation to the Fisher matrix to perform efficient approximate natural gradient updates.
   * each update is comparable in cost to an SGD update, and
   * it keeps a running average of curvature information, allowing it to use small batches.
-* The method of natural gradient constructs the norm using the Fisher information matrix F,
-  a local quadratic approximation to the KL divergence.
-  * This norm is independent of the model parameterization `\theta` on the class of probability distributions,
-    providing a more stable and effective update.
-  * However, since modern neural networks may contain millions of parameters,
-    computing and storing the exact Fisher matrix and its inverse is impractical, so we have to resort to approximations.
-  * Kronecker-factored approximate curvature (K-FAC) [16] uses
-    a Kronecker-factored approximation to the Fisher matrix to perform efficient approximate natural gradient updates.
-* natural gradient performed with SGD-like updates can result in large updates to the policy, causing
-  the algorithm to prematurely converge to a near-deterministic policy.
-  * advocate instead using a trust region approach, whereby
-    the update is scaled down to modify the policy distribution (in terms of KL divergence) by at most a specified amount.
+  
+* TRPO avoids explicitly storing and inverting the Fisher matrix by using Fisher-vector products [21].
+  
+* active line of research:
+  designing an advantage function that provides **both low-variance and low-bias** gradient estimates
+  
+## comment
+* the essense is to use KFAC to approximate the natural gradient updates
+
