@@ -99,5 +99,6 @@
   designing an advantage function that provides **both low-variance and low-bias** gradient estimates
   
 ## comment
-* the essense is to use KFAC to approximate the natural gradient updates
+* the essense is to use KFAC to approximate the natural gradient updates,
+  yet another optimizer, see https://www.tensorflow.org/api_docs/python/tf/contrib/kfac
 
