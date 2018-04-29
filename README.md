@@ -1,5 +1,7 @@
 # reinforcement-learning foundation
-See also: https://github.com/tttor/dl-foundation
+See also: 
+* https://github.com/tttor/dl-foundation
+* https://github.com/tttor/robot-foundation
 
 ## related sources
 * https://deeplearning4j.org/deepreinforcementlearning
