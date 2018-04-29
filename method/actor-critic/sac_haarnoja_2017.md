@@ -1,6 +1,8 @@
 # Soft Actor-Critic: Off-Policy Maximum Entropy Deep Reinforcement Learning with a Stochastic Actor
 * Tuomas Haarnoja, Aurick Zhou, Pieter Abbeel & Sergey Levine
 * 31st Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA.
+* https://github.com/haarnoja/sac
+* https://arxiv.org/abs/1801.01290
 
 ## problem
 * model-free RL
