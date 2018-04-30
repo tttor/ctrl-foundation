@@ -18,8 +18,9 @@
 ### Young, t >= 2015 
 * John Schulman: Optimizing expectations: from deep reinforcement learning to stochastic computation graphs, 2016
 * Arthur Guez: Sample-based search methods for bayes-adaptive planning, 2015
-* Jonathan Scholz: Physics-based reinforcement learning for autonomous manipulation, 2015
 * Adam White: Developing a predictive approach to knowledge, 2015
+* Ivo Grondman: Online Model Learning Algorithms for Actor-Critic Control, 2015
+* Jonathan Scholz: Physics-based reinforcement learning for autonomous manipulation, 2015
 
 ### Mid, 2008 <= t < 2015
 * Stephane Ross, 2013
@@ -46,8 +47,8 @@
 * Masashi Sugiyama
 * Satinder Singh
 * Gerald Tesauro
-* Sham M. Kakade: On the Sample Complexity of Reinforcement Learning, 2003
 * Andrew Ng: Shaping and policy search in reinforcement learning, 2003
+* Sham M. Kakade: On the Sample Complexity of Reinforcement Learning, 2003
 * Vijaymohan Konda: Actor-Critic Algorithms, 2002
 * Benjamin Van Roy: Learning and Value Function Approximation in Complex Decision Processes, 1998
 * Chris Watkins: Learning from delayed rewards, 1989
