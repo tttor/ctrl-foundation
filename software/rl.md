@@ -38,3 +38,14 @@ Available packages in ROS for model-based and model-free RL: <br/>
 * OpenAI Gym with ros-bridge
   * from ErleRobotics: https://github.com/erlerobot/gym-gazebo/
   * earlier bridge, now abandoned: https://github.com/openai/rosbridge
+  
+## misc
+* list openai gym env
+```
+def list_env():
+    from gym import envs
+    env_ids = [spec.id for spec in envs.registry.all()]
+    print("Total Number of environments are", len(env_ids))
+    for env_id in sorted(env_ids):
+        print(env_id)
+```
