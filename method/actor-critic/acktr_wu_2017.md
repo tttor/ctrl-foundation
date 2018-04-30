@@ -4,21 +4,15 @@
 * https://github.com/openai/baselines/tree/master/baselines/acktr
 
 ## problem
-* neural networks (to represent control policies) are still trained using simple variants of stochastic gradient descent (SGD).
+* there still does **not exist** a scalable, sample-efficient, and general-purpose instantiation of 
+  the natural policy gradient.
   * SGD and related first-order methods explore weight space inefficient
-* a distributed approach leads to rapidly diminishing returns of sample efficiency as the degree of parallelism increases.
-  * those approachesreduce training time by executing multiple agents to interact with the environment simultaneously
-* the exact computation of the natural gradient is intractable because
-  it requires inverting the Fisher information matrix.
-* Trust-region policy optimization (TRPO) is impractical for large models and suffers from sample inefficien
+    * neural networks (to represent control policies) are still trained using simple variants of SGD
+
+* Trust-region policy optimization (TRPO) is impractical for large models and suffers from sample inefficient
   * it typically requires many steps of conjugate gradient to obtain a single parameter update, and
     accurately estimating the curvature requires a large number of samples in each batch;
-* On Natural gradient: there still does not exist a scalable, sample-efficient, and
-  general-purpose instantiation of the natural policy gradient.
-* define the joint distribution of the policy and the value distribution by
-  assuming independence of the two output distributions, i.e., `$p(a, v|s) = \pi(a|s) p(v|s)$`, and
-  construct the Fisher metric with respect to `$p(a, v|s)$`,
-* apply K-FAC to approximate the Fisher matrix to perform updates simultaneously.
+    
 * computational challenges when applying natural gradient methods, mainly associated with 
   efficiently storing the Fisher matrix as well as computing its inverse.
   * For tractability: using the compatible function approximator (a linear function approximator). 
@@ -35,17 +29,25 @@
       * using tractable Fisher matrix approximations and 
       * keeping a running average of curvature statistics during training.  
 
+* a distributed approach leads to rapidly diminishing returns of sample efficiency as the degree of parallelism increases.
+  * those approaches reduce training time by executing multiple agents to interact with the environment simultaneously
+
 ## observation
-* One way to effectively reduce the sample size is to use more advanced optimization techniques for gradient updates
-* applying K-FAC to policy optimization could improve the sample efficiency of the current deep RL methods
+* to effectively reduce the sample size (improve the sample efficiency)
+  * to use more advanced optimization techniques for gradient updates
+    * applying K-FAC to policy optimization 
 
 ## idea: Kronecker-factored trust region (ACKTR)
-* extend the framework of natural policy gradient and
-  propose to optimize **both the actor and the critic** using Kronecker-factored approximate curvature (K-FAC) with trust region
+* to optimize **both the actor and the critic** using Kronecker-factored approximate curvature (K-FAC) with trust region
   * K-FAC to approximate the natural gradient update for actor-critic methods, with trust region optimization for stability
   * optimizing both the actor and the critic using natural gradient updates
-* propose also applying a natural gradient update to the critic
-  (The previous natural policy gradient method applied a natural gradient update only to the actor)
+* applying a natural gradient update to the critic
+  * previous natural policy gradient method applied a natural gradient update only to the actor
+  * assume the output of the critic is defined to be a Gaussian distribution 
+* define the joint distribution of the policy and the value distribution by
+  assuming independence of the two output distributions, i.e., `$p(a, v|s) = \pi(a|s) p(v|s)$`, and
+  construct the Fisher metric with respect to `$p(a, v|s)$`,
+* apply K-FAC to approximate the Fisher matrix to perform updates simultaneously.
   
 ## setup
 * to avoid instability in training,
@@ -57,7 +59,7 @@
     * low-dimensional state-space representation 
     * directly from pixel representation
 * baselines
-  * a synchronous and batched version of the asynchronous advantage actor critic model (A3C) [18], called A2C , and 
+  * a synchronous and batched version of the asynchronous advantage actor critic model (A3C) [18]: A2C
   * TRPO [22].
 * plots on: episode reward vs number of timesteps
   
@@ -93,12 +95,13 @@
   * each update is comparable in cost to an SGD update, and
   * it keeps a running average of curvature information, allowing it to use small batches.
   
-* TRPO avoids explicitly storing and inverting the Fisher matrix by using Fisher-vector products [21].
-  
+* TRPO avoids explicitly storing and inverting the Fisher matrix by using Fisher-vector products [21].  
 * active line of research:
   designing an advantage function that provides **both low-variance and low-bias** gradient estimates
+* the exact computation of the natural gradient is intractable because
+  it requires inverting the Fisher information matrix.
   
 ## comment
-* the essense is to use KFAC to approximate the natural gradient updates,
-  yet another optimizer, see https://www.tensorflow.org/api_docs/python/tf/contrib/kfac
+* the essense is to use KFAC to approximate the natural gradient updates + trust region,
+  * KFAC is yet another optimizer, see https://www.tensorflow.org/api_docs/python/tf/contrib/kfac
 
