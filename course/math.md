@@ -1,5 +1,11 @@
 # math
 
+## optimization: convex, nonconvex
+* https://www.solver.com/convex-optimization
+* http://www.cs.cornell.edu/courses/cs6787/2017fa/Lecture7.pdf'
+* https://stats.stackexchange.com/questions/106334/cost-function-of-neural-network-is-non-convex
+* NIPS Workshop on Nonconvex Optimization for Machine Learning: Theory and Practice
+
 ## gradient
 * https://en.wikipedia.org/wiki/Gradient
   * the gradient is a multi-variable generalization of the derivative.
