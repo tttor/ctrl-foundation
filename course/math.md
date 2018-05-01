@@ -31,4 +31,10 @@
 * https://en.wikipedia.org/wiki/Logit
   * If `p` is a probability, then `p/(1 − p)` is the corresponding odds;
   * the logit of the probability is the logarithm of the odds.
-  * `logit(p) = log[p/(1-p)]
+  * `logit(p) = log[p/(1-p)]`
+
+## variate == random variable
+* A variate is a generalization of the concept of a random variable 
+  that is defined without reference to a particular type of probabilistic experiment. 
+  It is defined as the set of all random variables that obey a given probabilistic law.
+* http://mathworld.wolfram.com/Variate.html
