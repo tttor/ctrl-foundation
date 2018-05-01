@@ -2,6 +2,7 @@
 * Yuhuai Wu, et al
 * https://arxiv.org/abs/1708.05144
 * https://github.com/openai/baselines/tree/master/baselines/acktr
+* https://github.com/openai/baselines-results
 
 ## problem
 * there still does **not exist** a scalable, sample-efficient, and general-purpose instantiation of 
@@ -41,39 +42,66 @@
 * to optimize **both the actor and the critic** using Kronecker-factored approximate curvature (K-FAC) with trust region
   * K-FAC to approximate the natural gradient update for actor-critic methods, with trust region optimization for stability
   * optimizing both the actor and the critic using natural gradient updates
-* applying a natural gradient update to the critic
+* applying a **natural gradient update to the critic**
   * previous natural policy gradient method applied a natural gradient update only to the actor
   * assume the output of the critic is defined to be a Gaussian distribution 
 * define the joint distribution of the policy and the value distribution by
   assuming independence of the two output distributions, i.e., `$p(a, v|s) = \pi(a|s) p(v|s)$`, and
   construct the Fisher metric with respect to `$p(a, v|s)$`,
 * apply K-FAC to approximate the Fisher matrix to perform updates simultaneously.
-  
-## setup
 * to avoid instability in training,
   it is often beneficial to use an architecture where the two networks share lower-layer representations but
   have distinct output layers
-* env:
-  * discrete ctrl: Atari environments [4] and 
-  * continuous ctrl: the MuJoCo [27] tasks
-    * low-dimensional state-space representation 
-    * directly from pixel representation
-* baselines
-  * a synchronous and batched version of the asynchronous advantage actor critic model (A3C) [18]: A2C
-  * TRPO [22].
-* plots on: episode reward vs number of timesteps
   
+## setup
+* task
+  * discrete ctrl: Atari env
+    * 6 games: Beamrider, Breakout Pong, Q-bert, Seaquest, Space Invaders
+  * continuous ctrl: MuJoCo env
+    * 6 task
+    * input 
+      * low-dimensional state-space representation 
+      * directly from pixel representation
+* baselines
+  * A2C: a synchronous and batched version of the asynchronous advantage actor critic model (A3C) [18]
+  * TRPO [22]
+* eval metric:
+  * plot episode reward vs number of timesteps
+    * to show sample efficiency: i.e., speed of convergence per number of timesteps
+    * shaded region denotes the standard deviation over 2 (Atari) and 3 (Mujoco) random seeds.
+  * table: rewards col, #episode col
+    * present the mean of rewards of the last 100 episodes in training for 50 million timesteps, 
+      as well as the number of episodes required to achieve human performance [17]
+  * table: 
+    * row: method
+    * col: env (atari, mujoco)
+    * cell: timesteps per second
+  * plot: with different batch size
+      
 ## result
+* discrete ctrl:
+  * significantly outperformed A2C in terms of sample efficiency 
+    (i.e., speed of convergence per number of timesteps) by a significant margin in all games.
+* cont ctrl:
+  * significantly outperformed baselines on six out of eight MuJoCo tasks and 
+  * performed competitively with A2C on the other two tasks (Walker2d and Swimmer).
+  
 * ACKTR substantially improves both sample efficiency and the final performance of the agent
   compared to the state-of-the-art on-policy actor-critic method A2C [18] and the famous trust region optimizer TRPO [22].
+
 * the per-update computation cost of ACKTR is only 10% to 25% higher than SGD-based methods.
+* ACKTR only increases computing time by at most 25% per timestep, 
+  demonstrating its practicality with large optimization benefits
+
 * regardless of which norm we use to optimize the critic, there are improvements brought by 
   applying ACKTR to the actor compared to the baseline A2C
   * improvements brought by using the Gauss-Newton norm for optimizing the critic are more substantial in terms of 
     sample efficiency and episode rewards at the end of training. 
   * the Gauss-Newton norm also helps stabilize the training, 
     as we observe larger variance in the results over random seeds with the Euclidean norm.
+
 * the benefit increases substantially when using a larger batch size with ACKTR compared to with A2C.
+* ACKTR > (A2C, TRPO)
 
 ## misc
 * Natural gradient methods (cf standard gradients)
@@ -106,6 +134,11 @@
 
   
 ## comment
-* the essense is to use KFAC to approximate the natural gradient updates + trust region,
+* the essense is to use KFAC to approximate the natural gradient updates + trust region, 
+  within A3C framework, so ACKTR is on-policy 
   * KFAC is yet another optimizer, see https://www.tensorflow.org/api_docs/python/tf/contrib/kfac
-
+* random seed setup varies across plots and tables
+* why those 6 games?
+  * ans: see Table 4 at appendix B, with Q-learning, one seed
+* episode rewards == return?
+  * ans: yes, see Table 1
