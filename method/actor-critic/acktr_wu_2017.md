@@ -1,6 +1,10 @@
 # Scalable trust-region method for deep reinforcement learning using Kronecker-factored approximation
 * Yuhuai Wu, et al
+* Advances in Neural Information Processing Systems 30 (NIPS 2017)
+* https://papers.nips.cc/paper/7112-scalable-trust-region-method-for-deep-reinforcement-learning-using-kronecker-factored-approximation
 * https://arxiv.org/abs/1708.05144
+* https://media.nips.cc/nipsbooks/nipspapers/paper_files/nips30/reviews/2732.html
+* https://blog.openai.com/baselines-acktr-a2c/
 * https://github.com/openai/baselines/tree/master/baselines/acktr
 * https://github.com/openai/baselines-results
 
