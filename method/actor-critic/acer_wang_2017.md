@@ -1,6 +1,6 @@
 # Sample efficient actor-critic with experience replay
 * ZiyuWang et al
-* Published as a conference paper at ICLR 2017
+* iclr2017: poster
 * https://arxiv.org/abs/1611.01224
 * https://openreview.net/forum?id=HyM25Mqel
 * https://github.com/openai/baselines/tree/master/baselines/acer
