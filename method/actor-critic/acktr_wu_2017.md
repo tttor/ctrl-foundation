@@ -77,6 +77,8 @@
 
 ## misc
 * Natural gradient methods (cf standard gradients)
+  * the exact computation of the natural gradient is intractable because
+    it requires inverting the Fisher information matrix.
   * follow the steepest descent direction that uses the Fisher metric as the underlying metric,
     a metric that is based not on the choice of coordinates but rather on the manifold (i.e., the surface).
   * constructs the norm using the Fisher information matrix F, a local quadratic approximation to the KL divergence.
@@ -96,10 +98,12 @@
   * it keeps a running average of curvature information, allowing it to use small batches.
   
 * TRPO avoids explicitly storing and inverting the Fisher matrix by using Fisher-vector products [21].  
+  * To avoid repeated computation of Fisher-vector products,
+    * Wang et al. [28] solve the **constrained optimization** problem with a linear approximation of 
+      **KL divergence** between a running average of the policy network and the current policy network.
 * active line of research:
   designing an advantage function that provides **both low-variance and low-bias** gradient estimates
-* the exact computation of the natural gradient is intractable because
-  it requires inverting the Fisher information matrix.
+
   
 ## comment
 * the essense is to use KFAC to approximate the natural gradient updates + trust region,
