@@ -5,7 +5,8 @@
   * `model-free` (direct RL): `source= realWorld`
     * the agent directly learns an optimal (or good) action-selection strategy from the collected data.
     * (in policy-search) is a general approach to learn policies based on **sampled trajectories**
-    * in robotics (cf Atari games where there is no real world; both real and sim are in simulator)
+    * if the **real** world and **simulated** world are always different;
+      as in robotics (cf Atari games where there is no real world; both "real" and sim are in simulator):
       * _true_ model-free:
         * trained with the **real** world
         * real experience is expensive
