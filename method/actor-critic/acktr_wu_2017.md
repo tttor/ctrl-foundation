@@ -49,19 +49,21 @@
   assuming independence of the two output distributions, i.e., `$p(a, v|s) = \pi(a|s) p(v|s)$`, and
   construct the Fisher metric with respect to `$p(a, v|s)$`,
 * apply K-FAC to approximate the Fisher matrix to perform updates simultaneously.
-* to avoid instability in training,
-  it is often beneficial to use an architecture where the two networks share lower-layer representations but
-  have distinct output layers
   
 ## setup
 * task
   * discrete ctrl: Atari env
     * 6 games: Beamrider, Breakout Pong, Q-bert, Seaquest, Space Invaders
+    * to avoid instability in training,
+      it is often beneficial to use an architecture where the two networks share lower-layer representations but
+      have distinct output layers
   * continuous ctrl: MuJoCo env
     * 6 task
     * input 
       * low-dimensional state-space representation 
       * directly from pixel representation
+    * separating the policy network and value function into two separate networks resulted in 
+      better empirical performance in both ACKTR and A2C
 * baselines
   * A2C: a synchronous and batched version of the asynchronous advantage actor critic model (A3C) [18]
   * TRPO [22]
