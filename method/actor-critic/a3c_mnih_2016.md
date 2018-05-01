@@ -1,5 +1,5 @@
 # Asynchronous Methods for Deep Reinforcement Learning
-* 33rd International Conference on Machine Learning, New York, NY, USA, 2016;
+* icml2016: oral
 * Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Timothy P. Lillicrap, Tim Harley, 
   David Silver, Koray Kavukcuoglu
 * https://arxiv.org/abs/1602.01783
