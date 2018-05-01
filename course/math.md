@@ -1,5 +1,17 @@
 # math
 
+## optimization: n-order
+* "0th order methods" (Black box optimization)
+  * blackbox stochastic search
+  * Markov Chain Monte Carlo methods
+  * evolutionary algorithms
+* 1st order methods
+  * plain grad., steepest descent, conjugate grad., Rprop, stochastic grad. 
+  * adaptive stepsize heuristics
+* 2nd order methods
+  * Newton, Gauss-Newton, Quasi-Newton, (L)BFGS
+  * constrained case, primal-dual Newton 
+ 
 ## optimization: convex, nonconvex
 * https://www.solver.com/convex-optimization
 * http://www.cs.cornell.edu/courses/cs6787/2017fa/Lecture7.pdf'
