@@ -10,6 +10,11 @@
 * DeepRL tend to be **sensitive to hyperparameter settings**, 
   * often requiring extensive hyperparameter sweeps to find good values,
   * Poor hyperparameter settings tend to produce unstable or non-convergent learning.
+* policy grad problem
+  * has very high variance since
+    the gradient is estimated using Monte Carlo samples in practice 
+  * requires on-policy samples, making policy gradient optimization very sample intensive
+* DDPG's use use of a biased policy gradient estimator makes analyzing its convergence and stability properties difficult
 
 ## observation
 * Off- policy methods can instead use all samples, including off-policy samples, 
@@ -48,6 +53,11 @@
   * provides substantial gains in sample efficiency over TRPO with GAE
   * improves stability over deep deterministic policy gradient (DDPG)
 * Q-prop > (TRPO, DDPG)
+
+## background
+* benefits of DDPG are 
+  * does not rely on high variance REINFORCE gradients and 
+  * is trainable on off-policy, hence more sample-efficient than policy gradient methods
 
 ## comment
 * TODO: finish!
