@@ -57,9 +57,11 @@
           obtain an initial estimate for the policy parameters
     * (+) directly optimize the quantity of interest while remaining stable under function approximation
           (given a sufficiently small learning rate)
-    * (-) high variance (due to monte carlo method) in estimating the gradient
+    * (-) high variance, because the gradient is estimated using Monte Carlo samples
     * (-) tend to converge to a local optimal
-    * (-) sample inefficiency: since policy gradients are estimated from rollouts the variance is often extreme
+    * (-) sample inefficiency, because
+      * policy gradients are estimated from rollouts the variance is often extreme
+      * requires on-policy samples
 * `value-based` (value iteration)
   * pros and cons
     * (+) low variance; more stable performance
