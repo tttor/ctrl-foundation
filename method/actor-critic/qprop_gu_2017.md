@@ -27,6 +27,9 @@
 * to use the first-order Taylor expansion of the critic as a control variate, resulting in 
   * an analytical gradient term through the critic and 
   * a Monte Carlo policy gradient term consisting of the residuals in advantage approximations.
+* can be seen as 
+  * using the off-policy critic to reduce variance in policy gradient, or 
+  * using on-policy Monte Carlo returns to correct for bias in the critic gradient
 * use control variate theory to derive two variants of Q-Prop
   with conservative and aggressive adaptation
 
