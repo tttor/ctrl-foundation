@@ -1,8 +1,4 @@
 # thesis
-
-## labs
-[Reinforcement Learning and Artificial Intelligence at the University of Alberta](http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html), ...
-
 ## people
 ### On going
 [Alex Irpan](https://www.alexirpan.com/),
@@ -21,6 +17,7 @@
 * Adam White: Developing a predictive approach to knowledge, 2015
 * Ivo Grondman: Online Model Learning Algorithms for Actor-Critic Control, 2015
 * Jonathan Scholz: Physics-based reinforcement learning for autonomous manipulation, 2015
+* [Philip S. Thomas](http://psthomas.com/): Safe Reinforcement Learning, 2015
 
 ### Mid, 2008 <= t < 2015
 * Stephane Ross, 2013
@@ -52,3 +49,6 @@
 * Vijaymohan Konda: Actor-Critic Algorithms, 2002
 * Benjamin Van Roy: Learning and Value Function Approximation in Complex Decision Processes, 1998
 * Chris Watkins: Learning from delayed rewards, 1989
+
+## labs
+[Reinforcement Learning and Artificial Intelligence at the University of Alberta](http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html), ...
