@@ -41,8 +41,12 @@
 ## setup
 * task:
   * OpenAI Gym’s MuJoCo
+* eval metric: 
+  * average return (over episodes) vs #episodes: line graph
+  * table: max return, #episodes
 
 ## result
+* Q-prop > (TRPO, DDPG)
 * Q-Prop
   * is both sample efficient and stable, and
   * effectively combines the benefits of on-policy and off-policy methods.
@@ -52,7 +56,7 @@
 * conservative Q-Prop
   * provides substantial gains in sample efficiency over TRPO with GAE
   * improves stability over deep deterministic policy gradient (DDPG)
-* Q-prop > (TRPO, DDPG)
+
 
 ## background
 * benefits of DDPG are 
@@ -61,3 +65,5 @@
 
 ## comment
 * TODO: finish!
+* ddpg: online or offline?
+* GAE vs PPO?
