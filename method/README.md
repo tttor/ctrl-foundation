@@ -16,7 +16,7 @@
       * training offline, before execution
       * in robotics, experience with the world is expensive, so
         pseudo model-free can be used in order to get a learned policy before any execution
-        (hence, this can can be thought of as offline planning), then
+        using interaction with simulated world (hence, this can can be thought of as offline planning), then
         there exists sim2real gap problem when deploying the trained policy to the world
         (because there exist the above-mentioned discrepancy)
   * pros and cons
