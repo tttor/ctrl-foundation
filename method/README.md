@@ -4,16 +4,21 @@
 * `model-free` (direct RL): `source= realWorld`
   * the agent directly learns an optimal (or good) action-selection strategy from the collected data.
   * (in policy-search) is a general approach to learn policies based on **sampled trajectories**
-  * in robotics, where real and sim are always different:
-    (cf Atari games, where there is no real world; both "real" and sim are set to be the same, and both are in simulator):
+  * based on whether there exist **discrepancy** between _the world for training_ and _the world for testing_:
+    (note: the world can be either real or simulated (using a generative model))
     * _true_ model-free:
-      * trained with the **real** world
-      * real experience is expensive
+      * **no discrepancy** between _the world for training_ and _the world for testing_
+      * training online: interleaved or in parallel (in background) with (during) execution
+      * in Atari games, there is always true model-free
+        because the worlds for both training and testing are always the same
     * _pseudo_ model-free:
-      * trained with a **generative** model to simulate the world
+      * **there exists discrepancy** between _the world for training_ and _the world for testing_
       * typically offline, before execution
-      * can be thought of as planning because pseudo model-free also uses a generative model
-      * sim2real gap problem when deploying the trained policy to real world
+      * in robotics, experience with the world is expensive, so
+        pseudo model-free can be used in order to get a learned policy before any execution
+        (hence, this can can be thought of as offline planning), then
+        there exists sim2real gap problem when deploying the trained policy to the world
+        (because there exist the above-mentioned discrepancy)
   * pros and cons
     * (+) have the advantage of handling arbitrary dynamical systems with minimal bias
     * (+) learning a policy is often easier than learning an accurate forward model;
