@@ -4,15 +4,15 @@
 * `model-free` (direct RL): `source= realWorld`
   * the agent directly learns an optimal (or good) action-selection strategy from the collected data.
   * (in policy-search) is a general approach to learn policies based on **sampled trajectories**
-  * only if the **real** world and **simulated** world are always different, ie as in _real_ robotics 
-    (cf Atari games, or _sim-only_ robotics, where there is no real world; both "real" and sim are in simulator):
+  * in robotics, where real and sim are always different:
+    (cf Atari games, where there is no real world; both "real" and sim are set to be the same, and both are in simulator):
     * _true_ model-free:
       * trained with the **real** world
       * real experience is expensive
     * _pseudo_ model-free:
-      * trained with a **generative** model
+      * trained with a **generative** model to simulate the world
       * typically offline, before execution
-      * aka planning because this also uses a generative model
+      * can be thought of as planning because pseudo model-free also uses a generative model
       * sim2real gap problem when deploying the trained policy to real world
   * pros and cons
     * (+) have the advantage of handling arbitrary dynamical systems with minimal bias
