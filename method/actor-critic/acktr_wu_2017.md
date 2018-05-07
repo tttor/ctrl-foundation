@@ -7,7 +7,9 @@
 * https://blog.openai.com/baselines-acktr-a2c/
 * https://github.com/openai/baselines/tree/master/baselines/acktr
 * https://github.com/openai/baselines-results
+* https://github.com/emansim/acktr
 * https://www.youtube.com/watch?v=0rrffaYuUi4
+* https://www.youtube.com/watch?v=gtM87w1xGoM
 
 ## problem
 * there still does **not exist** a scalable, sample-efficient, and general-purpose instantiation of 
