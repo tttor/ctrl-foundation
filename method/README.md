@@ -1,7 +1,7 @@
 # method
 
 ## source of experience
-* `model-free` (direct RL): `source= realWorld`
+* `model-free` (direct RL): `source= world`
   * the agent directly learns an optimal (or good) action-selection strategy from the collected data.
   * (in policy-search) is a general approach to learn policies based on **sampled trajectories**
   * based on whether there exist **discrepancy** between _the world for training_ and _the world for testing_:
