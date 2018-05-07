@@ -10,12 +10,13 @@
 * FitML: https://github.com/FitMachineLearning/FitML
 
 ## type 1: people power
-* https://github.com/rlcode/reinforcement-learning
 * https://github.com/dennybritz/reinforcement-learning
-* rllab: https://github.com/rll/rllab
-* https://github.com/ikostrikov/pytorch-rl
 * https://github.com/hunkim/ReinforcementZeroToAll
+* https://github.com/ikostrikov/pytorch-rl
 * https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
+* https://github.com/rll/rllab
+* https://github.com/rlcode/reinforcement-learning
+* https://github.com/ShangtongZhang/DeepRL
 * https://github.com/vitchyr/rlkit
 
 ## type 2: old
