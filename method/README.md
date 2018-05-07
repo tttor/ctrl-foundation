@@ -15,6 +15,7 @@
         because the worlds for both training and testing are always the same
     * _pseudo_ model-free:
       * **there exists discrepancy** between _the world for training_ and _the world for testing_
+      * the discrepancy is inherited from the fact that **no model** can perfectly approximate the real world
       * training offline, before execution
       * in robotics, experience with the world is expensive, so
         pseudo model-free can be used in order to get a learned policy before any execution
