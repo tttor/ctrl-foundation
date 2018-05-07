@@ -5,11 +5,13 @@
   * the agent directly learns an optimal (or good) action-selection strategy from the collected data.
   * (in policy-search) is a general approach to learn policies based on **sampled trajectories**
   * based on whether there exist **discrepancy** between _the world for training_ and _the world for testing_:
-    (note: the world can be either real or simulated (using a generative model))
+    (note: 
+    the world can be either real or simulated (using a generative model), 
+    testing means execution)
     * _true_ model-free:
       * **no discrepancy** between _the world for training_ and _the world for testing_
       * training online: interleaved or in parallel (in background) with (during) execution
-      * in Atari games, there is always true model-free
+      * in Atari games, it is always true model-free
         because the worlds for both training and testing are always the same
     * _pseudo_ model-free:
       * **there exists discrepancy** between _the world for training_ and _the world for testing_
