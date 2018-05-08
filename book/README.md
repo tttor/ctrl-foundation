@@ -4,8 +4,12 @@
 * Reinforcement Learning: State-of-the-Art, Wiering, Marco and van Otterlo, Martijn, 2012
 * Statistical Reinforcement Learning: Modern Machine Learning Approaches, Masashi Sugiyama, 2015
 * Algorithms for Reinforcement Learning, Csaba Szepesvari, 2010
-* [Monte Carlo theory, methods and examples](http://statweb.stanford.edu/~owen/mc/), Art B. Owen, 2013 
 * http://artint.info/html/ArtInt_262.html
+
+## monte carlo
+* [Monte Carlo theory, methods and examples](http://statweb.stanford.edu/~owen/mc/), Art B. Owen, 2013 
+* Handbook of Monte Carlo Methods
+  * https://people.smp.uq.edu.au/DirkKroese/montecarlohandbook/
 
 ## misc
 Marco Wiering, Martijn van Otterlo:
