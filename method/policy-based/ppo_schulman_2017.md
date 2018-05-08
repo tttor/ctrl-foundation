@@ -1,16 +1,39 @@
 # Proximal Policy Optimization Algorithms
 * John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, Oleg Klimov
+* https://arxiv.org/abs/1707.06347
+* https://blog.openai.com/openai-baselines-ppo/
+
+## problem
+* method that is 
+  scalable (to large models and parallel implementations), 
+  data efficient, and 
+  robust (i.e., successful on a variety of problems without hyperparameter tuning). 
+  * Q-learning [Mni+15] (with function approximation) fails on many simple problems and is poorly understood, 
+    * DQN works well with discrete action spaces, 
+    * **not been demonstrated** to perform well on continuous control, see Duan et al. [Dua+16].
+  * vanilla policy gradient methods [Mni+16] (A3C) have poor data effiency and robustness; 
+  * TRPO [Sch+15b]: 
+    * relatively complicated, and 
+    * not compatible with architectures that include noise (such as dropout) or 
+      parameter sharing (between the policy and value function, or with auxiliary tasks)
 
 ## idea: PPO
-* a new family of policy gradient methods for reinforcement learning,
-  which alternate between
-  * sampling data through interaction with the environment, and
-  * optimizing a “surrogate” objective function using stochastic gradient ascent.
-* a novel objective function that enables multiple epochs of minibatch updates.
-  * use multiple epochs of stochastic gradient ascent to perform each policy update
-  * cf:  standard policy gradient methods perform one gradient update per data sample
+* policy gradient methods that alternate between
+  * sampling data (from the policy) through interaction with the environment, and
+  * optimizing a "surrogate" objective function using stochastic gradient ascent
+    (performing several epochs of optimization on the sampled data.)
+* a novel objective function 
+  * that enables multiple epochs of minibatch updates.
+    * use multiple epochs of stochastic gradient ascent to perform each policy update
+    * cf: standard policy gradient methods perform one gradient update per data sample
+  * with clipped probability ratios, which 
+    forms a pessimistic estimate (i.e., lower bound) of the performance of the policy. 
 
 ## result
 * PPO > TRPO
-  * much simpler to implement, more general, and
-    have better sample complexity (empirically).
+  * have the stability and reliability of trust-region methods
+  * much simpler to implement, more general, and have better sample complexity (empirically).
+
+## comment
+* should it be "grad update per (mini)batch?
+> standard policy gradient methods perform one gradient update per data sample
