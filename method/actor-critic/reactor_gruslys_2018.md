@@ -1,7 +1,8 @@
 # The reactor : a fast and sample-efficient actor-critic agent for reinforcement learning
 * Audrūnas Gruslys et al
-* Published as a conference paper at ICLR 2018
+* iclr2018: poster
 * https://arxiv.org/abs/1704.04651
+* https://openreview.net/forum?id=rkHVZWZAZ
 
 ## problem
 * Data-efficiency and off-policy learning are essential for
