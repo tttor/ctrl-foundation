@@ -13,6 +13,7 @@
   * (-) suffers from potentially slowlearning caused by single-step temporal difference updates,
   * variants:
     * double Q-learning with prioritized experience replay
+* NAF: Continuous Deep Q-Learning with Model-based Acceleration
 
 ## others
 * SARSA (Rummery & Niranjan, 1994)
