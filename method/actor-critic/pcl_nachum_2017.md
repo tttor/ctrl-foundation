@@ -1,7 +1,8 @@
 # Bridging the Gap Between Value and Policy Based Reinforcement Learning
 * Ofir Nachum1 Mohammad Norouzi Kelvin Xu1 Dale Schuurmans
-* 31st Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA.
+* nips2017: ?
 * https://arxiv.org/abs/1702.08892
+* https://media.nips.cc/nipsbooks/nipspapers/paper_files/nips30/reviews/1564.html
 
 ## problem
 * how best to combine the advantages of value and policy based RL approaches in 
