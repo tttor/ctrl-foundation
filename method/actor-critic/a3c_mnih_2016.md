@@ -1,9 +1,10 @@
 # Asynchronous Methods for Deep Reinforcement Learning
-* icml2016: oral
 * Volodymyr Mnih, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Timothy P. Lillicrap, Tim Harley, 
   David Silver, Koray Kavukcuoglu
-* https://arxiv.org/abs/1602.01783
+* icml2016: oral
 * http://proceedings.mlr.press/v48/mniha16.html
+* https://arxiv.org/abs/1602.01783
+* https://icml.cc/2016/reviews/885.txt
 * https://www.youtube.com/watch?v=Ajjc08-iPx8&feature=youtu.be (for robots, goto: 0:44)
 * https://www.youtube.com/watch?v=9sx1_u2qVhQ&t=27s
 
