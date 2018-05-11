@@ -51,4 +51,6 @@
 * Chris Watkins: Learning from delayed rewards, 1989
 
 ## labs
-[Reinforcement Learning and Artificial Intelligence at the University of Alberta](http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html), ...
+[ualberta: Reinforcement Learning and Artificial Intelligence at the University of Alberta](http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html), 
+[mcgill: Reasoning and Learning Lab]((http://rl.cs.mcgill.ca/index.html),
+...
