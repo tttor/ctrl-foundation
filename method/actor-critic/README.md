@@ -2,7 +2,10 @@
 
 ## variant
 * [Reactor: A Sample-Efficient Actor-Critic Architecture, 2018](reactor_gruslys_2018.md)
+* [GAC: Guide actor-critic, 2018](gac_tangkaratt_2018.md)
+* [TD3: Twin Delayed Deep Deterministic, 2018](td3_fujimoto_2018.md)
 * [ACKTR: Actor Critic using Kronecker-Factored Trust Region, 2017](acktr_wu_2017.md)
+* [Q-prop: ?, 2017](qprop_gu_2017.md)
 * [ACER: Sample efficient actor-critic with experience replay, 2017](acer_wang_2017.md)
 * [Dual-AC: Boosting the Actor with Dual Critic, 2017](dualac_dai_2017.md)
 * [PGQL: Combining policy gradient and q-learning, 2017](pgql_donoghue_2017.md)
