@@ -30,8 +30,8 @@
 * uses a deep **recurrent** neural network, ie LSTM
 
 ## result
-* > (Prioritized Dueling DQN, Categorical DQN) in terms of sample-efficiency 
-* > A3C in term of better run time
+* Reactor > (Prioritized Dueling DQN, Categorical DQN) in terms of sample-efficiency 
+* Reactor > A3C in term of better run time
 * The Reactor is 
   * sample-efficient due to the use of memory replay, and 
   * numerical efficient since it uses multi-step returns.
