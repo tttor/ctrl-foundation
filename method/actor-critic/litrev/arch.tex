@@ -1,12 +1,17 @@
 \section{Architecture}
 % Identify components
+
 % * psi: the advantage that is put in gradient
+
 % * optimization method: adam, rmsprop, sgd, kfac
 %   * order: first, second
+
 % * constraint in opt: KL-div
-% * off - on policy
+
+% * OFF - ON POLICY
 %   off-policy learning: for sample efficiency at the cost of learning stability
-% * actor and critic nets: shared, separated
+
+% * ACTOR AND CRITIC NETS: shared, separated
 
 % To ensure exploration in the policy
 % * to use entropy regularization to ensure exploration in the policy,
@@ -24,3 +29,19 @@ The policy gradient is defined as:
 $\nabla_{\theta} J(\theta) = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \Psi^t \nabla log \pi_{\theta} (a_t | s_t) ]$,
 where $\Psi^t$ is often chosen to be the advantage function $A^{\pi}(s_t,a_t)$,
 which provides a relative measure of valur of each action~$a_t$ at a given state~$s_t$.
+
+\section{Taxonomy}
+
+\subsection{On- vs -off policy learning}
+On-policy:
+A3C~\cite{Mnih2016},
+ACKTR,
+natural AC,
+
+Off-policy:
+Reactor~\cite{Gruslys2018},
+SoftAC~\cite{Haarnoja2017},
+ACER~\cite{Wang2016},
+using experience replay buffer,
+
+\subsection{stoc vs det policy}
