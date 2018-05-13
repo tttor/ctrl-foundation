@@ -5,8 +5,8 @@
 * https://openreview.net/forum?id=rkHVZWZAZ
 
 ## problem
-* Data-efficiency and off-policy learning are essential for
-  many real-world domains where interactions with the environment are expensive.
+* Data-efficiency and off-policy learning 
+  * are essential for many real-world domains where interactions with the environment are expensive.
 
 ## idea: reactor (retrace-actor)
 * based on an **off-policy multi-step return** actor-critic architecture
@@ -17,29 +17,29 @@
   * an action-value Q-function (the critic) evaluating the current policy π, and 
   * an estimated behavioural policy `\hat{\mu}` which we use for off-policy correction.
 * training
-  * The critic is trained by the multi-step off-policy **Retrace algorithm**
-  * the actor is trained by a novel **β-leave-one-out policy gradient estimate**
-    (which uses both the off-policy corrected return and the estimated Q- function).
+  * critic: trained by the multi-step off-policy **Retrace algorithm**
+  * actor: trained by **β-leave-one-out policy gradient estimate**
+    * uses both the off-policy corrected return and the estimated Q- function).
+    * improves the trade-off between variance and bias by using action values as a baseline.
 * Distributional Retrace,
   * a new policy evaluation algorithm which brings multi-step off-policy updates to the
     distributional reinforcement learning setting
-* β-leave-one-out policy gradient algorithm,
-  * which improves the trade-off between variance and bias by using action values as a baseline.
 
 ## setup
 * Atari 2600 benchmarks from the Arcade Learning Environment (ALE)
 * uses a deep **recurrent** neural network, ie LSTM
 
 ## result
-* an agent with
-  * higher sample-efficiency than Prioritized Dueling DQN (Wang et al., 2017) and
+* higher sample-efficiency 
+  * than Prioritized Dueling DQN (Wang et al., 2017) and
     Categorical DQN (Bellemare et al., 2017), while giving
-  * better run-time performance than A3C (Mnih et al., 2016).
+* better run-time performance 
+  * than A3C (Mnih et al., 2016).
 * The Reactor is 
-  * sample-efficient thanks to the use of memory replay, and 
+  * sample-efficient due to the use of memory replay, and 
   * numerical efficient since it uses multi-step returns.
 
-## misc
+## background
 * Much of the recent work can be divided into two categories
   * those of which that, often building on the DQN framework,
     act eps-greedily according to an action-value function and
