@@ -13,6 +13,7 @@
   * (-) suffers from potentially slowlearning caused by single-step temporal difference updates,
   * variants:
     * double Q-learning with prioritized experience replay
+    * Rainbow: https://arxiv.org/abs/1710.02298
 * NAF: Continuous Deep Q-Learning with Model-based Acceleration
 
 ## others
