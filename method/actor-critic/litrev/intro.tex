@@ -21,8 +21,17 @@ TODO: iterate the diff.
 Problems include:
 \begin{itemize}
 \item data/sample efficiency,
+    WHY:
+    * on-policy learning; train on each trajectory only once,
+    SOLUTION:
+    * off-policy learning (via replay buffer),
+      but this may lead to bad convergence
+      eg: REACTOR~\cite{Gruslys2018}
 \item stable, good convergence
-\item computational efficiency, wall-time
+\item computational efficiency, computation speed/time
+    CONCERN
+    * paralel: gpu vs cpu computation
+
 \item ease of implementation, deployment, hyperparams tuning
 \item tradeoff bias and variance in estimating the gradient
 \end{itemize}
