@@ -1,5 +1,7 @@
 # Addressing Function Approximation Error in Actor-Critic Methods
 * Scott Fujimoto, Herke van Hoof, David Meger,
+* https://arxiv.org/abs/1802.09477
+* https://github.com/sfujim/TD3/blob/master/TD3.py
 
 ## problem
 * function approximation
