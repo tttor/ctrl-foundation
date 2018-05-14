@@ -1,0 +1,38 @@
+\section{Problems}
+
+
+
+\item sample efficiency,
+AKA
+data efficiency
+
+WHY:
+* on-policy learning; train on each trajectory only once,
+  * recall: vanilla actor-critic methods are on-policy only
+
+SOLUTION:
+* off-policy learning (via replay buffer),
+  EG:
+  * REACTOR~\cite{Gruslys2018}
+
+  BUT
+  * may lead to bad convergence
+
+\item stability
+AKA
+stable, good convergence
+
+\item computational efficiency
+AKA
+computation speed,
+time efficiency
+
+CONCERN
+* paralel (distributive nature): gpu vs cpu computation
+
+\item ease of implementation, deployment, hyperparams tuning
+
+\item tradeoff bias and variance in estimating the gradient
+
+
+

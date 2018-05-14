@@ -2,6 +2,42 @@
 % use reported values,
 % eval metric
 
+% Identify components
+
+% * psi: the advantage that is put in gradient
+
+% * optimization method: adam, rmsprop, sgd, kfac
+%   * order: first, second
+
+% * constraint in opt: KL-div
+
+% * OFF - ON POLICY
+%   off-policy learning: for sample efficiency at the cost of learning stability
+
+% * ACTOR AND CRITIC NETS: shared, separated
+
+% To ensure exploration in the policy
+% * to use entropy regularization to ensure exploration in the policy,
+% which is a common practice in policy gradient (Williams & Peng, 1991; Mnih et al., 2016).
+% * to use KL-divergence as a constraint on how much deviation is permitted from a prior policy
+% (Bagnell & Schneider, 2003; Peters et al., 2010; Schulman et al., 2015; Fox et al., 2015).
+
+% \section{Taxonomy}
+
+% \subsection{On- vs -off policy learning}
+% On-policy:
+% A3C~\cite{Mnih2016},
+% ACKTR,
+% natural AC,
+
+% Off-policy:
+% Reactor~\cite{Gruslys2018},
+% SoftAC~\cite{Haarnoja2017},
+% ACER~\cite{Wang2016},
+% using experience replay buffer,
+
+% \subsection{stoc vs det policy}
+
 \subsection{Discrete action space: Atari tasks}
 Atari game~\footnote{\url{https://gym.openai.com/envs/\#atari}}.
 
