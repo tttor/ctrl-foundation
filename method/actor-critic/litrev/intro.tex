@@ -18,23 +18,16 @@ Figure~\ref{} shows REINFORCE-with-baseline and one-step vanilla actor-critic.
 The latter is on-policy actor-critic.
 TODO: iterate the diff.
 
-Problems include:
-\begin{itemize}
-\item data/sample efficiency,
-    WHY:
-    * on-policy learning; train on each trajectory only once,
-    SOLUTION:
-    * off-policy learning (via replay buffer),
-      but this may lead to bad convergence
-      eg: REACTOR~\cite{Gruslys2018}
-\item stable, good convergence
-\item computational efficiency, computation speed/time
-    CONCERN
-    * paralel (distributive nature): gpu vs cpu computation
+The objective is to
+maximize the expected $\gamma$-discounted cumulative return,
+$J(\theta) = \mathbb{E}_{\pi} [R_t] = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \gamma^i r(s_{t+i}, a_{t+1}) ]$
+with respect to the policy parameters~$\theta$.
+Note that $J(\theta)$ is a nonconvex function.
 
-\item ease of implementation, deployment, hyperparams tuning
-\item tradeoff bias and variance in estimating the gradient
-\end{itemize}
+The policy gradient is defined as:
+$\nabla_{\theta} J(\theta) = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \Psi^t \nabla log \pi_{\theta} (a_t | s_t) ]$,
+where $\Psi^t$ is often chosen to be the advantage function $A^{\pi}(s_t,a_t)$,
+which provides a relative measure of valur of each action~$a_t$ at a given state~$s_t$.
 
 The trend:
 \begin{itemize}
