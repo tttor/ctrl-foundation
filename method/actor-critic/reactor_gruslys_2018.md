@@ -14,22 +14,27 @@
 ## idea: reactor (retrace-actor)
 * based on an **off-policy multi-step return** actor-critic architecture
   * maintains a memory buffer filled with past experiences
-* decoupled acting from learning by allowing the actor and the learner to run in parallel
+
+* the actor and the learner to run in parallel
+  * decoupled acting from learning
+
 * The network outputs
   * a target policy π (the actor),
   * an action-value Q-function (the critic) evaluating the current policy π, and
   * an estimated behavioural policy `\hat{\mu}` which we use for off-policy correction.
+
 * training
   * critic: trained by the multi-step off-policy **Retrace algorithm**
   * actor: trained by **beta-leave-one-out policy gradient estimate**
 
-* **beta-leave-one-out policy gradient estimate**
-  * uses both the off-policy corrected return and the estimated Q- function
+* beta-leave-one-out policy gradient estimate
+  * uses both the off-policy corrected return and the estimated Q-function
   * improves the trade-off between variance and bias by using action values as a baseline.
-* Distributional Retrace (as a policy evaluation algorithm)
-  * brings multi-step off-policy updates to the distributional reinforcement learning setting
+* distributional retrace (as a policy evaluation algorithm)
+  * brings multi-step off-policy updates to the distributional RL setting
 * prioritized replay algorithm for sequences,
-  * exploits the temporal locality of neighboring observations for more efficient replay prioritization.
+  * exploits the temporal locality of neighboring observations for
+    more efficient replay prioritization.
 
 ## setup
 * on discrete-action Atari
@@ -45,11 +50,13 @@
 ## result
 * Reactor > (Prioritized Dueling DQN, Categorical DQN) in terms of sample-efficiency
 * Reactor > A3C in term of better run time
-* The Reactor is
+* Reactor is
   * sample-efficient due to the use of memory replay, and
   * numerical efficient since it uses multi-step returns.
 * contrib:
-  Distributional Retrace, beta-LOO policy gradient and contextual priority tree (prioritized sequence replay)
+  Distributional Retrace,
+  beta-LOO policy gradient, and
+  contextual priority tree (prioritized sequence replay)
 
 ## background
 * Much of the recent work can be divided into two categories

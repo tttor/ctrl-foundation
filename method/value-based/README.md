@@ -6,6 +6,7 @@
 
 * variants:
   * Rainbow: https://arxiv.org/abs/1710.02298
+  * Double Q-learning
   * Prioritized Dueling DQN (Wang et al., 2017)
   * NAF: Continuous Deep Q-Learning with Model-based Acceleration
 

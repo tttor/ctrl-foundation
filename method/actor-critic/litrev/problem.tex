@@ -1,10 +1,9 @@
 \section{Problems}
 
-
-
-\item sample efficiency,
+\subsection{low sample efficiency}
 AKA
-data efficiency
+low data efficiency
+hi sample complexity
 
 WHY:
 * on-policy learning; train on each trajectory only once,
@@ -13,26 +12,47 @@ WHY:
 SOLUTION:
 * off-policy learning (via replay buffer),
   EG:
-  * REACTOR~\cite{Gruslys2018}
+  * reactor~\cite{Gruslys2018}
+    * prioritized sequence replay
 
   BUT
   * may lead to bad convergence
 
-\item stability
+\subsection{unguaranteed stability}
 AKA
 stable, good convergence
 
-\item computational efficiency
+\subsection{hi computational efficiency}
 AKA
 computation speed,
 time efficiency
 
+SOLUTION
+* paralel (distributive nature)
+  EG:
+  * reactor
+    * distributional retrace
+
 CONCERN
-* paralel (distributive nature): gpu vs cpu computation
+* gpu vs cpu computation
 
-\item ease of implementation, deployment, hyperparams tuning
+\subsection{tradeoff bias and variance in estimating the gradient}
+AKA
+* overestimation on value estimate
 
-\item tradeoff bias and variance in estimating the gradient
+SOLUTION
+* xxx
+  EG:
+  * reactor
+    * beta-leave-one-out policy gradient estimate
+* xxx2
+  EG:
+  * GAC
+    * guide actor
+* favors underestimations
+  EG:
+  * TD3
 
+\subsection{ease of implementation, deployment, hyperparams tuning}
 
 
