@@ -11,21 +11,34 @@ WHY:
 
 SOLUTION:
 * off-policy learning (via replay buffer),
+  BUT
+  * may lead to bad convergence
   EG:
   * reactor~\cite{Gruslys2018}
     * prioritized sequence replay
 
-  BUT
-  * may lead to bad convergence
+* use more advanced optimization techniques
+EG
+* acktr: kfac
+
 
 \subsection{unguaranteed stability}
 AKA
 stable, good convergence
 
+CONCERNS
+* off-policy learning
+* nonconvex optim in net
+* nonlinear gn approx of net
+
 \subsection{hi computational efficiency}
 AKA
 computation speed,
-time efficiency
+time efficiency,
+training time
+
+WHY
+* applying natural grad
 
 SOLUTION
 * paralel (distributive nature)
