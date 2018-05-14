@@ -25,9 +25,6 @@
   * such as Q-learning and off-policy actor-critic methods 
 
 ## idea: q-prop
-* aim to develop methods that combine
-  * the stability of policy gradients with
-  * the efficiency of off-policy RL
 * to use the first-order Taylor expansion of the critic as a control variate, resulting in 
   * an analytical gradient term through the critic and 
   * a Monte Carlo policy gradient term consisting of the residuals in advantage approximations.
@@ -47,15 +44,15 @@
 ## result
 * Q-prop > (TRPO, DDPG)
 * Q-Prop
-  * is both sample efficient and stable, and
   * effectively combines the benefits of on-policy and off-policy methods.
+    (combine the stability of policy gradients with the efficiency of off-policy RL)
+    * both sample efficient and stable
   * a policy gradient method that
     uses a **Taylor expansion** of the off-policy critic as a control variate.
-  * can reduce the variance of gradient estimator without adding bias
+  * can reduce the variance of gradient estimator **without adding bias**
 * conservative Q-Prop
   * provides substantial gains in sample efficiency over TRPO with GAE
   * improves stability over deep deterministic policy gradient (DDPG)
-
 
 ## background
 * benefits of DDPG are 
@@ -63,6 +60,4 @@
   * is trainable on off-policy, hence more sample-efficient than policy gradient methods
 
 ## comment
-* TODO: finish!
-* ddpg: online or offline?
-* GAE vs PPO?
+* vs GAE, PPO?
