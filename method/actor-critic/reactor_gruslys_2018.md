@@ -6,14 +6,14 @@
 * https://arxiv.org/abs/1704.04651
 
 ## problem
-* Data-efficiency and off-policy learning
+* data-efficiency and off-policy learning
   * essential when interactions with the environment are expensive.
 * time-efficiency
   * directly impacts an algorithm’s applicability through resource costs
 
 ## idea: reactor (retrace-actor)
 * based on an **off-policy multi-step return** actor-critic architecture
-* maintains a memory buffer filled with past experiences
+  * maintains a memory buffer filled with past experiences
 * decoupled acting from learning by allowing the actor and the learner to run in parallel
 * The network outputs
   * a target policy π (the actor),
