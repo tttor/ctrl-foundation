@@ -1,23 +1,21 @@
 # Bridging the Gap Between Value and Policy Based Reinforcement Learning
 * Ofir Nachum1 Mohammad Norouzi Kelvin Xu1 Dale Schuurmans
-* nips2017: ?
+* nips2017: poster
 * https://arxiv.org/abs/1702.08892
 * https://media.nips.cc/nipsbooks/nipspapers/paper_files/nips30/reviews/1564.html
 
 ## problem
-* how best to combine the advantages of value and policy based RL approaches in 
-  the presence of deep function approximators, while mitigating their shortcomings
-  * this issue is not yet settled, and 
-  * the intricacies of each perspective are exacerbated by deep models.
-* off-policy learning under function approximation remain potentially unstable and 
- require specialized algorithmic and theoretical development as well as delicate tuning to be effective in practice
+* the intricacies of actor and critic perspectives are exacerbated by deep models.
+* off-policy learning under function approximation 
+  * remain potentially unstable and 
+  * require specialized algorithmic and theoretical development as well as delicate tuning to be effective in practice
 
 ## observation
 * for the softmax value function `V^*` in (8), 
   the quantity `exp{V^*(s)/ \tau}` also serves as the normalization factor of the optimal policy `\pi^*∗(a|s)` in (7)
   
-## idea: Unified Path Consistency Learning (Unifie PCL)
-* connection between value and policy based reinforcement learning (RL) based on a relationship between 
+## idea: Unified Path Consistency Learning (Unified PCL)
+* connection between value and policy based RL based on a relationship between 
   * softmax temporal value consistency and 
   * policy optimality under entropy regularization.
 * exploit a relationship between 
@@ -66,7 +64,7 @@
   * A2C:
     takes PCL with `\tau \rightarrow 0` and omits the replay buffer
   
-## misc
+## background
 * Actor-critic methods have thus become popular [39, 40, 42], because 
   they use value approximators to replace rollout estimates and reduce variance, at the cost of some bias.
 * one-hot distribution that assigns a probability of 1 to an action with maximal return and 0 elsewhere  
@@ -76,4 +74,4 @@
 * the idea of merging actor and critic models roughly similar to 
   use the same network (shared params) for both actor and critic
   * unexpectedly, the authors suggest using diff learning rate to updates `\rho` from `V_{\rho}` and `\pi_{\rho}` in practice
-* why use uncommon task: tasks such as Copy, Reverse, and RepeatCopy?
+* why use uncommon tasks: Copy, Reverse, and RepeatCopy?
