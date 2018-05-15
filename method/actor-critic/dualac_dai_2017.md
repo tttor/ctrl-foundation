@@ -5,15 +5,14 @@
 * https://openreview.net/forum?id=BkUp6GZRW
 
 ## problem
-* While the use of a critic is important for the efficiency of actor-critic algorithms, 
-  it is not entirely clear **how the critic should be optimized to facilitate improvement** of the actor.
-* Lagrangian dual form yields a game-theoretic view for the roles of the actor and the dual critic
+* not entirely clear **how the critic should be optimized to facilitate improvement** of the actor.
+* Lagrangian dual form yields a **game-theoretic view** for the roles of the actor and the dual critic
   * such a framework for actor and dual critic allows them to be optimized for the same objective function,
   * parametering the actor and dual critic **unfortunately induces instablity** in optimization
 
-## idea: Dual Actor-Critic
-* derived in a principled way from the Lagrangian dual form of the Bellman optimality equation,
-  * which can be viewed as a two-player game between the actor and a critic-like function,
+## idea: Dual Critic
+* derived from the Lagrangian dual form of the Bellman optimality equation,
+  * can be viewed as a two-player game between the actor and a critic-like function,
     which is named as dual critic
 * the actor and dual-critic are **updated cooperatively** to optimize the same objective function,
   * providing a more transparent way for learning the critic that
@@ -35,6 +34,5 @@
     * temporal-difference methods are perhaps the most popular choice to learn the critic, especially 
       when nonlinear function approximation is used
       
-## result
-* TODO: finish!
+## comment
 * how did someone come up with ...Lagrangian...?
