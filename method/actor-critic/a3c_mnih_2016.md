@@ -105,7 +105,7 @@
     both value- based and policy-based methods, off-policy as well as on- policy methods, and 
     in discrete as well as continuous domains
   
-## misc
+## background
 * unstability of deepNN on RL caused by
   * the sequence of observed data encountered by an online RL agent is non-stationary, and 
   * online RL updates are strongly correlated.
