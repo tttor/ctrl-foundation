@@ -11,21 +11,18 @@
   * has very high variance since
     the gradient is estimated using Monte Carlo samples in practice 
 * DeepRL tend to be **sensitive to hyperparameter settings**, 
-  * often requiring extensive hyperparameter sweeps to find good values,
-  * Poor hyperparameter settings tend to produce unstable or non-convergent learning.
-  * DDPG's use use of a biased policy gradient estimator makes analyzing its convergence and stability properties difficult
+  * poor hyperparameter settings tend to produce unstable or non-convergent learning.
 
 ## observation
 * Off- policy methods can instead use all samples, including off-policy samples, 
   by adopting temporal difference learning with experience replay. 
   * (+) much more sample-efficient. 
   * (-) convergence is in general not guaranteed with non-linear function approximators, and 
-  * (-) practical convergence and instability issues typically mean that 
-        extensive hyperparameter tuning is required to attain good results.
+  * (-) typically, extensive hyperparameter tuning is required to attain good results.
   * such as Q-learning and off-policy actor-critic methods 
 
 ## idea: q-prop
-* to use the first-order Taylor expansion of the critic as a control variate, resulting in 
+* to use the **first-order Taylor expansion of the critic as a control variate**, resulting in 
   * an analytical gradient term through the critic and 
   * a Monte Carlo policy gradient term consisting of the residuals in advantage approximations.
 * can be seen as 
@@ -55,9 +52,10 @@
   * improves stability over deep deterministic policy gradient (DDPG)
 
 ## background
-* benefits of DDPG are 
-  * does not rely on high variance REINFORCE gradients and 
-  * is trainable on off-policy, hence more sample-efficient than policy gradient methods
-
+* DDPG 
+  * (+) does not rely on high variance REINFORCE gradients and 
+  * (+) trainable on off-policy, hence more sample-efficient than policy gradient methods
+  * (-) use of a biased policy gradient estimator makes analyzing its convergence and stability properties difficult
+  
 ## comment
 * vs GAE, PPO?
