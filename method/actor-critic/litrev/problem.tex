@@ -1,4 +1,4 @@
-\section{Problems}
+\section{Problems and Existing Solutions}
 
 \subsection{low sample efficiency}
 AKA
@@ -8,30 +8,40 @@ hi sample complexity
 WHY:
 * on-policy learning; train on each trajectory only once,
   * recall: vanilla actor-critic methods are on-policy only
+  * on-policy leads to good convergence, why?
 
 SOLUTION:
 * off-policy learning (via replay buffer),
   BUT
-  * may lead to bad convergence
+  * may lead to bad convergence, why?
   EG:
-  * reactor~\cite{Gruslys2018}
-    * prioritized sequence replay
+  * reactor~\cite{Gruslys2018}: prioritized sequence replay
+  * qprop:  Taylor expansion of the critic as a control variate
+  * acer: ?
 
 * use more advanced optimization techniques
 EG
 * acktr: kfac
 
-
 \subsection{unguaranteed stability}
+merge to sample efficiency?
+
 AKA
-stable, good convergence
+* stable, good convergence
+* sensitive to hyperparameter settings
+
+WHY
+* off-policy learning
+
+SOLUTION
+* qprop: Taylor expansion of the critic as a control variate
 
 CONCERNS
 * off-policy learning
 * nonconvex optim in net
-* nonlinear gn approx of net
+* nonlinear fn approx of net
 
-\subsection{hi computational efficiency}
+\subsection{computational efficiency}
 AKA
 computation speed,
 time efficiency,
@@ -56,16 +66,15 @@ AKA
 SOLUTION
 * xxx
   EG:
-  * reactor
-    * beta-leave-one-out policy gradient estimate
+  * reactor: beta-leave-one-out policy gradient estimate
 * xxx2
   EG:
-  * GAC
-    * guide actor
+  * GAC: guide actor
 * favors underestimations
   EG:
   * TD3
 
-\subsection{ease of implementation, deployment, hyperparams tuning}
-
+\subsection{ease of implementation, deployment}
+AKA
+reproducibility
 
