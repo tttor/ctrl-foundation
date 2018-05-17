@@ -5,7 +5,6 @@
 * https://openreview.net/forum?id=BkUp6GZRW
 
 ## problem
-* not entirely clear **how the critic should be optimized to facilitate improvement** of the actor.
 * Lagrangian dual form yields a **game-theoretic view** for the roles of the actor and the dual critic
   * such a framework for actor and dual critic allows them to be optimized for the same objective function,
   * parametering the actor and dual critic **unfortunately induces instablity** in optimization
@@ -36,3 +35,5 @@
       
 ## comment
 * how did someone come up with ...Lagrangian...?
+* is not it clear as the critic should tell how good to take some action given state
+> not entirely clear how the critic should be optimized to facilitate improvement of the actor.
