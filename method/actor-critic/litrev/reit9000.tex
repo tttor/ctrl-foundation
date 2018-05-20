@@ -4,6 +4,7 @@ actor-critic approaches combine policy- and value-based methods~\cite{6392457};
 pure versions of those methods are called actor-only and critic-only, respectively.
 Essensially, we have a parameterized policy in the actor that is
 updated with information from the critic.
+
 The objective is to maximize the expected $\gamma$-discounted cumulative return,
 $J(\theta) = \mathbb{E}_{\pi} [R_t] = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \gamma^i r(s_{t+i}, a_{t+1}) ]$
 with respect to the policy parameters~$\theta$.
@@ -22,20 +23,33 @@ consider fully-observable single task and single agent.
 \subsection{Low sample efficiency (high sample complexity)}
 This problem stems from the fact that vanilla actor-critic methods are on-policy only.
 On-policy learning leads to good convergence to the target policy at
-the cost of low sample efficiency as it trains on each trajectory only once.
+the cost of low sample efficiency as it trains on each trajectory only once.\\
 
-One straightforward solution is to (also) train off-policy using a replay buffer.
+\noindent
+\textbf{Off-policy solutions:}\\
+One straightforward solution for this is to (also) train off-policy using a replay buffer.
 This, however, results in bad convergence because the training data
 do not come from the current policy, but from another behaviour policy.
-Consequently, works in this line propose ideas that not only benefits from off-policy learning
-but also (try to) maintains convergence.
-This includes Reactor~\cite{Gruslys2018}, Q-prop~\cite{}, and ACER~\cite{}.
+Consequently, works in this line propose ideas that \emph{not only} benefits from
+off-policy learning \emph{but also} (try to) maintains convergence,
+for example, Reactor~\cite{Gruslys2018}, Q-prop~\cite{}, and ACER~\cite{}.
 
-Reactor proposes prioritized sequence replay.
-Q-prop utilizes Taylor expansion of the critic as a control variate.
-ACER introduces truncated importance sampling with bias correction and
-stochastic dueling network architectures.
+Reactor~\cite{Gruslys2018} exploits the temporal locality of neighboring observations for
+more efficient replay prioritization.
+In Reactor, critic is trained by the multi-step off-policy Retrace algorithm,
+while actor is trained by beta-leave-one-out policy gradient estimate.
+Q-prop~\cite{} uses the first-order Taylor expansion of the critic as a control variate,
+This yields an analytical gradient term through the critic and
+a Monte Carlo policy gradient term consisting of the residuals in advantage approximations.
+Overall, one can view Q-prop as
+using the off-policy critic to reduce variance in policy gradient, or
+using on-policy Monte Carlo returns to correct for bias in the critic gradient.
+ACER~\cite{} introduces 2 ways in using experience replay, namely:
+truncated importance sampling with bias correction and
+stochastic dueling network architectures.\\
 
+\noindent
+\textbf{On-policy solutions:}\\
 Other solutions for low sample officiency do not incorporate off-policy learning
 (so they stay on-policy), for example: ACKTR~\cite{}, soft-AC~\cite{}, and A3C~\cite{}.
 
@@ -49,7 +63,6 @@ The value from critic is aimed to reduce the variance and to accelerate learning
 although it introduces bias and an asymptotic dependence on the quality of the function approximation.
 As a result, the intricacy between actor and critic can be encoded as the bias and variance tradeoff.
 
-Reactor~\cite{} proposes beta-leave-one-out policy gradient estimate.
 GAC~\cite{} introduces guide actors.
 TD3~\cite{} favors underestimations.
 Dual-AC~\cite{} suggests using dual critic.
@@ -72,6 +85,10 @@ The progress, however, has been slowed down mainly due to technical choices of t
 whether tensorflow (as in the baseline) or pytorch.
 
 \section{Discussions}
+reduce variance not only by critic, but variance reduction technique from monte-carlo sim field;
+should not trade convergence for sample efficiency;
+should be on-policy with other optimization tehck, optiomizer, activation fn, net arch
+
 In order to foster the reproducibility, we should aim for an architecture with the following characterisics.
 First, it is minimal, for example, in term of the number of neural networks.
 Concretely, this means one shared neural network for both actor and critic.
