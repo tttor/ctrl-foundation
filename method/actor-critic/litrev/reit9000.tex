@@ -1,0 +1,62 @@
+\section{Introduction}
+In reinforcement learning (RL),
+actor-critic approaches combine policy- and value-based methods~\cite{6392457};
+pure versions of those 2 methods are called actor-only and critic-only, respectively.
+Essensially, we have a parameterized policy in the actor that is
+updated with information from the critic.
+The objective is to maximize the expected $\gamma$-discounted cumulative return,
+$J(\theta) = \mathbb{E}_{\pi} [R_t] = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \gamma^i r(s_{t+i}, a_{t+1}) ]$
+with respect to the policy parameters~$\theta$.
+The policy gradient is defined as
+$\nabla_{\theta} J(\theta) = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \Psi^t \nabla log~\pi_{\theta} (a_t | s_t) ]$,
+where $\Psi^t$ is typically an advantage function $A^{\pi}(s_t,a_t)$ computed in the critic.
+The trend is to utilize deep neural networks as both policy representation and (non-linear) function approximator, by which we have nonconvex optimization.
+
+\section{Issues}
+Here, we review the current issues: problems and their existing solutions.
+We focus on those that are non-hierarchical and
+consider fully-observable single task and single agent.
+
+\subsection{Low sample efficiency (high sample complexity)}
+This problem stems from the fact that vanilla actor-critic methods are on-policy only.
+On-policy learning leads to good convergence to the target policy at
+the cost of low sample efficiency as it trains on each trajectory only once.
+
+One straightforward solution is to (also) train off-policy using a replay buffer.
+This, however, results in bad convergence because the training data do not come from the current policy.
+Consequently, works in this line propose ideas that benefits from off-policy learning
+while trying to maintain convergence.
+This includes Reactor~\cite{Gruslys2018}, Q-prop~\cite{}, and ACER~\cite{}.
+Reactor proposes prioritized sequence replay.
+Q-prop utilizes Taylor expansion of the critic as a control variate.
+ACER introduces truncated importance sampling with bias correction and
+stochastic dueling network architectures.
+
+Other solutions for low sample officiency do not incorporate off-policy learning
+(so they stay on-policy), for example: ACKTR~\cite{} and soft-AC~\cite{}.
+ACKTR uses more advance optimization technique, i.e. Kronecker-factored approximate curvature (K-FAC).
+Whereas, soft-AC uses maximum entropy.
+
+\subsection{Bias and variance tradeoff}
+Actor-critic methods originate from policy-based methods that
+use Monte-carlo rollout to estimate the policy gradient; hence having high variance.
+The value from critic is aimed to reduce the variance and to accelerate learning;
+although it introduces bias and an asymptotic dependence on the quality of the function approximation.
+As a result, the intricacy between actor and critic can be encoded as the bias and variance tradeoff.
+
+Reactor~\cite{} proposes beta-leave-one-out policy gradient estimate.
+GAC~\cite{} introduces guide actors.
+TD3~\cite{} favors underestimations.
+Dual-AC~\cite{} suggests using dual critic.
+
+\subsection{Reproducibility}
+The reproducibility issue in actor-critic is naturally worse than in general RL~\cite{}.
+Typically, there are, at least, 2 neural networks in actor-critic methods;
+although it is theoretically possible to use one network for both actor and critic,
+in practice, especially for continuous action spaces, separate networks are superior~\cite{A3c}.
+This implies that there are more hyperparameters to tune.
+For example, DDPG~\cite{} requires 4 neural networks, in addition,
+its performance is known to be sensitive to hyperparameter settings~\cite{}.
+
+\section{Discussions}
+TODO

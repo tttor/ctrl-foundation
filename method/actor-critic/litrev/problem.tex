@@ -1,46 +1,44 @@
 \section{Problems and Existing Solutions}
 
-\subsection{low sample efficiency}
-AKA
-low data efficiency
-hi sample complexity
+% \subsection{low sample efficiency}
+% WHY:
+% * on-policy learning; train on each trajectory only once,
+%   * recall: vanilla actor-critic methods are on-policy only
+%   * on-policy leads to good convergence, why?
 
-WHY:
-* on-policy learning; train on each trajectory only once,
-  * recall: vanilla actor-critic methods are on-policy only
-  * on-policy leads to good convergence, why?
+% SOLUTION:
+% * off-policy learning (via replay buffer),
+%   BUT
+%   * may lead to bad convergence, why?
+%   EG:
+%   * reactor~\cite{Gruslys2018}: prioritized sequence replay
+%   * qprop:  Taylor expansion of the critic as a control variate
+%   * acer: 3 contrib:
+%     truncated importance sampling with bias correction,
+%     stochastic dueling network architectures, and
+%     a new trust region policy optimization method.
 
-SOLUTION:
-* off-policy learning (via replay buffer),
-  BUT
-  * may lead to bad convergence, why?
-  EG:
-  * reactor~\cite{Gruslys2018}: prioritized sequence replay
-  * qprop:  Taylor expansion of the critic as a control variate
-  * acer: 3 contrib:
-    truncated importance sampling with bias correction,
-    stochastic dueling network architectures, and
-    a new trust region policy optimization method.
+% * use more advanced optimization techniques
+% EG
+% * acktr: kfac
 
-* use more advanced optimization techniques
-EG
-* acktr: kfac
+% * soft-ac: max entropy actor critic
 
-\subsection{unguaranteed convergence}
+% \subsection{tradeoff bias and variance in estimating the gradient}
+% AKA
+% * overestimation on value estimate
 
-AKA
-* sensitive to hyperparameter settings
-
-WHY
-* off-policy learning
-
-SOLUTION
-* qprop: Taylor expansion of the critic as a control variate
-
-CONCERNS
-* off-policy learning
-* nonconvex optim in net
-* nonlinear fn approx of net
+% SOLUTION
+% * xxx
+%   EG:
+%   * reactor: beta-leave-one-out policy gradient estimate
+% * xxx2
+%   EG:
+%   * GAC: guide actor
+% * favors underestimations
+%   EG:
+%   * TD3
+% * dual critic
 
 \subsection{computational efficiency}
 AKA
@@ -60,23 +58,7 @@ SOLUTION
 CONCERN
 * gpu vs cpu computation
 
-\subsection{tradeoff bias and variance in estimating the gradient}
-AKA
-* overestimation on value estimate
-
-SOLUTION
-* xxx
-  EG:
-  * reactor: beta-leave-one-out policy gradient estimate
-* xxx2
-  EG:
-  * GAC: guide actor
-* favors underestimations
-  EG:
-  * TD3
-* dual critic
-
-\subsection{ease of implementation, deployment}
-AKA
-reproducibility
-
+% \subsection{ease of implementation, deployment}
+% AKA
+% reproducibility
+% * sensitive to hyperparameter settings

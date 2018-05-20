@@ -1,44 +1,44 @@
 \section{Introduction}
 
-One promising approach in RL is actor-critic.
-Briefly, it takes advantage of both value- and policy-based RL.
-One can view that actor-critic methods originate from policy-based RL, ie. REINFORCE.
+% One promising approach in RL is actor-critic.
+% Briefly, it takes advantage of both value- and policy-based RL.
+% One can view that actor-critic methods originate from policy-based RL, ie. REINFORCE.
 
-The REINFORCE-with-baseline algorithm learns both a policy and a state-value function.
-However, it does not belong to actor-critic becuase
-its state-value function is used only as a baseline, not as a critic.
-In other words, the value function is not used for bootstrapping
-(updating the value estimate for a state from the estimated values of subsequent states),
-but only as a baseline for the state whose estimate is being updated.
-Such bootstrapping is useful to reduces variance and accelerates learning,
-although it introduce bias and an asymptotic dependence on
-the quality of the function approximation.
+% The REINFORCE-with-baseline algorithm learns both a policy and a state-value function.
+% However, it does not belong to actor-critic because
+% its state-value function is used only as a baseline, not as a critic.
+% In other words, the value function is not used for bootstrapping
+% (updating the value estimate for a state from the estimated values of subsequent states),
+% but only as a baseline for the state whose estimate is being updated.
+% Such bootstrapping is useful to reduces variance and accelerates learning,
+% although it introduce bias and an asymptotic dependence on
+% the quality of the function approximation.
 
-Figure~\ref{} shows REINFORCE-with-baseline and one-step vanilla actor-critic.
-The latter is on-policy actor-critic.
-TODO: iterate the diff.
+% Figure~\ref{} shows REINFORCE-with-baseline and one-step vanilla actor-critic.
+% The latter is on-policy actor-critic.
+% TODO: iterate the diff.
 
-The objective is to
-maximize the expected $\gamma$-discounted cumulative return,
-$J(\theta) = \mathbb{E}_{\pi} [R_t] = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \gamma^i r(s_{t+i}, a_{t+1}) ]$
-with respect to the policy parameters~$\theta$.
-Note that $J(\theta)$ is a nonconvex function.
+% The objective is to
+% maximize the expected $\gamma$-discounted cumulative return,
+% $J(\theta) = \mathbb{E}_{\pi} [R_t] = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \gamma^i r(s_{t+i}, a_{t+1}) ]$
+% with respect to the policy parameters~$\theta$.
+% Note that $J(\theta)$ is a nonconvex function.
 
-The policy gradient is defined as:
-$\nabla_{\theta} J(\theta) = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \Psi^t \nabla log \pi_{\theta} (a_t | s_t) ]$,
-where $\Psi^t$ is often chosen to be the advantage function $A^{\pi}(s_t,a_t)$,
-which provides a relative measure of valur of each action~$a_t$ at a given state~$s_t$.
+% The policy gradient is defined as:
+% $\nabla_{\theta} J(\theta) = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \Psi^t \nabla log \pi_{\theta} (a_t | s_t) ]$,
+% where $\Psi^t$ is often chosen to be the advantage function $A^{\pi}(s_t,a_t)$,
+% which provides a relative measure of value of each action~$a_t$ at a given state~$s_t$.
 
-The trend:
-\begin{itemize}
-\item deep neural networks as
-      function approximators and policy representation
-\item scales to both continuous and discrete action spaces
-\item natural policy gradient, instead of standard gradient
-\end{itemize}
+% The trend:
+% \begin{itemize}
+% \item deep neural networks as
+%       function approximators and policy representation
+% \item scales to both continuous and discrete action spaces
+% \item natural policy gradient, instead of standard gradient
+% \end{itemize}
 
-Survey on actor-critic include:
-\cite{6392457}
+% Survey on actor-critic include:
+% \cite{6392457}
 
 % focus
 % single agent

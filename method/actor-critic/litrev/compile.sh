@@ -1,8 +1,8 @@
 #!/bin/sh
 
 ROOT_TEX=main
-BUILD_DIR=/home/tor/tmp/build-litrevactorcritic
-OUT_DIR=/home/tor/tmp
+BUILD_DIR=~/tmp/build-litrevactorcritic
+OUT_DIR=~/tmp
 OUT_FNAME=litrevactorcritic_vektor.pdf
 
 mkdir -p $BUILD_DIR
