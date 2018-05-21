@@ -37,29 +37,30 @@ Reactor~\cite{Gruslys2018} exploits the temporal locality of neighboring observa
 more efficient replay prioritization.
 In Reactor, critic is trained by the multi-step off-policy Retrace algorithm,
 while actor is trained by beta-leave-one-out policy gradient estimate.
-Q-prop~\cite{} uses the first-order Taylor expansion of the critic as a control variate,
+Q-prop~\cite{GuLilGhaTurLev17} uses the first-order Taylor expansion of the critic as a control variate,
 This yields an analytical gradient term through the critic and
 a Monte Carlo policy gradient term consisting of the residuals in advantage approximations.
 Overall, one can view Q-prop as
 using the off-policy critic to reduce variance in policy gradient, or
 using on-policy Monte Carlo returns to correct for bias in the critic gradient.
-SAC~\cite{} combines off-policy actor-critic training with a stochastic actor, and
+
+SAC~\cite{abs-1801-01290} combines off-policy actor-critic training with a stochastic actor, and
 further aims to maximize the entropy of this actor with an entropy maximization objective.
-ACER~\cite{} introduces 2 ways in harnessing experience replay, namely:
+ACER~\cite{WangBHMMKF16} introduces 2 ways in harnessing experience replay, namely:
 truncated importance sampling with bias correction and
 stochastic dueling network architectures.\\
 
 \noindent
 \textbf{On-policy solutions:}\\
-Other solutions for low sample officiency do not incorporate off-policy learning
-(so they stay on-policy).
-We notice that fewer works are done using on-policy solutions for dealing with high sample complexity.
+Other solutions for low sample officiency do not incorporate off-policy learning.
+In other words, they stay on-policy.
+We notice that fewer works are carried out using on-policy solutions for dealing with high sample complexity.
 
-ACKTR~\cite{} optimizes both the actor and the critic using
+ACKTR~\cite{NIPS2017_7112} optimizes both the actor and the critic using
 Kronecker-factored approximate curvature (K-FAC) with trust region.
 It also applies a natural gradient update to the critic;
 in most works, natural gradient updates are only for the actor.
-A3C~\cite{} asynchronously executes multiple agents in parallel on multiple instances of the environment;
+A3C~\cite{pmlr-v48-mniha16} asynchronously executes multiple agents in parallel on multiple instances of the environment;
 instead of using experience replay.
 The parallelism decorrelates the agents’ data into a more stationary process, since
 at any given time-step the parallel agents will be experiencing a variety of different states.
@@ -71,27 +72,27 @@ The value from critic is aimed to reduce the variance and to accelerate learning
 although it introduces bias and an asymptotic dependence on the quality of the function approximation.
 As a result, the intricacy between actor and critic can be encoded as the bias and variance tradeoff.
 
-GAC~\cite{} learns a guide actor that locally maximizes the critic.
+GAC~\cite{tangkaratt2018guide} learns a guide actor that locally maximizes the critic.
 It updates the guide actor by performing second-order optimization in
 the action space where the curvature matrix is based on the Hessians of the critic.
-TD3~\cite{} favors underestimations.
+TD3~\cite{abs-1802-09477} favors underestimations.
 It takes the minimum value between a pair of critics to restrict overestimation and
 delays policy updates to reduce per-update error.
-In Dual-AC~\cite{}, the actor and dual-critic are updated cooperatively to
+In Dual-AC~\cite{dai2018boosting}, the actor and dual-critic are updated cooperatively to
 optimize the same objective function.
 This can be viewed as a two-player game between the actor and a critic-like function.
 
-\subsection{Reproducibility}
-The reproducibility issue in actor-critic is naturally worse than in general RL~\cite{}.
-Typically, there are, at least, 2 neural networks in deep actor-critic RL methods.
+\subsection{Low reproducibility}
+The reproducibility issue in actor-critic approaches is naturally worse than in general RL~\cite{henderson2017reinforcement}.
+Typically, there are, at least, 2 neural networks in deep actor-critic RL.
 Although it is theoretically possible to use one network for both actor and critic,
-in practice, especially for continuous action spaces, separate networks are superior~\cite{A3c}.
+in practice, especially for continuous action spaces, separate networks are superior~\cite{pmlr-v48-mniha16}.
 This implies that there are more hyperparameters to tune.
-For example, DDPG~\cite{} requires 4 neural networks, in addition,
-its performance is known to be sensitive to hyperparameter settings~\cite{}.
+For example, DDPG~\cite{LillicrapHPHETS15} requires 4 neural networks.
+Moreover, its performance is known to be sensitive to hyperparameter settings~\cite{Duan:2016}.
 
 There exist several initiatives for better reproducibility in terms of standardization.
-In our opinion, the top-2 are OpenAI's baseline~\cite{} and gym~\cite{}.
+In our opinion, the top-2 are OpenAI's baseline~\cite{baselines} and gym~\cite{1606.01540}.
 The former provides high quality implementation of major actor-critic algorithms.
 Whereas, the latter has a set of standardized test environments for both discrete and continuous action spaces.
 We observe that the community progressively accepts these baseline and gym for benchmarking.
@@ -101,19 +102,19 @@ whether tensorflow (as in the baseline) or pytorch.
 \section{Discussions}
 We believe that we should not trade convergence for sample efficiency.
 In other words, the first preference is to learn on-policy with some advance optimization methods
-in order to improve the sample efficiency.
-To this end, other network architecture, including activation functions, are also worth exploring.s
+in order to improve the sample efficiency, like ACKTR~\cite{NIPS2017_7112}.
+To this end, other network architecture, including activation functions, are also worth exploring.
 Additionally, we argue that variance can be reduced \emph{not only} by critic,
-\emph{but also} by other variance reduction techniques from the field of monte-carlo simulation~\cite{}.
+\emph{but also} by other variance reduction techniques from the field of monte-carlo simulation~\cite{citeulike:14544227}.
 
 In order to foster the reproducibility, we should aim for an architecture with the following characterisics.
 First, it is minimal, for example, in terms of the number of neural networks.
 Concretely, this means one shared neural network for both actor and critic.
-Secondly, it has insensitive hyperparams so that rough tuning is already sufficient
-Thirdly, it provide an easy switch among neural-network backends.
+Secondly, it has insensitive hyperparams so that rough tuning is already sufficient.
+Thirdly, it provides an easy switch among neural-network backends.
 
 Because sample complexity remains high, it is always desirable to have parallel implementation.
-Its distributive nature will reduce wall-clock time so that more experiment can be carried out.
-We note that most works report statistics inferred from few number of experiments; merely 3, 5, up to 10 runs.
-The parallelism should not limited to the deep network training, but to include core component of actor-critic.
-One good attempt is Reactor~\cite{} that presents distributional retrace.
+Its distributive nature will reduce wall-clock time so that more experiments can be carried out.
+We note that most works report statistics inferred merely from few number of experiments; 3, 5, up to 10 runs~\cite{henderson2017reinforcement}.
+The parallelism should not only for deep network training, but also for core components of actor-critic.
+One good attempt is Reactor~\cite{Gruslys2018} that presents distributional retrace.
