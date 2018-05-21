@@ -6,10 +6,10 @@ Essensially, we have a parameterized policy in the actor that is
 updated with information from the critic.
 
 The objective is to maximize the expected $\gamma$-discounted cumulative return,
-$J(\theta) = \mathbb{E}_{\pi} [R_t] = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \gamma^i r(s_{t+i}, a_{t+1}) ]$
+$J(\theta) = \mathbb{E}_{\pi} [R_t] = \mathbb{E}_{\pi} [ \sum_{t \ge 0}^{\infty} \gamma^t r(s_{t}, a_{t}) ]$
 with respect to the policy parameters~$\theta$.
 The policy gradient is defined as
-$\nabla_{\theta} J(\theta) = \mathbb{E}_{\pi} [ \sum_{i \ge 0}^{\infty} \Psi^t~\nabla log~\pi_{\theta} (a_t | s_t) ]$,
+$\nabla_{\theta} J(\theta) = \mathbb{E}_{\pi} [ \sum_{t \ge 0}^{\infty} \Psi^t~\nabla log~\pi_{\theta} (a_t | s_t) ]$,
 where $\Psi^t$ is typically an advantage function $A^{\pi}(s_t,a_t)$ computed by the critic.
 The trend is to utilize deep neural networks as both policy representation and
 (non-linear) function approximator, by which we have nonconvex optimization and
@@ -27,12 +27,11 @@ the cost of low sample efficiency as it trains on each trajectory only once.\\
 
 \noindent
 \textbf{Off-policy solutions:}\\
-One straightforward solution for this is to (also) train off-policy using a replay buffer.
+One straightforward solution for this is to train off-policy using a replay buffer.
 This, however, results in bad convergence because the training data
 do not come from the current policy, but from another behaviour policy.
-Consequently, works in this line propose ideas that \emph{not only} benefits from
-off-policy learning \emph{but also} (try to) maintains convergence,
-for example, Reactor~\cite{Gruslys2018}, Q-prop~\cite{}, and ACER~\cite{}.
+Consequently, works in this line propose ideas that \emph{not only} benefit from
+off-policy learning \emph{but also} (try to) maintain convergence.
 
 Reactor~\cite{Gruslys2018} exploits the temporal locality of neighboring observations for
 more efficient replay prioritization.
@@ -44,28 +43,43 @@ a Monte Carlo policy gradient term consisting of the residuals in advantage appr
 Overall, one can view Q-prop as
 using the off-policy critic to reduce variance in policy gradient, or
 using on-policy Monte Carlo returns to correct for bias in the critic gradient.
-ACER~\cite{} introduces 2 ways in using experience replay, namely:
+SAC~\cite{} combines off-policy actor-critic training with a stochastic actor, and
+further aims to maximize the entropy of this actor with an entropy maximization objective.
+ACER~\cite{} introduces 2 ways in harnessing experience replay, namely:
 truncated importance sampling with bias correction and
 stochastic dueling network architectures.\\
 
 \noindent
 \textbf{On-policy solutions:}\\
 Other solutions for low sample officiency do not incorporate off-policy learning
-(so they stay on-policy), for example: ACKTR~\cite{}, soft-AC~\cite{}, and A3C~\cite{}.
+(so they stay on-policy).
+We notice that fewer works are done using on-policy solutions for dealing with high sample complexity.
 
-ACKTR uses more advance optimization technique, i.e. Kronecker-factored approximate curvature (K-FAC).
-Whereas, soft-AC uses maximum entropy.
+ACKTR~\cite{} optimizes both the actor and the critic using
+Kronecker-factored approximate curvature (K-FAC) with trust region.
+It also applies a natural gradient update to the critic;
+in most works, natural gradient updates are only for the actor.
+A3C~\cite{} asynchronously executes multiple agents in parallel on multiple instances of the environment;
+instead of using experience replay.
+The parallelism decorrelates the agents’ data into a more stationary process, since
+at any given time-step the parallel agents will be experiencing a variety of different states.
 
 \subsection{Bias and variance tradeoff}
-Actor-critic methods originate from policy-based methods that
-use Monte-carlo rollouts to estimate the policy gradient; hence having high variance.
+Actor-critic methods originate from policy-based methods in model-free setting that
+wait until the end of an episode to estimate the policy gradient; hence having high variance.
 The value from critic is aimed to reduce the variance and to accelerate learning;
 although it introduces bias and an asymptotic dependence on the quality of the function approximation.
 As a result, the intricacy between actor and critic can be encoded as the bias and variance tradeoff.
 
-GAC~\cite{} introduces guide actors.
+GAC~\cite{} learns a guide actor that locally maximizes the critic.
+It updates the guide actor by performing second-order optimization in
+the action space where the curvature matrix is based on the Hessians of the critic.
 TD3~\cite{} favors underestimations.
-Dual-AC~\cite{} suggests using dual critic.
+It takes the minimum value between a pair of critics to restrict overestimation and
+delays policy updates to reduce per-update error.
+In Dual-AC~\cite{}, the actor and dual-critic are updated cooperatively to
+optimize the same objective function.
+This can be viewed as a two-player game between the actor and a critic-like function.
 
 \subsection{Reproducibility}
 The reproducibility issue in actor-critic is naturally worse than in general RL~\cite{}.
@@ -76,7 +90,7 @@ This implies that there are more hyperparameters to tune.
 For example, DDPG~\cite{} requires 4 neural networks, in addition,
 its performance is known to be sensitive to hyperparameter settings~\cite{}.
 
-There exist several initiatives for better reproducibility.
+There exist several initiatives for better reproducibility in terms of standardization.
 In our opinion, the top-2 are OpenAI's baseline~\cite{} and gym~\cite{}.
 The former provides high quality implementation of major actor-critic algorithms.
 Whereas, the latter has a set of standardized test environments for both discrete and continuous action spaces.
@@ -85,12 +99,15 @@ The progress, however, has been slowed down mainly due to technical choices of t
 whether tensorflow (as in the baseline) or pytorch.
 
 \section{Discussions}
-reduce variance not only by critic, but variance reduction technique from monte-carlo sim field;
-should not trade convergence for sample efficiency;
-should be on-policy with other optimization tehck, optiomizer, activation fn, net arch
+We believe that we should not trade convergence for sample efficiency.
+In other words, the first preference is to learn on-policy with some advance optimization methods
+in order to improve the sample efficiency.
+To this end, other network architecture, including activation functions, are also worth exploring.s
+Additionally, we argue that variance can be reduced \emph{not only} by critic,
+\emph{but also} by other variance reduction techniques from the field of monte-carlo simulation~\cite{}.
 
 In order to foster the reproducibility, we should aim for an architecture with the following characterisics.
-First, it is minimal, for example, in term of the number of neural networks.
+First, it is minimal, for example, in terms of the number of neural networks.
 Concretely, this means one shared neural network for both actor and critic.
 Secondly, it has insensitive hyperparams so that rough tuning is already sufficient
 Thirdly, it provide an easy switch among neural-network backends.
