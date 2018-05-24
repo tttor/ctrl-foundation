@@ -9,6 +9,7 @@
 [Vitchyr Pong](https://people.eecs.berkeley.edu/~vitchyr/),
 [Yevgen Chebotar](http://www-clmc.usc.edu/Main/YevgenChebotar),
 [Yan Duan](http://rockyduan.com/),
+[Gregory Kahn](https://people.eecs.berkeley.edu/~gregoryk/),
 ...
 
 ### Young, t >= 2015 
