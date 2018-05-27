@@ -17,17 +17,10 @@
 ## observation
 * hypothesize  that  the  maximum  entropy  principle  [6]
   can  yield  an  effective  framework  for  practical,  real-world
-  deep reinforcement learning due to the following two prop-
-  erties
+  deep reinforcement learning due to the following two properties
 
 ## idea
-* two  important  features  of  soft  Q-learning.  First,
-soft Q-learning can learn multimodal exploration strategies by
-learning  policies  represented  by  expressive  energy-based  mod-
-els. Second, we show that policies learned with soft Q-learning
-can be composed to create new policies, and that the optimality
-of the resulting policy can be bounded in terms of the divergence
-between the  composed policies
+?
 
 ## result
 * soft Q-learning is substantially more sample efficient than prior model-free deep
@@ -40,6 +33,14 @@ between the  composed policies
   function.   This   bound   suggests   that   policies   with   higher
   entropy  may  be  easier  to  compose
 * softQ > NAF > DDPGs
+
+## background
+* 2 important  features  of  soft  Q-learning.
+  * soft Q-learning can learn multimodal exploration strategies by
+    learning  policies  represented  by  expressive  energy-based  models.
+  * policies learned with soft Q-learning can be composed to create new policies,
+    sand that the optimality of the resulting policy can be bounded in terms of
+    the divergence between the  composed policies
 
 ## comment
 * ? soft Q-learning: critic-only?
