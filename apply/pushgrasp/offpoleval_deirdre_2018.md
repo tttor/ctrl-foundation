@@ -5,6 +5,9 @@
 ## problem
 * proliferation of algorithms makes it difficult to discern which particular approach would be best 
   suited for **rich, diverse, and highly varied situations tasks** like grasping.
+* most deep RL applications 
+  * generally tackle individual skills and 
+  * not emphasize generalizing to task instances beyond what the robot was trained on
 
 ## idea
 * simulated benchmark for robotic grasping that emphasizes off- policy learning and generalization to unseen objects
@@ -14,8 +17,14 @@
   * a  novel  approach  based  on  a  combination  of  Monte  Carlo return  estimation  and  an  off-policy  correction
 
 ## setup
+* task: 
+  * grasping with diverse obj shapes
+  * object positions and rotations are randomized within the bin
+  * The reward is binary, only at the last step, 
+    * with r(sT ,aT ) = 1 for a successful grasp and 0 for a failed grasp
+  * Continuous actions are represented by a Cartesian displacement
 * baseline:
-  PCL, DDPG, ...
+  Q-learning, PCL, DDPG, ...
 * tool: pybullet
 
 ## result
@@ -36,9 +45,12 @@
   making it difficult to handle extremely diverse grasping scenarios
   * Off-policy reinforcement learning methods might therefore be preferred for tasks such as grasping, where 
     the wide variety of previously seen objects is crucial for generalization.
-
+* The use of a separate actor network has considerable benefits: 
+  * obtaining the action from the actor is much faster than stochastic search, and 
+  * the actor training process can have an amortizing effect that can accelerate learning [25]. 
 
 ## comment
+* ! simulated only, no real robots
 * ? vary the gripper shapes?
   ans: not trained
 * ? movable obj
