@@ -1,6 +1,4 @@
 \section{Discussions}
-TODO
-
 % net arch
 % which optimizer? Adam, KFAC, SGL, RMSProp
 % activation fn
@@ -12,8 +10,28 @@ TODO
 % Variance Reduction Techniques,
 % * ch 10 @Sheldon M. Ross-Simulation, Fifth Edition-Academic Press (2012)
 % * https://people.smp.uq.edu.au/DirkKroese/montecarlohandbook/
+% * Monte Carlo theory, methods and examples, Art B. Owen, 2013
 
 % not the same set of task,
 % eg reacher is missing
 
 % reduce variance will reduce sample complexity
+
+We believe that we should not trade convergence for sample efficiency.
+In other words, the first preference is to learn on-policy with some advance optimization methods
+in order to improve the sample efficiency, like ACKTR~\cite{NIPS2017_7112}.
+To this end, other network architectures, including activation functions, learning rates, are also worth exploring.
+Additionally, we argue that variance can be reduced \emph{not only} by critic,
+\emph{but also} by specific variance reduction techniques from the field of monte-carlo simulation~\cite{citeulike:14544227}.
+
+In order to foster the reproducibility, we should aim for an architecture with the following characterisics.
+First, it is minimal, for example, in terms of the number of neural networks.
+Concretely, this means one shared neural network for both actor and critic.
+Secondly, it has insensitive hyperparameters so that rough tuning is already sufficient.
+Thirdly, it provides easy switching among neural-network backends.
+
+Because sample complexity remains high, it is always desirable to have parallel implementation.
+Its distributive nature will reduce wall-clock time so that more experiments can be carried out.
+We note that most works report statistics inferred merely from few number of experiments; 3, 5, up to 10 runs~\cite{henderson2017reinforcement}.
+The parallelism should not only for deep network training, but also for core components of actor-critic.
+One good attempt is Reactor~\cite{Gruslys2018} that presents distributional retrace.

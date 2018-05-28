@@ -48,3 +48,18 @@
 % nonlinear fn approx, eg net
 % fully observable
 
+In reinforcement learning (RL),
+actor-critic approaches combine policy- and value-based methods~\cite{6392457};
+pure versions of those methods are called actor-only and critic-only, respectively.
+Essensially, we have a parameterized policy in the actor that is
+updated with information from the critic.
+
+The objective is to maximize the expected $\gamma$-discounted cumulative return,
+$J(\theta) = \mathbb{E}_{\pi} [R_t] = \mathbb{E}_{\pi} [ \sum_{t \ge 0}^{\infty} \gamma^t r(s_{t}, a_{t}) ]$
+with respect to the policy parameters~$\theta$.
+The policy gradient is defined as
+$\nabla_{\theta} J(\theta) = \mathbb{E}_{\pi} [ \sum_{t \ge 0}^{\infty} \Psi^t~\nabla log~\pi_{\theta} (a_t | s_t) ]$,
+where $\Psi^t$ is typically an advantage function $A^{\pi}(s_t,a_t)$ computed by the critic.
+The trend is to utilize deep neural networks as both policy representation and
+(non-linear) function approximator, by which we have nonconvex optimization and
+the so-called deep actor-critic RL.
