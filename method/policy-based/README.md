@@ -17,6 +17,8 @@
   * TNPG: Truncated Natural Policy Gradient
   
 ## tutor
+* Jan Peter: Policy Search: Methods and Applications
+  * https://icml.cc/2015/tutorials/PolicySearch.pdf
 * http://karpathy.github.io/2016/05/31/rl/
   * https://www.youtube.com/watch?v=tqrcjHuNdmQ
   * https://www.youtube.com/watch?v=PDbXPBwOavc
