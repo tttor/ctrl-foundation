@@ -8,6 +8,9 @@
    * plans ahead and 
    * improves its policy before it actually acts in the environment.
  
+## setup
+* for discrete problem. 
+
 ## result
 * Numerical experiments suggest that 
   the probabilistic policy indeed converges to an optimal policy—but quite slowly
