@@ -34,13 +34,14 @@
 ### Old, t < 2008
 * Pascal Poupart, 2005
 * Andrew Bagnell, 2004
+* Joelle Pineau, 2004
+* [Remi Munos](http://researchers.lille.inria.fr/~munos/): Contributions to reinforcement learning and optimal control with approximation, 2004
 * Richard Sutton
 * Andrew Barto
 * Csaba Szepesvári
 * Michael Littman
 * Sebastian Thrun
 * Leslie Kaebling
-* Joelle Pineau, 2004
 * Jan Peters
 * Masashi Sugiyama
 * Satinder Singh
