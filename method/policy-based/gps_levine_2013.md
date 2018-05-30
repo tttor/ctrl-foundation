@@ -9,15 +9,20 @@
 * complex policies with hundreds of parameters often requires numerous samples and 
   often falling into poor local optima.
   
-## idea
-* a guided policy search algorithm that uses trajectory optimization to 
-  direct policy learning and avoid poor local optima.
-* use differential dynamic programming to generate suitable guiding samples,
-  which assist the policy search by exploring high-reward regions
+## idea: GPS
 * GPS: a policy search that incorporates guiding samples into the policy search. 
   * These samples are drawn from a distribution built around a DDP solution,
     which can be initialized from demonstrations. 
-
+  *  can be viewed as transforming a collection of trajectories into a controller. 
+* a guided policy search algorithm that uses trajectory optimization to 
+  direct policy learning and avoid poor local optima.
+* use differential dynamic programming (DDP)
+  * to supplement the sample set with off-policy guiding samples that 
+    guide the policy search to regions of high reward.
+* incorporate guiding samples into the policy search 
+  * by building one or more initial DDP solutions and 
+  * supplying the resulting samples to the importance sampled policy search algorithm. 
+ 
 ## result
 * proposed sampling scheme and regularizer are essential for good performance, and 
 * the learned policies can generalize successfully to new environments.
