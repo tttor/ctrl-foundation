@@ -1,6 +1,7 @@
 # Model predictive control: Recent developments and future promise
 * David Q. Mayne
 * Automatica 50 (2014) 2967–2986
+* https://www.sciencedirect.com/science/article/pii/S0005109814005160
 
 ## intro
 *  MPC: applying at state x the first control in a finite sequence of control
