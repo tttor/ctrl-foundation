@@ -48,4 +48,8 @@ This is also formulated in some other fields, including
 
 ## mpc
 * http://www.mpc.berkeley.edu
-
+* http://deepmpc.cs.cornell.edu/
+> Defining `X_{t:k}` as the system state from time `t` through time `k`, and `U_{t:k}` similarly for system inputs, 
+a model-predictive controller works by finding a set of optimal inputs `U^*_{t+1:t+T}` which minimize some cost function
+`C(\hat{X}_{t+1:t+T}, U_{t+1:t+T})` over predicted state `\hat{X}` and control inputs `U` for some finite time horizon `T`
+ 
