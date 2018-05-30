@@ -1,6 +1,6 @@
 # Trust Region Policy Optimization
-https://arxiv.org/abs/1502.05477
-(ICML 2015)
+* icml2015
+* https://arxiv.org/abs/1502.05477
 
 ## idea: TRPO (trust region policy optimization)
 * two variants of this algorithm: 
@@ -39,7 +39,7 @@ https://arxiv.org/abs/1502.05477
   * By combining TRPO with model learning, it would also be possible to substantially reduce its sample complexity, 
   making it applicable to real-world settings where samples are expensive.
   
-## misc
+## background
 * policy optimization can be classified into three broad categories: 
   * **policy iteration methods**, which alternate between estimating the value function under the current policy and improving the policy (Bertsekas, 2005); 
   * **policy gradient methods**, which use an estimator of the gradient of the expected return (total reward) obtained from sample trajectories (Peters & Schaal, 2008a) (and which, as we later discuss, have a close connection to policy iteration); and 

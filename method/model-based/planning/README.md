@@ -45,3 +45,7 @@ Some use the term "planning" (to denote decision making processes) once the mode
 The model here provides a way to access or sample the dynamics of the environment so that trajectories can be internally simulated.
 This is also formulated in some other fields, including
 ["optimal learning"](http://optimallearning.princeton.edu/) and "dual control".
+
+## mpc
+* http://www.mpc.berkeley.edu
+

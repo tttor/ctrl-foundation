@@ -1,5 +1,6 @@
 # Hindsight Experience Replay
-Conference on Neural Information Processing Systems (NIPS 2017), Long Beach, CA, USA.
+* nips2017: poster
+* https://papers.nips.cc/paper/7090-hindsight-experience-replay
 
 ## problem
 * sparse (and binary, not informative) rewards
