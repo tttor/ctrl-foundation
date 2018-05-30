@@ -72,6 +72,9 @@ This problem stems from the fact that vanilla actor-critic methods are on-policy
 On-policy learning leads to good convergence to the target policy at
 the cost of low sample efficiency as it trains on each trajectory only once.\\
 
+% Low sample effiency is also becuase policy grad use monte-carlo techniques
+% that tend to have high variance, which leads to slow convergence
+
 \noindent
 \textbf{Off-policy solutions:}\\
 One straightforward solution for this is to train off-policy using a replay buffer.
@@ -108,6 +111,14 @@ For example:
 GAC~\cite{tangkaratt2018guide},
 TD3~\cite{abs-1802-09477},
 In Dual-AC~\cite{dai2018boosting}.
+
+% major shortcoming of these algorithms, namely, the high variance of the gradient estimates.
+% This problem may be traced to the fact that in most interesting cases, the time-average of
+% the observed rewards is a high-variance (although unbiased) estimator of the true average
+% reward, resulting in the sample-inefficiency of these algorithms.
+
+% See, bayesian actor critic, GPS, GAE
+lots work on policy-based try to reduce variance
 
 \subsection{Low reproducibility}
 The reproducibility issue in actor-critic approaches is naturally worse than in general RL~\cite{henderson2017reinforcement}.
