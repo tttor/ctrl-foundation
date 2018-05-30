@@ -1,7 +1,7 @@
 # model-based
 
 ## planning
-Go to [planning](planning)
+* online planning is related to **model predictive control (MPC)**
 
 ## model learning
 * inverse RL
