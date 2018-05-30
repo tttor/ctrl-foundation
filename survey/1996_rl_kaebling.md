@@ -1,13 +1,6 @@
 # Kaebling: Reinforcement Learning: A Survey
-
-@article{KLMSurvey1996,
-author = "Leslie Pack Kaelbling and Michael L. Littman and Andrew P. Moore",
-title = "Reinforcement Learning: A Survey",
-journal = "Journal of Artificial Intelligence Research",
-volume = "4",
-pages = "237-285",
-year = "1996",
-}
+* Leslie Pack Kaelbling and Michael L. Littman and Andrew P. Moore
+* Journal of Artificial Intelligence Research, 4, 1996
 
 The model consists of knowledge of
 the state transition probability function $T(s,a,s')$ and
