@@ -13,6 +13,7 @@
       * training online: interleaved or in parallel (in background) with (during) execution
       * in Atari games, it is always true model-free
         because the worlds for both training and testing are always the same
+      * to run true model-free experiment in simulator: use simulated world
     * _pseudo_ model-free:
       * **there exists discrepancy** between _the world for training_ and _the world for testing_
       * the discrepancy is inherited from the fact that **no model** can perfectly approximate the real world
