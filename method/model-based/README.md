@@ -1,11 +1,7 @@
 # model-based
+consists of
+* planning
+  * online planning is related to **model predictive control (MPC)**
+* model learning
+  * including: learning reward (inverse RL)
 
-## planning
-* online planning is related to **model predictive control (MPC)**
-
-## model learning
-* inverse RL
-* sample-efficient:
-  [pilco_deisenroth_2015.md](pilco_deisenroth_2015.md), 
-  [texplore_hester_2013.md](texplore_hester_2013.md), ...
-  

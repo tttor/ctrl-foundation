@@ -1,8 +1,9 @@
 # dyna
+dyna := model-free (direct) + model-based (indirect) RL
 
 ## taxonomy
 * Dyna_1990
-  * Dyna2_2008, 
+  * Dyna2_2008,
 * misc:
   PILQR_2017, VPN_2017
 
