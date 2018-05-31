@@ -1,6 +1,7 @@
 # Integrating a Partial Model into Model Free Reinforcement Learning
 * Aviv Tamar et al
 * Journal of Machine Learning Research 13 (2012) 1927-1966
+* http://www.jmlr.org/papers/volume13/tamar12a/tamar12a.pdf
 
 ## problem
 * Model free RL algorithms typically operate without explicit knowledge of the underlying environment,
@@ -26,6 +27,7 @@ mation is available in a specific form which we term partially known MDP
 * provide a method for integrating such information into RL algorithms of the Stochastic Approximation (SA) type
 *  to bound the term δθ, which is the error in the value function, and can be seen as
 the total bias induced by the IPM method with the inaccurate model
+* IPM Policy Gradient, IPM Q-learning
 
 ## result
 *  Our method improves the asymptotic behavior of the algorithm, and at each iteration reduces the esti-
