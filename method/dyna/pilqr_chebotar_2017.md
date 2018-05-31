@@ -1,4 +1,9 @@
-# pilqr_chebotar_2017
+# Combining Model-Based and Model-Free Updates for Trajectory-Centric Reinforcement Learning
+* Yevgen Chebotar et al
+* icml2017
+* https://arxiv.org/pdf/1703.03078.pdf
+* https://am.is.tuebingen.mpg.de/publications/pilqr_icml17
+* https://vimeo.com/238244081
 
 ## problems
 * real-world applications of RL have to contend with two often opposing requirements: 
