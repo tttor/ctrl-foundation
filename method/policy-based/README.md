@@ -1,4 +1,5 @@
 # policy-based
+See also: [method/model-based/planning/policy-based](https://github.com/tttor/rl-foundation/tree/master/method/model-based/planning/policy-based)
 
 ## taxonomy
 * gradient-free
