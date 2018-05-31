@@ -1,15 +1,17 @@
 # thesis
+
 ## people
 ### On going
 [Alex Irpan](https://www.alexirpan.com/),
 [Chelsea Finn](http://people.eecs.berkeley.edu/~cbfinn/),
+[Gregory Kahn](https://people.eecs.berkeley.edu/~gregoryk/),
 [Junhyuk Oh](https://sites.google.com/a/umich.edu/junhyuk-oh/),
+[Marvin Zhang](http://marvinzhang.com/),
 [Riashat Islam](https://riashatislam.com/),
 [Shane Gu](http://sg717.user.srcf.net/),
 [Vitchyr Pong](https://people.eecs.berkeley.edu/~vitchyr/),
-[Yevgen Chebotar](http://www-clmc.usc.edu/Main/YevgenChebotar),
 [Yan Duan](http://rockyduan.com/),
-[Gregory Kahn](https://people.eecs.berkeley.edu/~gregoryk/),
+[Yevgen Chebotar](http://www-clmc.usc.edu/Main/YevgenChebotar),
 ...
 
 ### Young, t >= 2015 
