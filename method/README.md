@@ -5,8 +5,8 @@
   * the agent directly learns an optimal (or good) action-selection strategy from the collected data.
   * (in policy-search) is a general approach to learn policies based on **sampled trajectories**
   * based on whether there exist **discrepancy** between _the world for training_ and _the world for testing_:
-    (note: 
-    the world can be either real or simulated (using a generative model), 
+    (note:
+    the world can be either real or simulated (using a generative model),
     testing means execution)
     * _true_ model-free:
       * **no discrepancy** between _the world for training_ and _the world for testing_
@@ -27,6 +27,8 @@
     * (+) learning a policy is often easier than learning an accurate forward model;
           may be more efficient in cases where the solution space (e.g., policy space)
           exhibits more regularity than the underlying dynamics
+    * (+) less computational resources
+    * (+) not affected by biases in the design (or estimation) of the model.
     * (-) less sample-efficient, high sample complexity
     * (-) require policies with carefully designed, low-dimensional parameterizations
     * (-) necessary to interact with the (real(in true model-free)) robot,
@@ -40,7 +42,7 @@
     subsequently, use this model for policy improvement.
   * consists of: planning and model learning
   * pros and cons
-    * (+) sample-efficient; better results with less data
+    * (+) sample-efficient; better results with less interaction with the world (experience)
     * (+) model learning transfers across tasks and environment configurations (learning physics)
     * (+) potentially to efficiently generalize to unforeseen situations
     * (-) suffer from significant bias, complex unknown dynamics cannot always be modeled accurately enough
@@ -118,13 +120,13 @@
     * (+) able to learn about an optimal policy while executing an exploratory policy
     * (+) able to learn multiple tasks in parallel from
           a single sensorimotor interaction with an environment
-    * (+) much more sample-efficient. 
+    * (+) much more sample-efficient.
     * (-) does **not stably** interact with function approximation
           (need extensive hyperparameter tuning can be required to obtain stable behavior)
     * (-) require complex approximate inference procedures in continuous action spaces.
-    * (-) convergence is in general not guaranteed with non-linear function approximators, and 
-    * (-) practical convergence and instability issues typically mean that 
-          extensive hyperparameter tuning is required to attain good results.  
+    * (-) convergence is in general not guaranteed with non-linear function approximators, and
+    * (-) practical convergence and instability issues typically mean that
+          extensive hyperparameter tuning is required to attain good results.
 * hybrid: `on-policy`+`off-policy`
 
 ## other dimensions:
