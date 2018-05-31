@@ -1,6 +1,10 @@
 # dyna
 dyna := model-free (direct) + model-based (indirect) RL
 
+## component
+* model-error analysis
+* common/unifying learning method
+
 ## taxonomy
 * Dyna_1990
   * Dyna2_2008,
