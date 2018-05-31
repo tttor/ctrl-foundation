@@ -35,9 +35,14 @@
 
 ### Old, t < 2008
 * Pascal Poupart, 2005
-* Andrew Bagnell, 2004
+* Andrew Bagnell: Learning decisions: robustness, uncertainty, and approximation, 2004
 * Joelle Pineau, 2004
 * [Remi Munos](http://researchers.lille.inria.fr/~munos/): Contributions to reinforcement learning and optimal control with approximation, 2004
+* Andrew Ng: Shaping and policy search in reinforcement learning, 2003
+* Sham M. Kakade: On the Sample Complexity of Reinforcement Learning, 2003
+* Vijaymohan Konda: Actor-Critic Algorithms, 2002
+* Benjamin Van Roy: Learning and Value Function Approximation in Complex Decision Processes, 1998
+* Chris Watkins: Learning from delayed rewards, 1989
 * Richard Sutton
 * Andrew Barto
 * Csaba Szepesvári
@@ -48,11 +53,6 @@
 * Masashi Sugiyama
 * Satinder Singh
 * Gerald Tesauro
-* Andrew Ng: Shaping and policy search in reinforcement learning, 2003
-* Sham M. Kakade: On the Sample Complexity of Reinforcement Learning, 2003
-* Vijaymohan Konda: Actor-Critic Algorithms, 2002
-* Benjamin Van Roy: Learning and Value Function Approximation in Complex Decision Processes, 1998
-* Chris Watkins: Learning from delayed rewards, 1989
 
 ## labs
 * http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html
