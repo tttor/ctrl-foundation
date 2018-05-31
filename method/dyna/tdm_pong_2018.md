@@ -4,6 +4,7 @@
 * https://openreview.net/forum?id=Skw0n-W0Z
 * https://arxiv.org/abs/1802.09081
 * https://github.com/vitchyr/rlkit
+* http://bair.berkeley.edu/blog/2018/04/26/tdm/
 
 ## problem
 * model-free: low sample efficiency in model-free
