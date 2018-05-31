@@ -17,6 +17,9 @@
   * TNPG: Truncated Natural Policy Gradient
   
 ## tutor
+* Quora
+  * https://www.quora.com/Why-does-the-policy-gradient-method-have-a-high-variance
+  * https://www.quora.com/What-is-the-difference-between-policy-gradient-methods-and-actor-critic-methods
 * Jan Peter: Policy Search: Methods and Applications
   * https://icml.cc/2015/tutorials/PolicySearch.pdf
 * http://karpathy.github.io/2016/05/31/rl/
