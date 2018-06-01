@@ -3,7 +3,6 @@
 * nips2017: poster
 * https://papers.nips.cc/paper/7112-scalable-trust-region-method-for-deep-reinforcement-learning-using-kronecker-factored-approximation
 * https://arxiv.org/abs/1708.05144
-* https://arxiv.org/abs/1503.05671
 * https://media.nips.cc/nipsbooks/nipspapers/paper_files/nips30/reviews/2732.html
 * https://blog.openai.com/baselines-acktr-a2c/
 * https://github.com/openai/baselines/tree/master/baselines/acktr # tf
@@ -144,7 +143,9 @@
 ## comment
 * KFAC= KFAC + trustRegion + A3C
   * ACKTR is on-policy
-  * KFAC is second-order optimizer, see https://www.tensorflow.org/api_docs/python/tf/contrib/kfac
+  * KFAC is second-order optimizer
+    * https://arxiv.org/abs/1503.05671
+    * https://www.tensorflow.org/api_docs/python/tf/contrib/kfac    
 * setup for random seeds varies across plots and tables
 * (?) why those 6 games?
   * ans: see Table 4 at appendix B, with Q-learning, one seed
