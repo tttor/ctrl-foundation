@@ -141,11 +141,10 @@
 * active line of research:
   designing an advantage function that provides **both low-variance and low-bias** gradient estimates
 
-
 ## comment
 * KFAC= KFAC + trustRegion + A3C
   * ACKTR is on-policy
-  * KFAC is yet another optimizer, see https://www.tensorflow.org/api_docs/python/tf/contrib/kfac
+  * KFAC is second-order optimizer, see https://www.tensorflow.org/api_docs/python/tf/contrib/kfac
 * setup for random seeds varies across plots and tables
 * (?) why those 6 games?
   * ans: see Table 4 at appendix B, with Q-learning, one seed
