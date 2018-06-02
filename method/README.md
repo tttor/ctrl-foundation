@@ -30,12 +30,15 @@
           exhibits more regularity than the underlying dynamics
     * (+) less computational resources
     * (+) not affected by biases in the design (or estimation) of the model.
+    * (+) makes little assumptions beyond a reward function
+    * (+) effective for learning complex policies
     * (-) less sample-efficient, high sample complexity
     * (-) require policies with carefully designed, low-dimensional parameterizations
     * (-) necessary to interact with the (real(in true model-free)) robot,
           which can be time consuming and challenging in practice
     * (-) brittle convergence properties,
           which necessitate meticulous hyperparameter tuning.
+    * (-) not transferable across tasks
 * `model-based` (indirect RL): `source= model`
   * the agent uses the collected data to first build a model of the domain’s dynamics and
     then uses this model to optimize its policy.
@@ -76,6 +79,7 @@
 * `value-based` (value iteration)
   * pros and cons
     * (+) low variance; more stable performance
+    * (+) more sample efficient when they work (does not mean computationally efficient)
     * (-) high bias (due to bootstrapping)
     * (-) value function approximation turns out to be a very difficult problem
           in high-dimensional state and action spaces;
