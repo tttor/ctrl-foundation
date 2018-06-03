@@ -1,6 +1,7 @@
 # reinforcement-learning foundation
 See also: 
 * https://github.com/tttor/dl-foundation
+* https://github.com/tttor/math-foundation
 * https://github.com/tttor/robot-foundation
 
 ## related sources
