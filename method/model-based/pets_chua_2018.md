@@ -1,0 +1,17 @@
+# Deep Reinforcement Learning in a Handful of Trials using Probabilistic Dynamics Models
+* Kurtland Chua et al
+* https://arxiv.org/abs/1805.12114
+* https://sites.google.com/view/drl-in-a-handful-of-trials
+
+## problem
+* Model-based reinforcement learning (RL) algorithms can attain excellent sample efficiency, 
+  * but often lag behind the best model-free algorithms in terms of asymptotic performance, 
+    especially those with high-capacity parametric function approximators, such as deep networks. 
+    
+## idea: probabilistic ensembles with trajectory sampling (PETS) 
+* combines uncertainty-aware deep network dynamics models with sampling-based uncertainty propagation.
+
+## result
+* our approach matches the asymptotic performance of model-free algorithms on several challenging benchmark tasks, while 
+  requiring significantly fewer samples 
+  * (e.g. 25 and 125 times fewer samples than Soft Actor Critic and Proximal Policy Optimization respectively on the half-cheetah task).
