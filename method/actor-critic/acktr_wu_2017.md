@@ -140,7 +140,7 @@
   designing an advantage function that provides **both low-variance and low-bias** gradient estimates
 
 ## comment
-* KFAC= KFAC + trustRegion + A3C
+* ACKTR= KFAC + trustRegion + A2C
   * ACKTR is on-policy
   * KFAC is second-order optimizer
     * https://arxiv.org/abs/1503.05671
@@ -153,3 +153,9 @@
 * (?) what does this mean?
 > a distributed approach leads to rapidly diminishing returns of sample efficiency as
   the degree of parallelism increases.
+* from nips reviewers:
+  * more on application papers, ie apply KFAC to RL
+  * comparison with x-axis representing optimization time instead of number of iterations, 
+    thus taking into account the complexity of the different algorithms
+  * compare ADAM perform relative to ACKTR
+  
