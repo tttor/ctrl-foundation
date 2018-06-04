@@ -1,5 +1,5 @@
 # model-based
-consists of
-* planning: online planning is related to **model predictive control (MPC)**
-* model learning
 
+## consists of
+* planning (incl.  **model predictive control (MPC)**)
+* model learning (+ interaction to planning)
