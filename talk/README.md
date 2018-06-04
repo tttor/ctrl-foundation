@@ -15,6 +15,12 @@
 * nips deep rl
   * https://sites.google.com/view/deeprl-symposium-nips2017
   * https://sites.google.com/site/deeprlnips2016/
-
+* https://www.quora.com/What-is-the-future-of-reinforcement-learning
+  * we do not learn to drive in a tabula rasa mode
+  * You cannot teach humans so easily because they have their own “internal” reward functions that are telling them what to do.
+    * This dichotomy between “internal” rewards, which gives us much of our “drive”, and “external” reward that 
+      society imposes us (parents, teachers, managers etc.), 
+    * has yet to be reflected in RL research, and yet it is an integral part of how RL works in humans and other animals.
+  
 ## forum
 * https://discuss.openai.com/
