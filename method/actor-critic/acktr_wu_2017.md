@@ -14,16 +14,15 @@
 ## problem
 * still does **not exist** a scalable, sample-efficient, and general-purpose instantiation of
   the natural policy gradient.
-  * SGD and related first-order methods explore weight space inefficient
-    * neural networks (to represent control policies) are still trained using simple variants of SGD
-  * TRPO is impractical for large models and suffers from sample inefficient
+  * SGD and related first-order methods explore weight space inefficient    
+  * TRPO is impractical for large models and suffers from sample inefficiency
     * requires many steps of conjugate gradient to obtain a single parameter update, and
-      accurately estimating the curvature requires a large number of samples in each batch;
-
+    * accurately estimating the curvature requires a large number of samples in each batch;
 * computational challenges when applying natural gradient methods, mainly associated with
   efficiently storing the Fisher matrix as well as computing its inverse.
-  * For tractability: using the compatible function approximator (a linear function approximator).
-  * To avoid the computational burden, TRPO approximately solves
+  * For tractability: 
+    * to use the compatible function approximator (a linear function approximator).
+  * To avoid the computational burden: TRPO approximately solves
     the linear system using conjugate gradient with fast Fisher matrix-vector products;
     * but, shortcomings:
       * requires repeated computation of Fisher vector products,
@@ -51,24 +50,22 @@
   * previous natural policy gradient method applied a natural gradient update only to the actor
   * assume the output of the critic is defined to be a Gaussian distribution
 * define the joint distribution of the policy and the value distribution by
-  assuming independence of the two output distributions, i.e., `$p(a, v|s) = \pi(a|s) p(v|s)$`, and
-  construct the Fisher metric with respect to `$p(a, v|s)$`,
+  assuming independence of the two output distributions, i.e., `p(a, v|s) = \pi(a|s) p(v|s)`, and
+  construct the Fisher metric with respect to `p(a, v|s)`,
 * apply K-FAC to approximate the Fisher matrix to perform updates simultaneously.
 
 ## setup
 * task
   * discrete ctrl: Atari env
     * 6 games: Beamrider, Breakout Pong, Q-bert, Seaquest, Space Invaders
-    * to avoid instability in training,
-      it is often beneficial to use an architecture where the two networks share lower-layer representations but
-      have distinct output layers
+    * to avoid instability in training:
+      use an architecture where the **two networks share lower-layer** representations but have **distinct output layers**
   * continuous ctrl: MuJoCo env
-    * 6 task
+    * 6 tasks
     * input
       * low-dimensional state-space representation
       * directly from pixel representation
-    * separating the policy network and value function into two separate networks resulted in
-      better empirical performance in both ACKTR and A2C
+    * **separating the policy and value function networks** resulted in better empirical performance in both ACKTR and A2C
 * baselines
   * A2C: a synchronous and batched version of the asynchronous advantage actor critic model (A3C) [18]
   * TRPO [22]
@@ -86,34 +83,27 @@
   * plot: with different batch size
 
 ## result
-* discrete ctrl:
-  * significantly outperformed A2C in terms of sample efficiency
-    (i.e., speed of convergence per number of timesteps) by a significant margin in all games.
-* cont ctrl:
-  * significantly outperformed baselines on six out of eight MuJoCo tasks and
-  * performed competitively with A2C on the other two tasks (Walker2d and Swimmer).
-
-* ACKTR substantially improves both sample efficiency and the final performance of the agent
-  compared to the state-of-the-art on-policy actor-critic method A2C [18] and the famous trust region optimizer TRPO [22].
-
-* the per-update computation cost of ACKTR is only 10% to 25% higher than SGD-based methods.
-* ACKTR only increases computing time by at most 25% per timestep,
-  demonstrating its practicality with large optimization benefits
-
-* regardless of which norm we use to optimize the critic, there are improvements brought by
-  applying ACKTR to the actor compared to the baseline A2C
+* performance: ACKTR > (A2C, TRPO)
+  * discrete ctrl:
+    * > A2C in terms of sample efficiency
+      (i.e., speed of convergence per number of timesteps) by a significant margin in all games.
+  * cont ctrl:
+    * > A2C, TRPO on six out of eight MuJoCo tasks and
+    * competitively with A2C on the other two tasks (Walker2d and Swimmer).
+* per-update computation cost of ACKTR is only 10% to 25% higher than SGD-based methods.
+* the benefit increases substantially 
+  * when using a larger batch size with ACKTR compared to with A2C, see fig 5c
+* improvements by ACKTR to the actor compared to the baseline A2C,
+  regardless of which norm we use to optimize the critic
   * improvements brought by using the Gauss-Newton norm for optimizing the critic are more substantial in terms of
     sample efficiency and episode rewards at the end of training.
   * the Gauss-Newton norm also helps stabilize the training,
     as we observe larger variance in the results over random seeds with the Euclidean norm.
 
-* the benefit increases substantially when using a larger batch size with ACKTR compared to with A2C.
-* ACKTR > (A2C, TRPO)
-
 ## background
 * Natural gradient methods (cf standard gradients)
-  * the exact computation of the natural gradient is intractable because
-    it requires inverting the Fisher information matrix.
+  * exact computation is intractable 
+    * because it requires inverting the Fisher information matrix.
   * follow the steepest descent direction that uses the Fisher metric as the underlying metric,
     a metric that is based not on the choice of coordinates but rather on the manifold (i.e., the surface).
   * constructs the norm using the Fisher information matrix F, a local quadratic approximation to the KL divergence.
@@ -126,18 +116,16 @@
     * advocate instead using a trust region approach, whereby
       the update is scaled down to modify the policy distribution (in terms of KL divergence) by
       at most a specified amount.
-
 * Kronecker-factored approximate curvature (K-FAC) [16]
   * uses a Kronecker-factored approximation to the Fisher matrix to perform efficient approximate natural gradient updates.
   * each update is comparable in cost to an SGD update, and
   * it keeps a running average of curvature information, allowing it to use small batches.
-
 * TRPO avoids explicitly storing and inverting the Fisher matrix by using Fisher-vector products [21].
   * To avoid repeated computation of Fisher-vector products,
     * Wang et al. [28] solve the **constrained optimization** problem with a linear approximation of
       **KL divergence** between a running average of the policy network and the current policy network.
 * active line of research:
-  designing an advantage function that provides **both low-variance and low-bias** gradient estimates
+  * designing an advantage function that provides **both low-variance and low-bias** gradient estimates
 
 ## comment
 * ACKTR= KFAC + trustRegion + A2C
@@ -145,7 +133,7 @@
   * KFAC is second-order optimizer
     * https://arxiv.org/abs/1503.05671
     * https://www.tensorflow.org/api_docs/python/tf/contrib/kfac    
-* setup for random seeds varies across plots and tables
+* (-) setup for random seeds varies across plots and tables
 * (?) why those 6 games?
   * ans: see Table 4 at appendix B, with Q-learning, one seed
 * (?) episode rewards == return?
