@@ -1,4 +1,6 @@
 # On Monte Carlo Tree Search and Reinforcement Learning
+* Tom Vodopivec; Spyridon Samothrakis; Branko Ster
+* https://jair.org/index.php/jair/article/view/11099
 
 ## 3: The Connection Between Monte Carlo Tree Search and Reinforcement Learning 
 * The key difference is the source of experience: 
