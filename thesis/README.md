@@ -55,6 +55,7 @@
 * Jan Peters
 * Satinder Singh
 * Gerald Tesauro
+* [Dimitri Bertsekas](http://web.mit.edu/dimitrib/www/home.html), 1971
 
 ## labs
 * http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html
