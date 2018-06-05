@@ -26,3 +26,16 @@ Con- versely, in off-policy control, the agent is following one policy, but may 
     most often it is directly entrusted to the selection policy – 
     * an MCTS method usually expects that its tree policy will guide the exploration towards 
       the most relevant part of the state space, which should as such be worth memorizing.
+
+## 4. Integrating Monte Carlo Tree Search and Reinforcement Learning
+### 4.1 A Representation Policy for Reinforcement Learning
+* RL theory offers a rich description of the MCTS backpropagation phase, whereas 
+  MCTS introduces into RL the distinction between a memorized and non-memorized part of the state space.
+### 4.2 Assumptions About Playout Estimates
+### 4.3 The Temporal-Difference Tree Search Framework
+* Traditional RL methods can benefit from several MCTS-inspired mechanics, implemented by the TDTS framework, such as incremental representations, ingenuous generalizations (MCTS enhance- ments) of the state space that is not memorized in the main representation, and strong heuristic con- trol policies (especially for the playout phase)
+* what MCTS methods do – 
+  * for the states near the root they store all the information (in a tabular tree representation) with high accuracy, 
+  * but for the (usually) vast state space visited in the playouts they either omit the estimates or 
+    apply low-accuracy generalization methods that estimate the states that are not memorized in the tree
+* Gelly and Silver (2007) describe the UCT algorithm as “a value-based reinforcement-learning algorithm that focusses exclusively on the start state and the tree of subsequent states”
