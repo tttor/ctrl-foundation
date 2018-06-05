@@ -24,16 +24,17 @@
 
 ### Mid, 2008 <= t < 2015
 * Stephane Ross, 2013
-* Volodymyr Mnih, 2013, with Geoffrey Hinton and  Csaba Szepesvari
-* Jens Kober, Learning Motor Skills: From Algorithms to Robot Experiments, 2012
+* John Asmuth: Model-based Bayesian Reinforcement Learning with Generalized Priors, 2013
+* Volodymyr Mnih, 2013
+* Jens Kober: Learning Motor Skills: From Algorithms to Robot Experiments, 2012
 * Todd Hester, 2012
 * George Konidaris, 2011
 * Marc Deisenroth, 2010
-* David Silver, 2009: Reinforcement Learning and Simulation-Based Search in Computer Go
+* David Silver: Reinforcement Learning and Simulation-Based Search in Computer Go, 2009
 * Hanna Kurniawati, 2008
-* Pieter Abbeel, 2008: inverse rl (for flying helicopters)
+* Pieter Abbeel, inverse rl (for flying helicopters), 2008
 
-### Old, t < 2008
+### Old, 2000 <= t < 2008
 * Pascal Poupart, 2005
 * Andrew Bagnell: Learning decisions: robustness, uncertainty, and approximation, 2004
 * Joelle Pineau, 2004
@@ -41,6 +42,8 @@
 * Andrew Ng: Shaping and policy search in reinforcement learning, 2003
 * Sham M. Kakade: On the Sample Complexity of Reinforcement Learning, 2003
 * Vijaymohan Konda: Actor-Critic Algorithms, 2002
+
+### Legend, t < 2000
 * Benjamin Van Roy: Learning and Value Function Approximation in Complex Decision Processes, 1998
 * Chris Watkins: Learning from delayed rewards, 1989
 * Richard Sutton
