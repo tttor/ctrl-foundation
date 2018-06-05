@@ -53,7 +53,6 @@
 * Sebastian Thrun
 * Leslie Kaebling
 * Jan Peters
-* Masashi Sugiyama
 * Satinder Singh
 * Gerald Tesauro
 
