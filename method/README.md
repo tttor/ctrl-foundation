@@ -71,6 +71,7 @@
           obtain an initial estimate for the policy parameters
     * (+) directly optimize the quantity of interest while remaining stable under function approximation
           (given a sufficiently small learning rate)
+    * (+) less susceptible to error in the presence of noise on properties of the controlled POMDP
     * (-) high variance, because the gradient is estimated using Monte Carlo samples
     * (-) tend to converge to a local optimal
     * (-) sample inefficiency, because
