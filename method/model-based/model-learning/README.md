@@ -3,7 +3,9 @@
 * learning R is called inverse RL
 
 ## taxonomy
+* neural networks:
+  ?
 * via gaussian-process:
   [pilco_deisenroth_2015.md](pilco_deisenroth_2015.md)
-* via neural networks:
-  ?
+* least-square:
+  [mpgpe_tangkaratt_2014.md](mpgpe_tangkaratt_2014.md)

@@ -94,6 +94,8 @@
           for some real-time applications.
 * hybrid: actor-critic (`actor:policy-based` + `critic:value-based`)
   * vanilla actor-critic methods are **on-policy** only
+  * pros and cons
+    * (-) requires optimizing two function approximators on different objectives.
 
 ## when policy compiled/learned with respect to execution/action time
 * `offline`
