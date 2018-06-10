@@ -12,24 +12,26 @@
 * https://www.youtube.com/watch?v=gtM87w1xGoM
 
 ## problem
-* still does **not exist** a scalable, sample-efficient, and general-purpose instantiation of
-  the natural policy gradient.
-  * SGD and related first-order methods explore weight space inefficient    
+* still does **not exist** a scalable, sample-efficient, and
+  general-purpose instantiation of the natural policy gradient.
+  * SGD and related first-order methods explore weight space inefficiently
   * TRPO is impractical for large models and suffers from sample inefficiency
     * requires many steps of conjugate gradient to obtain a single parameter update, and
     * accurately estimating the curvature requires a large number of samples in each batch;
-* computational challenges when applying natural gradient methods, mainly associated with
-  efficiently storing the Fisher matrix as well as computing its inverse.
-  * For tractability: 
+* computational challenges when applying natural gradient methods:
+  mainly associated with efficiently storing the Fisher matrix as well as computing its inverse.
+  * for tractability:
     * to use the compatible function approximator (a linear function approximator).
-  * To avoid the computational burden: TRPO approximately solves
-    the linear system using conjugate gradient with fast Fisher matrix-vector products;
+  * to avoid the computational burden:
+    TRPO approximately solves the linear system using conjugate gradient with
+    fast Fisher matrix-vector products,
     * but, shortcomings:
       * requires repeated computation of Fisher vector products,
-        preventing it from scaling to the larger architectures typically used in experiments on learning from
-        image observations in Atari and MuJoCo.
+        preventing it from scaling to the larger architectures typically used in
+        experiments on learning from image observations in Atari and MuJoCo.
       * requires a large batch of rollouts in order to accurately estimate curvature.
-      * generally less sample efficient (Although TRPO shows better per-iteration progress than
+      * generally less sample efficient
+        (although TRPO shows better per-iteration progress than
         policy gradient methods trained with first-order optimizers such as Adam)
     * K-FAC avoids both issues by
       * using tractable Fisher matrix approximations and
@@ -45,9 +47,8 @@
   Kronecker-factored approximate curvature (K-FAC) with trust region
   * K-FAC to approximate the natural gradient update for actor-critic methods,
     with trust region optimization for stability
-  * optimizing both the actor and the critic using natural gradient updates
 * applying a natural gradient update **to the critic**
-  * previous natural policy gradient method applied a natural gradient update only to the actor
+  * previously, a natural gradient update only to the actor
   * assume the output of the critic is defined to be a Gaussian distribution
 * define the joint distribution of the policy and the value distribution by
   assuming independence of the two output distributions, i.e., `p(a, v|s) = \pi(a|s) p(v|s)`, and
@@ -59,15 +60,17 @@
   * discrete ctrl: Atari env
     * 6 games: Beamrider, Breakout Pong, Q-bert, Seaquest, Space Invaders
     * to avoid instability in training:
-      use an architecture where the **two networks share lower-layer** representations but have **distinct output layers**
+      use an architecture where the **two networks share lower-layer** representations but
+      have **distinct output layers**
   * continuous ctrl: MuJoCo env
     * 6 tasks
     * input
       * low-dimensional state-space representation
       * directly from pixel representation
-    * **separating the policy and value function networks** resulted in better empirical performance in both ACKTR and A2C
+    * **separating the policy and value function networks** resulted in
+      better empirical performance in both ACKTR and A2C
 * baselines
-  * A2C: a synchronous and batched version of the asynchronous advantage actor critic model (A3C) [18]
+  * A2C: a synchronous and batched version of A3C
   * TRPO [22]
 * eval metric:
   * plot episode reward vs number of timesteps
@@ -91,7 +94,7 @@
     * > A2C, TRPO on six out of eight MuJoCo tasks and
     * competitively with A2C on the other two tasks (Walker2d and Swimmer).
 * per-update computation cost of ACKTR is only 10% to 25% higher than SGD-based methods.
-* the benefit increases substantially 
+* the benefit increases substantially
   * when using a larger batch size with ACKTR compared to with A2C, see fig 5c
 * improvements by ACKTR to the actor compared to the baseline A2C,
   regardless of which norm we use to optimize the critic
@@ -102,7 +105,7 @@
 
 ## background
 * Natural gradient methods (cf standard gradients)
-  * exact computation is intractable 
+  * exact computation is intractable
     * because it requires inverting the Fisher information matrix.
   * follow the steepest descent direction that uses the Fisher metric as the underlying metric,
     a metric that is based not on the choice of coordinates but rather on the manifold (i.e., the surface).
@@ -132,18 +135,17 @@
   * ACKTR is on-policy
   * KFAC is second-order optimizer
     * https://arxiv.org/abs/1503.05671
-    * https://www.tensorflow.org/api_docs/python/tf/contrib/kfac    
+    * https://www.tensorflow.org/api_docs/python/tf/contrib/kfac
+* from nips reviewers:
+  * more on application papers, ie apply KFAC to RL
+  * comparison with x-axis representing optimization time instead of number of iterations,
+    thus taking into account the complexity of the different algorithms
+  * compare ADAM perform relative to ACKTR
 * (-) setup for random seeds varies across plots and tables
 * (?) why those 6 games?
   * ans: see Table 4 at appendix B, with Q-learning, one seed
 * (?) episode rewards == return?
   * ans: yes, see Table 1
 * (?) what does this mean?
-> a distributed approach leads to rapidly diminishing returns of sample efficiency as
-  the degree of parallelism increases.
-* from nips reviewers:
-  * more on application papers, ie apply KFAC to RL
-  * comparison with x-axis representing optimization time instead of number of iterations, 
-    thus taking into account the complexity of the different algorithms
-  * compare ADAM perform relative to ACKTR
-  
+> a distributed approach leads to rapidly diminishing returns of
+  sample efficiency as the degree of parallelism increases.
