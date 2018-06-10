@@ -15,6 +15,11 @@
 * is guaranteed to converge to the optimal policy for the tabular (non-approximate) case,
 * may diverge when using linear function approximation (Baird, 1995).
 
+## Q-learning for continuous actions
+* Gu, Shixiang, Lillicrap, Timothy, Sutskever, Ilya, and Levine, Sergey. Continuous deep q-learning with model- based acceleration. In International Conference on Ma- chine Learning, pp. 2829–2838, 2016.
+* Metz, Luke, Ibarz, Julian, Jaitly, Navdeep, and Davidson, James. Discrete sequential prediction of continuous ac- tions for deep rl. arXiv preprint arXiv:1705.05035, 2017
+* Tavakoli, Arash, Pardo, Fabio, and Kormushev, Petar. Ac- tion branching architectures for deep reinforcement learn- ing. arXiv preprint arXiv:1711.08946, 2017.
+
 ## others
 * SARSA (Rummery & Niranjan, 1994)
 * multi-step Q-learning
