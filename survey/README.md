@@ -53,6 +53,23 @@ Multiagent RL,
 Evolutionary RL,
 ...
 
+## succinct background
+* @article{DBLP:journals/corr/abs-1802-09477,
+  author    = {Scott Fujimoto and
+               Herke van Hoof and
+               Dave Meger},
+  title     = {Addressing Function Approximation Error in Actor-Critic Methods},
+  journal   = {CoRR},
+  volume    = {abs/1802.09477},
+  year      = {2018},
+  url       = {http://arxiv.org/abs/1802.09477},
+  archivePrefix = {arXiv},
+  eprint    = {1802.09477},
+  timestamp = {Fri, 02 Mar 2018 13:46:22 +0100},
+  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1802-09477},
+  bibsource = {dblp computer science bibliography, https://dblp.org}
+}
+
 ## misc
 [1999: Richard S. Sutton: Reinforcement Learning: Past, Present and Future?](https://link.springer.com/chapter/10.1007/3-540-48873-1_26)
 > Just as reinforcement learning present took a step away from the ultimate goal of reward to
