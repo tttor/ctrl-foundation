@@ -78,6 +78,8 @@
       * policy gradients are estimated from rollouts the variance is often extreme
       * requires on-policy samples
 * `value-based` (value iteration)
+  * Bellman equ is fundamental to value fn learning: 
+    relates the value of `(s,a)` to the value os the subsequent `(s', a')`
   * pros and cons
     * (+) low variance; more stable performance
     * (+) more sample efficient when they work (does not mean computationally efficient)
