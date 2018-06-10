@@ -61,4 +61,4 @@
 * http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html
 * http://rl.cs.mcgill.ca/index.html
 * https://mila.quebec/en/
-
+* https://vectorinstitute.ai/
