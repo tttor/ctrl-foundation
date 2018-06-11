@@ -126,6 +126,23 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
     as we observe larger variance in the results over random seeds with the Euclidean norm.
 
 ## background
+* story: from standard to natural gradient
+  * To minimize a nonconvex function J(θ), 
+    the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ), 
+    subject to the constraint that ||∆θ||B < 1, 
+    where || · ||B is the norm defined by `|| x ||_B = (x^T B x)^{\frac{1]{2}}` , and B is a positive semidefinite matrix. 
+  * The solution to the constraint optimization problem has the form `\Delta \theta \propto -B^{-1} \nabla_{\theta} J`,
+    where `\nabla_{\theta} J`  is the standard gradient. 
+  * When the norm is Euclidean, i.e., B = I, this becomes the commonly used method of gradient descent. 
+    * However, the Euclidean norm of the change depends on the parameterization θ. 
+      This is not favorable because the parameterization of the model is an arbitrary choice, and 
+      it should not affect the optimization trajectory. 
+  * The method of natural gradient constructs the norm using the Fisher information matrix F, 
+    a local quadratic approximation to the KL divergence. 
+    * This norm is independent of the model parameterization θ on the class of probability distributions, 
+      providing a more stable and effective update. 
+    * However, since modern neural networks may contain millions of parameters, 
+      computing and storing the exact Fisher matrix and its inverse is impractical, so we have to resort to approximations.
 * Natural gradient methods (cf standard gradients)
   * exact computation is intractable
     * because it requires inverting the Fisher information matrix.
@@ -172,3 +189,6 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
 * (?) what does this mean?
 > a distributed approach leads to rapidly diminishing returns of
   sample efficiency as the degree of parallelism increases.
+* (?) where does the constraint come from?
+> To minimize a nonconvex function J(θ), the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ), 
+  subject to the constraint that  ...
