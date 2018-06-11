@@ -1,6 +1,6 @@
-Amii Presents Tea Time Talk with Rich Sutton (May 28, 2018)
-
 # the next big step in ai: planning with a learned model
+* Amii Presents Tea Time Talk with Rich Sutton (May 28, 2018)
+* https://www.youtube.com/watch?v=6-Uiq8-wKrg
 
 * now, pretty good at
   * model-free
