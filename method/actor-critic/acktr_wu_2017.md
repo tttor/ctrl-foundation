@@ -84,6 +84,27 @@
     * col: env (atari, mujoco)
     * cell: timesteps per second
   * plot: with different batch size
+* actor/policy network: 
+  * Gaussian MLP
+* critic/value network:
+  * MLP (fully connected, dense)
+  * predict Advantage values, not Q values
+    * advantage fn is defined as k-step returns with fn approx
+  * https://www.tensorflow.org/api_docs/python/tf/nn/elu
+* multi-threading is for optimization (network operations), not for rollout
+  * https://www.tensorflow.org/api_docs/python/tf/train/QueueRunner
+  * https://www.tensorflow.org/api_docs/python/tf/train/Coordinator
+* observation filter is crucial!
+  * `y = (x-mean)/std`
+    using running estimates of mean,std
+* is this learning under various init state (jpos, target pose)?
+  * ans: yes, reset() is called at every rollout()
+* loss vs loss_sampled?
+  * ans: loss = surr
+```
+surr = - tf.reduce_mean(adv_n * logprob_n)
+surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
+```
 
 ## result
 * performance: ACKTR > (A2C, TRPO)
@@ -136,6 +157,7 @@
   * KFAC is second-order optimizer
     * https://arxiv.org/abs/1503.05671
     * https://www.tensorflow.org/api_docs/python/tf/contrib/kfac
+    * https://github.com/tttor/baselines/blob/study-acktr/baselines/acktr/kfac.py
 * from nips reviewers:
   * more on application papers, ie apply KFAC to RL
   * comparison with x-axis representing optimization time instead of number of iterations,
