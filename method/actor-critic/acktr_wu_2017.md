@@ -87,6 +87,7 @@
 * actor/policy network: 
   * Gaussian MLP
 * critic/value network:
+  * [in: 28] --wh1--> [h1: 64] --wh2--> [h2: 64] --whfinal--> [out:1]
   * MLP (fully connected, dense)
   * predict Advantage values, not Q values
     * advantage fn is defined as k-step returns with fn approx
