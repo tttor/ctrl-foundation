@@ -2,10 +2,9 @@
 
 ## type 0: big guy 
 * OpenAI: https://github.com/openai/baselines
+* Tensorforce: https://github.com/reinforceio/tensorforce
 * Ray RLlib: http://ray.readthedocs.io/en/latest/rllib.html
 * ChainerRL: https://github.com/chainer/chainerrl
-* Tensorlayer: https://github.com/tensorlayer/tensorlayer
-* Tensorforce: https://github.com/reinforceio/tensorforce
 * KerasRL: https://github.com/keras-rl/keras-rl
 * FitML: https://github.com/FitMachineLearning/FitML
 
