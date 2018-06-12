@@ -84,7 +84,7 @@
     * col: env (atari, mujoco)
     * cell: timesteps per second
   * plot: with different batch size
-* actor/policy network: 
+* actor/policy network:
   * Gaussian MLP
 * critic/value network:
   * [in: 28] --wh1--> [h1: 64] --wh2--> [h2: 64] --whfinal--> [out:1]
@@ -96,16 +96,16 @@
   * https://www.tensorflow.org/api_docs/python/tf/train/QueueRunner
   * https://www.tensorflow.org/api_docs/python/tf/train/Coordinator
 * observation filter is crucial!
-  * `y = (x-mean)/std`
+  * $y = (x-mean)/std$
     using running estimates of mean,std
 * is this learning under various init state (jpos, target pose)?
   * ans: yes, reset() is called at every rollout()
 * loss vs loss_sampled?
   * ans: loss = surr
-```
+$$$
 surr = - tf.reduce_mean(adv_n * logprob_n)
 surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
-```
+$$$
 
 ## result
 * performance: ACKTR > (A2C, TRPO)
@@ -127,21 +127,21 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
 
 ## background
 * story: from standard to natural gradient
-  * To minimize a nonconvex function J(θ), 
-    the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ), 
-    subject to the constraint that ||∆θ||B < 1, 
-    where || · ||B is the norm defined by `|| x ||_B = (x^T B x)^{\frac{1]{2}}` , and B is a positive semidefinite matrix. 
-  * The solution to the constraint optimization problem has the form `\Delta \theta \propto -B^{-1} \nabla_{\theta} J`,
-    where `\nabla_{\theta} J`  is the standard gradient. 
-  * When the norm is Euclidean, i.e., B = I, this becomes the commonly used method of gradient descent. 
-    * However, the Euclidean norm of the change depends on the parameterization θ. 
-      This is not favorable because the parameterization of the model is an arbitrary choice, and 
-      it should not affect the optimization trajectory. 
-  * The method of natural gradient constructs the norm using the Fisher information matrix F, 
-    a local quadratic approximation to the KL divergence. 
-    * This norm is independent of the model parameterization θ on the class of probability distributions, 
-      providing a more stable and effective update. 
-    * However, since modern neural networks may contain millions of parameters, 
+  * To minimize a nonconvex function J(θ),
+    the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ),
+    subject to the constraint that ||∆θ||B < 1,
+    where || · ||B is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1]{2}}$ , and B is a positive semidefinite matrix.
+  * The solution to the constraint optimization problem has the form $\Delta \theta \propto -B^{-1} \nabla_{\theta} J$,
+    where $\nabla_{\theta} J$  is the standard gradient.
+  * When the norm is Euclidean, i.e., B = I, this becomes the commonly used method of gradient descent.
+    * However, the Euclidean norm of the change depends on the parameterization θ.
+      This is not favorable because the parameterization of the model is an arbitrary choice, and
+      it should not affect the optimization trajectory.
+  * The method of natural gradient constructs the norm using the Fisher information matrix F,
+    a local quadratic approximation to the KL divergence.
+    * This norm is independent of the model parameterization θ on the class of probability distributions,
+      providing a more stable and effective update.
+    * However, since modern neural networks may contain millions of parameters,
       computing and storing the exact Fisher matrix and its inverse is impractical, so we have to resort to approximations.
 * Natural gradient methods (cf standard gradients)
   * exact computation is intractable
@@ -149,7 +149,7 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
   * follow the steepest descent direction that uses the Fisher metric as the underlying metric,
     a metric that is based not on the choice of coordinates but rather on the manifold (i.e., the surface).
   * constructs the norm using the Fisher information matrix F, a local quadratic approximation to the KL divergence.
-    * This norm is independent of the model parameterization `\theta` on the class of probability distributions,
+    * This norm is independent of the model parameterization $\theta$ on the class of probability distributions,
       providing a more stable and effective update.
     * However, since modern neural networks may contain millions of parameters,
       computing and storing the exact Fisher matrix and its inverse is impractical, so we have to resort to approximations.
@@ -190,5 +190,5 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
 > a distributed approach leads to rapidly diminishing returns of
   sample efficiency as the degree of parallelism increases.
 * (?) where does the constraint come from?
-> To minimize a nonconvex function J(θ), the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ), 
+> To minimize a nonconvex function J(θ), the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ),
   subject to the constraint that  ...
