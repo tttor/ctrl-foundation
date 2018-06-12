@@ -51,8 +51,8 @@
   * previously, a natural gradient update only to the actor
   * assume the output of the critic is defined to be a Gaussian distribution
 * define the joint distribution of the policy and the value distribution by
-  assuming independence of the two output distributions, i.e., `p(a, v|s) = \pi(a|s) p(v|s)`, and
-  construct the Fisher metric with respect to `p(a, v|s)`,
+  assuming independence of the two output distributions, i.e., $p(a, v|s) = \pi(a|s) p(v|s)$, and
+  construct the Fisher metric with respect to $p(a, v|s)$,
 * apply K-FAC to approximate the Fisher matrix to perform updates simultaneously.
 
 ## setup
