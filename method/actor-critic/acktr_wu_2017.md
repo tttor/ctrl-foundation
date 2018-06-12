@@ -102,10 +102,10 @@
   * ans: yes, reset() is called at every rollout()
 * loss vs loss_sampled?
   * ans: loss = surr
-$$$
+```
 surr = - tf.reduce_mean(adv_n * logprob_n)
 surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
-$$$
+```
 
 ## result
 * performance: ACKTR > (A2C, TRPO)
@@ -130,7 +130,7 @@ $$$
   * To minimize a nonconvex function J(θ),
     the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ),
     subject to the constraint that ||∆θ||B < 1,
-    where || · ||B is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1]{2}}$ , and B is a positive semidefinite matrix.
+    where || · ||B is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1}{2}}$ , and B is a positive semidefinite matrix.
   * The solution to the constraint optimization problem has the form $\Delta \theta \propto -B^{-1} \nabla_{\theta} J$,
     where $\nabla_{\theta} J$  is the standard gradient.
   * When the norm is Euclidean, i.e., B = I, this becomes the commonly used method of gradient descent.
