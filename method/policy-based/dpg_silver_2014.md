@@ -1,6 +1,7 @@
 # Deterministic Policy Gradient Algorithms
 * David Silver et al
-* Proceedings of the 31st International Conference on Machine Learning, Beijing, China, 2014
+* icml2014
+* http://proceedings.mlr.press/v32/silver14.pdf
 
 ## problem
 * computing the stochastic policy gradient may **require more samples**,
