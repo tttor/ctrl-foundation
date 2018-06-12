@@ -1,6 +1,7 @@
 # off-Policy Actor-Critic
 * Thomas Degris, et al
-* Proceedings of the 29 th International Conference on Machine Learning, Edinburgh, Scotland, UK, 2012.
+* icml2012
+* https://arxiv.org/pdf/1205.4839.pdf
 
 ## problem
 * Previous work on actor-critic algorithms is limited to the on-policy setting and
