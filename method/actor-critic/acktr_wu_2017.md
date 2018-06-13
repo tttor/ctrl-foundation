@@ -6,6 +6,7 @@
 * https://blog.openai.com/baselines-acktr-a2c/
 * https://github.com/openai/baselines/tree/master/baselines/acktr # tf
   * https://github.com/tttor/baselines/tree/study-acktr/baselines/acktr
+* https://github.com/ikostrikov/pytorch-a2c-ppo-acktr/blob/master/algo/a2c_acktr.py
 * https://github.com/openai/baselines-results
 * https://github.com/emansim/acktr
 * https://www.youtube.com/watch?v=0rrffaYuUi4
