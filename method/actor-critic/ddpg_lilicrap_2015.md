@@ -8,3 +8,4 @@
 ## comment
 * (?) how does the output layer look like? for cont contrl using deterministic policy?
   * cf, in stoc policy, one output node gives $\mu$ and another gives $\sigma$
+  * ans: it uses `x = tf.nn.tanh(x)`, see `baselines/baselines/ddpg/models.py`
