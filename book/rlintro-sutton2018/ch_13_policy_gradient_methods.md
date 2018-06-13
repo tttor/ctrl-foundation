@@ -6,9 +6,9 @@
 * goal of policy gradient methods:
   * learning the policy parameter based on the gradient of
     some performance measure $J(\theta)$ with respect to the policy parameter.
-  * to maximize performance, so their updates approximate gradient ascent in $J(\theta)$:
+  * to maximize performance, so their updates **approximate** gradient ascent in $J(\theta)$:
     * $\theta_{t+1} = \theta_t + \alpha \hat{ \nabla J(\theta_t) }$ ...(13.1)
-      * $\hat{ \grad J(\theta_t) }$:
+      * $\hat{ \nabla J(\theta_t) }$:
         a **stochastic estimate** whose expectation approximates the gradient of the
         performance measure with respect to its argument
       * $\theta \in R^{d'}$: policy’s parameter vector
@@ -77,7 +77,7 @@
      * a quantity that can be sampled on each time step whose **expectation is equal to** the gradient.
  * Using this sample to instantiate our generic stochastic gradient ascent algorithm (13.1), yields the **update**:
    * $\theta_{t+1}= \theta_t + \alpha G_t \frac{\nabla \pi(A_t|S_t,\theta)}{\pi(A_t|S_t,\theta)}$ ...(13.6)
-      * $G_t \frac{...}{...}$ substitutes $\hat{ \grad J(\theta_t) }$
+      * $G_t \frac{...}{...}$ substitutes $\hat{ \nabla J(\theta_t) }$
       * $G_t \frac{...}{...}$ can be written as $\nabla ln \pi(A_t|S_t,\theta)$
         * since $\nabla ln x = \frac{\nabla x}{x}$
       * aka REINFORCE algor
