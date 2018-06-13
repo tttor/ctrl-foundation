@@ -10,9 +10,7 @@
 * [Stanford: Ng: Lecture 16 | Machine Learning](https://www.youtube.com/watch?v=RtxI449ZjSc)
 * [Udacity: RL](https://www.udacity.com/course/reinforcement-learning--ud600)
 * http://psthomas.com/courses/CMPSCI_687_Fall2017.html
-
-### optimization
-* https://ipvs.informatik.uni-stuttgart.de/mlr/marc/teaching/13-Optimization/
+* https://github.com/yandexdataschool/Practical_RL
 
 ## workshop
 * [NIPS Deep Reinforcement Learning Workshop, 2015, 2016, 2017](https://sites.google.com/view/deeprl-symposium-nips2017/home)
