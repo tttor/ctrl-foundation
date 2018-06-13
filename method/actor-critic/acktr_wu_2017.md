@@ -10,6 +10,7 @@
 * https://github.com/emansim/acktr
 * https://www.youtube.com/watch?v=0rrffaYuUi4
 * https://www.youtube.com/watch?v=gtM87w1xGoM
+* https://www.reddit.com/r/MachineLearning/comments/6uk1q8/r_openai_baselines_acktr/
 
 ## problem
 * still does **not exist** a scalable, sample-efficient, and
