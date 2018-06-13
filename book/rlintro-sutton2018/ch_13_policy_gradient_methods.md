@@ -123,7 +123,7 @@
     * this bias is often beneficial because it reduces variance and accelerates learning.
 * One-step actor–critic methods replace the full return of REINFORCE (13.9) with
   the one-step return (and use a learned state-value function as the baseline) as follows:
-  * $\theta_{t+1}= \theta_t + \alpha \delta \frac{...}{...}$ ...(13.12)
+  * $\theta_{t+1}= \theta_t + \alpha \delta \frac{\nabla \pi (A_t|S_t, \theta_t)}{\pi (A_t|S_t, \theta_t)}$ ...(13.12)
     * $\delta = R_{t+1} + \gamma \hat{v}(S_{t+1},w) - \hat{v}(S_{t+1},w)$
 * The generalizations to
   * the forward view of n-step methods:
