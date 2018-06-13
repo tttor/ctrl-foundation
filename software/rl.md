@@ -17,6 +17,8 @@
 * https://github.com/rlcode/reinforcement-learning
 * https://github.com/ShangtongZhang/DeepRL
 * https://github.com/vitchyr/rlkit
+* https://github.com/higgsfield/RL-Adventure-2
+  * https://github.com/higgsfield/RL-Adventure
 
 ## type 2: old
 * PyBrain: http://pybrain.org/
