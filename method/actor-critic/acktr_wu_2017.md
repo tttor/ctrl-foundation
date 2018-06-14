@@ -183,7 +183,10 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
   * comparison with x-axis representing optimization time instead of number of iterations,
     thus taking into account the complexity of the different algorithms
   * compare ADAM perform relative to ACKTR
+* cf PPOKFAC: https://arxiv.org/abs/1801.05566
+  * ACKTR > PPOKFAC
 * (-) setup for random seeds varies across plots and tables
+* (-) performance varies across task: who wins, who loses
 * (?) why those 6 games?
   * ans: see Table 4 at appendix B, with Q-learning, one seed
 * (?) episode rewards == return?
