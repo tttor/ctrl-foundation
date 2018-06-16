@@ -44,7 +44,7 @@
   these are independent of coordinate frame of the chosen policy representation, and
   can be estimated more efficiently **than regular policy gradients**
 
-## misc
+## background
 * policy iteration architectures consist of two steps, 
   * a policy evaluation step
     * requirement: makes efficient usage of experienced data

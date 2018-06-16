@@ -129,10 +129,10 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
 
 ## background
 * story: from standard to natural gradient
-  * To minimize a nonconvex function J(θ),
-    the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ),
-    subject to the constraint that ||∆θ||B < 1,
-    where || · ||B is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1}{2}}$ , and B is a positive semidefinite matrix.
+  * To minimize a nonconvex function $J(\theta)$,
+    the method of steepest descent calculates the update $\Delta \theta$ that minimizes $J(\theta + \Delta \theta)$,
+    subject to the constraint that $|| \Delta \theta ||_B < 1$,
+    where $|| · ||_B$ is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1}{2}}$ , and $B$ is a positive semidefinite matrix.
   * The solution to the constraint optimization problem has the form $\Delta \theta \propto -B^{-1} \nabla_{\theta} J$,
     where $\nabla_{\theta} J$  is the standard gradient.
   * When the norm is Euclidean, i.e., B = I, this becomes the commonly used method of gradient descent.
@@ -183,7 +183,10 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
   * comparison with x-axis representing optimization time instead of number of iterations,
     thus taking into account the complexity of the different algorithms
   * compare ADAM perform relative to ACKTR
+* cf PPOKFAC: https://arxiv.org/abs/1801.05566
+  * ACKTR > PPOKFAC
 * (-) setup for random seeds varies across plots and tables
+* (-) performance varies across task: who wins, who loses
 * (?) why those 6 games?
   * ans: see Table 4 at appendix B, with Q-learning, one seed
 * (?) episode rewards == return?
