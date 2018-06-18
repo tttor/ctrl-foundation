@@ -35,6 +35,7 @@
 * Pieter Abbeel, inverse rl (for flying helicopters), 2008
 
 ### Old, 2000 <= t < 2008
+* ShimonWhiteson: Adaptive Representations for Reinforcement Learning, 2007
 * Pascal Poupart, 2005
 * Andrew Bagnell: Learning decisions: robustness, uncertainty, and approximation, 2004
 * Joelle Pineau, 2004
@@ -46,6 +47,7 @@
 ### Legend, t < 2000
 * Benjamin Van Roy: Learning and Value Function Approximation in Complex Decision Processes, 1998
 * Chris Watkins: Learning from delayed rewards, 1989
+* [Dimitri Bertsekas](http://web.mit.edu/dimitrib/www/home.html), 1971
 * Richard Sutton
 * Andrew Barto
 * Csaba Szepesvári
@@ -55,10 +57,10 @@
 * Jan Peters
 * Satinder Singh
 * Gerald Tesauro
-* [Dimitri Bertsekas](http://web.mit.edu/dimitrib/www/home.html), 1971
 
 ## labs
 * http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html
 * http://rl.cs.mcgill.ca/index.html
 * https://mila.quebec/en/
 * https://vectorinstitute.ai/
+* http://whirl.cs.ox.ac.uk/
