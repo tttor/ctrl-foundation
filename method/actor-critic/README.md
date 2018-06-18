@@ -12,6 +12,7 @@
 * [PCL: Bridging the Gap Between Value and Policy Based Reinforcement Learning, 2017](pcl_nachum_2017.md)
 * [Soft Actor-Critic: Off-Policy Maximum Entropy Deep RL with a Stochastic Actor, 2017](sac_haarnoja_2017.md)
 * [A3C: Asynchronous advantage actor-critic, 2016](a3c_mnih_2016.md)
+* [BPAC: ayesian Policy Gradient and Actor-Critic Algorithms, 2016](bpgac_ghavamzadeh_2016.md) # Gaussian processes, **not** neural nets
 * [Deep DPG, 2015](ddpg_lilicrap_2015.md)
 
 ### legend
