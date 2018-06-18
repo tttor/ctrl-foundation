@@ -4,14 +4,14 @@
 * https://github.com/sfujim/TD3 # pytorch
 
 ## problem
-* function approximation errors lead to
-  overestimated value estimates and
-  the accumulation of error in temporal difference methods and suboptimal policies
-  * present in an actor-critic setting
+* in an actor-critic setting, 
+  * function approximation errors lead to overestimated value estimates and
+  *  the accumulation of error in temporal difference methods and suboptimal policies
 
 ## idea
-* takes the minimum value between a pair of critics to restrict overestimation and
-  delays policy updates to reduce per-update error
+* core
+  * takes the minimum value between a pair of critics to restrict overestimation and
+  * delays policy updates to reduce per-update error
 * a clipped Double Q-learning variant which
   * favors underestimations by
     bounding situations where Double Q-learning does poorly.
@@ -27,12 +27,17 @@
 * maintains a pair of critics along with a single actor.
 
 ## setup
-* openai gym mujoco task
-  * nets: ?
+* critic:
+  * a clipped Double Q-learning variant
+* nets
+  * arch: fully-connected
   * optim: Adam
   * activ-fn: relu, relu, tanh
-
+* openai gym mujoco task
+  * max average return over 10 trials of 1 millions timesteps
+  
 ## result
+* TD3 > (DDPG, ACKTR, PPO) in gym mujoco
 
 ## background
 * In temporal difference learning (Sutton, 1988) 
@@ -52,3 +57,4 @@
 * fn approx err is indeed present
 * td3= ddpg + doubleQlearning
 * (-) no atari xprmt
+* (?) max average return?
