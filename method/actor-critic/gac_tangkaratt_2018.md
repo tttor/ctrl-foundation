@@ -12,8 +12,8 @@
 
 ## idea: guide actor-critic (GAC).
 * learns a **guide actor** that locally maximizes the critic
-  * updates the guide actor by performing **second-order optimization** in
-    the action space where the curvature matrix is based on the Hessians of the critic.
+  * updates the guide actor by performing **second-order optimization** in the action space 
+    * where the curvature matrix is based on the Hessians of the critic.
 * updates the policy parameter based on the guide actor by supervised learning.
 
 ## setup
