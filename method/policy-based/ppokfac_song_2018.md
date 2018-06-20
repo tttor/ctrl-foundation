@@ -1,6 +1,16 @@
 # An Empirical Analysis of Proximal Policy Optimization with Kronecker-factored Natural Gradients
 * https://arxiv.org/abs/1801.05566
 
+## problem
+* Both PPO and ACKTR are state-of-the-art in their respective regimes
+  * PPO obtains the advantage through the clipping objective function that can be easily optimized, while 
+  * ACKTR achieves higher performance through (an approximation of) natural gradient updates. 
+  * How would an algorithm perform if we combine the advantages of both fronts?
+
+## setup
+* For the critic, we consider the Gauss-Newton matrix, which is
+equivalent to the Fisher for a Gaussian observation model
+
 ## result
 * PPOKFAC > PPO
   * in terms of sample complexity and speed in a range of MuJoCo environments, 
@@ -19,8 +29,8 @@
   (take different approaches to better sample efficiency)
   * Proximal Policy Optimization ( Schulman et al. [2017]) 
     * considers a particular “clipping” objective that mimics a trust-region,
-    *  penalizes the new policy to be far from the old policy without explicitly enforcing the trust region constraint.
-    *  optimized through stochastic gradients descent (PPO-SGD)
+    * penalizes the new policy to be far from the old policy without explicitly enforcing the trust region constraint.
+    * optimized through stochastic gradients descent (PPO-SGD)
   * ACKTR [Wu et al., 2017].
     * considers approximated natural gradients that balances speed and optimization.
     
