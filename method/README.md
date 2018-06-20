@@ -60,6 +60,7 @@
 * `policy-based` (policy-search, policy iteration)
   * improve the policy directly by calculating the derivative of the future expected reward 
     with respect to the policy parameters.
+  *  learn a parameterized policy that can select actions without consulting a value function
   * pros and cons
     * (+) a policy may be easier to learn than action values or action advantages;
           apply to a wider range of problems, eg when Q-fn is too complex
@@ -80,6 +81,8 @@
       * policy gradients are estimated from rollouts the variance is often extreme
       * requires on-policy samples
 * `value-based` (value iteration)
+  * learned the values of actions and then selected actions based on their estimated action values; 
+    (their policies would not even exist without the action-value estimates)
   * Bellman equ is fundamental to value fn learning: 
     * relates the value of $(s,a)$ to the value os the subsequent $(s', a')$
   * pros and cons
