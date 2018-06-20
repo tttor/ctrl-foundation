@@ -58,6 +58,8 @@
 
 ## base for iteration
 * `policy-based` (policy-search, policy iteration)
+  * improve the policy directly by calculating the derivative of the future expected reward 
+    with respect to the policy parameters.
   * pros and cons
     * (+) a policy may be easier to learn than action values or action advantages;
           apply to a wider range of problems, eg when Q-fn is too complex
