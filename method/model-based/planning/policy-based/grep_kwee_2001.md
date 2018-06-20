@@ -15,3 +15,7 @@
 ## result
 * Numerical experiments suggest that
   the probabilistic policy indeed converges to an optimal policy—but quite slowly
+ 
+## comment
+* (-) discrete problem, so why use policy based? cf value based
+* hard to follow the derivation of the exact policy gradient
