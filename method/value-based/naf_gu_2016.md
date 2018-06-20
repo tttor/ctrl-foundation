@@ -1,5 +1,7 @@
 # Continuous Deep Q-Learning with Model-based Acceleration
 * Shixiang Gu et al
+* http://proceedings.mlr.press/v48/gu16.pdf
+* https://icml.cc/2016/reviews/1274.txt
 
 ## idea: normalized advantage function (NAF)
 * avoids the need for a second actor or policy
@@ -26,7 +28,7 @@ ily and analytically during the Q-learning update
 
 ## result
 * NAF > DDPG
-*  although Q-learning can incorporate off-policy experience,
+* although Q-learning can incorporate off-policy experience,
 learning primarily from off-policy exploration (via model-
 based planning) only rarely improves the overall sample
 efficiency of the algorithm.
@@ -49,12 +51,14 @@ free continuous Q-learning, and show that this produces a
 large improvement in sample complexity.
 
 ## background
-* For continuous action problems, Q-learning becomes diffi-
-cult, because it requires maximizing a complex, nonlinear
-function at each update.
+* For continuous action problems, Q-learning becomes difficult, 
+  * because it requires maximizing a complex, nonlinear function at each update.
   * For this reason, continuous domains are often tackled using actor-critic methods
 
 ## comment
 * seems a breaktrough: Q-learning for continuous actions
 * ?: how decomposing Q into (A + V) and using nets to represent V, A
   can make solving max of Q?
+* from the reviewer:
+> The main advantages of the proposed method over comparable actor-critic methods seem to be that the quadratic assumption acts as a regularizer and that the learning signal for all of the estimators comes directly from the environment
+
