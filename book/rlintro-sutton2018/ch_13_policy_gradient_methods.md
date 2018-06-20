@@ -8,7 +8,7 @@
     some performance measure $J(\theta)$ with respect to the policy parameter.
   * to maximize performance, so their updates **approximate** gradient ascent in $J(\theta)$:
     * $\theta_{t+1} = \theta_t + \alpha \widehat{ \nabla J(\theta_t) }$ ...(13.1)
-      * $\hat{ \nabla J(\theta_t) }$:
+      * $\widehat{ \nabla J(\theta_t) }$:
         a **stochastic estimate** whose expectation approximates the gradient of the
         performance measure with respect to its argument
       * $\theta \in R^{d'}$: policy’s parameter vector
