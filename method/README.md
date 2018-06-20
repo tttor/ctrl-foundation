@@ -99,23 +99,11 @@
     * (-)  a small change in the action-value function can cause large changes
           in the policy, which creates difficulties for convergence proofs and
           for some real-time applications.
+    * (-) have **no** natural way of finding stochastic optimal policies
 * hybrid: actor-critic (`actor:policy-based` + `critic:value-based`)
   * vanilla actor-critic methods are **on-policy** only
   * pros and cons
     * (-) requires optimizing two function approximators on different objectives.
-
-## when policy compiled/learned with respect to execution/action time
-* `offline`
-  * policy learned (planned) before execution
-  * consider all contingencies so does not scale up
-* `online`
-  * aka: decision-time planning
-  * plan from the **current** belief (typically, each step), so
-    * potentially can handle large-scale planning
-    * handle model changes naturally
-  * policy learned:
-    in between 2 execution (interleaved) and **in background** (in paralel with execution)
-* hybrid: (`offline` + `online`)
 
 ## base policy for learning
 * `on-policy`
@@ -144,13 +132,36 @@
           extensive hyperparameter tuning is required to attain good results.
 * hybrid: `on-policy`+`off-policy`
 
+## stochasticity of the policy
+* `stochastic`
+  * stochastic policy gradient theorem
+    * the policy gradient integrates over both state and action spaces
+    * computing the stochastic policy gradient may require more samples
+  * the best approximate policy may be stochastic, eg
+    * in card games with **imperfect information** the optimal play is
+      often to do two different things with specific probabilities, such as when bluffing in Poker.
+* `deterministic`
+  * deterministic policy gradient theorem
+    * the policy gradient integrates over state only 
+
+## when policy compiled/learned with respect to execution/action time
+* `offline`
+  * policy learned (planned) before execution
+  * consider all contingencies so does not scale up
+* `online`
+  * aka: decision-time planning
+  * plan from the **current** belief (typically, each step), so
+    * potentially can handle large-scale planning
+    * handle model changes naturally
+  * policy learned:
+    in between 2 execution (interleaved) and **in background** (in paralel with execution)
+* hybrid: (`offline` + `online`)
+
 ## other dimensions:
-deterministic _vs_ stochastic policy,
+plain _vs_ hierarchical structure,
 episodic _vs_ continuing tasks,
 average _vs_ cumulative discounted rewards,
 without-prior (non-Bayesian) _vs_ with-prior (Bayesian),
-plain _vs_ hierarchical structure,
-(onlinePlanning or modelFreeRL) _vs_ (onlinePlanning + modelLearning + modelFreeRL),
 see also [this](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro-sutton2018/part_01_summary.md)
 
 ## policy representation
