@@ -1,6 +1,8 @@
 # Continuous Deep Q-Learning with Model-based Acceleration
 * Shixiang Gu et al
 * http://proceedings.mlr.press/v48/gu16.pdf
+* http://proceedings.mlr.press/v48/gu16-supp.pdf
+* http://proceedings.mlr.press/v48/gu16.html
 * https://icml.cc/2016/reviews/1274.txt
 
 ## idea: normalized advantage function (NAF)
