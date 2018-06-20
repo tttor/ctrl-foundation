@@ -19,6 +19,8 @@
   (take different approaches to better sample efficiency)
   * Proximal Policy Optimization ( Schulman et al. [2017]) 
     * considers a particular “clipping” objective that mimics a trust-region,
+    *  penalizes the new policy to be far from the old policy without explicitly enforcing the trust region constraint.
+    *  optimized through stochastic gradients descent (PPO-SGD)
   * ACKTR [Wu et al., 2017].
     * considers approximated natural gradients that balances speed and optimization.
     
