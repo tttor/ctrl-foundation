@@ -7,7 +7,7 @@
   * learning the policy parameter based on the gradient of
     some performance measure $J(\theta)$ with respect to the policy parameter.
   * to maximize performance, so their updates **approximate** gradient ascent in $J(\theta)$:
-    * $\theta_{t+1} = \theta_t + \alpha \hat{ \nabla J(\theta_t) }$ ...(13.1)
+    * $\theta_{t+1} = \theta_t + \alpha \widehat{ \nabla J(\theta_t) }$ ...(13.1)
       * $\hat{ \nabla J(\theta_t) }$:
         a **stochastic estimate** whose expectation approximates the gradient of the
         performance measure with respect to its argument
@@ -41,7 +41,7 @@
 ## 13.2 The Policy Gradient Theorem
 * advantages of policy parameterization over ε-greedy
   * the approximate policy can approach a deterministic policy
-  * the action probabilities change smoothly as a function of the learned parameter, i
+  * the action probabilities change smoothly as a function of the learned parameter,     
     if with continuous policy parameterization
     * Largely because of this, **stronger convergence guarantees** are available for
       policy-gradient methods than for action-value methods.
