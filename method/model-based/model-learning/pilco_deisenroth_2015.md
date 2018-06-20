@@ -1,4 +1,4 @@
-# PILCO: Gaussian Processes for Data-Efficient Learning in Robotics and Control
+# Gaussian Processes for Data-Efficient Learning in Robotics and Control
 * Marc Peter Deisenroth, Dieter Fox, and Carl Edward Rasmussen
 * ieee transactions on pattern analysis and machine intelligence, vol. 37, no. 2, february 2015
 * https://doi.org/10.1109/TPAMI.2013.218
@@ -16,6 +16,10 @@
   they inherently assume that the learned model resembles the real environment sufficiently accurately
 
 ## idea: Probabilistic Inference for Learning Control (PILCO)
+* To find a optimal policy, which minimizes (2), PILCO builds upon three components: 
+  * a probabilistic GP dynamics model (Section 3.1), 
+  * deterministic approximate infer- ence for long-term predictions and policy evaluation (Sec- tion 3.2), 
+  * **analytic computation** of the policy gradients for policy improvement (Section 3.3)
 * learn a probabilistic, non-parametric Gaussian process **transition model** of the system.
   * a probabilistic model places a posterior distribution on plausible transition functions and
     expresses the level of uncertainty about the model itself.
@@ -35,3 +39,6 @@
 * not yet: neural nets for learning transition model?
 * seems strong relation with bayesian RL
 * ? Model uncertainty is easily evaluated?
+* ? when does analytic gradient not work?
+  * will it work beyond moment macthing or linearization of the posterior GP?
+> For example, with moment matching (MM) or linearization of the posterior GP (see Section 4 for details) the desired gradients can be computed analytically by repeated application of the chain-rule. ...
