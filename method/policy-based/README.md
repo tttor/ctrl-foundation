@@ -1,6 +1,6 @@
 # policy-based
-Here is for model-free policy-based approaches,
-for model-based policy-based see [method/model-based/planning/policy-based](https://github.com/tttor/rl-foundation/tree/master/method/model-based/planning/policy-based)
+Here is for model-free policy-based approaches. </br>
+For model-based policy-based approaches, goto [method/model-based/planning/policy-based](https://github.com/tttor/rl-foundation/tree/master/method/model-based/planning/policy-based)
 
 ## taxonomy
 * gradient-based: policy-gradient
