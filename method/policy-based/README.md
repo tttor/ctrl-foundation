@@ -11,7 +11,7 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
   * based on policy gradient theorem: stochastic and deterministic
     * actor-critic: </br>
       Deep DPG (Lilicrap, 2016), Recurrent DPG
-    * actor-only: </br>       
+    * actor-only:
       TRPO (Schulman, 2015), PPO (Schulman, 2017), GPS (Levine, 2013)
 
 ## tutor
