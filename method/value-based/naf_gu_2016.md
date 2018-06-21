@@ -27,11 +27,8 @@ domains.
   * iteratively fitting local linear models to the latest batch of on-policy or off-policy rollouts provides 
     sufficient local accuracy to achieve substantial improvement using short imagination rollouts 
     in the vicinity of the real-world samples.
-
-
-* to represent the Q-function Q(xt , ut ) in Q-learning in such a way that
-its maximum, arg maxu Q(xt , ut ), can be determined eas-
-ily and analytically during the Q-learning update
+* to represent the Q-function Q(xt , ut ) in Q-learning in such a way that 
+   its maximum, arg maxu Q(xt , ut ), can be determined easily and analytically during the Q-learning update
   * Decomposing Q into an advantage term A and a state-value term V
   * representations:
     is based on a neural network that separately outputs a value
@@ -41,7 +38,6 @@ ily and analytically during the Q-learning update
 
 ## result
 * NAF > DDPG
-
 * although Q-learning can incorporate off-policy experience,
 learning primarily from off-policy exploration (via model-
 based planning) only rarely improves the overall sample
@@ -69,7 +65,13 @@ ing algorithm is chosen carefully.
 ## comment
 * address low sample efficiency via
   * Q-learning (value-based) for cont actions
-  * model-based (toward Dyna)
+  * model-based (toward Dyna); imagination rollout is essentially planning
+* wondering none compare to NAF in actor-critic context
+* (+): empirically analyze the sensitivity of the method to imperfect learned dynamics models.
+* (-): no plot for this
+>  empirically analyze the sensitivity of this method to imperfect learned dynamics models.
+* (-): restricted to quadratic Q-fn (?)
+> since the Q-function is quadratic in u, the action that maximizes the Q-function is always given by μ(x|θμ )
 * ?: so NAF for both direct and indirect polucy update?
 * ?: how decomposing Q into (A + V) and using nets to represent V, A
   can make solving max of Q?
