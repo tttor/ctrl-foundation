@@ -9,9 +9,9 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
   * analytical (closed-form) solution:
     PILCO, PEGASUS 2000
   * based on policy gradient theorem: stochastic and deterministic
-    * actor-critic:
+    * actor-critic: </br>
       Deep DPG (Lilicrap, 2016), Recurrent DPG
-    * actor-only:       
+    * actor-only: </br>       
       TRPO (Schulman, 2015), PPO (Schulman, 2017), GPS (Levine, 2013)
 
 ## tutor
