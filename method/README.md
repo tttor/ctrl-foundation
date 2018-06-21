@@ -85,6 +85,9 @@
     (their policies would not even exist without the action-value estimates)
   * Bellman equ is fundamental to value fn learning: 
     * relates the value of $(s,a)$ to the value os the subsequent $(s', a')$
+  * the learning obj is to minimize the Bellman error
+    * $L(\theta^Q) = \mathbb{E}[\big( Q(s_t, a_t|\theta^Q) - y_t \big)^2]$,
+      where $y_t = r(s_t, a_t) + \gamma Q(s_{t+1}, a_{t+1})$
   * pros and cons
     * (+) low variance; more stable performance
     * (+) more sample efficient when they work (does not mean computationally efficient)
