@@ -60,18 +60,19 @@
 * `policy-based` (policy-search, policy iteration)
   * improve the policy directly by calculating the derivative of the future expected reward 
     with respect to the policy parameters.
-  *  learn a parameterized policy that can select actions without consulting a value function
+  * learn a parameterized policy that can select actions without consulting a value function
   * pros and cons
     * (+) a policy may be easier to learn than action values or action advantages;
-          apply to a wider range of problems, eg when Q-fn is too complex
-    * (+) parametrized policies allows for scaling RL into
-          high dimensional continuous action spaces by reducing the search space of possible policies;
-          easily applied to continuous action space, since capable of learning stochastic policies
-    * (+) faster convergence rate
+          eg when Q-fn is too complex
+    * (+) parameterized policies allows
+       * if with continuous policy parameterization, 
+         the action probabilities change smoothly as a function of the learned parameter,
+         Largely because of this, stronger convergence guarantees are available for policy-gradient methods than 
+         for action-value methods.
     * (+) allows task-appropriate pre-structured policies, such as
-          movement primitives to be integrated straightforwardly,
-          imitation learning from an expert's demonstrations can be used to
-          obtain an initial estimate for the policy parameters
+      * movement primitives to be integrated straightforwardly,
+      * imitation learning from an expert's demonstrations can be used to
+        obtain an initial estimate for the policy parameters
     * (+) directly optimize the quantity of interest while remaining stable under function approximation
           (given a sufficiently small learning rate)
     * (+) less susceptible to error in the presence of noise on properties of the controlled POMDP
