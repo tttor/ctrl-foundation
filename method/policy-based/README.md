@@ -1,22 +1,18 @@
 # policy-based
 Here is for model-free policy-based approaches. </br>
-For model-based policy-based approaches, goto [method/model-based/planning/policy-based](https://github.com/tttor/rl-foundation/tree/master/method/model-based/planning/policy-based)
+For model-based policy-based approaches, goto [method/model-based/planning/policy-based](https://github.com/tttor/rl-foundation/tree/master/method/model-based/planning/policy-based).
 
 ## taxonomy
-* gradient-based: policy-gradient
-  * TRPO: Trust Region Policy Optimization (Schulman, 2015)
-    * PPO: Proximal Policy Optimization (Schulman, 2017)
-  * DPG: Deterministic Policy Gradient (Silver, 2014)
-    * Deep DPG (Lilicrap, 2016)
-    * Recurrent DPG
-  * GPS: Guided Policy Search (Levine, 2013)
 * gradient-free
   * cross-entropy method
-* misc:
-  * PILCO
-  * PEGASUS, 2000
-  * DMP: Dynamic Motion Primitives
-  * TNPG: Truncated Natural Policy Gradient
+* gradient-based: 
+  * analytical (closed-form) solution:
+    PILCO, PEGASUS 2000
+  * based on policy gradient theorem: stochastic and deterministic
+    * actor-critic:
+      Deep DPG (Lilicrap, 2016), Recurrent DPG
+    * actor-only:       
+      TRPO (Schulman, 2015), PPO (Schulman, 2017), GPS (Levine, 2013)
 
 ## tutor
 * Quora
