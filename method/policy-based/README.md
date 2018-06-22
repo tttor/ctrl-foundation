@@ -7,13 +7,15 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
   * cross-entropy method
 * gradient-based:
   * analytical (closed-form) solution:
-    PILCO, PEGASUS 2000
+    PILCO, PEGASUS
   * based on policy gradient theorem: stochastic and deterministic
     * actor-baseline (action-value fn **not** used for bootstrapping): </br>
-      TRPO (Schulman, 2015), PPO (Schulman, 2017), GPS (Levine, 2013)
+      TRPO (Schulman, 2015), PPO (Schulman, 2017)
     * actor-critic (action-value fn used for bootstrapping): </br>
       Deep DPG (Lilicrap, 2016)
-
+    * others: </br>
+      importance sampling: GPS (Levine, 2013)
+      
 ## tutor
 * Quora
   * https://www.quora.com/Why-does-the-policy-gradient-method-have-a-high-variance
