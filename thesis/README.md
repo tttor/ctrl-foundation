@@ -14,7 +14,7 @@
 [Yevgen Chebotar](http://www-clmc.usc.edu/Main/YevgenChebotar),
 ...
 
-### Young, t >= 2015 
+### Young, t >= 2015
 * John Schulman: Optimizing expectations: from deep reinforcement learning to stochastic computation graphs, 2016
 * Arthur Guez: Sample-based search methods for bayes-adaptive planning, 2015
 * Adam White: Developing a predictive approach to knowledge, 2015
@@ -35,7 +35,7 @@
 * Pieter Abbeel, inverse rl (for flying helicopters), 2008
 
 ### Old, 2000 <= t < 2008
-* ShimonWhiteson: Adaptive Representations for Reinforcement Learning, 2007
+* Shimon Whiteson: Adaptive Representations for Reinforcement Learning, 2007
 * Pascal Poupart, 2005
 * Andrew Bagnell: Learning decisions: robustness, uncertainty, and approximation, 2004
 * Joelle Pineau, 2004
@@ -48,15 +48,16 @@
 * Benjamin Van Roy: Learning and Value Function Approximation in Complex Decision Processes, 1998
 * Chris Watkins: Learning from delayed rewards, 1989
 * [Dimitri Bertsekas](http://web.mit.edu/dimitrib/www/home.html), 1971
-* Richard Sutton
 * Andrew Barto
 * Csaba Szepesvári
-* Michael Littman
-* Sebastian Thrun
-* Leslie Kaebling
 * Jan Peters
-* Satinder Singh
+* Leslie Kaebling
+* Michael Littman
 * Gerald Tesauro
+* Richard Sutton
+* Ronald J Williams.
+* Satinder Singh
+* Sebastian Thrun
 
 ## labs
 * http://incompleteideas.net/rlai.cs.ualberta.ca/RLAI/ualberta.html
