@@ -58,8 +58,11 @@
 
 ## base for iteration
 * `policy-based` (policy-search, policy iteration)
-  * improve the policy directly by calculating the derivative of the future expected reward 
-    with respect to the policy parameters.
+  * directly optimize parameters of a stochastic policy through local gradient information obtained by 
+    interacting with the environment using the current policy. 
+  * operate by increasing the log probability of actions proportional to the future rewards influenced by these actions. 
+    * On average, actions which perform better will acquire higher probability, and 
+      the policy’s expected performance improves.
   * learn a parameterized policy that can select actions without consulting a value function
   * pros and cons
     * (+) a policy may be easier to learn than action values or action advantages;
