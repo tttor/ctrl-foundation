@@ -10,10 +10,10 @@
   often falling into poor local optima.
   
 ## idea: GPS
-* GPS: a policy search that incorporates guiding samples into the policy search. 
-  * These samples are drawn from a distribution built around a DDP solution,
+* GPS: a policy search that incorporates **guiding samples** into the policy search. 
+  * samples are drawn from a distribution built around a DDP solution,
     which can be initialized from demonstrations. 
-  *  can be viewed as transforming a collection of trajectories into a controller. 
+  * can be viewed as transforming a collection of trajectories into a controller. 
 * a guided policy search algorithm that uses trajectory optimization to 
   direct policy learning and avoid poor local optima.
 * use differential dynamic programming (DDP)
