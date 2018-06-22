@@ -115,9 +115,9 @@
 
 ## 13.5 Actor–Critic Methods
 * REINFORCE-with-baseline method is **not** an actor–critic method, because
-  * its state-value function is used only as a baseline, **not** as a critic.
-  * it is not used for bootstrapping,  but only as a baseline for the state whose estimate is being updated.
-    * for bootstrapping: updating the value estimate for a state from the estimated values of subsequent states
+  * its state-value function is used only as a baseline, **not as a critic**
+  * it is **not used for bootstrapping**, but only as a baseline for the state whose estimate is being updated.
+    * bootstrapping: updating the value estimate for a state from the estimated values of subsequent states
 * only through bootstrapping
   * we introduce bias and an asymptotic dependence on the quality of the function approximation.
     * this bias is often beneficial because it reduces variance and accelerates learning.
