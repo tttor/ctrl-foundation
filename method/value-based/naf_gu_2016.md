@@ -35,6 +35,8 @@ domains.
     function term V (x) and an advantage term A(x, u), which
     is parameterized as a quadratic function of nonlinear fea-
     tures of the state:
+* utilize the iLQG algorithm to generate good trajectories under the model, and 
+  then mix these trajectories together with on-policy experience by appending them to the replay buffer. 
 
 ## result
 * NAF > DDPG
@@ -55,7 +57,14 @@ ing algorithm is chosen carefully.
     we show that they are minimally effective on our continuous control tasks.
   * to combine **locally linear models** with local on-policy imagination rollouts to accelerate 
     model-free continuous Q-learning, and show that this produces a large improvement in sample complexity.
-
+* even when planning under the true model, the improvement obtained from this approach is often quite small,
+  and varies significantly across domains and choices of exploration noise.
+  * The intuition behind this result is that off- policy iLQG exploration is 
+    too different from the learned policy, and Q-learning must consider alternatives in order 
+    to ascertain the optimality of a given action.
+  * not enough to simply show the algorithm good actions, 
+    it must also experience bad actions to understand which actions are better and which are worse.
+    
 ## background
 * For continuous action problems, Q-learning becomes difficult, 
   * because it requires maximizing a complex, nonlinear function at each update.
@@ -73,6 +82,7 @@ ing algorithm is chosen carefully.
 * (-): restricted to quadratic Q-fn (?)
 > since the Q-function is quadratic in u, the action that maximizes the Q-function is always given by μ(x|θμ )
 * ?: so NAF for both direct and indirect polucy update?
+  * ans: NO, for planning, it uses iLQG
 * ?: how decomposing Q into (A + V) and using nets to represent V, A
   can make solving max of Q?
 * ?: how imagination rollout differ from Dyna?
