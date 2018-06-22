@@ -32,7 +32,7 @@
 * Marc Deisenroth, 2010
 * David Silver: Reinforcement Learning and Simulation-Based Search in Computer Go, 2009
 * Hanna Kurniawati, 2008
-* Pieter Abbeel, inverse rl (for flying helicopters), 2008
+* Pieter Abbeel, Apprenticeship learning and reinforcement learning with application to robotic control, 2008
 
 ### Old, 2000 <= t < 2008
 * Shimon Whiteson: Adaptive Representations for Reinforcement Learning, 2007
