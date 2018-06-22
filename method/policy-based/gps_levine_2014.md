@@ -1,6 +1,7 @@
 # Learning Neural Network Policies with Guided Policy Search
-Sergey Levine and Pieter Abbeel;
-NIPS 2014;
+* Sergey Levine and Pieter Abbeel;
+* nips2014: spotlight
+* https://papers.nips.cc/paper/5444-learning-neural-network-policies-with-guided-policy-search-under-unknown-dynamics
 
 ## problem
 * robotic manipulation tasks 
