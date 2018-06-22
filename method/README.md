@@ -168,14 +168,6 @@ average _vs_ cumulative discounted rewards,
 without-prior (non-Bayesian) _vs_ with-prior (Bayesian),
 see also [this](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro-sutton2018/part_01_summary.md)
 
-## policy representation
-* neural networks
-  * tutor:
-    * https://github.com/tttor/TensorFlow-1x-Deep-Learning-Cookbook/blob/devel/ch09/02_nn_random_agent.py
-* belief tree
-* dynamic movement primitives
-* time-varying linear-Gaussian (TVLG)
-
 ## misc
 * Temporal Difference (TD):
   MonteCarlo and DynamicsProgramming
