@@ -1,5 +1,6 @@
 # Trust Region Policy Optimization
 * icml2015
+* http://proceedings.mlr.press/v37/schulman15.html
 * https://arxiv.org/abs/1502.05477
 
 ## idea: TRPO (trust region policy optimization)
