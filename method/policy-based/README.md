@@ -9,9 +9,9 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
   * analytical (closed-form) solution:
     PILCO, PEGASUS 2000
   * based on policy gradient theorem: stochastic and deterministic
-    * actor-critic: </br>
-      Deep DPG (Lilicrap, 2016), Recurrent DPG
-    * actor-only:
+    * actor-critic (using critic to reduce variance): </br>
+      Deep DPG (Lilicrap, 2016)
+    * actor-only (using baseline to reduce variance): </br>
       TRPO (Schulman, 2015), PPO (Schulman, 2017), GPS (Levine, 2013)
 
 ## tutor
@@ -34,3 +34,11 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
 * https://github.com/dennybritz/reinforcement-learning/tree/master/PolicyGradient
 * https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow/tree/master/contents/7_Policy_gradient_softmax
 * https://www.oreilly.com/ideas/reinforcement-learning-with-tensorflow
+
+## policy representation
+* neural networks
+  * tutor:
+    * https://github.com/tttor/TensorFlow-1x-Deep-Learning-Cookbook/blob/devel/ch09/02_nn_random_agent.py
+* belief tree
+* dynamic movement primitives
+* time-varying linear-Gaussian (TVLG)
