@@ -64,6 +64,8 @@
     * On average, actions which perform better will acquire higher probability, and 
       the policy’s expected performance improves.
   * learn a parameterized policy that can select actions without consulting a value function
+  * a step in the policy gradient direction should increase the probability of better-than-average actions and 
+    decrease the probability of worse-than-average actions
   * pros and cons
     * (+) a policy may be easier to learn than action values or action advantages;
           eg when Q-fn is too complex
