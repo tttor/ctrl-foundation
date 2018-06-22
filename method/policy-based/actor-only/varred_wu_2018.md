@@ -2,6 +2,7 @@
 * Cathy Wu, Aravind Rajeswaran, Yan Duan, Vikash Kumar, Alexandre M Bayen, Sham Kakade, Igor Mordatch, Pieter Abbeel
 * iclr2018: oral
 * https://openreview.net/forum?id=H1tSsb-AW
+* https://vimeo.com/252186180
 
 ## problem
 * high variance of gradient estimates.
