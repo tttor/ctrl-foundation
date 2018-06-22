@@ -5,14 +5,14 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
 ## taxonomy
 * gradient-free
   * cross-entropy method
-* gradient-based: 
+* gradient-based:
   * analytical (closed-form) solution:
     PILCO, PEGASUS 2000
   * based on policy gradient theorem: stochastic and deterministic
-    * actor-critic (using critic to reduce variance): </br>
-      Deep DPG (Lilicrap, 2016)
-    * actor-only (using baseline to reduce variance): </br>
+    * actor-baseline (action-value fn **not** used for bootstrapping): </br>
       TRPO (Schulman, 2015), PPO (Schulman, 2017), GPS (Levine, 2013)
+    * actor-critic (action-value fn used for bootstrapping): </br>
+      Deep DPG (Lilicrap, 2016)
 
 ## tutor
 * Quora
