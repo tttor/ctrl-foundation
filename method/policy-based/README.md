@@ -7,7 +7,7 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
   * cross-entropy method
 * gradient-based:
   * analytical (closed-form) solution:
-    PILCO, PEGASUS 2000
+    PILCO, PEGASUS
   * based on policy gradient theorem: stochastic and deterministic
     * actor-baseline (action-value fn **not** used for bootstrapping; iterative approaches):
     * actor-critic (action-value fn used for bootstrapping; incremental approaches): </br>
