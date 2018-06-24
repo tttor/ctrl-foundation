@@ -9,9 +9,12 @@
 * FitML: https://github.com/FitMachineLearning/FitML
 
 ## type 1: people power
+### pytorch
+* https://github.com/ikostrikov/pytorch-rl
+
+### tensorflow
 * https://github.com/dennybritz/reinforcement-learning
 * https://github.com/hunkim/ReinforcementZeroToAll
-* https://github.com/ikostrikov/pytorch-rl
 * https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
 * https://github.com/rll/rllab
 * https://github.com/rlcode/reinforcement-learning
