@@ -1,7 +1,9 @@
 # Addressing Function Approximation Error in Actor-Critic Methods
-* Scott Fujimoto, Herke van Hoof, David Meger,
+* Scott Fujimoto, Herke van Hoof, David Meger
+* icml2018: oral
 * https://arxiv.org/abs/1802.09477
 * https://github.com/sfujim/TD3 # pytorch
+* https://www.youtube.com/watch?v=x33Vw-6vzso&feature=youtu.be
 
 ## problem
 * in an actor-critic setting, 
