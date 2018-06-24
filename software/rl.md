@@ -14,6 +14,7 @@
 * https://github.com/higgsfield/RL-Adventure-2
   * https://github.com/higgsfield/RL-Adventure
 * https://github.com/vitchyr/rlkit
+* https://github.com/ShangtongZhang/DeepRL
 
 ### tensorflow
 * https://github.com/dennybritz/reinforcement-learning
