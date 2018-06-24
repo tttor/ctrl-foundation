@@ -10,9 +10,11 @@
 ## type 1: people power
 ### pytorch
 * https://github.com/ikostrikov/pytorch-rl
+  * https://github.com/ikostrikov/pytorch-a2c-ppo-acktr
 * https://github.com/higgsfield/RL-Adventure-2
   * https://github.com/higgsfield/RL-Adventure
-  
+* https://github.com/vitchyr/rlkit
+
 ### tensorflow
 * https://github.com/dennybritz/reinforcement-learning
 * https://github.com/hunkim/ReinforcementZeroToAll
