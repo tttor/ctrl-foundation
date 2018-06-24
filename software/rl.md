@@ -22,8 +22,6 @@
 * https://github.com/MorvanZhou/Reinforcement-learning-with-tensorflow
 * https://github.com/rll/rllab
 * https://github.com/rlcode/reinforcement-learning
-* https://github.com/ShangtongZhang/DeepRL
-* https://github.com/vitchyr/rlkit
 
 ## type 2: old
 * PyBrain: http://pybrain.org/
