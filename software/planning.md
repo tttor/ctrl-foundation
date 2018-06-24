@@ -1,6 +1,6 @@
 # Planning software
 
-* JuliaPOMDP \cite{Egorov2017}: \url{https://github.com/JuliaPOMDP/POMDPs.jl}
+* JuliaPOMDP: https://github.com/JuliaPOMDP/POMDPs.jl
 * APPL: http://bigbird.comp.nus.edu.sg/pmwiki/farm/appl
   * C++ toolkit for approximate POMDP planning.
   * contains
