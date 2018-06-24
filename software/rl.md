@@ -6,7 +6,6 @@
 * Ray RLlib: http://ray.readthedocs.io/en/latest/rllib.html
 * ChainerRL: https://github.com/chainer/chainerrl
 * KerasRL: https://github.com/keras-rl/keras-rl
-* FitML: https://github.com/FitMachineLearning/FitML
 
 ## type 1: people power
 ### pytorch
