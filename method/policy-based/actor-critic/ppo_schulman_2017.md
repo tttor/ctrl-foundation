@@ -2,6 +2,9 @@
 * John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Radford, Oleg Klimov
 * https://arxiv.org/abs/1707.06347
 * https://blog.openai.com/openai-baselines-ppo/
+* https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl
+* https://www.youtube.com/watch?v=gqX8J38tESw&feature=youtu.be&t=14m1s
+* https://channel9.msdn.com/Events/Neural-Information-Processing-Systems-Conference/Neural-Information-Processing-Systems-Conference-NIPS-2016/Deep-Reinforcement-Learning-Through-Policy-Optimization
 
 ## problem
 * looking for a method that is 
