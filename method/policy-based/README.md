@@ -9,8 +9,10 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
   * analytical (closed-form) solution:
     PILCO, PEGASUS
   * based on policy gradient theorem: stochastic and deterministic
-    * actor-baseline (action-value fn **not** used for bootstrapping; iterative approaches):
-    * actor-critic (action-value fn used for bootstrapping; incremental approaches): </br>
+    * actor-baseline (action-value fn **not** used for bootstrapping; iterative approaches)
+    * actor-critic (action-value fn used for bootstrapping; incremental approaches)
+* based on expectation maximization (EM)
+* policy-prior seach
 
 ## tutor
 * Quora

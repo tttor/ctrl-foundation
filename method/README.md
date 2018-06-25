@@ -57,22 +57,22 @@
 * hybrid: dyna (`true model-free` + and `model-based`)
 
 ## base for iteration
-* `policy-based` (policy-search, policy iteration)
-  * directly optimize parameters of a stochastic policy through local gradient information obtained by 
-    interacting with the environment using the current policy. 
-  * operate by increasing the log probability of actions proportional to the future rewards influenced by these actions. 
-    * On average, actions which perform better will acquire higher probability, and 
+* `policy-based` (aka policy iteration)
+  * directly optimize parameters of a stochastic policy through local gradient information obtained by
+    interacting with the environment using the current policy.
+  * operate by increasing the log probability of actions proportional to the future rewards influenced by these actions.
+    * On average, actions which perform better will acquire higher probability, and
       the policy’s expected performance improves.
   * learn a parameterized policy that can select actions without consulting a value function
-  * a step in the policy gradient direction should increase the probability of better-than-average actions and 
+  * a step in the policy gradient direction should increase the probability of better-than-average actions and
     decrease the probability of worse-than-average actions
   * pros and cons
     * (+) a policy may be easier to learn than action values or action advantages;
           eg when Q-fn is too complex
     * (+) parameterized policies allows
-       * if with continuous policy parameterization, 
+       * if with continuous policy parameterization,
          the action probabilities change smoothly as a function of the learned parameter,
-         Largely because of this, stronger convergence guarantees are available for policy-gradient methods than 
+         Largely because of this, stronger convergence guarantees are available for policy-gradient methods than
          for action-value methods.
     * (+) allows task-appropriate pre-structured policies, such as
       * movement primitives to be integrated straightforwardly,
@@ -86,10 +86,10 @@
     * (-) sample inefficiency, because
       * policy gradients are estimated from rollouts the variance is often extreme
       * requires on-policy samples
-* `value-based` (value iteration)
-  * learned the values of actions and then selected actions based on their estimated action values; 
+* `value-based` (aka value iteration)
+  * learned the values of actions and then selected actions based on their estimated action values;
     (their policies would not even exist without the action-value estimates)
-  * Bellman equ is fundamental to value fn learning: 
+  * Bellman equ is fundamental to value fn learning:
     * relates the value of $(s,a)$ to the value os the subsequent $(s', a')$
   * the learning obj is to minimize the Bellman error
     * $L(\theta^Q) = \mathbb{E}[\big( Q(s_t, a_t|\theta^Q) - y_t \big)^2]$,
@@ -151,7 +151,7 @@
       often to do two different things with specific probabilities, such as when bluffing in Poker.
 * `deterministic`
   * deterministic policy gradient theorem
-    * the policy gradient integrates over state only 
+    * the policy gradient integrates over state only
 
 ## when policy compiled/learned with respect to execution/action time
 * `offline`
