@@ -1,5 +1,61 @@
 # method
 
+## base for iteration
+* `policy-based` (aka policy iteration)
+  * directly optimize parameters of a stochastic policy through local gradient information obtained by
+    interacting with the environment using the current policy.
+  * operate by increasing the log probability of actions proportional to the future rewards influenced by these actions.
+    * On average, actions which perform better will acquire higher probability, and
+      the policy’s expected performance improves.
+  * learn a parameterized policy that can select actions without consulting a value function
+  * a step in the policy gradient direction should increase the probability of better-than-average actions and
+    decrease the probability of worse-than-average actions
+  * pros and cons
+    * (+) a policy may be easier to learn than action values or action advantages;
+          eg when Q-fn is too complex
+    * (+) parameterized policies allows
+       * if with continuous policy parameterization,
+         the action probabilities change smoothly as a function of the learned parameter,
+         Largely because of this, stronger convergence guarantees are available for policy-gradient methods than
+         for action-value methods.
+    * (+) allows task-appropriate pre-structured policies, such as
+      * movement primitives to be integrated straightforwardly,
+      * imitation learning from an expert's demonstrations can be used to
+        obtain an initial estimate for the policy parameters
+    * (+) directly optimize the quantity of interest while remaining stable under function approximation
+          (given a sufficiently small learning rate)
+    * (+) less susceptible to error in the presence of noise on properties of the controlled POMDP
+    * (-) high variance, because the gradient is estimated using Monte Carlo samples
+    * (-) tend to converge to a local optimal
+    * (-) sample inefficiency, because
+      * policy gradients are estimated from rollouts the variance is often extreme
+      * requires on-policy samples
+* `value-based` (aka value iteration)
+  * learned the values of actions and then selected actions based on their estimated action values;
+    (their policies would not even exist without the action-value estimates)
+  * Bellman equ is fundamental to value fn learning:
+    * relates the value of $(s,a)$ to the value os the subsequent $(s', a')$
+  * the learning obj is to minimize the Bellman error
+    * $L(\theta^Q) = \mathbb{E}[\big( Q(s_t, a_t|\theta^Q) - y_t \big)^2]$,
+      where $y_t = r(s_t, a_t) + \gamma Q(s_{t+1}, a_{t+1})$
+  * pros and cons
+    * (+) low variance; more stable performance
+    * (+) more sample efficient when they work (does not mean computationally efficient)
+    * (-) high bias (due to bootstrapping)
+    * (-) value function approximation turns out to be a very difficult problem
+          in high-dimensional state and action spaces;
+          need to discretize action for continuous action space
+    * (-) often discontinuous, especially when the non-myopic policy differs
+          from a myopic policy; For instance, the value function of the under-powered pendulum swing-up is
+          discontinuous along the manifold where the applicable torque is
+          just not sufficient to swing the pendulum up
+    * (-)  a small change in the action-value function can cause large changes
+          in the policy, which creates difficulties for convergence proofs and
+          for some real-time applications.
+    * (-) have **no** natural way of finding stochastic optimal policies
+    * (-) mis-specification of value function models can lead to an inappropriate policy even in very simple problems
+    * (-) control policies can vary drastically in each iteration
+      
 ## source of experience
 * `model-free` (direct RL): `source= world`
   * the agent directly learns an optimal (or good) action-selection strategy from the collected data.
@@ -54,67 +110,8 @@
     * (-) lead to control strategies that are not robust to model errors,
           Since the learned policy is inherently based on internal simulations with the learned model, inaccurate models;
           (can be alleviated by using models that explicitly account for model errors)
-* hybrid: dyna (`true model-free` + and `model-based`)
 
-## base for iteration
-* `policy-based` (aka policy iteration)
-  * directly optimize parameters of a stochastic policy through local gradient information obtained by
-    interacting with the environment using the current policy.
-  * operate by increasing the log probability of actions proportional to the future rewards influenced by these actions.
-    * On average, actions which perform better will acquire higher probability, and
-      the policy’s expected performance improves.
-  * learn a parameterized policy that can select actions without consulting a value function
-  * a step in the policy gradient direction should increase the probability of better-than-average actions and
-    decrease the probability of worse-than-average actions
-  * pros and cons
-    * (+) a policy may be easier to learn than action values or action advantages;
-          eg when Q-fn is too complex
-    * (+) parameterized policies allows
-       * if with continuous policy parameterization,
-         the action probabilities change smoothly as a function of the learned parameter,
-         Largely because of this, stronger convergence guarantees are available for policy-gradient methods than
-         for action-value methods.
-    * (+) allows task-appropriate pre-structured policies, such as
-      * movement primitives to be integrated straightforwardly,
-      * imitation learning from an expert's demonstrations can be used to
-        obtain an initial estimate for the policy parameters
-    * (+) directly optimize the quantity of interest while remaining stable under function approximation
-          (given a sufficiently small learning rate)
-    * (+) less susceptible to error in the presence of noise on properties of the controlled POMDP
-    * (-) high variance, because the gradient is estimated using Monte Carlo samples
-    * (-) tend to converge to a local optimal
-    * (-) sample inefficiency, because
-      * policy gradients are estimated from rollouts the variance is often extreme
-      * requires on-policy samples
-* `value-based` (aka value iteration)
-  * learned the values of actions and then selected actions based on their estimated action values;
-    (their policies would not even exist without the action-value estimates)
-  * Bellman equ is fundamental to value fn learning:
-    * relates the value of $(s,a)$ to the value os the subsequent $(s', a')$
-  * the learning obj is to minimize the Bellman error
-    * $L(\theta^Q) = \mathbb{E}[\big( Q(s_t, a_t|\theta^Q) - y_t \big)^2]$,
-      where $y_t = r(s_t, a_t) + \gamma Q(s_{t+1}, a_{t+1})$
-  * pros and cons
-    * (+) low variance; more stable performance
-    * (+) more sample efficient when they work (does not mean computationally efficient)
-    * (-) high bias (due to bootstrapping)
-    * (-) value function approximation turns out to be a very difficult problem
-          in high-dimensional state and action spaces;
-          need to discretize action for continuous action space
-    * (-) often discontinuous, especially when the non-myopic policy differs
-          from a myopic policy; For instance, the value function of the under-powered pendulum swing-up is
-          discontinuous along the manifold where the applicable torque is
-          just not sufficient to swing the pendulum up
-    * (-)  a small change in the action-value function can cause large changes
-          in the policy, which creates difficulties for convergence proofs and
-          for some real-time applications.
-    * (-) have **no** natural way of finding stochastic optimal policies
-* hybrid: actor-critic (`actor:policy-based` + `critic:value-based`)
-  * vanilla actor-critic methods are **on-policy** only
-  * pros and cons
-    * (-) requires optimizing two function approximators on different objectives.
-
-## base policy for learning
+## policy for learning
 * `on-policy`
   * by estimating quantities defined by the **current policy**, either
     on-policy data must be used, or updating must be sufficiently slow to avoid significant bias.
@@ -139,7 +136,6 @@
     * (-) convergence is in general not guaranteed with non-linear function approximators, and
     * (-) practical convergence and instability issues typically mean that
           extensive hyperparameter tuning is required to attain good results.
-* hybrid: `on-policy`+`off-policy`
 
 ## stochasticity of the policy
 * `stochastic`
@@ -164,7 +160,6 @@
     * handle model changes naturally
   * policy learned:
     in between 2 execution (interleaved) and **in background** (in paralel with execution)
-* hybrid: (`offline` + `online`)
 
 ## other dimensions:
 plain _vs_ hierarchical structure,
