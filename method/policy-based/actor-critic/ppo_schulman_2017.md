@@ -4,14 +4,15 @@
 * https://blog.openai.com/openai-baselines-ppo/
 
 ## problem
-* method that is 
+* looking for a method that is 
   scalable (to large models and parallel implementations), 
   data efficient, and 
   robust (i.e., successful on a variety of problems without hyperparameter tuning). 
   * Q-learning [Mni+15] (with function approximation) fails on many simple problems and is poorly understood, 
     * DQN works well with discrete action spaces, 
     * **not been demonstrated** to perform well on continuous control, see Duan et al. [Dua+16].
-  * vanilla policy gradient methods [Mni+16] (A3C) have poor data effiency and robustness; 
+  * vanilla policy gradient methods [Mni+16] (A3C) 
+    * have poor data effiency and robustness; 
   * TRPO [Sch+15b]: 
     * relatively complicated, and 
     * not compatible with architectures that include noise (such as dropout) or 
@@ -35,5 +36,5 @@
   * much simpler to implement, more general, and have better sample complexity (empirically).
 
 ## comment
-* should it be "grad update per (mini)batch?
+* should it be: grad update per (mini)batch?
 > standard policy gradient methods perform one gradient update per data sample
