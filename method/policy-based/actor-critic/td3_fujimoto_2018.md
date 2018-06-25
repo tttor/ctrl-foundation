@@ -39,7 +39,7 @@
   * max average return over 10 trials of 1 millions timesteps
   
 ## result
-* TD3 > (DDPG, ACKTR, PPO) in gym mujoco
+* TD3 > (DDPG, ACKTR, PPO from OpenAI baselines) in gym mujoco
 
 ## background
 * In temporal difference learning (Sutton, 1988) 
@@ -60,3 +60,4 @@
 * td3= ddpg + doubleQlearning
 * (-) no atari xprmt
 * (?) max average return?
+* (?) according to the repo, xprmnt run in v1 environment, eg Reacher-v1, why?
