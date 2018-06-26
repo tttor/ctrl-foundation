@@ -1,6 +1,7 @@
 # Approximate Newton Methods for Policy Search in Markov Decision Processes
 * Thomas Furmston et al
 * jmlr2017
+* http://jmlr.org/papers/v17/15-414.html
 
 ## 1. Introduction
 * (stochastic) gradient ascent suffers from
@@ -37,12 +38,7 @@ TODO
 ### 4.1 The Gauss-Newton Methods
 * drops the Hessian terms which are difficult to estimate, but
   are expected to be negligible in the vicinity of local optima
-<!--
-J. Baxter and P. Bartlett. Infinite horizon policy gradient estimation. Journal of Artificial
-Intelligence Research, 15:319–350, 2001.
 
-J. Baxter, P. Bartlett, and L. Weaver. Experiments with infinite horizon policy gradient
-estimation. Journal of Artificial Intelligence Research, 15:351–381, 2001.
-
-further cited by
- -->
+## comment
+* relatively old work:
+  no neural network, no openai gym env
