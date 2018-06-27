@@ -47,7 +47,18 @@
 * Policy search update using
   * gradient ascent
   * Natural Gradient Ascent
+* It is **not possible** to calculate the gradient exactly for many real-world MDPs of interest.
+  * in discrete domains the size of the state-action space may be too large for enu- meration over these sets to be feasible.   * in continuous domains the presence of non-linearities in the transition dynamics makes 
+    the calculation of the occupancy marginals an intractable problem. 
+  * it can be the case that P and R are unknown in practice. 
+  * preferable to directly estimate the gradient using samples obtained from the environment, 
+    rather than building a model of the MDP
+    * eg Monte carlo policy gradient, actor-critic policy gradient methods
 
 ## comment
 * relatively old work:
   no neural network, no openai gym env
+* pol grad theorem differs in the $log \pi(\cdot)$
+  * Theorem 1 (in this paper)
+  * Equ 13.5 (Sutton's book)
+  
