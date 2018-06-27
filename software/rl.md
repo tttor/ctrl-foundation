@@ -13,6 +13,7 @@
   * https://github.com/higgsfield/RL-Adventure
 * https://github.com/ikostrikov/pytorch-rl
   * https://github.com/ikostrikov/pytorch-a2c-ppo-acktr
+* https://github.com/kengz/SLM-Lab
 * https://github.com/ShangtongZhang/DeepRL
 * https://github.com/vitchyr/rlkit
 
