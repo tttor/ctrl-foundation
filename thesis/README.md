@@ -23,6 +23,7 @@
 * [Philip S. Thomas](http://psthomas.com/): Safe Reinforcement Learning, 2015
 
 ### Mid, 2008 <= t < 2015
+* Daniel Rasmussen: Hierarchical reinforcement learning in a biologically plausible neural architecture, 2014
 * Stephane Ross, 2013
 * John Asmuth: Model-based Bayesian Reinforcement Learning with Generalized Priors, 2013
 * Volodymyr Mnih, 2013
