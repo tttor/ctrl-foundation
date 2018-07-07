@@ -9,6 +9,7 @@
 * [Edinburg: Reinforcement Learning, Pavlos Andreadis, 2018](http://www.inf.ed.ac.uk/teaching/courses/rl/)
 * [Stanford: Ng: Lecture 16 | Machine Learning](https://www.youtube.com/watch?v=RtxI449ZjSc)
 * [Udacity: RL](https://www.udacity.com/course/reinforcement-learning--ud600)
+  * https://github.com/udacity/deep-reinforcement-learning
 * http://psthomas.com/courses/CMPSCI_687_Fall2017.html
 * https://github.com/yandexdataschool/Practical_RL
 
