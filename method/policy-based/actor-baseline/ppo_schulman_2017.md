@@ -31,9 +31,13 @@
 * a novel objective function 
   * that enables multiple epochs of minibatch updates.
     * use multiple epochs of stochastic gradient ascent to perform each policy update
-    * cf: standard policy gradient methods perform one gradient update per data sample
-  * with clipped probability ratios, which 
-    forms a pessimistic estimate (i.e., lower bound) of the performance of the policy. 
+      * cf: standard policy gradient methods perform one gradient update per data sample
+    *  alternate between sampling data from the policy and performing several epochs of optimization on the sampled data
+  * with clipped probability ratios, 
+    * which forms a pessimistic estimate (i.e., lower bound) of the performance of the policy. 
+    * why clipped? ans: based on empirical experiment
+      > Our experiments compare the performance of various different versions of the surrogate objective, and 
+        find that the version with the clipped probability ratios performs best.
 
 ## result
 * PPO > TRPO
@@ -41,7 +45,7 @@
   * much simpler to implement, more general, and have better sample complexity (empirically).
 
 ## comment
+* What limits the standard polgrad to one grad update per minibatch or why does PPO not have such limit?
+  Is it because the surrogate loss/objective?
 * Should it be: grad update per minibatch?
-  What limits the standard polgrad to one grad update per minibatch?
-  Why does PPO not have such limit?
 > standard policy gradient methods perform one gradient update per data sample
