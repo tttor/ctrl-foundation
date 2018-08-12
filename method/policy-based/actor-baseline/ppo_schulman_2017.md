@@ -5,6 +5,8 @@
 * https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl
 * https://www.youtube.com/watch?v=gqX8J38tESw&feature=youtu.be&t=14m1s
 * https://channel9.msdn.com/Events/Neural-Information-Processing-Systems-Conference/Neural-Information-Processing-Systems-Conference-NIPS-2016/Deep-Reinforcement-Learning-Through-Policy-Optimization
+* https://github.com/ikostrikov/pytorch-a2c-ppo-acktr
+  * https://github.com/tttor/pytorch-a2c-ppo-acktr
 
 ## problem
 * looking for a method that is 
@@ -39,5 +41,7 @@
   * much simpler to implement, more general, and have better sample complexity (empirically).
 
 ## comment
-* should it be: grad update per (mini)batch?
+* Should it be: grad update per minibatch?
+  What limits the standard polgrad to one grad update per minibatch?
+  Why does PPO not have such limit?
 > standard policy gradient methods perform one gradient update per data sample
