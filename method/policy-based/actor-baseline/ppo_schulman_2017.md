@@ -47,5 +47,8 @@
 ## comment
 * What limits the standard polgrad to one grad update per minibatch or why does PPO not have such limit?
   Is it because the surrogate loss/objective?
+  * ans: the paper mentions
+    > While it is appealing to perform multiple steps of optimization on this loss LP G using the same
+      trajectory, doing so is not well-justified, and empirically it often leads to destructively large policy updates
 * Should it be: grad update per minibatch?
 > standard policy gradient methods perform one gradient update per data sample
