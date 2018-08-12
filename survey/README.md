@@ -1,6 +1,7 @@
 # survey, benchmark, review
 
 ## paper
+* [2018: Recht: A Tour of Reinforcement Learning: The View from Continuous Control](https://arxiv.org/abs/1806.09460)
 * [2018: Sigaud: Policy Search in Continuous Action Domains: an Overview](https://arxiv.org/abs/1803.04706)
 * [2017: Machado: Revisiting the ALE: Evaluation Protocols and Open Problems for General Agents](https://arxiv.org/abs/1709.06009)
 * [2017: Vodopivec: On Monte Carlo Tree Search and Reinforcement Learning](https://www.jair.org/media/5507/live-5507-10333-jair.pdf)
