@@ -28,7 +28,7 @@
   * shared function approximation architecture for the policy and the value function, 
   
 ## background
-*  credit assignment problem:
+* credit assignment problem:
   * the long time delay between actions and their positive or negative effect on rewards
 * the variance of the gradient estimator scales unfavorably with the time horizon, 
   * since the effect of an action is confounded with the effects of past and future actions.
