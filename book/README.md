@@ -6,6 +6,7 @@
 * Algorithms for Reinforcement Learning, Csaba Szepesvari, 2010
 * http://artint.info/html/ArtInt_262.html
 * [From Bandits to Monte-Carlo Tree Search: The Optimistic Principle Applied to Optimization and Planning, Rémi Munos, 2014](https://www.nowpublishers.com/article/Details/MAL-038)
+* [Bandit Algorithms](http://banditalgs.com/)
 
 ## misc
 Marco Wiering, Martijn van Otterlo:
