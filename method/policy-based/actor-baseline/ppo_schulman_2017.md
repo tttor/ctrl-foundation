@@ -41,12 +41,28 @@
           find that the version with the clipped probability ratios performs best.
       * Without a constraint, maximization of L CPI would lead to an excessively large policy update
         (L CPI: loss with corservative policy iteration)
-* The proposed objective function: $L^{PPO} = min(L^{UnclippedCPI}, L^{ClippedCPI})$ ... Equ. 7
+* The proposed objective function: $L^{Clipped} = min(L^{UnclippedCPI}, L^{ClippedCPI})$ ... Equ. 7
   * take the minimum of the clipped and unclipped objective, 
     * so the final objective is a lower bound (i.e., a pessimistic bound) on the unclipped objective.
   * modify L_CPI, to penalize changes to the policy that move rt(θ) away from 1
   * the KL penalty performed worse than the clipped surrogate objective
-  
+* If using a neural network architecture that shares parameters
+  between the policy and value function, we must use a loss function that combines the policy
+  surrogate and a value function error term.
+  * can further be augmented by adding an entropy bonus to ensure sufficient exploration, as suggested in past work 
+  * Equ 9
+
+## setup
+* Use Adam, SGD
+* searching over hyperparameters for each algorithm variant, 
+  * used 7 simulated robotics tasks2 implemented in OpenAI Gym [Bro+16],
+  * do one million timesteps of training on each one.
+* a fully-connected MLP with two hidden layers of 64 units, and tanh nonlinearities, 
+ outputting the mean of a Gaussian distribution, with variable standard deviations, following [Sch+15b; Dua+16]. 
+* NOT share parameters between the policy and value function (so coefficient c1 is irrelevant), and 
+  we don’t use an entropy bonus.
+* Each algorithm was run on all 7 environments, with 3 random seeds on each.
+
 ## result
 * PPO > TRPO
   * have the stability and reliability of trust-region methods
@@ -60,7 +76,6 @@ and we include it when it makes the objective worse
 * Why does clipping depend on A?
 >  Figure 1 plots a single term (i.e., a single t) in LCLIP ; note that the probability ratio r is clipped at 1 − eps
 or 1 + eps depending on whether the advantage is positive or negative.
-
 
 * What limits the standard polgrad to one grad update per minibatch or why does PPO not have such limit?
   Is it because the surrogate loss/objective?
