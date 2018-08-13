@@ -1,7 +1,7 @@
 # method
 
 ## base for iteration
-* `policy-based` (aka policy iteration)
+* `policy-based`
   * directly optimize parameters of a stochastic policy through local gradient information obtained by
     interacting with the environment using the current policy.
   * operate by increasing the log probability of actions proportional to the future rewards influenced by these actions.
@@ -30,7 +30,7 @@
     * (-) sample inefficiency, because
       * policy gradients are estimated from rollouts the variance is often extreme
       * requires on-policy samples
-* `value-based` (aka value iteration)
+* `value-based`
   * learned the values of actions and then selected actions based on their estimated action values;
     (their policies would not even exist without the action-value estimates)
   * Bellman equ is fundamental to value fn learning:
