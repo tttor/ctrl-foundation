@@ -22,7 +22,7 @@
     * relatively complicated, and 
     * not compatible with architectures that include noise (such as dropout) or 
       parameter sharing (between the policy and value function, or with auxiliary tasks)
-
+  
 ## idea: PPO
 * policy gradient methods that alternate between
   * sampling data (from the policy) through interaction with the environment, and
@@ -41,17 +41,32 @@
           find that the version with the clipped probability ratios performs best.
       * Without a constraint, maximization of L CPI would lead to an excessively large policy update
         (L CPI: loss with corservative policy iteration)
-
+* The proposed objective function: $L^{PPO} = min(L^{UnclippedCPI}, L^{ClippedCPI})$ ... Equ. 7
+  * take the minimum of the clipped and unclipped objective, 
+    * so the final objective is a lower bound (i.e., a pessimistic bound) on the unclipped objective.
+  * modify L_CPI, to penalize changes to the policy that move rt(θ) away from 1
+  * the KL penalty performed worse than the clipped surrogate objective
+  
 ## result
 * PPO > TRPO
   * have the stability and reliability of trust-region methods
   * much simpler to implement, more general, and have better sample complexity (empirically).
 
 ## comment
+* What does this mean?
+> With this scheme, we only ignore the change in probability ratio when it would make the objective improve,
+and we include it when it makes the objective worse
+
+* Why does clipping depend on A?
+>  Figure 1 plots a single term (i.e., a single t) in LCLIP ; note that the probability ratio r is clipped at 1 − eps
+or 1 + eps depending on whether the advantage is positive or negative.
+
+
 * What limits the standard polgrad to one grad update per minibatch or why does PPO not have such limit?
   Is it because the surrogate loss/objective?
   * ans: the paper mentions
     > While it is appealing to perform multiple steps of optimization on this loss LP G using the same
       trajectory, doing so is not well-justified, and empirically it often leads to destructively large policy updates
+      
 * Should it be: grad update per minibatch?
 > standard policy gradient methods perform one gradient update per data sample
