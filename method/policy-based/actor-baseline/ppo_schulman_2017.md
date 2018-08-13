@@ -35,9 +35,12 @@
     *  alternate between sampling data from the policy and performing several epochs of optimization on the sampled data
   * with clipped probability ratios, 
     * which forms a pessimistic estimate (i.e., lower bound) of the performance of the policy. 
-    * why clipped? ans: based on empirical experiment
-      > Our experiments compare the performance of various different versions of the surrogate objective, and 
-        find that the version with the clipped probability ratios performs best.
+    * why clipped? 
+      * based on empirical experiment
+        > Our experiments compare the performance of various different versions of the surrogate objective, and 
+          find that the version with the clipped probability ratios performs best.
+      * Without a constraint, maximization of L CPI would lead to an excessively large policy update
+        (L CPI: loss with corservative policy iteration)
 
 ## result
 * PPO > TRPO
