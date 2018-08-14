@@ -4,16 +4,17 @@
 * https://www.sciencedirect.com/science/article/pii/S0925231208000532
 
 ## problem
-* When applied with continuous function approximation, many algorithms based on value function approximation have 
-  failed to generalize, and few convergence guarantees could be obtained
+* When applied with **continuous function approximation**, many algorithms based on value function approximation have 
+  failed to generalize and few convergence guarantees could be obtained
   * reason: the greedy or eps-greedy policy updates of most techniques, because
     * it does not ensure a policy improvement when applied with an approximate value function [8]. 
     * During a greedy update, small errors in the value function can cause large changes in the policy which in return 
       can cause large changes in the value function. 
     * This process, when applied repeatedly, can result in oscillations or divergence of the algorithms.
 * when applied to simple examples with rather few states, policy-gradient methods often turn out to be quite inefficient,
-  * reason: partially caused by the large plateaus in the expected return landscape where the gradients are small and 
+  * partially caused by the large plateaus in the expected return landscape where the gradients are small and 
     often do not point directly towards the optimal solution
+* Vanilla policy gradient improvements (see e.g. [25,15])  often get stuck in plateaus as demonstrated in [14]
 
 ## observation
 * Similar as in supervised learning, the steepest ascent with respect to the **Fisher information metric** [3], 
@@ -22,7 +23,7 @@
 ## idea: natural actor-critic (NAC)
 * actor-critic:
   * The actor updates are
-    achieved using stochastic policy gradients employing Amari’s natural gradient approach, while
+    achieved using stochastic policy gradients employing Amari’s natural gradient approach
   * the critic obtains both the natural policy gradient and
     additional parameters of a value function simultaneously by linear regression.
 * do not follow the steepest direction in parameter space but the steepest direction with respect to the Fisher metric
@@ -35,7 +36,8 @@
   * As the natural gradient analytically averages out the influence of the stochastic policy 
     (including the baseline of the function approximator), it requires **fewer data point** for 
     a good gradient estimate than ‘vanilla gradients’.
-* Properties of NAC: TODO
+* Critic evaluation with LSTD-Q(lambda)
+
 ## setup
 * Cart-Pole Balancing, baseball swing robot (the learning system is initialized by imitation learning)
 
@@ -50,4 +52,15 @@
     * requirement: makes efficient usage of experienced data
   * a policy improvement step.
     * requirement: improve the policy on every step until convergence while being efficient
-     
+
+## comment
+* key concepts: 
+  * compatible function approximation
+  * Fisher information matrix 
+* key refs:
+  * [14] S.A. Kakade, Natural policy gradient, in: Advances in Neural
+  Information Processing Systems, vol. 14, 2002.
+  * [25] R.S. Sutton, D. McAllester, S. Singh, Y. Mansour, Policy gradient
+  methods for reinforcement learning with function approximation, in:
+  Advances in Neural Information Processing Systems, vol. 12, 2000. 
+ 
