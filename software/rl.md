@@ -35,6 +35,7 @@
 see also: [simulator](https://github.com/tttor/rl-foundation/blob/master/software/simulator.md)
 * https://github.com/openai/gym
   * https://github.com/openai/gym/wiki/Table-of-environments
+  * https://stackoverflow.com/questions/48980368/list-all-environment-id-in-openai-gym
   * `Box` means that you are dealing with real valued quantities,
     see [ref](https://stackoverflow.com/questions/44404281/openai-gym-understanding-action-space-notation-spaces-box)
 * https://github.com/openai/universe
