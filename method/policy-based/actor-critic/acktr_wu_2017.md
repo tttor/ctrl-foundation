@@ -53,19 +53,18 @@
 * apply **K-FAC to approximate the Fisher matrix** to perform updates simultaneously.
   
 ## setup
-* task
-  * discrete ctrl: Atari env
-    * 6 games: Beamrider, Breakout Pong, Q-bert, Seaquest, Space Invaders
-    * to avoid instability in training:
-      use an architecture where the **two networks share lower-layer** representations but
-      have **distinct output layers**
-  * continuous ctrl: MuJoCo env
-    * 6 tasks
-    * input
-      * low-dimensional state-space representation
-      * directly from pixel representation
-    * **separating the policy and value function networks** resulted in
-      better empirical performance in both ACKTR and A2C
+* discrete ctrl: Atari env
+  * 6 games: Beamrider, Breakout Pong, Q-bert, Seaquest, Space Invaders
+  * to avoid instability in training:
+    use an architecture where the **two networks share lower-layer** representations but
+    have **distinct output layers**
+* continuous ctrl: MuJoCo env
+  * 6 tasks
+  * input
+    * low-dimensional state-space representation
+    * directly from pixel representation
+  * **separating the policy and value function networks** resulted in
+    better empirical performance in both ACKTR and A2C
 * baselines
   * A2C: a synchronous and batched version of A3C
   * TRPO [22]
@@ -113,10 +112,8 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
     * > A2C, TRPO on six out of eight MuJoCo tasks and
     * competitively with A2C on the other two tasks (Walker2d and Swimmer).
 * per-update computation cost of ACKTR is only 10% to 25% higher than SGD-based methods.
-* the benefit increases substantially
-  * when using a larger batch size with ACKTR compared to with A2C, see fig 5c
-* improvements by ACKTR to the actor compared to the baseline A2C,
-  regardless of which norm we use to optimize the critic
+* the benefit increases substantially: when using a larger batch size with ACKTR compared to with A2C, see fig 5c
+* improvements by ACKTR to the actor compared to the baseline A2C (regardless of which norm we use to optimize the critic)
   * improvements brought by using the Gauss-Newton norm for optimizing the critic are more substantial in terms of
     sample efficiency and episode rewards at the end of training.
   * the Gauss-Newton norm also helps stabilize the training,
