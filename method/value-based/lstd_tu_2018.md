@@ -15,7 +15,7 @@
 # setup
 * compare model-free Least-Squares Policy Iteration (LSPI) algorithm (Lagoudakis & Parr, 2003)
   * WITH the model-based methods proposed in Dean et al.
-* com- pare model-free policy iteration (LSPI) to two model-based
+* compare model-free policy iteration (LSPI) to two model-based
 methods: (a) the naı̈ve nominal model controller which
 uses a controller designed assuming that the nominal model
 has zero error, and (b) a controller based on a semidefinite
