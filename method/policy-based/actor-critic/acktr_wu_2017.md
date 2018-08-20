@@ -15,29 +15,27 @@
 
 ## problem
 * still does **not exist** a scalable, sample-efficient, and
-  general-purpose instantiation of the natural policy gradient.
+  general-purpose instantiation of the **natural** policy gradient.
   * SGD and related first-order methods explore weight space inefficiently
   * TRPO is impractical for large models and suffers from sample inefficiency
     * requires many steps of conjugate gradient to obtain a single parameter update, and
     * accurately estimating the curvature requires a large number of samples in each batch;
-* computational challenges when applying natural gradient methods:
-  mainly associated with efficiently storing the Fisher matrix as well as computing its inverse.
-  * for tractability:
-    * to use the compatible function approximator (a linear function approximator).
-  * to avoid the computational burden:
-    TRPO approximately solves the linear system using conjugate gradient with
-    fast Fisher matrix-vector products,
-    * but, shortcomings:
-      * requires repeated computation of Fisher vector products,
-        preventing it from scaling to the larger architectures typically used in
-        experiments on learning from image observations in Atari and MuJoCo.
-      * requires a large batch of rollouts in order to accurately estimate curvature.
-      * generally less sample efficient
-        (although TRPO shows better per-iteration progress than
-        policy gradient methods trained with first-order optimizers such as Adam)
-    * K-FAC avoids both issues by
-      * using tractable Fisher matrix approximations and
-      * keeping a running average of curvature statistics during training.
+* computational challenges when applying **natural** gradient methods:
+  * mainly associated with efficiently storing the Fisher matrix as well as computing its inverse.
+  * example solution
+    * for tractability:
+      to use the compatible function approximator (a linear function approximator).
+    * to avoid the computational burden:
+      TRPO approximately solves the linear system using conjugate gradient with
+      fast Fisher matrix-vector products,
+      * but, shortcomings:
+        * requires repeated computation of Fisher vector products,
+          preventing it from scaling to the larger architectures typically used in
+          experiments on learning from image observations in Atari and MuJoCo.
+        * requires a large batch of rollouts in order to accurately estimate curvature.
+        * generally less sample efficient
+          (although TRPO shows better per-iteration progress than
+          policy gradient methods trained with first-order optimizers such as Adam)
 
 ## observation
 * to effectively reduce the sample size (improve the sample efficiency)
@@ -56,7 +54,10 @@
   assuming independence of the two output distributions, i.e., $p(a, v|s) = \pi(a|s) p(v|s)$, and
   construct the Fisher metric with respect to $p(a, v|s)$,
 * apply K-FAC to approximate the Fisher matrix to perform updates simultaneously.
-
+* K-FAC 
+  * using tractable Fisher matrix approximations and
+  * keeping a running average of curvature statistics during training.
+  
 ## setup
 * task
   * discrete ctrl: Atari env
