@@ -27,15 +27,14 @@
       to use the compatible function approximator (a linear function approximator).
     * to avoid the computational burden:
       TRPO approximately solves the linear system using conjugate gradient with
-      fast Fisher matrix-vector products,
-      * but, shortcomings:
-        * requires repeated computation of Fisher vector products,
-          preventing it from scaling to the larger architectures typically used in
-          experiments on learning from image observations in Atari and MuJoCo.
-        * requires a large batch of rollouts in order to accurately estimate curvature.
-        * generally less sample efficient
-          (although TRPO shows better per-iteration progress than
-          policy gradient methods trained with first-order optimizers such as Adam)
+      fast Fisher matrix-vector products, BUT
+      * requires repeated computation of Fisher vector products,
+        preventing it from scaling to the larger architectures typically used in
+        experiments on learning from image observations in Atari and MuJoCo.
+      * requires a large batch of rollouts in order to accurately estimate curvature.
+      * generally less sample efficient
+        (although TRPO shows better per-iteration progress than
+        policy gradient methods trained with first-order optimizers such as Adam)
 
 ## observation
 * to effectively reduce the sample size (improve the sample efficiency)
