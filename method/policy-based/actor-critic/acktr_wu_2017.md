@@ -124,7 +124,8 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
   * To minimize a nonconvex function $J(\theta)$,
     the method of steepest descent calculates the update $\Delta \theta$ that minimizes $J(\theta + \Delta \theta)$,
     subject to the constraint that $|| \Delta \theta ||_B < 1$,
-    where $|| · ||_B$ is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1}{2}}$ , and $B$ is a positive semidefinite matrix.
+    where $|| · ||_B$ is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1}{2}}$ , and 
+    $B$ is a positive semidefinite matrix.
   * The solution to the constraint optimization problem has the form $\Delta \theta \propto -B^{-1} \nabla_{\theta} J$,
     where $\nabla_{\theta} J$  is the standard gradient.
   * When the norm is Euclidean, i.e., B = I, this becomes the commonly used method of gradient descent.
@@ -136,7 +137,7 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
     * This norm is independent of the model parameterization θ on the class of probability distributions,
       providing a more stable and effective update.
     * However, since modern neural networks may contain millions of parameters,
-      computing and storing the exact Fisher matrix and its inverse is impractical, so we have to resort to approximations.
+      computing and storing the **exact Fisher matrix and its inverse is impractical**
 * Natural gradient methods (cf standard gradients)
   * exact computation is intractable
     * because it requires inverting the Fisher information matrix.
@@ -155,7 +156,7 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
 * Kronecker-factored approximate curvature (K-FAC) [16]
   * uses a Kronecker-factored approximation to the Fisher matrix to perform efficient approximate natural gradient updates.
   * each update is comparable in cost to an SGD update, and
-  * it keeps a running average of curvature information, allowing it to use small batches.
+  * keeps a running average of curvature information, allowing it to use small batches.
 * TRPO avoids explicitly storing and inverting the Fisher matrix by using Fisher-vector products [21].
   * To avoid repeated computation of Fisher-vector products,
     * Wang et al. [28] solve the **constrained optimization** problem with a linear approximation of
