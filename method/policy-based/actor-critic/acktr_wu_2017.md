@@ -44,18 +44,13 @@
 ## idea: actor-critic Kronecker-factored trust region (ACKTR)
 * to optimize **both the actor and the critic** using
   Kronecker-factored approximate curvature (K-FAC) with trust region
-  * K-FAC to approximate the natural gradient update for actor-critic methods,
-    with trust region optimization for stability
-* applying a natural gradient update **to the critic**
-  * previously, a natural gradient update only to the actor
-  * assume the output of the critic is defined to be a Gaussian distribution
+  * applying a natural gradient update **to the critic**
+    * previously, a **natural** gradient update **only to the actor**
+    * assume the output of the critic is defined to be a Gaussian distribution
 * define the joint distribution of the policy and the value distribution by
   assuming independence of the two output distributions, i.e., $p(a, v|s) = \pi(a|s) p(v|s)$, and
   construct the Fisher metric with respect to $p(a, v|s)$,
-* apply K-FAC to approximate the Fisher matrix to perform updates simultaneously.
-* K-FAC 
-  * using tractable Fisher matrix approximations and
-  * keeping a running average of curvature statistics during training.
+* apply **K-FAC to approximate the Fisher matrix** to perform updates simultaneously.
   
 ## setup
 * task
