@@ -12,6 +12,11 @@
   cient estimators are possible.
 * how well do model-free RL methods perform on the LQR problem.
 
+# idea
+*  studied the number of samples needed for the LSTD
+estimator to return a ε-accurate solution in relative error
+for the value function associated to a fixed policy π for LQR.
+
 # setup
 * compare model-free Least-Squares Policy Iteration (LSPI) algorithm (Lagoudakis & Parr, 2003)
   * WITH the model-based methods proposed in Dean et al.
@@ -43,8 +48,15 @@ static state-feedback.
     applying a known non-linear transformation to the state
 
 # comment
-* specific to LSTD estimator for LQR:
+* specific to LSPI+LSTD estimator for LQR:
   * ie sample complexity of the LSTD estimator on LQR
   * in model-free, and value-based classes
+  * no policy grad
 * key concepts:
   * LQR, LSTD, LSPI
+* is not this obvious already? that model-based is one way to improve (world-)sample efficiency
+>  Empirically, we demonstrated
+that model-free policy iteration (LSPI) requires substantially
+more samples on certain LQR instances than the model-
+based methods from Dean et al.
+
