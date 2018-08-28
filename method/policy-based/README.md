@@ -1,8 +1,8 @@
-# policy-based
+# Policy-based
 Here is for model-free policy-based approaches. </br>
 For model-based policy-based approaches, goto [method/model-based/planning/policy-based](https://github.com/tttor/rl-foundation/tree/master/method/model-based/planning/policy-based).
 
-## taxonomy
+## Taxonomy
 * gradient-free
   * cross-entropy method
 * gradient-based:
@@ -43,7 +43,7 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
 * dynamic movement primitives
 * time-varying linear-Gaussian (TVLG)
 
-# actor-critic
+# Actor-critic
 ## variant
 * [Reactor: A Sample-Efficient Actor-Critic Architecture, 2018](reactor_gruslys_2018.md)
 * [GAC: Guide actor-critic, 2018](gac_tangkaratt_2018.md)
