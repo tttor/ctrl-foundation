@@ -74,7 +74,7 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
 * http://www.rage.net/~greg/2016-07-05-ActorCritic-with-OpenAI-Gym.html
 * [Survey: 2012: Grondman: A Survey of Actor-Critic Reinforcement Learning: Standard and Natural Policy Gradients](http://ieeexplore.ieee.org/abstract/document/6392457/), see [survey](https://github.com/tttor/rl-foundation/tree/master/survey)
 
-# Those that focus on optimization
+# On optimization
 * 2018: Accelerating Natural Gradient with Higher-Order Invariance: https://arxiv.org/abs/1803.01273
 * 2018: https://github.com/tttor/rl-foundation/blob/master/method/policy-based/ppokfac_song_2018.md
 * 2017: https://github.com/tttor/rl-foundation/blob/master/method/policy-based/acktr_wu_2017.md
