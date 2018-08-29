@@ -20,7 +20,7 @@
 * use a **trust region optimization** method for the value function
 * GAE has two parameters $\gamma$ and $\lambda$ which adjust the bias-variance tradeoff.
   * allows us to smoothly interpolate between the high-bias estimator (λ = 0) and the low-bias estimator (λ = 1).
-* GAE as a variance reduction scheme
+* GAE, Equ 16,  as a variance reduction scheme
 * The choice Ψt = Aπ (st, at ) yields almost the lowest possible variance, 
   (in practice, the  advantage function is not known and must be estimated)
   * This statement can be intuitively justified by
@@ -58,3 +58,10 @@
   * using Trust Region to optimize the value function
 * "...bias is more pernicious" is related to TD3 paper
 * ? trust region opt for value fn, and what opt is for policy network?
+* as said:
+  * GAE where lambda=1 is equal to one-step actor-critic in Sutton book, where they use TD-residual
+  * GAE where lambda=0 is equal to return minus predicted state-value as baseline
+> Equ 16...  closely
+analogous to the one used to define TD(λ) (Sutton & Barto, 1998), however TD(λ) is an estimator
+of the value function, whereas here we are estimating the advantage function.
+
