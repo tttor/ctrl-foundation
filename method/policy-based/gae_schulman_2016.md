@@ -3,6 +3,7 @@
 * iclr2016: poster
 * https://arxiv.org/abs/1506.02438
 * https://sites.google.com/site/gaepapersupp/
+* https://danieltakeshi.github.io/2017/04/02/notes-on-the-generalized-advantage-estimation-paper/
 
 ## problem
 * main challenges in policy gradient are 
