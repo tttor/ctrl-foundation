@@ -1,6 +1,6 @@
 # Addressing Function Approximation Error in Actor-Critic Methods
 * Scott Fujimoto, Herke van Hoof, David Meger
-* icml2018: oral
+* icml2018
 * http://proceedings.mlr.press/v80/fujimoto18a.html
 * https://arxiv.org/abs/1802.09477
 * https://github.com/sfujim/TD3 # pytorch
