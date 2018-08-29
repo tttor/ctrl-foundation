@@ -20,6 +20,11 @@
 * GAE has two parameters $\gamma$ and $\lambda$ which adjust the bias-variance tradeoff.
   * allows us to smoothly interpolate between the high-bias estimator (λ = 0) and the low-bias estimator (λ = 1).
 * GAE as a variance reduction scheme
+* The choice Ψt = Aπ (st, at ) yields almost the lowest possible variance, 
+  (in practice, the  advantage function is not known and must be estimated)
+  * This statement can be intuitively justified by
+  the following interpretation of the policy gradient: that a step in the policy gradient direction should
+  increase the probability of better-than-average actions and decrease the probability of worse-than-average actions.
 
 ## setup
 * combine this idea with trust region policy optimization and a trust region algorithm that optimizes a value function, 
@@ -47,6 +52,8 @@
   obtaining an estimator with lower variance at the cost of introducing bias
 
 ## comment
-* on accurate estimate of critic (advantage fn) and using Trust Region to optimize the value function
+* contrib
+  * accurate estimate of critic (ie the advantage fn, $\hat{A}$)
+  * using Trust Region to optimize the value function
 * "...bias is more pernicious" is related to TD3 paper
 * ? trust region opt for value fn, and what opt is for policy network?
