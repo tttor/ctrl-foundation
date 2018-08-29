@@ -78,3 +78,5 @@ For model-based policy-based approaches, goto [method/model-based/planning/polic
 * 2018: Accelerating Natural Gradient with Higher-Order Invariance: https://arxiv.org/abs/1803.01273
 * 2018: https://github.com/tttor/rl-foundation/blob/master/method/policy-based/ppokfac_song_2018.md
 * 2017: https://github.com/tttor/rl-foundation/blob/master/method/policy-based/acktr_wu_2017.md
+* TRPO, GAC, NAC
+
