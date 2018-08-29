@@ -63,5 +63,6 @@
 * one of contribs:
 > suggest delaying policy updates to reduce per-update error and further improve performance
 * (-) no atari xprmt
+* (-) use -v1 of OpenAI Mujoco
 * (?) max average return?
 * (?) according to the repo, xprmnt run in v1 environment, eg Reacher-v1, why?
