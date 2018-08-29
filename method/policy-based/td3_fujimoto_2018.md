@@ -60,6 +60,8 @@
 ## comment
 * fn approx err is indeed present
 * td3= ddpg + doubleQlearning
+* one contrib:
+> suggest delaying policy updates to reduce per-update error and further improve performance
 * (-) no atari xprmt
 * (?) max average return?
 * (?) according to the repo, xprmnt run in v1 environment, eg Reacher-v1, why?
