@@ -8,7 +8,7 @@
 * main challenges in policy gradient are 
   * the large number of samples typically required, and 
   * the difficulty of obtaining stable and steady improvement despite the nonstationarity of the incoming data.
-* while high variance necessitates using more samples, bias is more pernicious
+* while high variance necessitates using more samples, **bias is more pernicious**
   * even with an unlimited number of samples, bias can cause the algorithm to fail to converge,
     or to converge to a poor solution that is not even a local optimum
 
@@ -43,13 +43,8 @@
   * the long time delay between actions and their positive or negative effect on rewards
 * the variance of the gradient estimator scales unfavorably with the time horizon, 
   * since the effect of an action is confounded with the effects of past and future actions.
-* actor-critic methods, use a value function rather than the empirical returns, ob-
-  taining an estimator with lower variance at the cost of introducing bias (Konda & Tsitsiklis, 2003;
-  Hafner & Riedmiller, 2011). 
-  * But while high variance necessitates using more samples, bias is more
-    pernicious—even with an unlimited number of samples, bias can cause the algorithm to fail to con-
-    verge, or to converge to a poor solution that is not even a local optimum.
+* actor-critic methods use a value function rather than the empirical returns, 
+  obtaining an estimator with lower variance at the cost of introducing bias
 
 ## comment
 * on accurate estimate of critic (advantage fn) and using Trust Region to optimize the value function
-
