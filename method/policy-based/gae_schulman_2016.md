@@ -49,3 +49,4 @@
 ## comment
 * on accurate estimate of critic (advantage fn) and using Trust Region to optimize the value function
 * "...bias is more pernicious" is related to TD3 paper
+* ? trust region opt for value fn, and what opt is for policy network?
