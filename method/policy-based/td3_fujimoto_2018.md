@@ -13,9 +13,9 @@
 
 ## idea
 * core
-  * takes the minimum value between a pair of critics to restrict overestimation and
-  * delays policy updates to reduce per-update error
-* a clipped Double Q-learning variant which
+  * takes the **minimum** value between a pair of critics to restrict overestimation and
+  * **delays policy updates** to reduce per-update error
+* a clipped Double Q-learning variant (a pair of critics along with a single actor) which
   * favors underestimations by
     bounding situations where Double Q-learning does poorly.
     * preferable as underestimations do not tend to be propagated during learning,
@@ -27,7 +27,6 @@
     in order to address the coupling of value and policy
   * introduce a novel regularization strategy, where
     a SARSA-style update bootstraps similar action estimates to further reduce variance.
-* maintains a pair of critics along with a single actor.
 
 ## setup
 * critic:
@@ -59,7 +58,8 @@
 
 ## comment
 * fn approx err is indeed present
-* td3= ddpg + doubleQlearning
+* td3= ddpg + doubleQlearning 
+  * well, doubling the Q-network (for Double Q-learning) may be costly
 * one of contribs:
 > suggest delaying policy updates to reduce per-update error and further improve performance
 * (-) no atari xprmt
