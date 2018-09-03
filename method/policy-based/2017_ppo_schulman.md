@@ -114,3 +114,5 @@ or 1 + eps depending on whether the advantage is positive or negative.
   * ans: standard pol grad requires `n_epoch==1` and using full-batch per agent update,
     and the way the grad is calculate is by taking the average of all sample gradient
 * ? input dim of actor and critic nets?
+  * ans: based on `baselines/baselines/ppo1/pposgd_simple.py`:
+    * input: observation only (not like actkr, that uses input=(observ+action)
