@@ -2,6 +2,7 @@
 * Cathy Wu, Aravind Rajeswaran, Yan Duan, Vikash Kumar, Alexandre M Bayen, Sham Kakade, Igor Mordatch, Pieter Abbeel
 * iclr2018: oral
 * https://openreview.net/forum?id=H1tSsb-AW
+* https://arxiv.org/abs/1803.07246
 * https://sites.google.com/view/ad-baselines
 * https://www.youtube.com/watch?v=3PhtXeM90to
 * https://vimeo.com/252186180
