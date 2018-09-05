@@ -2,16 +2,6 @@
 Here is for model-free policy-based approaches. </br>
 For model-based policy-based approaches, goto [method/model-based/planning/policy-based](https://github.com/tttor/rl-foundation/tree/master/method/model-based/planning/policy-based).
 
-# On optimization
-* 2018: Accelerating Natural Gradient with Higher-Order Invariance: https://arxiv.org/abs/1803.01273
-* 2018: https://github.com/tttor/rl-foundation/blob/master/method/policy-based/ppokfac_song_2018.md
-* 2017: https://github.com/tttor/rl-foundation/blob/master/method/policy-based/acktr_wu_2017.md
-* TRPO, GAC, NAC
-
-## task
-* https://gym.openai.com/envs/#mujoco
-* https://github.com/openai/gym/blob/master/gym/envs/__init__.py
-
 # Actor-critic
 ## variant
 * [Reactor: A Sample-Efficient Actor-Critic Architecture, 2018](reactor_gruslys_2018.md)
