@@ -65,4 +65,3 @@
 * (-) no atari xprmt
 * (-) use -v1 of OpenAI Mujoco
 * (?) max average return?
-* (?) according to the repo, xprmnt run in v1 environment, eg Reacher-v1, why?
