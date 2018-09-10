@@ -11,10 +11,10 @@
 * https://stackoverflow.com/questions/48980368/list-all-environment-id-in-openai-gym
 
 ## observ and action dims
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+| env id | observ dim | action dim |
+| :---   | :---       | :---       |
+| Ant-v2 | 111 | 8 |
+| HalfCheetah-v2 | 17 | 6 |
 
 # Others
 * https://github.com/openai/universe
