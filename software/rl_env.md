@@ -15,6 +15,12 @@
 | :---   | :---       | :---       |
 | Ant-v2 | 111 | 8 |
 | HalfCheetah-v2 | 17 | 6 |
+| Hopper-v2 | 11 | 3 |
+| InvertedDoublePendulum-v2 | 11 | 1 |
+| InvertedPendulum-v2 | 4 | 1 |
+| Reacher-v2 | 11 | 2 |
+| Swimmer-v2 | 8 | 2 |
+
 
 # Others
 * https://github.com/openai/universe
