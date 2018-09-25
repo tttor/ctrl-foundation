@@ -127,11 +127,15 @@
   * Advantage fn: `$A_{\pi}(s,a) = Q_{\pi}(s,a) - V_{\pi}(s)$`
 
 ## comment
- * promising way to use multi-threading in planning where we do simulate multiple env+agent interactions,
-   note, from Figure S4: the training time is in the order of hours, meaning **no way** for online planning,
-   but what if for offline planning?
- * plots and tables (on the paper, not the appendix) with analysis are all from Atari game setup,
-   although there are experiments in/with Mujoco/robots (shown in the appendix)
- * in the [demo vid on robots, 0:44](https://www.youtube.com/watch?v=Ajjc08-iPx8&feature=youtu.be),
-    initial state is **fixed**, what if **any** initial state?
- * in a3c, for the critic: what if using Q or (Q-V), instead of V?
+* this separation is LIKELY crucial: http://proceedings.mlr.press/v48/mniha16-supp.pdf
+> In our experiments with continuous control
+problems the networks for policy network and value network **do not** share any parameters, though this detail
+is unlikely to be crucial.
+* promising way to use multi-threading in planning where we do simulate multiple env+agent interactions,
+ note, from Figure S4: the training time is in the order of hours, meaning **no way** for online planning,
+ but what if for offline planning?
+* plots and tables (on the paper, not the appendix) with analysis are all from Atari game setup,
+ although there are experiments in/with Mujoco/robots (shown in the appendix)
+* in the [demo vid on robots, 0:44](https://www.youtube.com/watch?v=Ajjc08-iPx8&feature=youtu.be),
+  initial state is **fixed**, what if **any** initial state?
+* in a3c, for the critic: what if using Q or (Q-V), instead of V?
