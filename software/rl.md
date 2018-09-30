@@ -2,6 +2,7 @@
 
 ## type 0: big guy 
 * OpenAI: https://github.com/openai/baselines
+  * https://github.com/hill-a/stable-baselines
 * Tensorforce: https://github.com/reinforceio/tensorforce
 * Ray RLlib: http://ray.readthedocs.io/en/latest/rllib.html
 * ChainerRL: https://github.com/chainer/chainerrl
