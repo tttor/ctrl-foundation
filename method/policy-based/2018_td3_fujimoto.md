@@ -11,6 +11,12 @@
   * function approximation errors lead to overestimated value estimates and
   * the accumulation of error in temporal difference methods and suboptimal policies
 
+## observation
+* While in the discrete action setting overestimation bias is
+  an obvious artifact from the analytical maximization,
+  * the presence and effects of overestimation bias is less clear
+    in an actor-critic setting.
+
 ## idea
 * core
   * takes the **minimum** value between a pair of critics to restrict overestimation and
@@ -37,10 +43,17 @@
   * activ-fn: relu, relu, tanh
 * openai gym mujoco task
   * max average return over 10 trials of 1 millions timesteps
+*  both networks receive the state and action as input to the first layer
 
 ## result
 * TD3 > (DDPG, ACKTR, PPO from OpenAI baselines) in gym mujoco
 * suggest delaying policy updates to reduce per-update error and further improve performance.
+* TD3, which greatly reduces overestimation by the critic
+  * graph the average value estimate over 10000 states and
+    compare it to an estimate of the true value.
+  * The true value is estimated using the average discounted return over 1000
+    evaluations following the current policy, starting from states
+    sampled from the buffer replay
 
 ## background
 * In temporal difference learning (Sutton, 1988)
@@ -58,7 +71,7 @@
 
 ## comment
 * fn approx err is indeed present
-* td3= ddpg + doubleQlearning 
+* td3= ddpg + doubleQlearning
   * well, doubling the Q-network (for Double Q-learning) may be costly
 * one of contribs:
 > suggest delaying policy updates to reduce per-update error and further improve performance
