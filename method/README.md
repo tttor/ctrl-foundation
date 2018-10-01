@@ -1,6 +1,6 @@
-# method
+# Method
 
-## base for iteration
+# Base for iteration
 * `policy-based`
   * directly optimize parameters of a stochastic policy through local gradient information obtained by
     interacting with the environment using the current policy.
@@ -56,7 +56,7 @@
     * (-) mis-specification of value function models can lead to an inappropriate policy even in very simple problems
     * (-) control policies can vary drastically in each iteration
       
-## source of experience
+# Source of experience
 * `model-free` (direct RL): `source= world`
   * the agent directly learns an optimal (or good) action-selection strategy from the collected data.
   * (in policy-search) is a general approach to learn policies based on **sampled trajectories**
@@ -111,7 +111,7 @@
           Since the learned policy is inherently based on internal simulations with the learned model, inaccurate models;
           (can be alleviated by using models that explicitly account for model errors)
 
-## policy for learning
+# Policy for learning
 * `on-policy`
   * by estimating quantities defined by the **current policy**, either
     on-policy data must be used, or updating must be sufficiently slow to avoid significant bias.
@@ -137,7 +137,7 @@
     * (-) practical convergence and instability issues typically mean that
           extensive hyperparameter tuning is required to attain good results.
 
-## stochasticity of the policy
+# Stochasticity of the policy
 * `stochastic`
   * stochastic policy gradient theorem
     * the policy gradient integrates over both state and action spaces
@@ -149,7 +149,7 @@
   * deterministic policy gradient theorem
     * the policy gradient integrates over state only
 
-## when policy compiled/learned with respect to execution/action time
+# When policy compiled/learned with respect to execution/action time
 * `offline`
   * policy learned (planned) before execution
   * consider all contingencies so does not scale up
@@ -161,14 +161,14 @@
   * policy learned:
     in between 2 execution (interleaved) and **in background** (in paralel with execution)
 
-## other dimensions:
+# Other dimensions:
 plain _vs_ hierarchical structure,
 episodic _vs_ continuing tasks,
 average _vs_ cumulative discounted rewards,
 without-prior (non-Bayesian) _vs_ with-prior (Bayesian),
 see also [this](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro-sutton2018/part_01_summary.md)
 
-## misc
+# Misc
 * Temporal Difference (TD):
   MonteCarlo and DynamicsProgramming
 * generalised policy iteration: interleaving policy evaluation with policy improvement
@@ -178,3 +178,9 @@ see also [this](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro
   * Policy improvement:
     * update the policy with respect to the (estimated) action-value function
     * eg, a greedy maximisation (or soft maximisation) of the action-value function
+* the interpretation of the discount factor, $\gamma$
+  * $\gamma = 0$: short-sighted, the agent only values immediate reward, 
+    * eg, because the agent (believes that it) is going to die right after receiving that immediate reward
+  * https://stats.stackexchange.com/questions/221402/understanding-the-role-of-the-discount-factor-in-reinforcement-learning
+  * https://en.wikipedia.org/wiki/Q-learning
+> while a factor approaching 1 will make it strive for a long-term high reward. If the discount factor meets or exceeds 1, the action values may diverge
