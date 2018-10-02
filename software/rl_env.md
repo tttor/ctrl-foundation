@@ -11,15 +11,15 @@
 * https://stackoverflow.com/questions/48980368/list-all-environment-id-in-openai-gym
 
 ## env spec
-| env id | observ dim | action dim | solved threshold | frame skip |
-| :---   | :---       | :---       | :---             | :---       |
-| Ant-v2 | 111 | 8 | 6000 | 5 |
-| HalfCheetah-v2 | 17 | 6 | 4800 | 5 |
-| Hopper-v2 | 11 | 3 | 3800 | 4 |
-| Swimmer-v2 | 8 | 2 | 360 | 4 | 
-| InvertedDoublePendulum-v2 | 11 | 1 | 9100 | 5 |
-| InvertedPendulum-v2 | 4 | 1 | 950 | 2 |
-| Reacher-v2 | 11 | 2 | -3.75 | 2 |
+| env id | observ dim | action dim | solved threshold | frame skip | timestep limit |
+| :---   | :---       | :---       | :---             | :---       | :---           |
+| Ant-v2 | 111 | 8 | 6000 | 5 | 1000 |
+| HalfCheetah-v2 | 17 | 6 | 4800 | 5 | 1000 |
+| Hopper-v2 | 11 | 3 | 3800 | 4 | 1000 |
+| Swimmer-v2 | 8 | 2 | 360 | 4 |  1000 |
+| InvertedDoublePendulum-v2 | 11 | 1 | 9100 | 5 | 1000 |
+| InvertedPendulum-v2 | 4 | 1 | 950 | 2 | 1000 |
+| Reacher-v2 | 11 | 2 | -3.75 | 2 | 50 |
 
 # Others
 * https://github.com/openai/universe
