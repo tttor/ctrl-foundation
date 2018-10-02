@@ -10,17 +10,16 @@
 > 2018-01-24: All continuous control environments now use mujoco_py >= 1.50. Versions have been updated accordingly to -v2, e.g. HalfCheetah-v2. Performance should be similar (see https://github.com/openai/gym/pull/834) but there are likely some differences due to changes in MuJoCo.
 * https://stackoverflow.com/questions/48980368/list-all-environment-id-in-openai-gym
 
-## observ and action dims
-| env id | observ dim | action dim |
-| :---   | :---       | :---       |
-| Ant-v2 | 111 | 8 |
-| HalfCheetah-v2 | 17 | 6 |
-| Hopper-v2 | 11 | 3 |
-| InvertedDoublePendulum-v2 | 11 | 1 |
-| InvertedPendulum-v2 | 4 | 1 |
-| Reacher-v2 | 11 | 2 |
-| Swimmer-v2 | 8 | 2 |
-
+## env spec
+| env id | observ dim | action dim | solved threshold |
+| :---   | :---       | :---       | :---             |
+| Ant-v2 | 111 | 8 | 6000 |
+| HalfCheetah-v2 | 17 | 6 | 4800 |
+| Hopper-v2 | 11 | 3 | 3800 |
+| Swimmer-v2 | 8 | 2 | 360 |
+| InvertedDoublePendulum-v2 | 11 | 1 | 9100 |
+| InvertedPendulum-v2 | 4 | 1 | 950 |
+| Reacher-v2 | 11 | 2 | -3.75 |
 
 # Others
 * https://github.com/openai/universe
