@@ -117,3 +117,8 @@ or 1 + eps depending on whether the advantage is positive or negative.
 * ? input dim of actor and critic nets?
   * ans: based on `baselines/baselines/ppo1/pposgd_simple.py`:
     * input: observation only (not like actkr, that uses input=(observ+action)
+* ? should not this be:
+  * the loss value is clipped \emph{at} its value at the ratio of \\
+    $(1 + \epsilon)$ when $\hat{A} > 0$ \emph{or}  $(1 - \epsilon)$ when $\hat{A} < 0$
+>  that the probability ratio r is clipped at $1 − \epsilon$ or $1 + \epsilon$ 
+   depending on whether the advantage is positive or negative.
