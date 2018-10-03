@@ -4,6 +4,7 @@
 * https://blog.openai.com/openai-baselines-ppo/
 * https://stackoverflow.com/questions/46422845/what-is-the-way-to-understand-proximal-policy-optimization-algorithm-in-rl
 * https://www.youtube.com/watch?v=gqX8J38tESw&feature=youtu.be&t=14m1s
+* https://www.youtube.com/watch?v=5P7I-xPq8u8
 * https://channel9.msdn.com/Events/Neural-Information-Processing-Systems-Conference/Neural-Information-Processing-Systems-Conference-NIPS-2016/Deep-Reinforcement-Learning-Through-Policy-Optimization
 * https://github.com/ikostrikov/pytorch-a2c-ppo-acktr
   * https://github.com/tttor/pytorch-a2c-ppo-acktr
