@@ -48,12 +48,11 @@
 ## result
 * TD3 > (DDPG, ACKTR, PPO from OpenAI baselines) in gym mujoco
 * suggest delaying policy updates to reduce per-update error and further improve performance.
-* TD3, which greatly reduces overestimation by the critic
+* TD3 greatly reduces overestimation by the critic
   * graph the average value estimate over 10000 states and
     compare it to an estimate of the true value.
-  * The true value is estimated using the average discounted return over 1000
-    evaluations following the current policy, starting from states
-    sampled from the buffer replay
+    * the true value is estimated using the average discounted return over 1000
+      evaluations following the current policy, starting from states sampled from the buffer replay
 
 ## background
 * In temporal difference learning (Sutton, 1988)
