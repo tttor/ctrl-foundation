@@ -27,8 +27,8 @@ domains.
   * iteratively fitting local linear models to the latest batch of on-policy or off-policy rollouts provides 
     sufficient local accuracy to achieve substantial improvement using short imagination rollouts 
     in the vicinity of the real-world samples.
-* to represent the Q-function Q(xt , ut ) in Q-learning in such a way that 
-   its maximum, arg maxu Q(xt , ut ), can be determined easily and analytically during the Q-learning update
+* to represent the Q-function $Q(x_t, u_t)$ in Q-learning in such a way that 
+   its maximum, $argmax_u Q(x_t, u_t)$, can be determined easily and analytically during the Q-learning update
   * Decomposing Q into an advantage term A and a state-value term V
   * representations:
     is based on a neural network that separately outputs a value
@@ -42,7 +42,7 @@ domains.
 * NAF > DDPG
 * although Q-learning can incorporate off-policy experience,
 learning primarily from off-policy exploration (via model-
-based planning) only rarely improves the overall sample
+based planning) only **rarely improves** the overall sample
 efficiency of the algorithm.
   * We postulate that this caused by the need to observe both successful and unsuccessful
 actions, in order to obtain an accurate estimate of the Q-
@@ -57,7 +57,7 @@ ing algorithm is chosen carefully.
     we show that they are minimally effective on our continuous control tasks.
   * to combine **locally linear models** with local on-policy imagination rollouts to accelerate 
     model-free continuous Q-learning, and show that this produces a large improvement in sample complexity.
-* even when planning under the true model, the improvement obtained from this approach is often quite small,
+* even when planning under the true model, the **improvement** obtained from this approach is **often quite small**,
   and varies significantly across domains and choices of exploration noise.
   * The intuition behind this result is that off- policy iLQG exploration is 
     too different from the learned policy, and Q-learning must consider alternatives in order 
