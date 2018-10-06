@@ -24,6 +24,11 @@
         obtain an initial estimate for the policy parameters
     * (+) directly optimize the quantity of interest while remaining stable under function approximation
           (given a sufficiently small learning rate)
+    * (+) In many problems, the policy is simpler than the value function
+    * (+) In many problems, the optimal policy is stochastic
+    * (+) To enable smoother change in policies
+    * (+) To avoid a search on every step (the max)
+    * (+) To better relate to biology
     * (+) less susceptible to error in the presence of noise on properties of the controlled POMDP
     * (-) high variance, because the gradient is estimated using Monte Carlo samples
     * (-) tend to converge to a local optimal
@@ -55,7 +60,7 @@
     * (-) have **no** natural way of finding stochastic optimal policies
     * (-) mis-specification of value function models can lead to an inappropriate policy even in very simple problems
     * (-) control policies can vary drastically in each iteration
-      
+
 # Source of experience
 * `model-free` (direct RL): `source= world`
   * the agent directly learns an optimal (or good) action-selection strategy from the collected data.
@@ -112,17 +117,22 @@
           (can be alleviated by using models that explicitly account for model errors)
 
 # Policy for learning
+* term
+  * the target policy is the policy being learned about
+  * the behavior policy is the policy generating the trajectory data
 * `on-policy`
   * by estimating quantities defined by the **current policy**, either
     on-policy data must be used, or updating must be sufficiently slow to avoid significant bias.
   * the agent learns only about the policy it is executing.
+  * is when the target and behavious policies are the same
   * pros and cons
     * (+) unbiasedness
     * (+) better stability
     * (-) sample inefficient; poor sample complexity
 * `off-policy`
   * an agent learns about a policy or policies different from the one it is executing.
-  * separate the evaluation policy from the behaviour policy
+  * separate the evaluation/target policy from the behaviour policy
+  * is learning about the value of a policy other than the policy being used to generate the trajectory
   * pros and cons
     * (+) able to exploit data from other sources, such as experts,
           making them inherently more sample efficient than on-policy methods
@@ -179,7 +189,7 @@ see also [this](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro
     * update the policy with respect to the (estimated) action-value function
     * eg, a greedy maximisation (or soft maximisation) of the action-value function
 * the interpretation of the discount factor, $\gamma$
-  * $\gamma = 0$: short-sighted, the agent only values immediate reward, 
+  * $\gamma = 0$: short-sighted, the agent only values immediate reward,
     * eg, because the agent (believes that it) is going to die right after receiving that immediate reward
   * https://stats.stackexchange.com/questions/221402/understanding-the-role-of-the-discount-factor-in-reinforcement-learning
   * https://en.wikipedia.org/wiki/Q-learning
