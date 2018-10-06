@@ -1,5 +1,5 @@
 # Sample efficient actor-critic with experience replay
-* ZiyuWang et al
+* Ziyu Wang et al
 * iclr2017: poster
 * https://arxiv.org/abs/1611.01224
 * https://openreview.net/forum?id=HyM25Mqel
@@ -8,8 +8,8 @@
 ## idea: acer
 * with experience replay, off-policy
 * innovations
-  * truncated importance sampling with bias correction, 
-  * stochastic dueling network architectures, and 
+  * truncated importance sampling with bias correction,
+  * stochastic dueling network architectures, and
   * a new trust region policy optimization method.
 
 ## setup
@@ -19,10 +19,14 @@
 * baseline
   * A3C and Trust-A3C.
   * Trust-TIS and TIS (truncated importance sampling)
-* show the mean and standard deviation of the best 5 out of 30 hyper-parameter settings 
+* show the mean and standard deviation of the best 5 out of 30 hyper-parameter settings
 
 ## result
 * ACER > A3C (in continuous control)
 * acer: stable, sample efficient
 * trust region optimization method can result in huge improvements over the baselines
 * Retrace and off- policy correction, SDNs, and trust region are critical
+
+## comment
+* recall that A3C paper mentions the drawback of using experience replay and try to avoid using it,
+  * and then this paper uses experience replay to beat A3C, ... what a drama, haha!
