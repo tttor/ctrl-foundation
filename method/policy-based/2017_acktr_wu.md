@@ -51,7 +51,12 @@
   assuming independence of the two output distributions, i.e., $p(a, v|s) = \pi(a|s) p(v|s)$, and
   construct the Fisher metric with respect to $p(a, v|s)$,
 * apply **K-FAC to approximate the Fisher matrix** to perform updates simultaneously.
-  
+* assume the output of the critic v is defined to be
+  a Gaussian distribution p(v|st ) ∼ N (v; V (st), σ 2 ). The Fisher matrix for the critic is defined with
+  respect to this Gaussian output distribution. In practice, we can simply set σ to 1, which is equivalent
+  to the vanilla Gauss-Newton method
+* adopt the trust region formulation of K-FAC introduced by [2]
+
 ## setup
 * discrete ctrl: Atari env
   * 6 games: Beamrider, Breakout Pong, Q-bert, Seaquest, Space Invaders
@@ -124,7 +129,7 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
   * To minimize a nonconvex function $J(\theta)$,
     the method of steepest descent calculates the update $\Delta \theta$ that minimizes $J(\theta + \Delta \theta)$,
     subject to the constraint that $|| \Delta \theta ||_B < 1$,
-    where $|| · ||_B$ is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1}{2}}$ , and 
+    where $|| · ||_B$ is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1}{2}}$ , and
     $B$ is a positive semidefinite matrix.
   * The solution to the constraint optimization problem has the form $\Delta \theta \propto -B^{-1} \nabla_{\theta} J$,
     where $\nabla_{\theta} J$  is the standard gradient.
@@ -163,6 +168,12 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
       **KL divergence** between a running average of the policy network and the current policy network.
 * active line of research:
   * designing an advantage function that provides **both low-variance and low-bias** gradient estimates
+*  Learning the critic can be
+  thought of as a least-squares function approximation problem, albeit one with a **moving target**
+*  in the context of deep RL, Schulman et al. [22] observed that such an update rule can result in large updates
+  to the policy, causing the algorithm to prematurely converge to a near-deterministic policy. They
+  advocate instead using a trust region approach, whereby the update is scaled down to modify the
+  policy distribution (in terms of KL divergence) by at most a specified amount.
 
 ## comment
 * ACKTR= KFAC + trustRegion + A2C
