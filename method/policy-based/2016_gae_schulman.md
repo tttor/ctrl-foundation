@@ -41,6 +41,8 @@
 * combine this idea with trust region policy optimization and a trust region algorithm that optimizes a value function,
   * both represented by neural networks.
 * use the Monte Carlo or TD(1) approach for estimating the value function
+* performed the policy updates using trust region policy optimization (TRPO)
+* used a trust region method to optimize the value function in each iteration of a batch optimization procedure
 
 ## result
 * the bias is prohibitively large when using a one-step estimate of the returns
