@@ -40,6 +40,7 @@
 ## setup
 * combine this idea with trust region policy optimization and a trust region algorithm that optimizes a value function,
   * both represented by neural networks.
+* use the Monte Carlo or TD(1) approach for estimating the value function
 
 ## result
 * the bias is prohibitively large when using a one-step estimate of the returns
