@@ -78,4 +78,7 @@
 > Equ 16...  closely
 analogous to the one used to define TD(λ) (Sutton & Barto, 1998), however TD(λ) is an estimator
 of the value function, whereas here we are estimating the advantage function.
+* ? how to measure: policy gradient estimation error?
+> the relationship between value function estimation error and policy gradient estimation error
+
 
