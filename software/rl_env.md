@@ -13,13 +13,15 @@
 ## env spec
 | env id | observ dim | action dim | solved threshold | frame skip | timestep limit |
 | :---   | :---       | :---       | :---             | :---       | :---           |
-| Ant-v2 | 111 | 8 | 6000 | 5 | 1000 |
 | HalfCheetah-v2 | 17 | 6 | 4800 | 5 | 1000 |
 | Hopper-v2 | 11 | 3 | 3800 | 4 | 1000 |
 | Swimmer-v2 | 8 | 2 | 360 | 4 |  1000 |
+| Walker-v2 | 17 | 6 | None| 4 | 1000 |
 | InvertedDoublePendulum-v2 | 11 | 1 | 9100 | 5 | 1000 |
 | InvertedPendulum-v2 | 4 | 1 | 950 | 2 | 1000 |
 | Reacher-v2 | 11 | 2 | -3.75 | 2 | 50 |
+| Ant-v2 | 111 | 8 | 6000 | 5 | 1000 |
+| Humanoid-v2 | 376 | 17 | None | 5 | 1000 |
 
 # Others
 * https://github.com/openai/universe
