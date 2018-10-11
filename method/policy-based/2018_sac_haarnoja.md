@@ -59,8 +59,8 @@ function.
     state space that lead to high-entropy behavior (Equation 5).
 * 3 ingredient
   * an actor-critic architecture with separate policy and
-    value function networks, an off-policy formulation that
-  * enables reuse of previously collected data for efficiency, and
+    value function networks, 
+  * an off-policy formulation that enables reuse of previously collected data for efficiency, and
   * entropy maximization to enable stability and exploration.
 
 ## setup
