@@ -2,7 +2,7 @@
 
 * fn approximator:
   * to approx $v_{\pi}$ from experience generated using a known policy $\pi$
-  * $\hat{v}_{\pi}$is represented as a parameterized functional form with weight vector $w in R^d$;
+  * $\hat{v}_{\pi}$is represented as a parameterized functional form with weight vector $w \in R^d$;
     **not** as a table anymore
   * $\hat{v}(s,w) \approx v_{\pi}(s)$
   * $\hat{v}$ can be:
@@ -35,13 +35,13 @@
     supervised learning methods
     * $s \mapsto g$ of each update as a **training example**
   * types of mapping $s \mapsto u$:
+    * DP policy-evaluation update: $s \mapsto E_{\pi}[ R_{t+1} + \gamma \hat{v}(S_{t+1},w_t) | S_t=s ]$
+    * TD(0) update: $S_t \mapsto R_{t+1} + \gamma \hat{v}(S_{t+1},w_t)$
+    * n-step TD update: $S_t \mapsto G_{t:t+n}$
     * Monte Carlo update: $S_t \mapsto G_t$
-    * TD(0): $S_t \mapsto R_{t+1} + \gamma \hat{v}(S_{t+1},w_t)$
-    * n-step TD: $S_t \mapsto G_{t:t+n}$
-    * DP: $s \mapsto E_{\pi}[  R_{t+1} + \gamma \hat{v}(S_{t+1},w_t) | S_t = s  ]$
-* On applying supervised learning in RL
-  * able to occur online, while the agent interacts with its environment or
-    with a model of its environment.
+* On applying supervised learning in RL, need a method that
+  * learning be able to occur online,
+    while the agent interacts with its environment or with a model of its environment.
     * requires methods that are able to learn efficiently from incrementally acquired data
   * able to handle nonstationary target functions (target functions that change over time).
     * For example, in control methods based on GPI (generalized policy iteration)
