@@ -89,20 +89,31 @@
   * If $U_t$ is an unbiased estimate, then $w_t$ is **guaranteed to converge** to
     a local optimum under the usual stochastic approximation conditions (2.7) for decreasing $\alpha$.
   * eg: Monte Carlo target $U_t = G_t$ is by definition an unbiased estimate of $v_{\pi}(S_t)$
-  * State aggregation is a special case of SGD (9.7)
-    * $\nabla  \hat{v}_{\pi}(S_t, w_t)$ is 1 for $S_t$'s group’s component and 0 for the other components.
-* semi-gradient methods.
+    * ...because the true value ofa state is the expected value of the return following it
+    * The gradient-descent version of Monte Carlo state-value prediction is guaranteed to
+      find a locally optimal solution
+  * One does not obtain the same guarantees if a bootstrapping estimate of $v_{\pi}(S_t)$ is
+    used as the target $U_t$ in (9.7).
+    * Bootstrapping targets such as
+      * n-step returns
+      * DP target
+    * because they depend on the current value of the weight vector
+      * implies that they will be biased and will not value produce of the true gradient-descent method.
+* semi-gradient (bootstrapping) methods.
   * use a bootstrapping estimate of $v_{\pi}(S_t)$ as the target $U_t$ in (9.7).
     * $U_t$ will be biased and will not produce of a true gradient-descent method.
   * Bootstrapping methods are not in fact instances of true gradient descent (Barnard, 1993).
-    * take into account the effect of changing the weight vector wt on the estimate,
+    * take into account the effect of changing the weight vector on the estimate,
       but ignore its effect on the target
   * pros and cons
     * (+) enable significantly faster learning,
+      * recall: the TD methods are often of vastly reduced variance compared to Monte Carlo methods
     * (+) enable learning to be continual and online, without waiting for the end of an episode.
     * (-) do not converge as robustly as gradient methods
+      * do converge reliably in important cases such as the linear case
   * eg: semi-gradient TD(0),
     * target: $U_t = R_{t+1} + \gamma \hat{v}_{\pi}(S_{t+1}, w)$
+* State aggregation is a special case of SGD (9.7)
 
 ## 9.4 Linear Methods
 * the approximate function is a linear function of the weight vector
@@ -112,12 +123,37 @@
     the same as selecting a set of d basis functions.
 * SGD updates with linear function approximation.
   * $\nabla \hat{v}(s,w) = x(s)$
+* the gradient Monte Carlo algorithm presented in the previous
+  section converges to the global optimum of the VE under linear function approximation
+  if $\alpha$ is reduced over time according to the usual conditions.
+* Convergence of Linear TD(0)
+  * The semi-gradient TD(0) algorithm presented in the previous section also converges
+    under linear function approximation,
+  * linear semi-gradient TD(0) converges to the TD fixed point
+  * linear semi-gradient DP also converges to the TD fixed point
+  * Critical to the these convergence results is
+    * that states are updated according to the *on-policy* distribution.
+    * For other update distributions, bootstrapping methods using
+      function approximation may actually diverge to infinity.
 
 ## 9.5 Feature Construction for Linear Methods
-TODO
+* Linear methods
+  * (+) convergence guarantees,
+  * (+) can be very efficient in terms of both data and computation
+  * (-) cannot take into account any interactions between features,
+    * such as the presence of feature i being good only in the absence of feature j.
+* Feature Construction
+  * Polynomials
+  * Fourier Basis
+  * Coarse Coding
+  * Tile Coding
+  * Radial Basis Functions
 
 ## 9.6 Selecting Step-Size Parameters Manually
-TODO
+there is a similar rule that gives similar behavior in the case
+of linear function approximation. Suppose you wanted to learn in about ⌧ experiences
+with substantially the same feature vector. A good rule of thumb for setting the step-size
+parameter of linear SGD methods is then Equ 9.19
 
 ## 9.7 Nonlinear Function Approximation: Artificial Neural Networks
 * If an ANN has **at least one loop** in its connections, it is a **recurrent** rather than a feedforward ANN.
@@ -125,6 +161,17 @@ TODO
 * backpropagation algorithm, which consists of alternating forward and backward passes through the network.
   * Each forward pass computes the activation of each unit given the current activations of the network’s input units.
   * After each forward pass, a backward pass efficiently computes a partial derivative for each weight.
+* training a network with k + 1 hidden layers can actually result in poorer performance than training
+  a network with k hidden layers, even though the deeper network can represent all the
+  functions that the shallower network can (Bengio, 2009). Explaining results like these
+  is not easy, but several factors are important.
+  * First, the large number of weights in
+    a typical deep ANN makes it difficult to avoid the problem of overfitting, that is, the
+    problem of failing to generalize correctly to cases on which the network has not been trained.
+  * Second, backpropagation does not work well for deep ANNs because the partial
+    derivatives computed by its backward passes either decay rapidly toward the input side
+    of the network, making learning by deep layers extremely slow, or the partial derivatives
+    grow rapidly toward the input side of the network, making learning unstable.
 * reducing overfitting
   * stopping training when performance begins to decrease on
     validation data different from the training data (cross validation),
@@ -138,7 +185,10 @@ TODO
 * deep residual learning  (He, Zhang, Ren, and Sun, 2016)
   * Sometimes it is easier to learn how a function differs from the identity function than to learn the function itself.
   * adding this difference, or residual function, to the input produces the desired function
-* deep convolutional network.
+* deep convolutional network
+* notice p226
+> It (Overfitting) is less of a problem for online reinforcement learning that does not rely on limited training sets, but
+generalizing e↵ectively is still an important issue.
 
 ## 9.8 Least-Squares TD
 TODO
