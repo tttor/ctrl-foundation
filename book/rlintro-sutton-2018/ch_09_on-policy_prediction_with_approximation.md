@@ -191,7 +191,19 @@ parameter of linear SGD methods is then Equ 9.19
 generalizing effectively is still an important issue.
 
 ## 9.8 Least-Squares TD
-TODO
+* Least-Squares TD algorithm (LSTD),
+  * computing estimates of A and b, and then directly computing the TD fixed point
+  * Equ 9.20, 9.21
+  * (+) the most data efficient form of linear TD(0),
+  * (+/-) requires no step-size parameter
+    * means that it never forgets.
+  * (-) more expensive computationally.
+  * (-) it does requires $\epsilon$;
+    * if $\epsilon$ is chosen too small the sequence of inverses can vary wildly, and
+    * if $\epsilon$ is chosen too large then learning is slowed.
+* Using the Sherman-Morrison formulat to compute the inverse matrix,
+  * $O(d^2)$ memory and per-step computation
+    * recall: $O(d)$ of semi-gradient TD
 
 ## 9.9 Memory-based Function Approximation
 * simply save training examples in memory as they arrive (or at least save a subset of the examples)
@@ -205,7 +217,7 @@ TODO
 TODO
 
 ## 9.11 Looking Deeper at On-policy Learning: Interest and Emphasis
-* In some cases, however, we are more interested in some states than others.
+* In some cases, however, we are **more interested in some states** than others.
   * In discounted episodic problems, for example,
     * more interested in accurately valuing early states in the episode than
       in later states where discounting may have made the rewards much less important to
@@ -226,4 +238,12 @@ TODO
 ## 9.12 Summary
 * Reinforcement learning systems must be capable of generalization
   * use supervised-learning function approximation
-    by treating each update as a training example.
+    by treating **each update as a training example**.
+* mean squared value error,
+  * as a measure of the error in the values $v_{\pi_w}(s)$ for a weight vector $w$
+    under the on-policy distribution, $\mu$
+  * this fives us a clear way to rank different value-function approximations in the on-policy case.
+* semi-gradient methods
+  * the weight vector appears in the update target, yet this is **not taken into account** in scomputing the gradient
+  * belongs to bootstrapping methods (including DP),
+  * cannot rely on classical SGD results
