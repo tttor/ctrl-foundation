@@ -188,7 +188,7 @@ parameter of linear SGD methods is then Equ 9.19
 * deep convolutional network
 * notice p226
 > It (Overfitting) is less of a problem for online reinforcement learning that does not rely on limited training sets, but
-generalizing e↵ectively is still an important issue.
+generalizing effectively is still an important issue.
 
 ## 9.8 Least-Squares TD
 TODO
