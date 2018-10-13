@@ -20,14 +20,21 @@
         the environment is in state $s$ at time t with parameter $\theta$
       * $\hat{v}(s,w)$: the learned value fn
 * actor-critic methods learn approximations to **both** policy and value functions
-  * $actor$: the learned policy
-  * $critic$: the learned value function
+  * `actor`: the learned policy
+  * `critic`: the learned value function
+* in the episodic case,
+  * performance is defined as the value of the **start state** under the parameterized policy
+* in the continuing case,
+  * performance is defined as the average reward rate
 
 ## 13.1 Policy Approximation and its Advantages
-* the policy can be parameterized in any way, as long as  it is **differentiable** with respect to its parameters
+* the policy can be parameterized in any way,
+  as long as  it is **differentiable** with respect to its parameters
   * $\nabla_{\pi} (a|s,\theta)$ exists and is always finite for all $s \in S$, $a \in A(s)$, and $\theta$
     * $\nabla_{\pi} (a|s,\theta)$:
        the column vector of partial derivatives of $\pi(a | s,\theta)$ with respect to the components of $\theta$
+* to ensure exploration we
+  generally require that the policy **never** becomes deterministic
 * soft-max in action preferences.
   * The actions with the highest preferences in each state are given the
     highest probabilities of being selected
@@ -36,21 +43,23 @@
     * enables the selection of actions with arbitrary probabilities.
 * **advantage** of policy parameterization (over action-value parameterization)
   * the policy may be a **simpler** function to approximate,
-  * a good way of **injecting prior knowledge** about the desired form of the policy into the reinforcement learning system.
+  * a good way of **injecting prior knowledge** about the desired form of the policy
+    into the reinforcement learning system.
 
 ## 13.2 The Policy Gradient Theorem
 * advantages of policy parameterization over ε-greedy
   * the approximate policy can approach a deterministic policy
-  * the action probabilities change smoothly as a function of the learned parameter,     
+  * the action probabilities change smoothly as a function of the learned parameter,
     if with continuous policy parameterization
     * Largely because of this, **stronger convergence guarantees** are available for
       policy-gradient methods than for action-value methods.
 * In the episodic case,
   * the performance measure:
     * the value of the start state of the episode.
-    * $J(\theta) = v_{ \pi_{\theta} } (s_0)$ ...(13.4)
-* ? How can we estimate the performance gradient with respect to the policy parameter when the gradient depends on
-  the unknown effect of policy changes on the state distribution?
+    * Equ 13.4: $J(\theta) = v_{ \pi_{\theta} } (s_0)$
+* ? How can we estimate the performance gradient with respect to
+  the policy parameter when the gradient depends on the unknown effect of
+  policy changes on the state distribution?
   * **Ans**: policy gradient theorem
 * policy gradient theorem
   * $\nabla J(\theta) \propto \sum_s \mu(s) \sum_a q_{\pi}(s,a) \nabla \pi (a|s,\theta)$ ...(13.5)
