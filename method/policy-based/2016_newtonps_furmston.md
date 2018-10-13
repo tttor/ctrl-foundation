@@ -117,4 +117,4 @@
 * no neural network (either as policy rep or fn approx or both)
 * no standard test sets, eg openai gym env
 * no comparison with other recent methods, eg. A2C
-
+* ? shared param, w, for both actor and critic?
