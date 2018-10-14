@@ -242,6 +242,4 @@ two networks share lower-layer representations but have distinct output layers
   * A.2 Continuous control
 > For experiments with low-dimensional state space as an input we used two separate neural networks
 with 64 hidden units per layer in a two-layer network
-
-fisher info matrix does NOT include Q?
-shared params
+* fisher info matrix does NOT include Q? in sec 3.1
