@@ -33,7 +33,8 @@
   * that enables multiple epochs of minibatch updates.
     * use multiple epochs of stochastic gradient ascent to perform each policy update
       * cf: standard policy gradient methods perform one gradient update per data sample
-    *  alternate between sampling data from the policy and performing several epochs of optimization on the sampled data
+    * alternate between sampling data from the policy and
+      performing several epochs of optimization on the sampled data
   * with clipped probability ratios,
     * which forms a pessimistic estimate (i.e., lower bound) of the performance of the policy.
     * why clipped?
@@ -90,7 +91,6 @@ function (so coefficient c1 is irrelevant), and we don’t use an entropy bonus.
   * averaged over 21 runs to produce a single scalar for each algorithm setting
   * HalfCheetah, Hopper, InvertedDoublePendulum, InvertedPendulum, Reacher, Swimmer, and Walker2d, all “-v1”
 
-
 ## result
 * PPO > TRPO
 * On Atari: PPO > A2C > ACER
@@ -118,7 +118,7 @@ or 1 + eps depending on whether the advantage is positive or negative.
   * ans: based on `baselines/baselines/ppo1/pposgd_simple.py`:
     * input: observation only (not like actkr, that uses input=(observ+action)
 * ? should not this be:
-  * the loss value is clipped \emph{at} its value at the ratio of 
+  * the loss value is clipped \emph{at} its value at the ratio of
     $(1 + \epsilon)$ when $\hat{A} > 0$ \emph{or}  $(1 - \epsilon)$ when $\hat{A} < 0$
->  that the probability ratio r is clipped at $1 − \epsilon$ or $1 + \epsilon$ 
+>  that the probability ratio r is clipped at $1 − \epsilon$ or $1 + \epsilon$
    depending on whether the advantage is positive or negative.
