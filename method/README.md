@@ -178,6 +178,21 @@ average _vs_ cumulative discounted rewards,
 without-prior (non-Bayesian) _vs_ with-prior (Bayesian),
 see also [this](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro-sutton2018/part_01_summary.md)
 
+# MDP-related formulas
+* state-value function
+  * how good it is for the agent to be in a given state
+  * $V^{\pi}(s) := \mathbb{E}_{\pi} [R_t | S_t = s]$
+  * $V^{\pi}(s) = \sigma_a \pi(a|s) Q^{\pi}(s, a)$
+* action-value function
+  * how good it is to perform a given action in a given state
+  * $Q^{\pi}(s, a) = \mathbb{E}_{\pi} [R_t | S_t = s, A_t = a]$
+* advantage function
+  * $A^{\pi}(s, a) := Q^{\pi}(s, a) - V^{\pi}(s)$
+* a policy
+  * is a mapping from states to probabilities of selecting each possible action
+* state transition probabilities
+  * $T: \mathcal{S} \times \mathcal{S} \times \mathcal{A} \mapsto [0, 1]$
+
 # Misc
 * Temporal Difference (TD):
   MonteCarlo and DynamicsProgramming
