@@ -8,7 +8,9 @@
 * https://channel9.msdn.com/Events/Neural-Information-Processing-Systems-Conference/Neural-Information-Processing-Systems-Conference-NIPS-2016/Deep-Reinforcement-Learning-Through-Policy-Optimization
 * https://github.com/ikostrikov/pytorch-a2c-ppo-acktr
   * https://github.com/tttor/pytorch-a2c-ppo-acktr
-
+* https://learningai.io/projects/2017/07/28/ai-gym-workout.html
+  * https://github.com/pat-coady/trpo
+  
 ## problem
 * looking for a method that is
   scalable (to large models and parallel implementations),

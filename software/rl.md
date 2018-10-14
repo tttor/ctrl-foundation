@@ -10,6 +10,8 @@
 * KerasRL: https://github.com/keras-rl/keras-rl
 
 ## type 1: people power
+* https://github.com/joschu/modular_rl
+
 ### pytorch
 * https://github.com/higgsfield/RL-Adventure-2
   * https://github.com/higgsfield/RL-Adventure
