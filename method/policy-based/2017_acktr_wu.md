@@ -17,8 +17,8 @@
 * still does **not exist** a scalable, sample-efficient, and
   general-purpose instantiation of the **natural** policy gradient.
   * SGD and related first-order methods explore weight space inefficiently
-  * TRPO is impractical for large models and suffers from sample inefficiency
-    * requires many steps of conjugate gradient to obtain a single parameter update, and
+  * TRPO is **impractical for large models** and suffers from sample inefficiency
+    * requires **many steps of conjugate gradient** to obtain a single parameter update, and
     * accurately estimating the curvature requires a large number of samples in each batch;
 * computational challenges when applying **natural** gradient methods:
   * mainly associated with efficiently storing the Fisher matrix as well as computing its inverse.
@@ -43,21 +43,29 @@
 
 ## idea: actor-critic Kronecker-factored trust region (ACKTR)
 * to optimize **both the actor and the critic** using
-  Kronecker-factored approximate curvature (K-FAC) with trust region
+  Kronecker-factored approximate curvature (K-FAC) **with trust region**
   * applying a natural gradient update **to the critic**
     * previously, a **natural** gradient update **only to the actor**
     * assume the output of the critic is defined to be a Gaussian distribution
+  * K-FAC to approximate the natural gradient update for actor-critic methods
+    * to extend the natural policy gradient algorithm to optimize value functions
+      via **Gauss-Newton approximation**
+  * with trust region optimization for stability.
+    * because: Schulman et al. [22] observed that SGD-like update rule can result in large updates
+      to the policy, causing the algorithm to prematurely converge to a near-deterministic policy
+  * use the factorized Tikhonov damping approach
 * define the joint distribution of the policy and the value distribution by
   assuming independence of the two output distributions, i.e., $p(a, v|s) = \pi(a|s) p(v|s)$, and
   construct the Fisher metric with respect to $p(a, v|s)$,
 * apply **K-FAC to approximate the Fisher matrix** to perform updates simultaneously.
 * assume the output of the critic v is defined to be
-  a Gaussian distribution p(v|st ) ∼ N (v; V (st), σ 2 ). The Fisher matrix for the critic is defined with
-  respect to this Gaussian output distribution. In practice, we can simply set σ to 1, which is equivalent
-  to the vanilla Gauss-Newton method
-* adopt the trust region formulation of K-FAC introduced by [2]
+  a Gaussian distribution p(v|st ) ∼ N (v; V (st), σ 2 ).
+  * The Fisher matrix for the critic is defined with respect to this Gaussian output distribution.
+  * In practice, we can simply set σ to 1, which is equivalent to the vanilla Gauss-Newton method
 
 ## setup
+* advantage function as
+  * the k-step returns with function approximation,
 * discrete ctrl: Atari env
   * 6 games: Beamrider, Breakout Pong, Q-bert, Seaquest, Space Invaders
   * to avoid instability in training:
@@ -87,7 +95,11 @@
   * plot: with different batch size
 * actor/policy network:
   * Gaussian MLP
+  * The log standard deviation of a Gaussian policy was parameterized as a
+    bias in a final layer of policy network that didn’t depend on input state
 * critic/value network:
+  * to minimize the squared
+    difference between the bootstrapped k-step returns $\hat{R}_t$ and the prediction value
   * [in: 28] --wh1--> [h1: 64] --wh2--> [h2: 64] --whfinal--> [out:1]
   * MLP (fully connected, dense)
   * predict Advantage values, not Q values
@@ -107,6 +119,7 @@
 surr = - tf.reduce_mean(adv_n * logprob_n)
 surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
 ```
+* ACKTR and A2C trained with batch sizes of 2500 and TRPO trained with a batch size of 25000.
 
 ## result
 * performance: ACKTR > (A2C, TRPO)
@@ -117,21 +130,33 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
     * > A2C, TRPO on six out of eight MuJoCo tasks and
     * competitively with A2C on the other two tasks (Walker2d and Swimmer).
 * per-update computation cost of ACKTR is only 10% to 25% higher than SGD-based methods.
-* the benefit increases substantially: when using a larger batch size with ACKTR compared to with A2C, see fig 5c
-* improvements by ACKTR to the actor compared to the baseline A2C (regardless of which norm we use to optimize the critic)
+* the benefit increases substantially: when using a larger batch size with ACKTR
+  compared to with A2C, see fig 5c
+* improvements by ACKTR to the actor compared to the baseline A2C
+  (regardless of which norm we use to optimize the critic)
   * improvements brought by using the Gauss-Newton norm for optimizing the critic are more substantial in terms of
     sample efficiency and episode rewards at the end of training.
   * the Gauss-Newton norm also helps stabilize the training,
     as we observe larger variance in the results over random seeds with the Euclidean norm.
+* ACKTR as the **first scalable trust region natural gradient** method for
+  actor-critic methods
+  * first to propose optimizing **both the actor and the critic** using natural gradient updates.
+  * first to train several non-trivial tasks in continuous control directly from
+    raw pixel observation space
+* the improvements brought by using the Gauss-Newton norm for optimizing the critic are
+  more substantial in terms of sample efficiency and episode rewards at the end of training. In addition,
+  the Gauss-Newton norm also helps stabilize the training, as we observe larger variance in the results over random seeds with the Euclidean norm.
+  * adaptive Gauss-Newton doesn’t provide any significant improvement over vanilla Gauss-Newton.
 
 ## background
 * story: from standard to natural gradient
   * To minimize a nonconvex function $J(\theta)$,
     the method of steepest descent calculates the update $\Delta \theta$ that minimizes $J(\theta + \Delta \theta)$,
     subject to the constraint that $|| \Delta \theta ||_B < 1$,
-    where $|| · ||_B$ is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1}{2}}$ , and
+    where $||·||_B$ is the norm defined by $|| x ||_B = (x^T B x)^{\frac{1}{2}}$ , and
     $B$ is a positive semidefinite matrix.
-  * The solution to the constraint optimization problem has the form $\Delta \theta \propto -B^{-1} \nabla_{\theta} J$,
+  * The solution to the constraint optimization problem has the form
+    $\Delta \theta \propto -B^{-1} \nabla_{\theta} J$,
     where $\nabla_{\theta} J$  is the standard gradient.
   * When the norm is Euclidean, i.e., B = I, this becomes the commonly used method of gradient descent.
     * However, the Euclidean norm of the change depends on the parameterization θ.
@@ -144,11 +169,13 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
     * However, since modern neural networks may contain millions of parameters,
       computing and storing the **exact Fisher matrix and its inverse is impractical**
 * Natural gradient methods (cf standard gradients)
+  * follow the steepest descent direction that uses the Fisher metric as the underlying metric,
+    a metric that is based not on the choice of coordinates but rather
+    on the manifold (i.e., the surface).
   * exact computation is intractable
     * because it requires inverting the Fisher information matrix.
-  * follow the steepest descent direction that uses the Fisher metric as the underlying metric,
-    a metric that is based not on the choice of coordinates but rather on the manifold (i.e., the surface).
-  * constructs the norm using the Fisher information matrix F, a local quadratic approximation to the KL divergence.
+  * constructs the norm using the Fisher information matrix F,
+    a local quadratic approximation to the KL divergence.
     * This norm is independent of the model parameterization $\theta$ on the class of probability distributions,
       providing a more stable and effective update.
     * However, since modern neural networks may contain millions of parameters,
@@ -159,7 +186,8 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
       the update is scaled down to modify the policy distribution (in terms of KL divergence) by
       at most a specified amount.
 * Kronecker-factored approximate curvature (K-FAC) [16]
-  * uses a Kronecker-factored approximation to the Fisher matrix to perform efficient approximate natural gradient updates.
+  * uses a Kronecker-factored approximation to the Fisher matrix to perform
+    efficient approximate natural gradient updates.
   * each update is comparable in cost to an SGD update, and
   * keeps a running average of curvature information, allowing it to use small batches.
 * TRPO avoids explicitly storing and inverting the Fisher matrix by using Fisher-vector products [21].
@@ -168,12 +196,18 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
       **KL divergence** between a running average of the policy network and the current policy network.
 * active line of research:
   * designing an advantage function that provides **both low-variance and low-bias** gradient estimates
-*  Learning the critic can be
+* Learning the critic can be
   thought of as a least-squares function approximation problem, albeit one with a **moving target**
-*  in the context of deep RL, Schulman et al. [22] observed that such an update rule can result in large updates
-  to the policy, causing the algorithm to prematurely converge to a near-deterministic policy. They
-  advocate instead using a trust region approach, whereby the update is scaled down to modify the
+  * In the setting of least-squares function approximation,
+    the second-order algorithm of choice is commonly Gauss-Newton
+  * The Gauss-Newton matrix is equivalent to the Fisher matrix for a Gaussian observation model
+* in the context of deep RL, Schulman et al. [22] observed that such an update rule
+  can result in large updates to the policy, causing the algorithm to prematurely converge
+  to a near-deterministic policy.
+  They advocate instead using a trust region approach, whereby the update is scaled down to modify the
   policy distribution (in terms of KL divergence) by at most a specified amount.
+* In a large-scale distributed learning setting, large batch size is used in optimization.
+  * Therefore, in such a setting, it is preferable to use a method that can scale well with batch size.
 
 ## comment
 * ACKTR= KFAC + trustRegion + A2C
@@ -189,6 +223,7 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
   * compare ADAM perform relative to ACKTR
 * cf PPOKFAC: https://arxiv.org/abs/1801.05566
   * ACKTR > PPOKFAC
+* note: KFAC alone is not enough, need to use trust-region for stability
 * (-) setup for random seeds varies across plots and tables
 * (-) performance varies across task: who wins, who loses
 * (?) why those 6 games?
@@ -199,5 +234,14 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
 > a distributed approach leads to rapidly diminishing returns of
   sample efficiency as the degree of parallelism increases.
 * (?) where does the constraint come from?
-> To minimize a nonconvex function J(θ), the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ),
-  subject to the constraint that  ...
+> To minimize a nonconvex function J(θ), the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ),subject to the constraint that  ...
+* this seems a contradiction
+  * sec 3.1
+> But to avoid instability in training, it is often beneficial to use an architecture where the
+two networks share lower-layer representations but have distinct output layers
+  * A.2 Continuous control
+> For experiments with low-dimensional state space as an input we used two separate neural networks
+with 64 hidden units per layer in a two-layer network
+
+fisher info matrix does NOT include Q?
+shared params
