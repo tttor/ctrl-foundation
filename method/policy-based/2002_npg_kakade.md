@@ -14,8 +14,8 @@
 * make the connection to policy iteration
   by showing that the natural gradient is moving toward choosing a greedy optimal
   action.
-* make the assumption that every policy 7r is **ergodic**,
-  * ie has a well-defined stationary distribution p7
+* make the assumption that every policy is **ergodic**,
+  * ie has a well-defined stationary distribution
 
 ## result
 * the F does not asymptotically converge to the Hessian, so

@@ -10,7 +10,10 @@
   corresponding to an n larger than 1
 
 # 10.3 Average Reward: A New Problem Setting for Continuing Tasks
-TODO
+* This assumption about the MDP is known as ergodicity.
+  * It means that:
+    where the MDP starts or any early decision made by the agent can have only a temporary effect;
+    in the long run the expectation of being in a state depends only on the policy and the MDP transition probabilities.
 
 # 10.4 Deprecating the Discounted Setting
 TODO

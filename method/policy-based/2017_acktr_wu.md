@@ -224,8 +224,25 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
 * cf PPOKFAC: https://arxiv.org/abs/1801.05566
   * ACKTR > PPOKFAC
 * note: KFAC alone is not enough, need to use trust-region for stability
+* the use of KFAC for critic looks like just to show-off, we may use Gauss-Newton method
+>  The Fisher matrix for the critic is defined with
+respect to this Gaussian output distribution. In practice, we can simply set σ to 1, which is equivalent
+to the vanilla Gauss-Newton method.
+* this looks like some contradiction
+  * sec 3.1
+> But to avoid instability in training, it is often beneficial to use an architecture where the
+two networks share lower-layer representations but have distinct output layers
+  * A.2 Continuous control
+> For experiments with low-dimensional state space as an input we used two separate neural networks
+with 64 hidden units per layer in a two-layer network
+
 * (-) setup for random seeds varies across plots and tables
 * (-) performance varies across task: who wins, who loses
+
+* (?) fisher info matrix does NOT include Q? in sec 3.1
+  * ans: yes, see
+    Bagnell and Schneider (2003) that (10) that shows
+    the Fisher information matrix of the distribution over trajectories in the state-action space, given π.
 * (?) why those 6 games?
   * ans: see Table 4 at appendix B, with Q-learning, one seed
 * (?) episode rewards == return?
@@ -235,11 +252,3 @@ surr_sampled = - tf.reduce_mean(logprob_n) # Sampled loss of the policy
   sample efficiency as the degree of parallelism increases.
 * (?) where does the constraint come from?
 > To minimize a nonconvex function J(θ), the method of steepest descent calculates the update ∆θ that minimizes J(θ + ∆θ),subject to the constraint that  ...
-* this seems a contradiction
-  * sec 3.1
-> But to avoid instability in training, it is often beneficial to use an architecture where the
-two networks share lower-layer representations but have distinct output layers
-  * A.2 Continuous control
-> For experiments with low-dimensional state space as an input we used two separate neural networks
-with 64 hidden units per layer in a two-layer network
-* fisher info matrix does NOT include Q? in sec 3.1

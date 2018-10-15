@@ -2,6 +2,7 @@
 * Thomas Furmston et al
 * jmlr2017
 * http://jmlr.org/papers/v17/15-414.html
+* https://arxiv.org/abs/1507.08271 # A Gauss-Newton Method for MDPs
 
 ## problem
 * (stochastic) gradient ascent
@@ -29,6 +30,16 @@
 * the Gauss-Newton Methods
   * drops the Hessian terms which are difficult to estimate, but
     are expected to be negligible in the vicinity of local optima
+* the second Gauss-Newton method has important performance guarantees including:
+  * a guaranteed ascent direction;
+  * **linear** convergence to a local optimum under a step size which does not depend upon unknown quantities;
+  * invariance to affine transformations of the parameter space; and
+  * efficient estimation procedures for the preconditioning matrix.
+  * (closely related to both the EM and natural gradient algorithms)
+  * $\mathcal{H}_2$ incorporates information about the reward structure
+    of the objective function that is not present in the Fisher information matrix.
+* consider a diagonal form of the approximation for both forms of
+  Gauss- Newton methods.
 
 ## setup
 * task:
@@ -43,6 +54,8 @@
   expectation maximisation and the second Gauss-Newton metho
 * repeated the experiment 100 times, each time
   with a different random initialisation of the system.
+* The **step size** sequences of gradient ascent, natural gradient ascent and
+  the Gauss-Newton method were **all tuned for performance**
 * To account for this variation the
   results from each run of the experiment are normalized by the maximal value achieved be-
   tween the algorithms in that run.
@@ -112,6 +125,16 @@
   * preferable to directly estimate the gradient using samples obtained from the environment,
     rather than building a model of the MDP
     * eg Monte carlo policy gradient, actor-critic policy gradient methods
+* Various techniques have been proposed in the literature to estimate the gradient, including
+  * the method of finite-differences (Kiefer and Wolfowitz, 1952; Kohl and Stone, 2004; Tedrake and Zhang,
+2005),
+  * simultaneous perturbation methods (Spall, 1992; Spall and Cristion, 1998; Srinivasan
+et al., 2006) and
+  * likelihood-ratio methods (Glynn, 1986, 1990; Williams, 1992; Baxter and
+Bartlett, 2001; Konda and Tsitsiklis, 2003, 1999; Sutton et al., 2000; Bhatnagar et al., 2009;
+Kober and Peters, 2011), including
+    * Monte-Carlo methods (Williams, 1992; Baxter and Bartlett, 2001) and
+    * actor-critic methods (Konda and Tsitsiklis, 2003, 1999; Sutton et al., 2000; Bhatnagar et al., 2009; Kober and Peters, 2011).
 
 ## comment
 * no neural network (either as policy rep or fn approx or both)
