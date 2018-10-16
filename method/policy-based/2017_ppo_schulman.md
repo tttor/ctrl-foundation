@@ -10,7 +10,8 @@
   * https://github.com/tttor/pytorch-a2c-ppo-acktr
 * https://learningai.io/projects/2017/07/28/ai-gym-workout.html
   * https://github.com/pat-coady/trpo
-  
+* https://medium.com/@jonathan_hui/rl-proximal-policy-optimization-ppo-explained-77f014ec3f12
+
 ## problem
 * looking for a method that is
   scalable (to large models and parallel implementations),
