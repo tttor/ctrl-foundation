@@ -30,14 +30,23 @@
     * suggests that one K-FAC update is much more efficient than one SGD update
 
 ## setup
-* report the mean of rewards of the last 100 episodes in training as a function of training timesteps
+* actor:
+  * uses Fisher information matrix over the policy function,
+  * use Adaptive Selection of Learning Rate:
+    * adopt the trust region formulation of
+      K-FAC and choose the learning rate according to the following schedule... sec 3.2
+    * In the SGD case for PPO, the learning rate η is selected according to
+      a fixed linear decaying schedule
+* critic:
+  * uses the Gauss-Newton matrix
+* minibatch vs fullbatch
+  * PPOSGD uses minibatch
+  * ACKTR: K-FAC optimizer takes in a single large batch and updates only once (aka fullbatch)
+  * PPOKFAC: follow ACKTR, ie fullbatch
+    * Having larger batches seems to reduce the variance of the Fisher matrix estimation for K-FAC.
+* report the mean of rewards of the last 100 episodes in training as
+  a function of training timesteps
 * use 4 and 10 million timesteps
-* actor: uses Fisher information matrix over the policy function,
-* critic: uses the Gauss-Newton matrix
-* the ACKTR case, however, the K-FAC optimizer takes in a single large batch and
-  updates only once.
-  * aka fullbatch
-* use Adaptive Selection of Learning Rate
 
 ## result
 * PPOKFAC > PPOSGD
@@ -70,3 +79,4 @@
 * ? Does not this make it is hard to converged?
 > increases learning rate with the new policy is too close
 * ? Does they separate actor and critic nets?
+* ? why not using armijo/wolfe-based line search?
