@@ -10,3 +10,4 @@ See also: (For rendering Latex equ, follow [this](https://github.com/tttor/robot
 * http://www-anw.cs.umass.edu/rlr/
 * https://deeplearning4j.org/deepreinforcementlearning
 * https://github.com/dennybritz/reinforcement-learning
+* https://github.com/brylevkirill/notes/blob/master/Reinforcement%20Learning.md
