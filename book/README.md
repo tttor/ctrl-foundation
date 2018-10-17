@@ -7,7 +7,10 @@
 * http://artint.info/html/ArtInt_262.html
 * [From Bandits to Monte-Carlo Tree Search: The Optimistic Principle Applied to Optimization and Planning, Rémi Munos, 2014](https://www.nowpublishers.com/article/Details/MAL-038)
 * [Bandit Algorithms](http://banditalgs.com/)
-
+* Neuro-Dynamic Programming, by Dimitri P. Bertsekas and John Tsitsiklis
+  * http://athenasc.com/ndpbook.html
+  * http://web.mit.edu/jnt/www/ndp.html
+  
 ## misc
 Marco Wiering, Martijn van Otterlo:
 > Two dominant books:
