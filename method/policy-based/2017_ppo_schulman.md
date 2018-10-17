@@ -15,15 +15,16 @@
 # problem
 * looking for a method that is
   * scalable (to large models and parallel implementations),
-  * data efficient, and
+  * data efficient,
   * robust (i.e., successful on a variety of problems without hyperparameter tuning).
 * the current state of affairs:
-  * Q-learning [Mni+15] (with function approximation) fails on many simple problems and is poorly understood,
+  * Q-learning [Mni+15] (with function approximation)
+    * fails on many simple problems and is poorly understood,
     * DQN works well with discrete action spaces,
     * **not been demonstrated** to perform well on continuous control, see Duan et al. [Dua+16].
   * vanilla policy gradient methods, eg A3C
     * have poor data effiency and robustness;
-  * TRPO [Sch+15b]:
+  * TRPO [Sch+15b]
     * relatively complicated, and
     * not compatible with architectures that include noise (such as dropout) or
       parameter sharing (between the policy and value function, or with auxiliary tasks)
@@ -43,8 +44,6 @@ objective Equation (5) with SGD; additional modifications are required.
   * enables multiple epochs of minibatch updates.
     * use multiple epochs of stochastic gradient ascent to perform each policy update
       * cf: standard policy gradient methods perform one gradient update per data sample
-    * alternate between sampling data from the policy and
-      performing several epochs of optimization on the sampled data
   * with clipped probability ratios,
     * which forms a pessimistic estimate (i.e., lower bound) of the performance of the policy.
     * also tried clipping in log space, but found the performance to be no better.
@@ -59,16 +58,11 @@ objective Equation (5) with SGD; additional modifications are required.
     * so the final objective is a lower bound (i.e., a pessimistic bound) on the unclipped objective.
   * modify L_CPI, to penalize changes to the policy that move rt(θ) away from 1
   * the KL penalty performed worse than the clipped surrogate objective
-* If using a neural network architecture that **shares parameters**
-  between the policy and value function, we **must use a loss function that combines** the policy
-  surrogate and a value function error term.
-  * can further be augmented by adding an entropy bonus to ensure sufficient exploration, as suggested in past work
-  * Equ 9
 * Equ 7 breakdown
-  * first term inside the min is L CPI
-  * The second term, clip(rt (θ), 1 − , 1 + )Ât , modifies the surrogate
+  * first term inside the min is $L^{CPI}$
+  * The second term, modifies the surrogate
     objective by clipping the probability ratio, which removes the incentive for moving rt outside of the
-    interval [1 − , 1 + ].
+    interval $[(1 - \epsilon), (1 + \epsilon)]$
   * Finally, we take the minimum of the clipped and unclipped objective, so the
     final objective is a lower bound (i.e., a pessimistic bound) on the unclipped objective.
 * Adaptive KL Penalty Coefficient
@@ -129,13 +123,18 @@ FlagrunHarder, where the robot is pelted by cubes and needs to get up off the gr
   * much simpler to implement, more general, and have better sample complexity (empirically)
 
 # background
+* A2C stands for advantage actor critic, and
+  is a synchronous version of A3C, which we found to have the same or better performance than the asynchronous version.
+* If using a neural network architecture that **shares parameters**
+  between the policy and value function, we **must use a loss function that combines** the policy
+  surrogate and a value function error term.
+  * can further be augmented by adding an entropy bonus to ensure sufficient exploration, as suggested in past work
+  * Equ 9
 * On multiple epoch using vanilla policy gradient objective
 > While it is appealing to perform multiple steps of optimization on this loss LP G using the same
 trajectory, doing so is not well-justified, and empirically it often leads to destructively large policy
 updates (see Section 6.1; results are not shown but were similar or worse than the “no clipping or
 penalty” setting).
-* A2C stands for advantage actor critic, and
-  is a synchronous version of A3C, which we found to have the same or better performance than the asynchronous version.
 
 # comment
 * PPO is a **surrogate** objective function designed **for stochastic gradient ascent** (first-order optimization)
