@@ -203,6 +203,7 @@ see also [this](https://github.com/tttor/rl-foundation/blob/master/book/rl-intro
   * Policy improvement:
     * update the policy with respect to the (estimated) action-value function
     * eg, a greedy maximisation (or soft maximisation) of the action-value function
+* https://mathoverflow.net/questions/44677/is-there-mdps-markow-decision-process-which-have-a-non-deterministic-optimal-p
 * the interpretation of the discount factor, $\gamma$
   * $\gamma = 0$: short-sighted, the agent only values immediate reward,
     * eg, because the agent (believes that it) is going to die right after receiving that immediate reward
