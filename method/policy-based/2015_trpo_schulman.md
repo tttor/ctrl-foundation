@@ -3,7 +3,27 @@
 * http://proceedings.mlr.press/v37/schulman15.html
 * https://arxiv.org/abs/1502.05477
 
+## problem
+*  optimize nonlinear policies with tens of thousands of parameters
+* Equation (4) implies that a sufficiently small step ...,
+  * but does not give us any guidance on old how big of a step to take.
+
+## observation
+* The inability of ADP and gradient-based methods to consistently
+  beat gradient-free random search is unsatisfying, since
+  gradient-based optimization algorithms enjoy much better
+  sample complexity guarantees than gradient-free methods
+  (Nemirovski, 2005).
+* Continuous gradient-based optimiza-
+  tion has been very successful at learning function approxi-
+  mators for supervised learning tasks with huge numbers of
+  parameters, and extending their success to reinforcement
+  learning would allow for efficient training of complex and
+  powerful policies.
+
 ## idea: TRPO (trust region policy optimization)
+*  prove that minimizing a certain surrogate loss function guarantees policy improvement with non-trivial step sizes.
+
 * two variants of this algorithm:
   * **the single-path method**, which can be ap- plied in the model-free setting;
   * **the vine method**, which requires the system to be restored to particular states,
@@ -33,6 +53,17 @@
     * single path: is based on sampling individual trajectories
     * vine: constructing a rollout set and then performing multiple actions from each state in the rollout set
 
+## setup
+considered in the compar-
+ison: single path TRPO; vine TRPO; reward-weighted re-
+gression (RWR), an EM-like policy search method (Peters
+& Schaal, 2007); relative entropy policy search (REPS)
+(Peters et al., 2010); cross-entropy method (CEM), a
+gradient-free method (Szita & Lörincz, 2006); covariance
+matrix adaption (CMA), another gradient-free method
+(Hansen & Ostermeier, 1996); natural gradient, the classic
+natural policy gradient algorithm (Kakade, 2002)
+
 ## result
 * suggest:
   * The use of recurrent policies with hidden state, could further make it possible to roll state estimation and
@@ -42,10 +73,13 @@
 
 ## background
 * policy optimization can be classified into three broad categories:
-  * **policy iteration methods**, which alternate between estimating the value function under the current policy and improving the policy (Bertsekas, 2005);
-  * **policy gradient methods**, which use an estimator of the gradient of the expected return (total reward) obtained from sample trajectories (Peters & Schaal, 2008a) (and which, as we later discuss, have a close connection to policy iteration); and
-  * **derivative-free optimization methods**, which treat the return as a black box function to be optimized
-  in terms of the policy parameters (Szita & Lorincz, 2006)
+  * **policy iteration methods**,
+    which alternate between estimating the value function under the current policy and improving the policy (Bertsekas, 2005);
+  * **policy gradient methods**,
+    which use an estimator of the gradient of the expected return (total reward) obtained from sample trajectories (Peters & Schaal, 2008a) (and which, as we later discuss, have a close connection to policy iteration); and
+  * **derivative-free optimization methods**,
+    which treat the return as a black box function to be optimized
+    in terms of the policy parameters (Szita & Lorincz, 2006)
     * the cross-entropy method (CEM) and
     * covariance matrix adaptation (CMA)
 * Classic: that the update performed by exact policy iteration, which uses the deterministic policy
