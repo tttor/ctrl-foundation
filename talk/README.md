@@ -21,6 +21,7 @@
     * This dichotomy between “internal” rewards, which gives us much of our “drive”, and “external” reward that 
       society imposes us (parents, teachers, managers etc.), 
     * has yet to be reflected in RL research, and yet it is an integral part of how RL works in humans and other animals.
-  
+* https://github.com/williamFalcon/DeepRLHacks
+
 ## forum
 * https://discuss.openai.com/

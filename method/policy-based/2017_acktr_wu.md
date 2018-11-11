@@ -235,10 +235,27 @@ two networks share lower-layer representations but have distinct output layers
   * A.2 Continuous control
 > For experiments with low-dimensional state space as an input we used two separate neural networks
 with 64 hidden units per layer in a two-layer network
-
 * (-) setup for random seeds varies across plots and tables
-* (-) performance varies across task: who wins, who loses
+* (-) performance varies across tasks: who wins, who loses
 
+### question
+* on  Step-size Selection, it seems the OpenAI implementation does not match with the paper
+  * paper: 3.2 Step-size Selection and trust-region optimization, with more sophisticated formula
+  * cf: https://github.com/openai/baselines/blob/old_acktr_cont/baselines/acktr/acktr_cont.py#L119
+```py
+min_stepsize = np.float32(1e-8)
+max_stepsize = np.float32(1e0)
+# Adjust stepsize
+kl = policy.compute_kl(ob_no, oldac_dist)
+if kl > desired_kl * 2:
+    logger.log("kl too high")
+    tf.assign(stepsize, tf.maximum(min_stepsize, stepsize / 1.5)).eval()
+elif kl < desired_kl / 2:
+    logger.log("kl too low")
+    tf.assign(stepsize, tf.minimum(max_stepsize, stepsize * 1.5)).eval()
+else:
+    logger.log("kl just right!")
+```
 * (?) fisher info matrix does NOT include Q? in sec 3.1
   * ans: yes, see
     Bagnell and Schneider (2003) that (10) that shows
