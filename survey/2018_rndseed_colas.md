@@ -1,5 +1,6 @@
 # How Many Random Seeds? Statistical Power Analysis in Deep Reinforcement Learning Experiments
 * Cédric Colas, Olivier Sigaud and Pierre-Yves Oudeyer
+* https://arxiv.org/abs/1806.08295
 * https://github.com/flowersteam/rl-difference-testing
 
 # abs
@@ -36,6 +37,8 @@
   learning curve is the average cumulated reward over 10 evaluation episodes.
   The measure of performance Xi of Algo i is the average performance over
   the last 10 points (i.e. last 100 evaluation episodes)
+*  The effect size  can be defined as the difference between the mean performances of
+both algorithms:  = μ1 − μ2
 
 ## 2.2 Comparing performances with a difference test
 * define the null hypothesis H0 and the alternate hypothesis Ha .
@@ -70,7 +73,27 @@ thinner the distribution.
 standard guidelines to select N so as to meet requirements for both α and β.
 
 ## 3.2 Bootstrapped confidence intervals
-TODO
+* The bootstrap confidence interval test assumes the
+sample size is large enough to represent the underlying distribution correctly,
+although this might be difficult to achieve in practice
+
+# 4 In theory: power analysis for the choice of the sample size
+* When the effect size 
+and the probability of type-I error α are kept constant, β is a function of the
+sample size N
+* Choosing N so as to meet requirements on β is called statistical
+power analysis. It answers the question: what sample size do I need to have 1 − β
+chance to detect an effect size , using a test with significance level α?
+* Message 3: Given a sample size N , a minimum effect size to detect 
+and a requirement on type-I error α the probability of type-II error β can
+be computed. This computation relies on the assumptions of the t-test.
+The sample size N should be chosen so as to meet the requirements on β
+
+# 5 In practice: influence of deviations from assumptions
+* propose to compute an empirical evaluation of the type-
+I error based on experimental data, and show that: 1) the bootstrap test is
+sensitive to small sample sizes; 2) the t-test might slightly under-evaluate the
+type-I error for non-normal data.
 
 # conclusion
 * Use the Welch’s t-test over the bootstrap confidence interval test.

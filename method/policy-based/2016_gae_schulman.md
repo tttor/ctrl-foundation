@@ -18,7 +18,7 @@
   * variance reduction to improce sample efficiency
 
 ## idea: GAE:  generalized advantage estimator
-* GAE: an exponentially-weighted estimator of the advantage function that is analogous to TD(λ). 
+* GAE: an exponentially-weighted estimator of the advantage function that is analogous to TD(λ).
   * to address challenge-1
 * using trust region optimization procedure for **both** the policy and the value function
 * GAE has two parameters $\gamma$ and $\lambda$ which adjust the bias-variance tradeoff.
@@ -29,9 +29,9 @@
   * This statement can be intuitively justified by
   the following interpretation of the policy gradient: that a step in the policy gradient direction should
   increase the probability of better-than-average actions and decrease the probability of worse-than-average actions.
-* advantages to using a state-value function in the manner of this paper. 
+* advantages to using a state-value function in the manner of this paper.
   * First, the state-value function has a lower-dimensional input and is thus easier
-    to learn than a state-action value function. 
+    to learn than a state-action value function.
   * Second, the method of this paper allows us to smoothly
     interpolate between the high-bias estimator (λ = 0) and the low-bias estimator (λ = 1).
     * using a parameterized Q-function only allows us to use a high-bias estimator
@@ -83,5 +83,8 @@ analogous to the one used to define TD(λ) (Sutton & Barto, 1998), however TD(λ
 of the value function, whereas here we are estimating the advantage function.
 * ? how to measure: policy gradient estimation error?
 > the relationship between value function estimation error and policy gradient estimation error
-
+* ? not sure why this is the case,
+```
+(On the other hand, using a parameterized Q-function only allows us to use a high-bias estimator.)
+```
 
