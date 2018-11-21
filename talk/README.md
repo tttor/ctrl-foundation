@@ -22,6 +22,7 @@
       society imposes us (parents, teachers, managers etc.), 
     * has yet to be reflected in RL research, and yet it is an integral part of how RL works in humans and other animals.
 * https://github.com/williamFalcon/DeepRLHacks
+* https://www.quora.com/What-are-the-disadvantages-of-reinforcement-learning-And-what-would-be-a-good-alternative-to-use-cases-where-its-used
 
 ## forum
 * https://discuss.openai.com/
