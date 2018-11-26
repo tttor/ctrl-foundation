@@ -10,6 +10,7 @@
 * [Stanford: Ng: Lecture 16 | Machine Learning](https://www.youtube.com/watch?v=RtxI449ZjSc)
 * [Udacity: RL](https://www.udacity.com/course/reinforcement-learning--ud600)
   * https://github.com/udacity/deep-reinforcement-learning
+* https://spinningup.openai.com/en/latest/index.html
 
 ## workshop
 * [NIPS Deep Reinforcement Learning Workshop, 2015, 2016, 2017](https://sites.google.com/view/deeprl-symposium-nips2017/home)
