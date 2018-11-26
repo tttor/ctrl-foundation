@@ -22,6 +22,7 @@
 * [2012: Browne: A Survey of Monte Carlo Tree Search Methods](https://ieeexplore.ieee.org/document/6145622/)
 * [2011: Nguyen-Tuong: Model learning for robot control: a survey](https://link.springer.com/article/10.1007/s10339-011-0404-1)
 * [2009: Taylor: Transfer Learning for Reinforcement Learning Domains: A Survey](http://www.jmlr.org/papers/v10/taylor09a.html)
+* [2009: Mahadevan: Learning Representation and Control in Markov Decision Processes: New Frontiers](?)
 * [2008: Ross: Online planning algorithms for POMDPs](http://www.jair.org/papers/paper2567.html)
 * [2008: Partalas: Reinforcement learning and automated planning: a survey](https://www.igi-global.com/chapter/reinforcement-learning-automated-planning/5322)
 * [2004: Greensmith: Variance Reduction Techniques for Gradient Estimates in Reinforcement Learning](?)

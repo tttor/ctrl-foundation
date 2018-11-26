@@ -18,8 +18,8 @@
 * https://www.quora.com/What-is-the-future-of-reinforcement-learning
   * we do not learn to drive in a tabula rasa mode
   * You cannot teach humans so easily because they have their own “internal” reward functions that are telling them what to do.
-    * This dichotomy between “internal” rewards, which gives us much of our “drive”, and “external” reward that 
-      society imposes us (parents, teachers, managers etc.), 
+    * This dichotomy between “internal” rewards, which gives us much of our “drive”, and “external” reward that
+      society imposes us (parents, teachers, managers etc.),
     * has yet to be reflected in RL research, and yet it is an integral part of how RL works in humans and other animals.
 * https://github.com/williamFalcon/DeepRLHacks
 
