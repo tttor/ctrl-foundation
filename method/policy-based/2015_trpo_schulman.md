@@ -2,6 +2,7 @@
 * icml2015
 * http://proceedings.mlr.press/v37/schulman15.html
 * https://arxiv.org/abs/1502.05477
+* https://www.depthfirstlearning.com/2018/TRPO
 
 ## problem
 *  optimize nonlinear policies with tens of thousands of parameters
