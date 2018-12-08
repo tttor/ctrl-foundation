@@ -54,6 +54,23 @@
     * single path: is based on sampling individual trajectories
     * vine: constructing a rollout set and then performing multiple actions from each state in the rollout set
 
+```
+Our principal theoretical result is that the policy improvement
+bound in Equation (6) can be extended to general stochas-
+tic policies, rather than just mixture polices, by replacing α
+with a distance measure between π and π̃, and changing the
+constant  appropriately. Since mixture policies are rarely
+used in practice, this result is crucial for extending the im-
+provement guarantee to practical problems.
+
+In practice, if we used the penalty coefficient C recom-
+mended by the theory above, the step sizes would be very
+small. One way to take larger steps in a robust way is to use
+a constraint on the KL divergence between the new policy
+and the old policy, i.e., a trust region constraint:
+
+```
+
 ## setup
 considered in the compar-
 ison: single path TRPO; vine TRPO; reward-weighted re-
@@ -91,3 +108,6 @@ natural policy gradient algorithm (Kakade, 2002)
 ## comment
 * vital role of KL divergence
 * the notion of "trust region" is from optimization
+* this trust region still explicitly computes step length via a line search method,
+  as in Appendix C, in trust-region opt,
+  should not the step length is computed implicitly, simultaneouly with the step direction?
