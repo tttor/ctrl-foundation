@@ -28,6 +28,7 @@
 * https://github.com/NervanaSystems/coach
 * https://github.com/rlcode/reinforcement-learning
 * https://github.com/rll/rllab
+  * https://github.com/rlworkgroup/garage
 
 ## type 2: old
 * PyBrain: http://pybrain.org/
