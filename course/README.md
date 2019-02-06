@@ -12,6 +12,7 @@
   * https://github.com/udacity/deep-reinforcement-learning
 * https://spinningup.openai.com/en/latest/index.html
 * https://web.stanford.edu/class/cs234/
+* http://researchers.lille.inria.fr/~lazaric/Webpage/Teaching.html
 
 ## workshop
 * [NIPS Deep Reinforcement Learning Workshop, 2015, 2016, 2017](https://sites.google.com/view/deeprl-symposium-nips2017/home)
