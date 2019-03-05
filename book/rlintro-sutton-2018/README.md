@@ -4,3 +4,4 @@
 [via UQ Lib](https://ebookcentral-proquest-com.ezproxy.library.uq.edu.au/lib/uql/detail.action?docID=3338821)
 * https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
 * https://github.com/dennybritz/reinforcement-learning
+* https://github.com/JKCooper2/rlai-exercises
