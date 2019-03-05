@@ -119,6 +119,9 @@ repeatedly estimating the gradient of the policy’s performance with respect to
   approximate the value function,
 
 # 3: trust region policy optimization (TRPO)
+* http://www.stat.yale.edu/~pollard/Books/1984book/pollard1984.pdf
+
+## 3.1
 To update the policy, we should improve a certain surrogate
 objective as much as possible, while changing the policy as little as possible, where this
 change is measured as a KL divergence between action distributions.
@@ -127,7 +130,47 @@ We show that by
 bounding the size of the policy update, we can bound the change in state distributions,
 guaranteeing policy improvement despite non-trivial step sizes
 
-next: 3.2 preliminaries
+## 3.2 preliminaries
+
+## 3.3
+* principal theoretical result is
+  * that the policy improvement bound in Equation (8) can
+    be extended to general stochastic policies, rather than just mixture polices,
+    by replacing α with a distance measure between π and π̃.
+*  Note that for now, we assume exact evaluation of the advantage values
+
+## 3.4
+* In practice, if we used the penalty coefficient C recommended by the theory above, the
+  step sizes would be very small. One way to take larger steps in a robust way is to use a
+  constraint on the KL divergence between the new policy and the old policy, i.e., a trust
+  region constraint
+
+## 3.6
+* Our theory ignores estimation error for the advantage function
+  Kakade and Langford [KL02] consider this error in their derivation, and the same arguments would
+  hold in the setting of this chapter, but we omit them for simplicity.
+
+## 3.8
+* used δ = 0.01 for all experiments.
+* For the natural
+  gradient method, we swept through the possible values of the stepsize in factors of three,
+  and took the best value according to the final performance
+* results provide empirical evidence that constraining the KL divergence is a more robust way to
+  choose step sizes and make fast, consistent progress, compared to using a fixed penalty.
+
+## 3.9
+* proved monotonic improvement for an algorithm that repeatedly optimizes a
+  local approximation to the expected return of the policy with a KL divergence penalty,
+  and we showed that an approximation to this method that incorporates a KL divergence
+  constraint achieves good empirical results on a range of challenging policy learning tasks,
+  outperforming prior methods.
+
+## 3.12
+* to efficiently approximately solve the following constrained optimization problem,
+  * (1) compute a search direction, using a
+    linear approximation to objective and quadratic approximation to the constraint; and
+  * (2) perform a line search in that direction, ensuring that we improve the nonlinear objective
+    while satisfying the nonlinear constraint.
 
 # 4: geralized advantage estimator (GAE)
 Two main challenges with policy gradient methods:
@@ -160,7 +203,8 @@ a combination of stochastic and deterministic operations yields recent models of
   * Shared representations for control and prediction.
   * Hierarchy: how to automatically learn these high-level actions, or
     what kind of optimization objective will encourage the policy to be more “hierarchical”.
-  * Exploration: exploration methods that can be applied in challenging real-world settings such as robotics.
+  * Exploration:
+    exploration methods that can be applied in challenging real-world settings such as robotics.
   * Using learned models to problems with high-dimensional state spaces.
   * Finer-grained credit assignment:
     to do better credit assignment with the help of a model of the system.

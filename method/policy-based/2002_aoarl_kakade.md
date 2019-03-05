@@ -1,4 +1,5 @@
-2002_aoarl_kakade.md
+# 2002_aoarl_kakade.md
+* http://hunch.net/~jl/projects/RL/aoarl/Final.tex
 
 # idea
 * consider a settting in which an algorithm is given an access to

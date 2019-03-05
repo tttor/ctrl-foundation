@@ -16,6 +16,9 @@
   * This problem is compounded in high dimensions, as illustrated by the continuous bandit task
 
 ## idea: deterministic policy gradients (theorem 1)
+*  show that the deterministic policy gradient does indeed exist, and further-
+  more it has a simple model-free form that simply follows
+  the gradient of the action-value function.
 * vs stochastic case
   * In the stochastic case: the policy gradient integrates over both state and action spaces,
   * in the deterministic case:  the policy gradient **only** integrates over the state space.
@@ -24,7 +27,7 @@
   * use the deterministic policy gradient to derive an off-policy actor-critic algorithm that
     estimates the action-value function using a differentiable function approximator, and
   * then updates the policy parameters in the direction of the approximate action-value gradient.
-* to explore: learn off-policy using stochastic behaviour policy  
+* to explore: learn off-policy using stochastic behaviour policy
 * Deterministic Actor-Critic Algorithms
   * On-Policy Deterministic Actor-Critic
     * using a simple Sarsa critic
@@ -36,6 +39,7 @@
   * such that the true gradient is preserved.
   * For any deterministic policy µθ(s), there always exists a compatible function approximator of the form ...
   * yields Compatible OPDAC (COPDAC)
+
 
 ## setup
 * task
@@ -57,7 +61,7 @@
 * the deterministic policy gradient theorem is in fact a limiting case of the stochastic policy gradient theorem;
   theorem 2
 * COPDAC-B still outperforms SAC-B by a very wide margin that grows larger with increasing dimension
-* COPDAC-Q 
+* COPDAC-Q
   * slightly outper- formed both SAC and OffPAC in all three domains.
   * the octopus arm converged to a good solution in all cases.
 * the deterministic policy gradient can be com- puted immediately in closed form
@@ -97,7 +101,8 @@
   to ensure that the approximation does not bias the policy gradient.
 * In general, behaving according to a deterministic policy will **not ensure** adequate exploration and
   may lead to sub- optimal solutions.
-  
+
 ## comment
 * (?) is deterministic policy more suitable in robotics?
 * (?) compatible fn approx using neural nets?
+  * ans: see paper (Sutton et al., 2000) on pol grad with fn approx
