@@ -11,7 +11,7 @@
 * https://stackoverflow.com/questions/48980368/list-all-environment-id-in-openai-gym
 
 ## env spec
-| env id | observ dim | action dim | solved threshold | frame skip | timestep limit |
+| env id | obs_dim | act_dim | solved | frame_skip | timestep_lim |
 | :---   | :---       | :---       | :---             | :---       | :---           |
 | HalfCheetah-v2 | 17 | 6 | 4800 | 5 | 1000 |
 | Hopper-v2 | 11 | 3 | 3800 | 4 | 1000 |
