@@ -11,17 +11,19 @@
 * https://stackoverflow.com/questions/48980368/list-all-environment-id-in-openai-gym
 
 ## env spec
-| env id | obs_dim | act_dim | solved | frame_skip | timestep_lim |
-| :---   | :---       | :---       | :---             | :---       | :---           |
-| HalfCheetah-v2 | 17 | 6 | 4800 | 5 | 1000 |
-| Hopper-v2 | 11 | 3 | 3800 | 4 | 1000 |
-| Swimmer-v2 | 8 | 2 | 360 | 4 |  1000 |
-| Walker-v2 | 17 | 6 | None| 4 | 1000 |
-| InvertedDoublePendulum-v2 | 11 | 1 | 9100 | 5 | 1000 |
-| InvertedPendulum-v2 | 4 | 1 | 950 | 2 | 1000 |
-| Reacher-v2 | 11 | 2 | -3.75 | 2 | 50 |
-| Ant-v2 | 111 | 8 | 6000 | 5 | 1000 |
-| Humanoid-v2 | 376 | 17 | None | 5 | 1000 |
+| env id | obs_dim | act_dim | solved | frame_skip | timestep_lim | act_range |
+| :---   | :---    | :---    | :---   | :---       | :---         | :---
+| HalfCheetah-v2 | 17 | 6 | 4800 | 5 | 1000 | (-1.0, 1.0) |
+| Hopper-v2 | 11 | 3 | 3800 | 4 | 1000 | (-1.0, 1.0) |
+| Swimmer-v2 | 8 | 2 | 360 | 4 |  1000 | (-1.0, 1.0) |
+| Walker-v2 | 17 | 6 | None| 4 | 1000 | (-1.0, 1.0) |
+| InvertedDoublePendulum-v2 | 11 | 1 | 9100 | 5 | 1000 | (-1.0, 1.0) |
+| InvertedPendulum-v2 | 4 | 1 | 950 | 2 | 1000 | (-3.0, 3.0) |
+| Reacher-v2 | 11 | 2 | -3.75 | 2 | 50 | (-1.0, 1.0) |
+| Ant-v2 | 111 | 8 | 6000 | 5 | 1000 | | (-1.0, 1.0) |
+| Humanoid-v2 | 376 | 17 | None | 5 | 1000 | (-0.4, 0.4) |
+| MountainCarContinuous-v0 | 2 | 1 | 90 | ? | 999 | (-1.0, 1.0) |
+| Pendulum-v0 | 3 | 1 | None | ? | 200 | (-2.0, 2.0) |
 
 # Others
 * https://github.com/openai/universe
