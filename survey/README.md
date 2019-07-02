@@ -1,6 +1,7 @@
 # survey, benchmark, review
 
 ## paper
+* [2018: Busonio: Reinforcement learning for control: Performance, stability, and deep approximators](?)
 * [2018: Mahmood: Benchmarking Reinforcement Learning Algorithms on Real-World Robots](https://arxiv.org/abs/1809.07731)
 * [2018: Colas: How Many Random Seeds? Statistical Power Analysis in Deep Reinforcement Learning Experiments](https://arxiv.org/abs/1806.08295)
 * [2018: Recht: A Tour of Reinforcement Learning: The View from Continuous Control](https://arxiv.org/abs/1806.09460)
