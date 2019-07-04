@@ -7,6 +7,11 @@
 * [David Silver, Deep Reinforcement Learning, ICML 2016](http://techtalks.tv/talks/deep-reinforcement-learning/62360/)
 * [David Silver, Deep Reinforcement Learning, UAI 2015](https://www.youtube.com/watch?v=qLaDWKd61Ig&t=238s)
 * [Sergey Levine, Deep Learning for Decision Making and Control, UWTV 2015](https://www.youtube.com/watch?v=EtMyH_--vnU&t=981s)
+* https://l4dc.mit.edu/videos/
+  * Emma Brunskill (Stanford University): “Efficient Reinforcement Learning When Data is Costly”
+    https://youtu.be/U2wHy7xmx9k
+  * Sham Kakade (University of Washington): “A No Regret Algorithm for Robust Online Adaptive Control”
+    https://youtu.be/115VA_tSKwg
 
 ## web
 * https://www.alexirpan.com/2018/02/14/rl-hard.html
