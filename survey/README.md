@@ -1,6 +1,7 @@
 # survey, benchmark, review
 
 ## paper
+* [2019: Wang: Benchmarking Model-Based Reinforcement Learning](?)
 * [2018: Busonio: Reinforcement learning for control: Performance, stability, and deep approximators](?)
 * [2018: Mahmood: Benchmarking Reinforcement Learning Algorithms on Real-World Robots](https://arxiv.org/abs/1809.07731)
 * [2018: Colas: How Many Random Seeds? Statistical Power Analysis in Deep Reinforcement Learning Experiments](https://arxiv.org/abs/1806.08295)
@@ -31,6 +32,7 @@
 * [2000: Hauskreht: Value-Funtion Approximations for Partially Observable Markov Deision Processes](https://www.jair.org/media/678/live-678-1858-jair.pdf)
 * [1998: Kaebling: Planning and acting in partially observable stochastic domains](https://www.sciencedirect.com/science/article/pii/S000437029800023X)
 * [1996: Kaebling: Reinforcement Learning: A Survey](https://www.jair.org/media/301/live-301-1562-jair.pdf)
+* [1996: Mahadevan: Average Reward Reinforcement Learning: Foundations, Algorithms, and Empirical Results](?)
 
 ## (rough) dimensions of challenges:
 * MDP (fully observable states) _...to..._ POMDP (partially observable states) model/formulations
