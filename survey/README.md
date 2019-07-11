@@ -18,6 +18,7 @@
 * [2015: Garcia: A Comprehensive Survey on Safe Reinforcement Learning](http://jmlr.org/papers/v16/garcia15a.html)
 * [2015: Ghavamzadeh: Bayesian Reinforcement Learning: A Survey](https://arxiv.org/abs/1609.04436)
 * [2014: Mayne: Model predictive control: Recent developments and future promise](https://www.sciencedirect.com/science/article/pii/S0005109814005160)
+* [2014: Geist: Off-policy Learning With Eligibility Traces: A Survey](?)
 * [2013: Kober: Reinforcement learning in robotics: A survey](http://journals.sagepub.com/doi/abs/10.1177/0278364913495721)
 * [2013: Deisenroth: A Survey on Policy Search for Robotics](https://spiral.imperial.ac.uk/bitstream/10044/1/12051/7/fnt_corrected_2014-8-22.pdf)
 * [2012: Grondman: A Survey of Actor-Critic Reinforcement Learning: Standard and Natural Policy Gradients](http://ieeexplore.ieee.org/abstract/document/6392457/)
