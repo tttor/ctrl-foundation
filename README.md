@@ -14,3 +14,4 @@ See also:
 * https://deeplearning4j.org/deepreinforcementlearning
 * https://github.com/dennybritz/reinforcement-learning
 * https://github.com/brylevkirill/notes/blob/master/Reinforcement%20Learning.md
+* https://github.com/mpatacchiola/dissecting-reinforcement-learning
