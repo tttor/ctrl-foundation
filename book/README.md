@@ -1,5 +1,7 @@
 # books
 
+
+
 * Reinforcement Learning An Introduction, Richard S. Sutton and Andrew G. Barto, 2017
 * Reinforcement Learning: State-of-the-Art, Wiering, Marco and van Otterlo, Martijn, 2012
 * Statistical Reinforcement Learning: Modern Machine Learning Approaches, Masashi Sugiyama, 2015
@@ -10,7 +12,12 @@
 * Neuro-Dynamic Programming, by Dimitri P. Bertsekas and John Tsitsiklis
   * http://athenasc.com/ndpbook.html
   * http://web.mit.edu/jnt/www/ndp.html
-  
+* http://www.athenasc.com/dpcontents.html
+* http://www.statslab.cam.ac.uk/~james/Markov/
+* Markov Chains and Stochastic Stability
+  * by S.P. Meyn and R.L. Tweedie
+  * http://probability.ca/MT/BOOK.pdf
+
 ## misc
 Marco Wiering, Martijn van Otterlo:
 > Two dominant books:
