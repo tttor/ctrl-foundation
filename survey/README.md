@@ -30,6 +30,7 @@ TMPend
 * [2012: Grondman: A Survey of Actor-Critic Reinforcement Learning: Standard and Natural Policy Gradients](http://ieeexplore.ieee.org/abstract/document/6392457/)
 * [2012: Browne: A Survey of Monte Carlo Tree Search Methods](https://ieeexplore.ieee.org/document/6145622/)
 * [2011: Nguyen-Tuong: Model learning for robot control: a survey](https://link.springer.com/article/10.1007/s10339-011-0404-1)
+* [2009: Gosavi: Reinforcement Learning: A Tutorial Survey and Recent Advances](https://pubsonline.informs.org/doi/pdf/10.1287/ijoc.1080.0305)
 * [2009: Taylor: Transfer Learning for Reinforcement Learning Domains: A Survey](http://www.jmlr.org/papers/v10/taylor09a.html)
 * [2009: Mahadevan: Learning Representation and Control in Markov Decision Processes: New Frontiers](?)
 * [2008: Ross: Online planning algorithms for POMDPs](http://www.jair.org/papers/paper2567.html)
