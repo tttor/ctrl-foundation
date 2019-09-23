@@ -17,6 +17,8 @@
 * Markov Chains and Stochastic Stability
   * by S.P. Meyn and R.L. Tweedie
   * http://probability.ca/MT/BOOK.pdf
+* RL theory monograph, Alekh Agarwal
+  * https://courses.cs.washington.edu/courses/cse599m/19sp/notes/rl_draft.pdf
 
 ## misc
 Marco Wiering, Martijn van Otterlo:
