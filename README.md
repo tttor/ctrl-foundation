@@ -15,3 +15,4 @@ See also:
 * https://github.com/dennybritz/reinforcement-learning
 * https://github.com/brylevkirill/notes/blob/master/Reinforcement%20Learning.md
 * https://github.com/mpatacchiola/dissecting-reinforcement-learning
+* Reinforcing behaviour to birds: https://twitter.com/kareem_carr/status/1180880588376596481
