@@ -1,7 +1,6 @@
 # Reinforcement Learning: An Introduction
 
-For an enjoyable (but not very rigorous) introduction,
-for rigorous ones, see eg
+For rigorous ones, see eg
 Puterman's MDP,
 Dimitri Bertsekas's Dynamic Programming and Optimal Control.
 
