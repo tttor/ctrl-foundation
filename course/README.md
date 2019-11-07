@@ -5,6 +5,7 @@
   * http://rll.berkeley.edu/deeprlcoursesp17/
   * https://github.com/berkeleydeeprlcourse/homework
 * [CMU: Deep Reinforcement Learning and Control, 2017](https://katefvision.github.io/)
+  * https://cmudeeprl.github.io
 * [Oxford: Machine Learning, Nando de Freitas, 2015](https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/)
 * [Edinburg: Reinforcement Learning, Pavlos Andreadis, 2018](http://www.inf.ed.ac.uk/teaching/courses/rl/)
 * [Stanford: Ng: Lecture 16 | Machine Learning](https://www.youtube.com/watch?v=RtxI449ZjSc)
