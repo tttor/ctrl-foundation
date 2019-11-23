@@ -19,6 +19,7 @@
   * http://probability.ca/MT/BOOK.pdf
 * RL theory monograph, Alekh Agarwal
   * https://courses.cs.washington.edu/courses/cse599m/19sp/notes/rl_draft.pdf
+  * https://rltheorybook.github.io/
 
 ## misc
 Marco Wiering, Martijn van Otterlo:
