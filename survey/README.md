@@ -3,6 +3,11 @@
 <!-- TMP
 Reinforcement Learning and Feedback Control
 Frank L. Lewis, Draguna Vrabie, and Kyriakos G. Vamvoudakis
+
+Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review
+Sergey Levine
+
+
 TMPend
  -->
 
