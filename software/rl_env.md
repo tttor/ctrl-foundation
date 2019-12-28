@@ -30,3 +30,4 @@
 * https://github.com/openai/roboschool
 * https://github.com/openai/retro
 * https://github.com/deepmind/bsuite
+* https://aihabitat.org/
