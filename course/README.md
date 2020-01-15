@@ -16,6 +16,7 @@
 * http://researchers.lille.inria.fr/~lazaric/Webpage/Teaching.html
 * http://civil.iisc.ernet.in/~tarunr/ce273.html
 * http://www.cse.chalmers.se/~chrdimi/teaching/optimal_decisions/overview.html
+  * http://www.cse.chalmers.se/~chrdimi/teaching/optimal_decisions/schedule.html
 
 ## workshop
 * [NIPS Deep Reinforcement Learning Workshop, 2015, 2016, 2017](https://sites.google.com/view/deeprl-symposium-nips2017/home)
