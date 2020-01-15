@@ -20,6 +20,9 @@
 * RL theory monograph, Alekh Agarwal
   * https://courses.cs.washington.edu/courses/cse599m/19sp/notes/rl_draft.pdf
   * https://rltheorybook.github.io/
+* Introduction to Multi-Armed Bandits
+  * Aleksandrs Slivkins
+
 
 ## misc
 Marco Wiering, Martijn van Otterlo:
