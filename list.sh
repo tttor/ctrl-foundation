@@ -2,6 +2,7 @@
 rootdir=/home/tor/rsc/ctrl-foundation
 dlist[0]=book/ebook
 dlist[1]=course/ecourse
+dlist[2]=talk/etalk
 
 for dir in "${dlist[@]}"
 do

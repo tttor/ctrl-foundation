@@ -1,0 +1,76 @@
+/home/tor/rsc/ctrl-foundation/talk/etalk:
+00126844.pdf
+10.1.1.225.4072.pdf
+13. Learning from weak supervision. Masashi Sugiyama.mp4
+20-Kakade.mp4
+28.Jan Peters Policy Search with the f-Divergence.mp4
+(8) Scalable Trust-Region Method for Deep Reinforcement Lear.mp4
+all-papers-deep-rl-workshop-2019.zip
+AllPolicyGradientLecture.pdf
+Amii Presents Tea Time Talk with Csaba Szepesvári, June 7, 2.mp4
+Amii Presents Tea Time Talk with Rich Sutton (May 28, 2018).mp4
+A Tutorial on Reinforcement Learning I.mp4
+Average Reward Reinforcement Learning_ an Overview.pdf
+aviv_slides.pdf
+Bruno-presentation.pdf
+carnegie-mellon-statement-of-purpose_riashatislam.pdf
+CS294-112 112017.mp4
+Csaba Szepesvari - Learning to Make Better Decisions Challen.mp4
+Deep Learning 5 Optimization for Machine Learning.mp4
+Deep Learning for Decision Making and Control.mp4
+Deep Multiagent Reinforcement Learning for Partially Observa.mp4
+deep-policy-gradient-methods_riashat_islam_research-proposal.pdf
+Deep Reinforcement Learning, Decision Making, and Control.mp4
+Deep Reinforcement Learning Doesn't Work Yet.pdf
+Deep Reinforcement Learning (John Schulman, OpenAI).mp4
+Deep Reinforcement Learning.mp4
+DeepReinforcementLearningThroughPolicyOptimizatio_high.mp4
+Deep-Reinforcement-Learning-Through-Policy-Optimization_high.mp4
+deep_rl.pdf
+Documentary Alphago 2017 (Korean sub).mp4
+Emma Brunskill (Stanford University) Efficient Reinforcement.mp4
+Emo Todorov (University of Washington) Acceleration-based me.mp4
+Extra Material — Spinning Up documentation2.pdf
+Feature Based Aggregation and Deep Reinforcement Learning.mp4
+hadavid_gecco_full_2019.pdf
+icml07-brl-tutorial-part5-bpg-bac-ghavamzadeh.pdf
+ICRA2018-Abbeel-keynote.pdf
+ICRA2018---tutorial---Abbeel---Vision-Based-Robotic-Control-w-Deep-Learning.pdf
+Joelle Pineau Reproducibility, Reusability, and Robustness i.mp4
+John Tsitsiklis (MIT) The Shades of Reinforcement Learning.mp4
+Keynote David Silver NIPS 2017 Deep Reinforcement Learning S.mp4
+lecture_13_advanced_pg.pdf
+Lecture 6 - Actor Critic.pdf
+LIST.txt
+neurips_2019.pdf
+nips2012_furmston_processes_01.pdf
+nips-tutorial-policy-optimization-Schulman-Abbeel.pdf
+Optimality and Approximation with Policy Gradient Methods in.mp4
+pg1.pdf
+pg.pdf
+Policy Error Bounds for Model-Based Reinforcement Learning w.mp4
+policy_gradient_methods_for_robotics.pdf
+PolicySearch.pdf
+prelimSlides.pdf
+pwl-8-31-17.pdf
+README.md
+Recht_ICML_Control-RL_tutorial.pdf
+Reinforcement Learning 5 Function Approximation and Deep Rei.mp4
+Reinforcement Learning 6 Policy Gradients and Actor Critics.mp4
+Reinforcement learning II.pdf
+Reinforcement learning.pdf
+Reinforcement Learning (RL) – Policy Gradients I – The Neural Perspective.pdf
+Re-Thinking Representational Learning in Robotics and Music.mp4
+RI Seminar Sergey Levine Deep Robotic Learning.mp4
+rl7.pdf
+RL_tutorial_18.pdf
+Russo_APS_Slides.pdf
+Sham Kakade (University of Washington) A No Regret Algorithm.mp4
+Stephen Tu on Least Squares Policy Iteration [PWL NYC].mp4
+TD Learning - Richard S. Sutton.mp4
+TDM_ From Model-Free to Model-Based Deep Reinforcement Learning – The Berkeley Artificial Intelligence Research Blog.pdf
+Tim Lillicrap - Data efficient deep reinforcement learning f.mp4
+Tutorial Introduction to Reinforcement Learning with Functio.mp4
+UAI 2015 Amsterdam Keynote David Silver.mp4
+vin_nips2016.pdf
+Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
