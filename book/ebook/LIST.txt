@@ -1,0 +1,162 @@
+/home/tor/rsc/ctrl-foundation/book/ebook:
+1811.12560.pdf
+1960-howard-dynamicprogrammingmarkovprocesses.djvu
+1981_Book_Non-negativeMatricesAndMarkovC.pdf
+1993_Book_AlgorithmsForRandomGenerationA.pdf
+1996_Book_Discrete Stochastic Processes.pdf
+1996_Book_Discrete-TimeMarkovControlProc.pdf
+1996_Book_RecentAdvancesInReinforcementL.pdf
+1997_Book_CompetitiveMarkovDecisionProce.pdf
+1999_Book_FurtherTopicsOnDiscrete-TimeMa.pdf
+2000_Book_ComputationalProbability.pdf
+2000_Book_ComputingToolsForModelingOptim.pdf
+2002_Book_HandbookOfMarkovDecisionProces.pdf
+2002_Book_MarkovProcessesAndControlledMa.pdf
+2007_Book_StochasticLearningAndOptimizat.pdf
+2012_Book_HamiltonianCycleProblemAndMark.pdf
+2012_Book_ReinforcementLearning.pdf
+2013_Book_StochasticProcesses.pdf
+2015_Book_DesignOfExperimentsForReinforc.pdf
+2015_Book_Simulation-BasedOptimization.pdf
+Algorithms for ReinforcementLearning.pdf
+A Tutorial on Linear Function Approximators for Dynamic Programming and Reinforcement Learning..pdf
+bandit
+bandit_algorithms_dec2018.pdf
+bertsekas
+(Cambridge Series in Statistical and Probabilistic Mathematics) J. R. Norris - Markov Chains-Cambridge University Press (1997).djvu
+(Chapman & Hall_CRC Texts in Statistical Science) Vidyadhar G. Kulkarni - Modeling and Analysis of Stochastic Systems, Third Edition-CRC Press_Chapman and Hall_CRC (2017).pdf
+(Communications and Control Engineering) Rushikesh Kamalapurkar, Patrick Walters, Joel Rosenfeld, Warren Dixon - Reinforcement Learning for Optimal Feedback Control-Springer International Publishing (.pdf
+Csaba Szepesvári Algorithms for Reinforcement Learning  .pdf
+David G. Luenberger - Introduction to Dynamic Systems_ Theory, Models, and Applications-Wiley (1979).pdf
+Decision Making Under Uncertainty and Reinforcement Learning.pdf
+Dimitri P. Bertsekas, Dimitri P. Bertsekas - Nonlinear programming (1999, Athena Scientific).djvu
+Dimitri P. Bertsekas, John N. Tsitsiklis-Neuro-Dynamic Programming-Athena Scientific (1996).djvu
+Dimitris Vrakas, Ioannis Pl Vlahavas-Artificial Intelligence for Advanced Problem Solving Techniques (2008).pdf
+(Dover Books on Mathematics (Book 2)) Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
+Francesco Borrelli, Alberto Bemporad, Manfred Morari-Predictive Control for Linear and Hybrid Systems (draft)  -Cambridge Univeristy Press (2011).pdf
+FTML2014.pdf
+(IEEE Press Series on Computational Intelligence) Frank L. Lewis, Derong Liu - Reinforcement Learning and Approximate Dynamic Programming for Feedback Control-Wiley-IEEE Press (2012).pdf
+Igor Griva, Stephen G. Nash, Ariela Sofer-Linear and nonlinear optimization-Society for Industrial and Applied Mathematics (2009).pdf
+(International Series in Operations Research & Management Science 171) Vivek S. Borkar, Vladimir Ejov, Jerzy A. Filar, Giang T. Nguyen (auth.) - Hamiltonian Cycle Problem and Markov Chains-Springer-Ve.pdf
+introduction_to_multi-armed_bandits.pdf
+Introduction-to-Stochastic-Dynamic-Programming-Ross.pdf
+J.R.Norris - Markov Chains-Cambridge University Press.pdf
+Konstantin E. Avrachenkov, Jerzy A. Filar, Phil G. Howlett - Analytic perturbation theory and its applications-SIAM-Society for Industrial and Applied Mathematics (2013).pdf
+Linn I. Sennott - Stochastic Dynamic Programming and the Control of Queueing Systems (1998).pdf
+Linn I. Sennott - Stochastic Dynamic Programming and the Control of Queueing Systems-Wiley-Interscience (1998).djvu
+LIST.txt
+(London Mathematical Society student texts 52) Olle Häggström - Finite Markov Chains and Algorithmic Applications-Cambridge University Press (2002).pdf
+Lucian Busoniu, Robert Babuska, Bart De Schutter, Damien Ernst - Reinforcement Learning and Dynamic Programming Using Function Approximators (Automation and Control Engineering) (2010).pdf
+mahadevan_09.pdf
+Markov Chains and Stochastic Stability.pdf
+(Mathematics in science and engineering 130) Stuart E. Dreyfus and Averill M. Law (Eds.) - The Art and Theory of Dynamic Programming-Academic Press (1977).pdf
+Mathematics of Statistical Sequential Decision Making.pdf
+(McGraw-Hill computer science series) Nils J Nilsson - Problem-solving methods in artificial intelligence-New York, McGraw-Hill  (1971).pdf
+mcmt2e.pdf
+mpc
+oc.pdf
+Olle Häggström - Finite Markov Chains and Algorithmic Applications-Cambridge University Press (2002).pdf
+Peter Whittle - Optimal Control_ Basics and Beyond-Wiley (1996).pdf
+Pierre Bremaud - Markov Chains_ Gibbs Fields, Monte Carlo Simulation, and Queues-Springer (1999).pdf
+(Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming-Academic Press (1983).pdf
+(Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming (Probability and Mathematical Statistics)-Academic Press (1983).pdf
+puterman
+README.md
+Reinforcement Learning State-of-the-Art.pdf
+Reinforcement Learning Theory and Algorithms.pdf
+Richard E. Bellman, Stuart E. Dreyfus - Applied Dynamic Programming (1962).pdf
+Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (2002).pdf
+Ronald A. Howard, Ali E. Abbas - Foundations of Decision Analysis-Pearson (2016).pdf
+Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
+Ronald A. Howard. - Dynamic programming and Markov processes-Technology Press of Massachusetts Institute of Technology (1960.).djvu
+Sigaud 2013 - Markov Decision Processes in Artificial Intelligence.pdf
+simulation_ScienceDirect_articles_02May2018_23-15-57.746
+Statistical Reinforcement Learning_ Modern Machine Learning Approaches-CRC Press (2015).pdf
+Stochastic Dynamic Programming and the Control of Queueing Systems.pdf
+sutton
+(Technology Press Research Monographs) Ronald A Howard - Dynamic programming and Markov processes-The MIT Press (1960).djvu
+(Texts in statistical science) Vidyadhar G. Kulkarni - Modeling and analysis of stochastic systems-Chapman and Hall_CRC (2017).pdf
+TS_Tutorial.pdf
+(Wiley Series in Probability and Statistics) Warren B. Powell - Approximate Dynamic Programming_ Solving the Curses of Dimensionality, 2nd Edition (Wiley Series in Probability and Statistics)-Wiley (2.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/bandit:
+1904.07272.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/bertsekas:
+Bertsekas D.P. - Abstract Dynamic Programming.pdf
+Dimitri P. Bertsekas, John N. Tsitsiklis - Neuro-Dynamic Programming (Optimization and Neural Computation Series, 3)-Athena Scientific (1996).djvu
+Dimitri P. Bertsekas, John Tsitsiklis - Parallel and Distributed Computation_ Numerical Methods (Optimization and Neural Computation)  -Athena Scientific (1997).pdf
+Dimitri P. Bertsekas - Parallel and Distributed Computation_ Numerical Methods (Optimization and Neural Computation)-Athena Scientific (1997).djvu
+dpoc-bertsekas
+(Mathematics in Science and Engineering 125) Dimitri P. Bertsekas (Eds.) - Dynamic Programming and Stochastic Control-Academic Press (1976).djvu
+(Mathematics in Science and Engineering 125) Dimitri P. Bertsekas (Eds.) - Dynamic Programming and Stochastic Control-Academic Press (1976).pdf
+netbook_Full_Book_NEW.pdf
+(Optimization and neural computation series) Dimitri P. Bertsekas, John N. Tsitsiklis - Neuro-Dynamic Programming-Athena Scientific (1996).djvu
+rlop-bertsekas
+
+/home/tor/rsc/ctrl-foundation/book/ebook/bertsekas/dpoc-bertsekas:
+Dimitri P. Bertsekas - 2_ Dynamic Programming and Optimal Control, Vol. II. 2-Athena Scientific (2007).djvu
+Dimitri P. Bertsekas - Dynamic programming and optimal control. Vol.1-Athena Scientific (2005).pdf
+Dimitri P. Bertsekas - Dynamic Programming & Optimal Control, Vol. I-Athena Scientific (2005).djvu
+
+/home/tor/rsc/ctrl-foundation/book/ebook/bertsekas/rlop-bertsekas:
+(1) Dmitri Bertsekas - Reinforcement learning and Optimal Control - Draft version-Athena Scientific (2019).pdf
+RL_Frontmatter.pdf
+RL_MONOGRAPH1.pdf
+RL_MONOGRAPH2.pdf
+RL_MONOGRAPH3.pdf
+RL_MONOGRAPH4.pdf
+RL_MONOGRAPH5.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/mpc:
+10.1007%2F978-0-85729-398-5.pdf
+10.1007%2F978-1-84882-331-0.pdf
+(Advanced Textbooks in Control and Signal Processing) Professor E. F. Camacho, Associate Professor C. Bordons (auth.)-Model Predictive control-Springer-Verlag London (2007).pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/puterman:
+mdp_puterman_2005.pdf
+MDP_Puterman_2005.pdf
+Puterman-Patrick2017_ReferenceWorkEntry_DynamicProgramming.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/simulation_ScienceDirect_articles_02May2018_23-15-57.746:
+Chapter-10---Additional-Variance-Reduction-Techniques_2013_Simulation.pdf
+Chapter-11---Statistical-Validation-Techniques_2013_Simulation.pdf
+Chapter-12---Markov-Chain-Monte-Carlo-Methods_2013_Simulation.pdf
+Chapter-1---Introduction_2013_Simulation.pdf
+Chapter-2---Elements-of-Probability_2013_Simulation.pdf
+Chapter-3---Random-Numbers_2013_Simulation.pdf
+Chapter-4---Generating-Discrete-Random-Variables_2013_Simulation.pdf
+Chapter-5---Generating-Continuous-Random-Variables_2013_Simulation.pdf
+Chapter-6---The-Multivariate-Normal-Distribution-and-Copulas_2013_Simulation.pdf
+Chapter-7---The-Discrete-Event-Simulation-Approach_2013_Simulation.pdf
+Chapter-8---Statistical-Analysis-of-Simulated-Data_2013_Simulation.pdf
+Chapter-9---Variance-Reduction-Techniques_2013_Simulation.pdf
+Copyright_2013_Simulation.pdf
+Front-Matter_2013_Simulation.pdf
+No-title-available_2013_Simulation.pdf
+Preface_2013_Simulation.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/sutton:
+rlintro-1998
+rlintro-2018
+
+/home/tor/rsc/ctrl-foundation/book/ebook/sutton/rlintro-1998:
+Reinforcement_Learning_An_Introduction_----_(10_-_Dimensions_of_Reinforcement_Learning_).pdf
+Reinforcement_Learning_An_Introduction_----_(11_-_Case_Studies_).pdf
+Reinforcement_Learning_An_Introduction_----_(1_-_Introduction_).pdf
+Reinforcement_Learning_An_Introduction_----_(2_-_Evaluative_Feedback_).pdf
+Reinforcement_Learning_An_Introduction_----_(4_-_Dynamic_Programming_).pdf
+Reinforcement_Learning_An_Introduction_----_(5_-_Monte_Carlo_Methods_).pdf
+Reinforcement_Learning_An_Introduction_----_(6_-_Temporal-Difference_Learning_).pdf
+Reinforcement_Learning_An_Introduction_----_(7_-_Eligibility_Traces_).pdf
+Reinforcement_Learning_An_Introduction_----_(8_-_Generalization_and_Function_Approximation_).pdf
+Reinforcement_Learning_An_Introduction_----_(9_-_Planning_and_Learning_).pdf
+Reinforcement_Learning_An_Introduction_----_(Index).pdf
+Reinforcement_Learning_An_Introduction_----_(Summary_of_Notation).pdf
+Richard_S._Sutton,_Andrew_G._Barto_Reinforcement_Learning_An_Introduction_Adaptive_Computation_and_Machine_Learning__1998.djvu
+Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (2002).pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/sutton/rlintro-2018:
+RLbook2018_20181005.pdf
+RLbook2018_20181107.pdf
+RLbook2018_20190115.pdf
