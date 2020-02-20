@@ -1,0 +1,77 @@
+/home/tor/rsc/ctrl-foundation/thesis/ethesis:
+02whole.pdf
+11877.pdf
+2017_7_Papini.pdf
+40344784-MIT.pdf
+adam_white_phd_2015.pdf
+ADAPTIVE STEP-SIZES FOR REINFORCEMENT LEARNING.pdf
+ali_e.pdf
+Ambuj Tewari EECS-2007-126.pdf
+Asadi2015.pdf
+asmuth_phd_thesis_2013.pdf
+bagnell_james_2004_1.pdf
+bagnell_james_2004.pdf
+Barry_NICHOLS_2014.pdf
+carlos_wasser_thesis_2010.pdf
+ciosek_phd-thesis.pdf
+DeepMARL.pdf
+doinaprecup_2000.pdf
+DRussoThesis-augmented.pdf
+DuffThesis_2002.pdf
+Farahmand_Amir-massoud_Fall 2011.pdf
+finn_dissertation.pdf
+Grondman_Thesis_2015.pdf
+GuezMSc_2010.pdf
+guez_phdthesis_2015.pdf
+hado_van_hasselt_2011.pdf
+hanna-08.pdf
+hoefer_sebastian_2017.pdf
+Huang_grad.sunysb_0771E_13001.pdf
+joschu_thesis_2016b.pdf
+joschu_thesis_2016.pdf
+Kober_2012.pdf
+konda_thesis_2002.pdf
+konidaris_thesis_2011.pdf
+Learning average reward irreducible stochastic games_ Analysis an.pdf
+Learning_to_solve_Markovian_decision_pro.pdf
+LIST.txt
+Mahmood_Ashique_201709_PhD.pdf
+Marbach, Peter 42429796-MIT.pdf
+marc_deisenroth_thesis_2009.pdf
+marc_deisenroth_thesis_2010.pdf
+Marlos Cholodovskis Machado_Thesis.pdf
+ng-thesis_2003.pdf
+Online learning in non-stationary Markov decision processes Gergely Neu thesis.pdf
+Paduraru_msc_2007.pdf
+phd-thesis.pdf
+phdThesis.pdf
+PieterAbbeel_2008.pdf
+pineau_joelle_2004.pdf
+ppoupart-thesis_2005.pdf
+rasmussen_thesis_2014.pdf
+README.md
+remi_Thesis_2002.pdf
+Reproducibility and reusability in deep reinforcement learning.pdf
+Ring-dissertation_1994.pdf
+ross_phdthesis_2013.pdf
+satinder sighn thesis.pdf
+Scholz_2015.pdf
+Sergey Levine_2014.pdf
+sham_thesis_2003.pdf
+silver_thesis_2009.pdf
+TEMPORAL_CREDIT_ASSIGNMENT_IN_sutton.pdf
+The Gamma-Ensemble Adaptive Reinforcement Learning via Modular Discounting.pdf
+these_sylvain-gelly_2007.pdf
+Thesis_Jeroen_van_Rooijen.pdf
+thesis_lagoudakis_2003.pdf
+thesis.pdf
+Thesis_POIS.pdf
+Thomas2015c.pdf
+Todd_Hester_Dissertation_2012.pdf
+TravisDickThesis.pdf
+UCAM-CL-TR-209.pdf
+veness_phd_thesis_final.pdf
+watkins.pdf
+watkin_thesis_1989.pdf
+whitesonbook10.pdf
+ZhongThesis.pdf
