@@ -1,0 +1,273 @@
+/home/tor/rsc/ctrl-foundation/course/ecourse:
+abbeel-dlss-2016
+deep-rl-bootcamp-2017
+indaba-2017
+levine-berkeley-2017
+LIST.txt
+mila-dlss-2017
+mila-dlss-2018
+mila-rlss-2017
+mila-rlss-2018
+rambha-iisc
+README.md
+schulman-mlss-2016
+silver-iclr-2015
+silver-rldm-2015
+silver-uai-2015
+silver-ucl-2015
+stanford-cs234
+yoni-ctrl
+zico-15780
+zzzmisc
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/abbeel-dlss-2016:
+deeplearning2016_abbeel_deep_reinforcement.pdf
+▶ Deep Reinforcement Learning - VideoLectures.NET(1).mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/deep-rl-bootcamp-2017:
+Deep RL Bootcamp Lecture 10A Utlities.mp4
+Deep RL Bootcamp Lecture 10B Inverse Reinforcement Learning.mp4
+Deep RL Bootcamp Lecture 1 Motivation + Overview + Exact Sol.mp4
+Deep RL Bootcamp Lecture 2 Sampling-based Approximations and.mp4
+Deep RL Bootcamp Lecture 3 Deep Q-Networks.mp4
+Deep RL Bootcamp Lecture 4A Policy Gradients.mp4
+Deep RL Bootcamp Lecture 4B Policy Gradients Revisited.mp4
+Deep RL Bootcamp Lecture 5 Natural Policy Gradients, TRPO, P.mp4
+Deep RL Bootcamp Lecture 6 Nuts and Bolts of Deep RL Experim.mp4
+Deep RL Bootcamp Lecture 7 SVG, DDPG, and Stochastic Computa.mp4
+Deep RL Bootcamp Lecture 8 Derivative Free Methods.mp4
+Deep RL Bootcamp Lecture 9 Model-based Reinforcement Learnin.mp4
+deep-rl-bootcamp-master.zip
+Deep RL Bootcamp TAs Research Overview.mp4
+Frontiers II -- Sergey Levine -- Deep RL Bootcamp -- Berkeley 2017.pdf
+Frontiers I -- Vlad Mnih -- Deep RL Bootcamp -- Berkeley 2017.pdf
+Frontiers Lecture II Recent Advances, Frontiers and Future o.mp4
+Frontiers Lecture I Recent Advances, Frontiers and Future o.mp4
+lab1.zip
+lab2.zip
+lab3.zip
+lab4.zip
+Lec10a-Utilities.pdf
+Lec10b-inverseRL.pdf
+Lec1-intro-mdps-exact-methods.pdf
+Lec2-sampling-based-approximations-and-function-fitting.pdf
+Lec3-DQN.pdf
+Lec4a-policy-gradients-actor-critic.pdf
+Lec4b_Pong_from_Pixels.pdf
+Lec5-advanced-policy-gradient-methods.pdf
+Lec6-nuts-and-bolts-deep-rl-research.pdf
+Lec7-deeprlbootcamp-svg+scg.pdf
+Lec8-derivative-free.pdf
+Lec9-model-based-deep-rl.pdf
+mbrl_bootcamp.pdf
+prelab.zip
+TA-intros.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/indaba-2017:
+01 - Mathematics for Deep Learning - Marc Deisenroth.mp4
+04 Fundamentals of Deep Learning Yann Dauphin.mp4
+05 Convolutional Neural Networks Nando de Freitas.mp4
+06 Gated Recurrent Models Stephan Gouws and Richard Klein.mp4
+07 Probabilistic Reasoning Konstantina Palla.mp4
+10 Reinforcement Learning Vukosi Marivate and Benjamin Rosma.mp4
+11 Advanced Reinforcement Learning George Konidaris.mp4
+2017-09-10-deep-learning-indaba.pdf
+deep_generative_models.pdf
+dl_indaba_gated_recurrent_models_lecture.pdf
+fundamentalsofmachinelearning.pdf
+indaba2017.pdf
+indaba_arl.pdf
+indaba_convolutional.pdf
+introtoreinforcementlearning.pdf
+notes.pdf
+prob_reasoning.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/levine-berkeley-2017:
+advanced_model_learning.pdf
+CS294-112 82317.mp4
+CS294-112 82817.mp4
+CS294-112 83017.mp4
+CS294-112 9617.mp4
+hw
+lecture_10_imitating_optimal_control.pdf
+lecture_11_control_and_inference.pdf
+lecture_12_irl.pdf
+lecture_13_advanced_pg.pdf
+lecture_13_exploration.pdf
+lecture_14_transfer.pdf
+lecture_15_multi_task_learning.pdf
+lecture_16_meta_learning.pdf
+lecture_17_challenges.pdf
+lecture_1_introduction.pdf
+lecture_2_behavior_cloning.pdf
+lecture_3_rl_intro.pdf
+lecture_4_policy_gradient.pdf
+lecture_5_actor_critic_pdf.pdf
+lecture_6_value_functions.pdf
+lecture_7_advanced_q_learning.pdf
+lecture_8_model_based_planning.pdf
+lecture_9_model_based_rl.pdf
+tf_review_session.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/levine-berkeley-2017/hw:
+hw1fall2017.pdf
+hw2_final.pdf
+hw3.pdf
+hw4.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-dlss-2017:
+deeplearning2017_bengio_rnn_01.pdf
+deeplearning2017_chintala_torch_01.pdf
+deeplearning2017_courville_generative_models_01.pdf
+deeplearning2017_goodfellow_generative_models_01.pdf
+deeplearning2017_lamblin_theano_01.pdf
+deeplearning2017_ullrich_bayesian_compression_01.pdf
+▶ Generative Models II - VideoLectures.NET.mp4
+▶ Generative Models I - VideoLectures.NET.mp4
+▶ Recurrent Neural Networks (RNNs) - VideoLectures.NET.mp4
+▶ Theano - VideoLectures.NET.mp4
+TorchPyTorch - VideoLectures.NET.mp4
+▶ What Would Shannon Do Bayesian Compression for DL - VideoL.mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-dlss-2018:
+cifar-jorge.pdf
+optimization_mlss_jimmy-ba.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017:
+abbeel-dlss-2017
+csaba-rlss-2017
+freitas-rlss-2017
+hasselt-rlss-2017
+parikh-rlss-2017
+pineau-rlss-2017
+rlss_tutorial.pdf
+roux-rlss-2017
+singh-rlss-2017
+sutton-rlss-2017
+thomas-rlss-2017
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017/abbeel-dlss-2017:
+deeplearning2017_abbeel_policy_search_01.pdf
+▶ Policy Search for RL - VideoLectures.NET.mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017/csaba-rlss-2017:
+deeplearning2017_szepesvari_theory_of_rl_01.pdf
+▶ Theory of RL - VideoLectures.NET.mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017/freitas-rlss-2017:
+Deep Control - VideoLectures.NET.mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017/hasselt-rlss-2017:
+deeplearning2017_van_hasselt_deep_reinforcement_01.pdf
+Deep Reinforcement Learning - Hado van Hasselt.mp4
+▶ Deep Reinforcement Learning - VideoLectures.NET.mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017/parikh-rlss-2017:
+Cooperative Visual Dialogue with Deep RL - VideoLectures.NET.mp4
+deeplearning2017_parikh_batra_deep_rl.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017/pineau-rlss-2017:
+deeplearning2017_pineau_reinforcement_learning_01.pdf
+▶ Reinforcement Learning - VideoLectures.NET.mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017/roux-rlss-2017:
+Applications of bandits and recommendation systems - VideoLe.mp4
+deeplearning2017_le_roux_recommendation_system_01.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017/singh-rlss-2017:
+deeplearning2017_singh_reinforcement_learning_01.pdf
+▶ Reinforcement Learning - VideoLectures.NET(1).mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017/sutton-rlss-2017:
+deeplearning2017_sutton_td_learning_01.pdf
+▶ TD Learning - VideoLectures.NET.mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2017/thomas-rlss-2017:
+deeplearning2017_thomas_safe_rl_01.pdf
+Safe RL - Philip S. Thomas.mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/mila-rlss-2018:
+bellemare-deep-rl-rlss-2018.pdf
+ghavamzadeh-safety-in-rl-rlss-2018.pdf
+levine-policy-search-rlss-2018.pdf
+sutton-introduction-to-rl-and-td-rlss-2018.pdf
+white-off-policy-learning-rlss-2018.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/rambha-iisc:
+Lecture_13.pdf
+Lecture_14.pdf
+Lecture_15.pdf
+Lecture_16.pdf
+Lecture_1.pdf
+Lecture_2.pdf
+Lecture_3.pdf
+Lecture_4.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/schulman-mlss-2016:
+2016-MLSS-RL.pdf
+John Schulman 1 Deep Reinforcement Learning.mp4
+John Schulman 2 Deep Reinforcement Learning.mp4
+John Schulman 3 Deep Reinforcement Learning.mp4
+John Schulman 4 Deep Reinforcement Learning.mp4
+lab1.pdf
+lab2.pdf
+pg-startercode.py
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/silver-iclr-2015:
+ICLR2015-david-silver-part1.mp4
+ICLR2015-david-silver-part2.mp4
+iclr2015_silver-iclr2015.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/silver-rldm-2015:
+▶ Deep Reinforcement Learning - VideoLectures.NET.mp4
+rldm2015_silver_reinforcement_learning.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/silver-uai-2015:
+UAI 2015 Amsterdam Keynote David Silver.mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/silver-ucl-2015:
+10_games.pdf
+1_intro_RL.pdf
+2_MDP.pdf
+3_DP.pdf
+4_MC-TD.pdf
+5_control.pdf
+6_FA.pdf
+7_pg.pdf
+8_dyna.pdf
+9_XX.pdf
+RL Course by David Silver - Lecture 10 Classic Games.mp4
+RL Course by David Silver - Lecture 1 Introduction to Reinfo.mp4
+RL Course by David Silver - Lecture 2 Markov Decision Proces.mp4
+RL Course by David Silver - Lecture 3 Planning by Dynamic Pr.mp4
+RL Course by David Silver - Lecture 4 Model-Free Prediction.mp4
+RL Course by David Silver - Lecture 5 Model Free Control.mp4
+RL Course by David Silver - Lecture 6 Value Function Approxi.mp4
+RL Course by David Silver - Lecture 7 Policy Gradient Method.mp4
+RL Course by David Silver - Lecture 8 Integrating Learning a.mp4
+RL Course by David Silver - Lecture 9 Exploration and Exploi.mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/stanford-cs234:
+Stanford CS234 Reinforcement Learning Winter 2019 Lecture 1 .mp4
+Stanford CS234 Reinforcement Learning Winter 2019 Lecture 2 .mp4
+Stanford CS234 Reinforcement Learning Winter 2019 Lecture 3 .mp4
+Stanford CS234 Reinforcement Learning Winter 2019 Lecture 4 .mp4
+Stanford CS234 Reinforcement Learning Winter 2019 Lecture 5 .mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/yoni-ctrl:
+AdvancedRegularFiniteMarkovChains_v3.pdf
+ProbReview_v8.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/zico-15780:
+linear_prog.pdf
+mdps.pdf
+optimization.pdf
+rl.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/zzzmisc:
+cs234_2018_l9_annotated.pdf
+cs234_2018_l9_updated.pdf
+Lecture-notes-MDP.pdf
+rl06.pdf
+rl2.pdf
+slides-lecture-02-handout.pdf
