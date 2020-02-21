@@ -7,6 +7,7 @@
 1996_Book_Discrete-TimeMarkovControlProc.pdf
 1996_Book_RecentAdvancesInReinforcementL.pdf
 1997_Book_CompetitiveMarkovDecisionProce.pdf
+1998_Book_LearningToLearn.pdf
 1999_Book_FurtherTopicsOnDiscrete-TimeMa.pdf
 2000_Book_ComputationalProbability.pdf
 2000_Book_ComputingToolsForModelingOptim.pdf
@@ -53,9 +54,11 @@ Markov Chains and Stochastic Stability.pdf
 Mathematics of Statistical Sequential Decision Making.pdf
 (McGraw-Hill computer science series) Nils J Nilsson - Problem-solving methods in artificial intelligence-New York, McGraw-Hill  (1971).pdf
 mcmt2e.pdf
+(MIT Lincoln Laboratory Series) Mykel J. Kochenderfer et al. - Decision Making Under Uncertainty_ Theory and Application-The MIT Press (2015).pdf
 mpc
 oc.pdf
 Olle Häggström - Finite Markov Chains and Algorithmic Applications-Cambridge University Press (2002).pdf
+Optimal Statistical Decisions.pdf
 Peter Whittle - Optimal Control_ Basics and Beyond-Wiley (1996).pdf
 Pierre Bremaud - Markov Chains_ Gibbs Fields, Monte Carlo Simulation, and Queues-Springer (1999).pdf
 (Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming-Academic Press (1983).pdf

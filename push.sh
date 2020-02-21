@@ -2,6 +2,9 @@
 
 echo '=== committing ==='
 git pull
+
+bash list.sh
+
 git add --all
 git commit -a -m fix
 
