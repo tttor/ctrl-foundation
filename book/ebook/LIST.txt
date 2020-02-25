@@ -163,3 +163,4 @@ Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (
 RLbook2018_20181005.pdf
 RLbook2018_20181107.pdf
 RLbook2018_20190115.pdf
+RLbook2018_20200224.pdf
