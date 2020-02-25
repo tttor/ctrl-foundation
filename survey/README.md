@@ -24,6 +24,7 @@ TMPend
 * [2017: Polydoros: Survey of Model-Based Reinforcement Learning: Applications on Robotics](https://link.springer.com/article/10.1007/s10846-017-0468-y)
 * [2017: Arulkumaran: Deep Reinforcement Learning: A Brief Survey](http://ieeexplore.ieee.org/document/8103164/)
 * [2017: Gorges: Relations between Model Predictive Control and Reinforcement Learning](https://www.sciencedirect.com/science/article/pii/S2405896317311941)
+* [2016: Warren B. Powell: Perspectives of approximate dynamic programming]()
 * [2016: Duan: Benchmarking Deep Reinforcement Learning for Continuous Control](https://arxiv.org/abs/1604.06778)
 * [2016: Castronovo: Benchmarking for Bayesian Reinforcement Learning](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157088)
 * [2015: Garcia: A Comprehensive Survey on Safe Reinforcement Learning](http://jmlr.org/papers/v16/garcia15a.html)
