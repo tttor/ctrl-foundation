@@ -37,6 +37,7 @@ Dimitris Vrakas, Ioannis Pl Vlahavas-Artificial Intelligence for Advanced Proble
 (Dover Books on Mathematics (Book 2)) Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
 Francesco Borrelli, Alberto Bemporad, Manfred Morari-Predictive Control for Linear and Hybrid Systems (draft)  -Cambridge Univeristy Press (2011).pdf
 FTML2014.pdf
+Gallager R.G. - Stochastic Processes_ Theory for Applications-Cambridge University Press (2013).pdf
 (IEEE Press Series on Computational Intelligence) Frank L. Lewis, Derong Liu - Reinforcement Learning and Approximate Dynamic Programming for Feedback Control-Wiley-IEEE Press (2012).pdf
 Igor Griva, Stephen G. Nash, Ariela Sofer-Linear and nonlinear optimization-Society for Industrial and Applied Mathematics (2009).pdf
 (International Series in Operations Research & Management Science 171) Vivek S. Borkar, Vladimir Ejov, Jerzy A. Filar, Giang T. Nguyen (auth.) - Hamiltonian Cycle Problem and Markov Chains-Springer-Ve.pdf
@@ -58,6 +59,7 @@ mcmt2e.pdf
 (MIT Lincoln Laboratory Series) Mykel J. Kochenderfer et al. - Decision Making Under Uncertainty_ Theory and Application-The MIT Press (2015).pdf
 mpc
 oc.pdf
+Olivier Sigaud, Olivier Buffet - Markov Decision Processes in Artificial Intelligence-Wiley-ISTE (2010).pdf
 Olle Häggström - Finite Markov Chains and Algorithmic Applications-Cambridge University Press (2002).pdf
 Optimal Statistical Decisions.pdf
 Peter Whittle - Optimal Control_ Basics and Beyond-Wiley (1996).pdf
@@ -70,6 +72,7 @@ Reinforcement Learning State-of-the-Art.pdf
 Reinforcement Learning Theory and Algorithms.pdf
 Richard E. Bellman, Stuart E. Dreyfus - Applied Dynamic Programming (1962).pdf
 Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (2002).pdf
+Robert Gallager - Stochastic Processes_ Theory for Applications-Cambridge University Press (2013).pdf
 Ronald A. Howard, Ali E. Abbas - Foundations of Decision Analysis-Pearson (2016).pdf
 Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
 Ronald A. Howard. - Dynamic programming and Markov processes-Technology Press of Massachusetts Institute of Technology (1960.).djvu
