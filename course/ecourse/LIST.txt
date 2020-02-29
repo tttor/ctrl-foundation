@@ -265,9 +265,12 @@ optimization.pdf
 rl.pdf
 
 /home/tor/rsc/ctrl-foundation/course/ecourse/zzzmisc:
+CMPSCI 687: Reinforcement Learning_687_F18_main.pdf
 cs234_2018_l9_annotated.pdf
 cs234_2018_l9_updated.pdf
+infinite-horizon-MDP.pdf
 Lecture-notes-MDP.pdf
 rl06.pdf
 rl2.pdf
 slides-lecture-02-handout.pdf
+slides-lecture-02.pdf

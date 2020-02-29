@@ -35,6 +35,7 @@ konda_thesis_2002.pdf
 konidaris_thesis_2011.pdf
 Learning average reward irreducible stochastic games_ Analysis an.pdf
 Learning_to_solve_Markovian_decision_pro.pdf
+Leemon C. Baird III_CMU-CS-99-132.pdf
 LIST.txt
 Mahmood_Ashique_201709_PhD.pdf
 Marbach, Peter 42429796-MIT.pdf

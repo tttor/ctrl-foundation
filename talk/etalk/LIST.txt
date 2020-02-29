@@ -32,12 +32,14 @@ Emma Brunskill (Stanford University) Efficient Reinforcement.mp4
 Emo Todorov (University of Washington) Acceleration-based me.mp4
 Extra Material — Spinning Up documentation2.pdf
 Feature Based Aggregation and Deep Reinforcement Learning.mp4
+Gao.Y.pdf
 hadavid_gecco_full_2019.pdf
 icml07-brl-tutorial-part5-bpg-bac-ghavamzadeh.pdf
 ICRA2018-Abbeel-keynote.pdf
 ICRA2018---tutorial---Abbeel---Vision-Based-Robotic-Control-w-Deep-Learning.pdf
 Joelle Pineau Reproducibility, Reusability, and Robustness i.mp4
 John Tsitsiklis (MIT) The Shades of Reinforcement Learning.mp4
+John Tsitsiklis -- Reinforcement Learning.mp4
 Keynote David Silver NIPS 2017 Deep Reinforcement Learning S.mp4
 lecture_13_advanced_pg.pdf
 Lecture 6 - Actor Critic.pdf
@@ -45,6 +47,8 @@ LIST.txt
 neurips_2019.pdf
 nips2012_furmston_processes_01.pdf
 nips-tutorial-policy-optimization-Schulman-Abbeel.pdf
+Northern Frontier In conversation with Prof. Balaraman Ravindran.mp4
+Northern Frontier In conversation with Prof. Martha White.mp4
 Optimality and Approximation with Policy Gradient Methods in.mp4
 pg1.pdf
 pg.pdf
@@ -65,6 +69,7 @@ RI Seminar Sergey Levine Deep Robotic Learning.mp4
 rl7.pdf
 RL_tutorial_18.pdf
 Russo_APS_Slides.pdf
+Sebastian Thrun Flying Cars, Autonomous Vehicles, and Education  Artificial Intelligence Podcast.mp4
 Sham Kakade (University of Washington) A No Regret Algorithm.mp4
 Stephen Tu on Least Squares Policy Iteration [PWL NYC].mp4
 TD Learning - Richard S. Sutton.mp4
