@@ -1,5 +1,6 @@
 /home/tor/rsc/ctrl-foundation/course/ecourse:
 abbeel-dlss-2016
+berkeley-cs294
 deep-rl-bootcamp-2017
 indaba-2017
 levine-berkeley-2017
@@ -23,6 +24,23 @@ zzzmisc
 /home/tor/rsc/ctrl-foundation/course/ecourse/abbeel-dlss-2016:
 deeplearning2016_abbeel_deep_reinforcement.pdf
 ▶ Deep Reinforcement Learning - VideoLectures.NET(1).mp4
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/berkeley-cs294:
+hw1fall2017.pdf
+hw2_final.pdf
+lec1.pdf
+lec2.pdf
+lec3.pdf
+lec5.pdf
+lec6.pdf
+lecture_13_advanced_pg.pdf
+lecture_1_introduction.pdf
+lecture_2_behavior_cloning.pdf
+lecture_3_rl_intro.pdf
+lecture_4_policy_gradient.pdf
+lecture_5_actor_critic_pdf.pdf
+lecture_8_model_based_planning.pdf
+tf_review_session.pdf
 
 /home/tor/rsc/ctrl-foundation/course/ecourse/deep-rl-bootcamp-2017:
 Deep RL Bootcamp Lecture 10A Utlities.mp4
@@ -269,7 +287,10 @@ CMPSCI 687: Reinforcement Learning_687_F18_main.pdf
 cs234_2018_l9_annotated.pdf
 cs234_2018_l9_updated.pdf
 infinite-horizon-MDP.pdf
+Lec5-advanced-policy-gradient-methods.pdf
+lecture_13_advanced_pg.pdf
 Lecture-notes-MDP.pdf
+lecture_slides_lec6.pdf
 rl06.pdf
 rl2.pdf
 slides-lecture-02-handout.pdf

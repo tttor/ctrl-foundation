@@ -18,6 +18,7 @@ smooth
 td-learning
 trpo-ppo
 varred
+zzzmisc
 
 /home/tor/rsc/ctrl-foundation/method/emethod/apply:
 grasper
@@ -386,3 +387,9 @@ Totalvar.pdf
 greensmith04a.pdf
 PAC-10074536.pdf
 Zhao15b.pdf
+
+/home/tor/rsc/ctrl-foundation/method/emethod/zzzmisc:
+Deep Deterministic Policy Gradients in TensorFlow.pdf
+Deep Reinforcement Learning_ Pong from Pixels.pdf
+mastering-atari-actor-critic.pdf
+Write an AI to win at Pong from scratch with Reinforcement Learning.pdf
