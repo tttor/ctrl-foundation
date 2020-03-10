@@ -22,7 +22,8 @@
   * https://rltheorybook.github.io/
 * Introduction to Multi-Armed Bandits
   * Aleksandrs Slivkins
-
+* INSIGHTS IN REINFORCEMENT LEARNING: Formal analysis and empirical evaluation of temporal-difference learning algorithms
+  * Hado van Hasselt
 
 ## misc
 Marco Wiering, Martijn van Otterlo:
