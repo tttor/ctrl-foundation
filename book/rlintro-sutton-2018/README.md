@@ -10,3 +10,5 @@ Dimitri Bertsekas's Dynamic Programming and Optimal Control.
 * https://github.com/ShangtongZhang/reinforcement-learning-an-introduction
 * https://github.com/dennybritz/reinforcement-learning
 * https://github.com/JKCooper2/rlai-exercises
+* https://github.com/MJeremy2017/Reinforcement-Learning-Implementation/
+* http://www.boris-belousov.net/2017/04/29/ergodic-MDP/
