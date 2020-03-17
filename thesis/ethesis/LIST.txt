@@ -21,6 +21,7 @@ DuffThesis_2002.pdf
 Farahmand_Amir-massoud_Fall 2011.pdf
 finn_dissertation.pdf
 furmston_thesis_2012.pdf
+Geoffrey J. Gordon CMU-CS-99-143.pdf
 Grondman_Thesis_2015.pdf
 GuezMSc_2010.pdf
 guez_phdthesis_2015.pdf
@@ -77,4 +78,5 @@ veness_phd_thesis_final.pdf
 watkins.pdf
 watkin_thesis_1989.pdf
 whitesonbook10.pdf
+Yasin Abbasi-Yadkori thesis_final.pdf
 ZhongThesis.pdf

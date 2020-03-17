@@ -65,6 +65,7 @@ Olle Häggström - Finite Markov Chains and Algorithmic Applications-Cambridge U
 Optimal Statistical Decisions.pdf
 Peter Whittle - Optimal Control_ Basics and Beyond-Wiley (1996).pdf
 Pierre Bremaud - Markov Chains_ Gibbs Fields, Monte Carlo Simulation, and Queues-Springer (1999).pdf
+Policy Gradient Methods for Control Applications by Jan Peters_techrep.pdf
 (Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming-Academic Press (1983).pdf
 (Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming (Probability and Mathematical Statistics)-Academic Press (1983).pdf
 puterman
