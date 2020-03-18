@@ -30,6 +30,7 @@ Hamid_Maei_PhDThesis.pdf
 hanna-08.pdf
 hoefer_sebastian_2017.pdf
 Huang_grad.sunysb_0771E_13001.pdf
+Insights in Reinforcement Learning_ van hasselt.pdf
 joschu_thesis_2016b.pdf
 joschu_thesis_2016.pdf
 Kober_2012.pdf

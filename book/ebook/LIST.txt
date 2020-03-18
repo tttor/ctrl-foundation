@@ -52,6 +52,7 @@ LIST.txt
 (London Mathematical Society student texts 52) Olle Häggström - Finite Markov Chains and Algorithmic Applications-Cambridge University Press (2002).pdf
 Lucian Busoniu, Robert Babuska, Bart De Schutter, Damien Ernst - Reinforcement Learning and Dynamic Programming Using Function Approximators (Automation and Control Engineering) (2010).pdf
 mahadevan_09.pdf
+Mahadevan S. - Learning Representation and Control in Markov Decision Processes_ New Frontiers.pdf
 Markov Chains and Stochastic Stability.pdf
 (Mathematics in science and engineering 130) Stuart E. Dreyfus and Averill M. Law (Eds.) - The Art and Theory of Dynamic Programming-Academic Press (1977).pdf
 Mathematics of Statistical Sequential Decision Making.pdf
