@@ -7,8 +7,7 @@ Frank L. Lewis, Draguna Vrabie, and Kyriakos G. Vamvoudakis
 Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review
 Sergey Levine
 
-
-TMPend
+TMP-end
  -->
 
 ## paper
@@ -24,11 +23,12 @@ TMPend
 * [2017: Polydoros: Survey of Model-Based Reinforcement Learning: Applications on Robotics](https://link.springer.com/article/10.1007/s10846-017-0468-y)
 * [2017: Arulkumaran: Deep Reinforcement Learning: A Brief Survey](http://ieeexplore.ieee.org/document/8103164/)
 * [2017: Gorges: Relations between Model Predictive Control and Reinforcement Learning](https://www.sciencedirect.com/science/article/pii/S2405896317311941)
-* [2016: Warren B. Powell: Perspectives of approximate dynamic programming]()
+* [2016: Warren B. Powell: Perspectives of approximate dynamic programming](?)
 * [2016: Duan: Benchmarking Deep Reinforcement Learning for Continuous Control](https://arxiv.org/abs/1604.06778)
 * [2016: Castronovo: Benchmarking for Bayesian Reinforcement Learning](http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0157088)
 * [2015: Garcia: A Comprehensive Survey on Safe Reinforcement Learning](http://jmlr.org/papers/v16/garcia15a.html)
 * [2015: Ghavamzadeh: Bayesian Reinforcement Learning: A Survey](https://arxiv.org/abs/1609.04436)
+* [2014: Christoph Dann: Policy Evaluation with Temporal Differences:A Survey and Comparison](?)
 * [2014: Mayne: Model predictive control: Recent developments and future promise](https://www.sciencedirect.com/science/article/pii/S0005109814005160)
 * [2014: Geist: Off-policy Learning With Eligibility Traces: A Survey](?)
 * [2013: Kober: Reinforcement learning in robotics: A survey](http://journals.sagepub.com/doi/abs/10.1177/0278364913495721)
@@ -74,23 +74,6 @@ Curriculum learning in RL,
 Multiagent RL,
 Evolutionary RL,
 ...
-
-## succinct background
-* @article{DBLP:journals/corr/abs-1802-09477,
-  author    = {Scott Fujimoto and
-               Herke van Hoof and
-               Dave Meger},
-  title     = {Addressing Function Approximation Error in Actor-Critic Methods},
-  journal   = {CoRR},
-  volume    = {abs/1802.09477},
-  year      = {2018},
-  url       = {http://arxiv.org/abs/1802.09477},
-  archivePrefix = {arXiv},
-  eprint    = {1802.09477},
-  timestamp = {Fri, 02 Mar 2018 13:46:22 +0100},
-  biburl    = {https://dblp.org/rec/bib/journals/corr/abs-1802-09477},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
-}
 
 ## misc
 [1999: Richard S. Sutton: Reinforcement Learning: Past, Present and Future?](https://link.springer.com/chapter/10.1007/3-540-48873-1_26)
