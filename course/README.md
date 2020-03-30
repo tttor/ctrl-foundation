@@ -18,7 +18,9 @@
 * http://www.cse.chalmers.se/~chrdimi/teaching/optimal_decisions/overview.html
   * http://www.cse.chalmers.se/~chrdimi/teaching/optimal_decisions/schedule.html
 * https://homes.cs.washington.edu/~todorov/courses/amath579/
-
+* https://nanjiang.cs.illinois.edu/cs498/
+  * https://nanjiang.cs.illinois.edu/cs598/
+  
 ## workshop
 * [NIPS Deep Reinforcement Learning Workshop, 2015, 2016, 2017](https://sites.google.com/view/deeprl-symposium-nips2017/home)
 * [Mila: Reinforcement Learning Summer School, 2017](http://videolectures.net/deeplearning2017_montreal/)
