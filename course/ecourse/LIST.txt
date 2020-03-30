@@ -3,6 +3,7 @@ abbeel-dlss-2016
 berkeley-cs294
 deep-rl-bootcamp-2017
 indaba-2017
+inria-lazaric
 levine-berkeley-2017
 LIST.txt
 mila-dlss-2017
@@ -99,6 +100,10 @@ indaba_convolutional.pdf
 introtoreinforcementlearning.pdf
 notes.pdf
 prob_reasoning.pdf
+
+/home/tor/rsc/ctrl-foundation/course/ecourse/inria-lazaric:
+slides-lecture-02-handout.pdf
+slides-lecture-02.pdf
 
 /home/tor/rsc/ctrl-foundation/course/ecourse/levine-berkeley-2017:
 advanced_model_learning.pdf
@@ -293,5 +298,3 @@ Lecture-notes-MDP.pdf
 lecture_slides_lec6.pdf
 rl06.pdf
 rl2.pdf
-slides-lecture-02-handout.pdf
-slides-lecture-02.pdf
