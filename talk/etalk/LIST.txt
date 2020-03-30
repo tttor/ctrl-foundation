@@ -50,6 +50,7 @@ nips-tutorial-policy-optimization-Schulman-Abbeel.pdf
 Northern Frontier In conversation with Prof. Balaraman Ravindran.mp4
 Northern Frontier In conversation with Prof. Martha White.mp4
 Optimality and Approximation with Policy Gradient Methods in.mp4
+optrl2019.github.io-master.zip
 pg1.pdf
 pg.pdf
 Policy Error Bounds for Model-Based Reinforcement Learning w.mp4
