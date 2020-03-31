@@ -22,6 +22,7 @@
 2015_Book_Simulation-BasedOptimization.pdf
 Algorithms for ReinforcementLearning.pdf
 A Modern Introduction to Online Learning_1912.13213.pdf
+An Algorithmic Perspective on Imitation Learning 1811.06711.pdf
 A Tutorial on Linear Function Approximators for Dynamic Programming and Reinforcement Learning..pdf
 bandit
 bandit_algorithms_dec2018.pdf
