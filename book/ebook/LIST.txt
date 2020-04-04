@@ -82,6 +82,7 @@ Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
 Ronald A. Howard. - Dynamic programming and Markov processes-Technology Press of Massachusetts Institute of Technology (1960.).djvu
 Sigaud 2013 - Markov Decision Processes in Artificial Intelligence.pdf
 simulation_ScienceDirect_articles_02May2018_23-15-57.746
+(Springer Proceedings in Mathematics & Statistics 252) Nihat Ay, Paolo Gibilisco, František  Matúš - Information Geometry and Its Applications_ On the Occasion of Shun-ichi Amari's 80th Birthday, IGAI.pdf
 Statistical Reinforcement Learning_ Modern Machine Learning Approaches-CRC Press (2015).pdf
 Stochastic Dynamic Programming and the Control of Queueing Systems.pdf
 sutton
