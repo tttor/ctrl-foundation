@@ -34,6 +34,7 @@ Insights in Reinforcement Learning_ van hasselt.pdf
 joschu_thesis_2016b.pdf
 joschu_thesis_2016.pdf
 Kober_2012.pdf
+konda_51552606-MIT.pdf
 konda_thesis_2002.pdf
 konidaris_thesis_2011.pdf
 Learning average reward irreducible stochastic games_ Analysis an.pdf
