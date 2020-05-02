@@ -65,6 +65,7 @@ Scholz_2015.pdf
 Sergey Levine_2014.pdf
 sham_thesis_2003.pdf
 silver_thesis_2009.pdf
+SK_kakade.pdf
 TEMPORAL_CREDIT_ASSIGNMENT_IN_sutton.pdf
 The Gamma-Ensemble Adaptive Reinforcement Learning via Modular Discounting.pdf
 these_sylvain-gelly_2007.pdf

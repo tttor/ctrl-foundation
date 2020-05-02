@@ -68,6 +68,7 @@ Reinforcement Learning (RL) – Policy Gradients I – The Neural Perspective.pd
 Re-Thinking Representational Learning in Robotics and Music.mp4
 RI Seminar Sergey Levine Deep Robotic Learning.mp4
 rl7.pdf
+rl-theory-seminar
 RL_tutorial_18.pdf
 Russo_APS_Slides.pdf
 Sebastian Thrun Flying Cars, Autonomous Vehicles, and Education  Artificial Intelligence Podcast.mp4
@@ -80,3 +81,7 @@ Tutorial Introduction to Reinforcement Learning with Functio.mp4
 UAI 2015 Amsterdam Keynote David Silver.mp4
 vin_nips2016.pdf
 Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar:
+1907.05388v2.pdf
+RL Theory Seminar Chi Jin.mp4
