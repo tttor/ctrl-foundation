@@ -83,5 +83,9 @@ vin_nips2016.pdf
 Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar:
+2020-04-29
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-04-29:
 1907.05388v2.pdf
 RL Theory Seminar Chi Jin.mp4
+slides_chi_jin.pdf
