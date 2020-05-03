@@ -3,7 +3,7 @@ abbeel-dlss-2016
 berkeley-cs294
 deep-rl-bootcamp-2017
 indaba-2017
-inria-lazaric
+lazaric-inria
 levine-berkeley-2017
 LIST.txt
 mila-dlss-2017
@@ -101,7 +101,9 @@ introtoreinforcementlearning.pdf
 notes.pdf
 prob_reasoning.pdf
 
-/home/tor/rsc/ctrl-foundation/course/ecourse/inria-lazaric:
+/home/tor/rsc/ctrl-foundation/course/ecourse/lazaric-inria:
+exploration_lazaric_1.pdf
+exploration_lazaric_2.pdf
 slides-lecture-02-handout.pdf
 slides-lecture-02.pdf
 
