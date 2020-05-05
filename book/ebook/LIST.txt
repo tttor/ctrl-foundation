@@ -172,7 +172,5 @@ Richard_S._Sutton,_Andrew_G._Barto_Reinforcement_Learning_An_Introduction_Adapti
 Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (2002).pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/sutton/rlintro-2018:
-RLbook2018_20181005.pdf
-RLbook2018_20181107.pdf
 RLbook2018_20190115.pdf
 RLbook2018_20200224.pdf

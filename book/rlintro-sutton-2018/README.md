@@ -1,9 +1,5 @@
 # Reinforcement Learning: An Introduction
 
-For rigorous ones, see eg
-Puterman's MDP,
-Dimitri Bertsekas's Dynamic Programming and Optimal Control.
-
 * 2nd-edition: http://www.incompleteideas.net/book/the-book-2nd.html
 * 1st-edition: http://incompleteideas.net/book/ebook/the-book.html or
 [via UQ Lib](https://ebookcentral-proquest-com.ezproxy.library.uq.edu.au/lib/uql/detail.action?docID=3338821)
@@ -12,3 +8,6 @@ Dimitri Bertsekas's Dynamic Programming and Optimal Control.
 * https://github.com/JKCooper2/rlai-exercises
 * https://github.com/MJeremy2017/Reinforcement-Learning-Implementation/
 * http://www.boris-belousov.net/2017/04/29/ergodic-MDP/
+* For rigorous treatment on DP (not RL), see
+  Puterman's MDP,
+  Dimitri Bertsekas's Dynamic Programming and Optimal Control.

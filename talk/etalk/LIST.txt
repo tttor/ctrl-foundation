@@ -26,7 +26,6 @@ Deep Reinforcement Learning (John Schulman, OpenAI).mp4
 Deep Reinforcement Learning.mp4
 DeepReinforcementLearningThroughPolicyOptimizatio_high.mp4
 Deep-Reinforcement-Learning-Through-Policy-Optimization_high.mp4
-deep_rl.pdf
 Documentary Alphago 2017 (Korean sub).mp4
 Emma Brunskill (Stanford University) Efficient Reinforcement.mp4
 Emo Todorov (University of Washington) Acceleration-based me.mp4
@@ -73,7 +72,9 @@ RL_tutorial_18.pdf
 Russo_APS_Slides.pdf
 Sebastian Thrun Flying Cars, Autonomous Vehicles, and Education  Artificial Intelligence Podcast.mp4
 Sham Kakade (University of Washington) A No Regret Algorithm.mp4
+silver-ppt
 Stephen Tu on Least Squares Policy Iteration [PWL NYC].mp4
+sutton-ppt
 TD Learning - Richard S. Sutton.mp4
 TDM_ From Model-Free to Model-Based Deep Reinforcement Learning – The Berkeley Artificial Intelligence Research Blog.pdf
 Tim Lillicrap - Data efficient deep reinforcement learning f.mp4
@@ -84,8 +85,18 @@ Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar:
 2020-04-29
+2020-05-06
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-04-29:
 1907.05388v2.pdf
 RL Theory Seminar Chi Jin.mp4
 slides_chi_jin.pdf
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-06:
+2003.14089.pdf
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/silver-ppt:
+deep_rl.pdf
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/sutton-ppt:
+gradient-TD-2011.pdf
