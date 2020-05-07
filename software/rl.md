@@ -13,6 +13,7 @@
 * https://github.com/joschu/modular_rl
 
 ### pytorch
+* https://github.com/cpnota/autonomous-learning-library
 * https://github.com/higgsfield/RL-Adventure-2
   * https://github.com/higgsfield/RL-Adventure
 * https://github.com/ikostrikov/pytorch-rl
