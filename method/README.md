@@ -1,4 +1,5 @@
 # Method
+* Witsenhausen's counterexample: https://en.wikipedia.org/wiki/Witsenhausen%27s_counterexample
 
 # Base for iteration
 * `policy-based`
