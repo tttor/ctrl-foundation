@@ -94,6 +94,8 @@ slides_chi_jin.pdf
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-06:
 2003.14089.pdf
+geist_talk_05052020_rl_theory_seminar.pdf
+RL Theory Seminar Matthieu Geist.mp4
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/silver-ppt:
 deep_rl.pdf
