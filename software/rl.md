@@ -21,6 +21,7 @@
 * https://github.com/kengz/SLM-Lab
 * https://github.com/ShangtongZhang/DeepRL
 * https://github.com/vitchyr/rlkit
+* https://github.com/DLR-RM/stable-baselines3
 
 ### tensorflow
 * https://github.com/dennybritz/reinforcement-learning
