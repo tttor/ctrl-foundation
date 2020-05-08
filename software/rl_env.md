@@ -1,4 +1,9 @@
 # Environment for RL
+* https://github.com/openai/universe
+* https://github.com/openai/roboschool
+* https://github.com/openai/retro
+* https://github.com/deepmind/bsuite
+* https://aihabitat.org/
 * see also: [simulator](https://github.com/tttor/rl-foundation/blob/master/software/simulator.md)
 
 # OpenAI Gym
@@ -24,10 +29,3 @@
 | Humanoid-v2 | 376 | 17 | None | 5 | 1000 | (-0.4, 0.4) |
 | MountainCarContinuous-v0 | 2 | 1 | 90 | ? | 999 | (-1.0, 1.0) |
 | Pendulum-v0 | 3 | 1 | None | ? | 200 | (-2.0, 2.0) |
-
-# Others
-* https://github.com/openai/universe
-* https://github.com/openai/roboschool
-* https://github.com/openai/retro
-* https://github.com/deepmind/bsuite
-* https://aihabitat.org/
