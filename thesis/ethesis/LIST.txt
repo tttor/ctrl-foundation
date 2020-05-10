@@ -1,6 +1,7 @@
 /home/tor/rsc/ctrl-foundation/thesis/ethesis:
 02whole.pdf
 11877.pdf
+2017_07_Metelli.pdf
 2017_7_Papini.pdf
 40344784-MIT.pdf
 adam_white_phd_2015.pdf
@@ -9,6 +10,7 @@ ali_e.pdf
 Ambuj Tewari EECS-2007-126.pdf
 Asadi2015.pdf
 asmuth_phd_thesis_2013.pdf
+bacon2018thesis.pdf
 bagnell_james_2004_1.pdf
 bagnell_james_2004.pdf
 Barry_NICHOLS_2014.pdf
