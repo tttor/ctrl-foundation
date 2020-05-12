@@ -13,7 +13,6 @@ A Tutorial on Reinforcement Learning I.mp4
 Average Reward Reinforcement Learning_ an Overview.pdf
 aviv_slides.pdf
 Bruno-presentation.pdf
-CameraReadySubmissions 1-154_pdfs
 carnegie-mellon-statement-of-purpose_riashatislam.pdf
 CS294-112 112017.mp4
 Csaba Szepesvari - Learning to Make Better Decisions Challen.mp4
@@ -50,7 +49,6 @@ nips-tutorial-policy-optimization-Schulman-Abbeel.pdf
 Northern Frontier In conversation with Prof. Balaraman Ravindran.mp4
 Northern Frontier In conversation with Prof. Martha White.mp4
 Optimality and Approximation with Policy Gradient Methods in.mp4
-optrl2019.github.io-master
 optrl2019.github.io-master.zip
 pg1.pdf
 pg.pdf
@@ -85,245 +83,10 @@ UAI 2015 Amsterdam Keynote David Silver.mp4
 vin_nips2016.pdf
 Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
 
-/home/tor/rsc/ctrl-foundation/talk/etalk/CameraReadySubmissions 1-154_pdfs:
-100_CameraReadySubmission_main.pdf
-101_CameraReadySubmission_Off_Policy_Distribution_Matching_with_DICE_for_imitation___NeurIPS_RL_Workshop.pdf
-102_CameraReadySubmission_QXplore_neurips_rlwork_final.pdf
-103_CameraReadySubmission_NeurIPS_RL_Workshop_2019__SymmetricRL_.pdf
-104_CameraReadySubmission_ROBEL_deepRLW_2019.pdf
-105_CameraReadySubmission_main.pdf
-106_CameraReadySubmission_cikd.pdf
-107_CameraReadySubmission_NIPS_Real_Time_Model_Based_RL.pdf
-108_CameraReadySubmission_NeurIPS_deep_RL_workshop_camera_ready_Mellowmax.pdf
-109_CameraReadySubmission_visualrl_nips19_8pg (3).pdf
-10_CameraReadySubmission_rnlps.pdf
-111_CameraReadySubmission_Plan2Vec_Unsupervised_Representation_Learning_By_Latent_Plans.pdf
-112_CameraReadySubmission_main.pdf
-113_CameraReadySubmission_1909.02583-compressed.pdf
-114_CameraReadySubmission_final_Meta_Reinforcement_Learning_with_Autonomous_Task_Inference.pdf
-116_CameraReadySubmission_Learning_Sparse_Representations_Incrementally_in_Deep_Reinforcement_Learning.pdf
-119_CameraReadySubmission_OP3_CoRL_NeurIPS_Deep_RL_compressed (1).pdf
-11_CameraReadySubmission_NeurIPS_2019_Regularization_Final.pdf
-120_CameraReadySubmission_Neurips_Deep_RL_Workshop___Final (3).pdf
-121_CameraReadySubmission_Meta_World_DRL.pdf
-123_CameraReadySubmission_Thinking_While_Moving_Camera_Ready__DRLW___NeurIPS_2019_FINAL_pdf.pdf
-124_CameraReadySubmission_main_neurips.pdf
-125_CameraReadySubmission_Hallucinative_Topological_Memory_Arxiv (1).pdf
-126_CameraReadySubmission_TetrisBattle_DRLWS (2).pdf
-127_CameraReadySubmission_EcologicalRL_ICLR_NeurIPS_Deep_RL.pdf
-128_CameraReadySubmission_NIPS_Workshop.pdf
-12_CameraReadySubmission_Blue_River_Gym.pdf
-130_CameraReadySubmission_data_efficient_RL__DRL_Camera_ready_ (1)_compressed.pdf
-131_CameraReadySubmission_neurips_2019.pdf
-132_CameraReadySubmission_camera.pdf
-133_CameraReadySubmission_drlw2019avid.pdf
-134_CameraReadySubmission_Imitation_NeurIPS_Workshop (1).pdf
-135_CameraReadySubmission_CPC_camera.pdf
-136_CameraReadySubmission_Deep_RL_workshop.pdf
-137_CameraReadySubmission_Paper___Learning_Theory_of_Mind_in_Deep_Reinforcement_Learning (1).pdf
-138_CameraReadySubmission_ImageToGrammar_nips.pdf
-139_CameraReadySubmission_Variational_EM_Planning-5.pdf
-13_CameraReadySubmission_sparse_skill_coding_short.pdf
-140_CameraReadySubmission_2020_ICRA_oorl (2).pdf
-141_CameraReadySubmission_safexp-short (1).pdf
-142_CameraReadySubmission_preqn.pdf
-143_CameraReadySubmission_dreamer.pdf
-144_CameraReadySubmission_Risk_Averse_Domain_Adaptation__NeurIPS_workshops_.pdf
-146_CameraReadySubmission_NIPS_CR.pdf
-147_CameraReadySubmission_Adaptive_Online_Planning__NeurIPS_Deep_RL_ (7).pdf
-148_CameraReadySubmission_neurips_2019_v2.pdf
-149_CameraReadySubmission_Meta_learning_curiosity_algorithms_deep_RL.pdf
-14_CameraReadySubmission_NeurIPS_2019_SAVED_DRL_Workshop_final_v1.pdf
-150_CameraReadySubmission_NeurIPS2019_camera_ready_v2.pdf
-151_CameraReadySubmission_pddm_neurips2019_drlw_cameraready.pdf
-153_CameraReadySubmission_multi_task_learning_NeurIPS_workshops.pdf
-154_CameraReadySubmission_Guided_Adaptive_Credit_Assignment.pdf
-15_CameraReadySubmission_NeurIPS2019DRLW_Camera_Ready.pdf
-17_CameraReadySubmission_main.pdf
-18_CameraReadySubmission_DeepRL_Workshop.pdf
-1_CameraReadySubmission_Rethinking_Common_Practices_in_Actor_Critic.pdf
-21_CameraReadySubmission_MERL_Neurips_DeepRL.pdf
-22_CameraReadySubmission_main.pdf
-23_CameraReadySubmission_main_neurips2019_reduced.pdf
-24_CameraReadySubmission_neurips_2019.pdf
-25_CameraReadySubmission_safe_rl_collision-FINAL.pdf
-26_CameraReadySubmission_NeurIPS_DRL.pdf
-27_CameraReadySubmission_main.pdf
-28_CameraReadySubmission_Is_DRL_superhuman_on_Atari_camera_ready_workshop_DRL_Neurips.pdf
-29_CameraReadySubmission_HierarchicalVisualForesight_NeurIPSDeepRLWSCR.pdf
-2_CameraReadySubmission_NeurIPS_2019_Approximating_two_value_functions_instead_of_one__towards_characterizing_a_new_family_of_Deep_Reinforcement_Learning_algorithms.pdf
-30_CameraReadySubmission_ID_30_DRLW_2019.pdf
-31_CameraReadySubmission_mainv4.pdf
-34_CameraReadySubmission_smac.pdf
-36_CameraReadySubmission_Off_PGs_Camera_Ready.pdf
-37_CameraReadySubmission_DeepRL_NeurIPS_Workshop_Marginalized_State_Entropy_Regularization_in_Policy_Optimization.pdf
-39_CameraReadySubmission_NeurIPS_2019_Deep_RL_Workshop___SkewFit_submit_v1.pdf
-3_CameraReadySubmission_Decentralized_Multi_Agent_Actor_Critic_with_Generative_Inference.pdf
-41_CameraReadySubmission_Neurips_RL_w_Suboptimal_Teachers_Camera_Ready-1-10-compressed.pdf
-42_CameraReadySubmission_main.pdf
-43_CameraReadySubmission_Appendix.pdf
-43_CameraReadySubmission_Data_efficient_Co_Adaptation_of_Morphology_and_Behaviour_with_Deep_Reinforcement_Learning_drlw.pdf
-44_CameraReadySubmission_Binary_Latent_Actor_Critic__NeurIPS_2019_ (4).pdf
-45_CameraReadySubmission_MultiplayerAlphaZero.pdf
-46_CameraReadySubmission_RoboNet___Camera_Ready_Deep_RL(1)-compressed.pdf
-47_CameraReadySubmission_Appendix_DRL_wksp_cr.pdf
-47_CameraReadySubmission_PSER_DRL_wksp_cr.pdf
-48_CameraReadySubmission_SPECTRA___workshop.pdf
-49_CameraReadySubmission_Task_Relevant_Adversarial_Imitation_Learning__Workshop__compressed.pdf
-4_CameraReadySubmission_Pommerman.pdf
-50_CameraReadySubmission_Dynamic Vehicle Dispatching Based on Minimum Fleet A Deep Reinforcement Learning Method.pdf
-51_CameraReadySubmission_neurips19drlw2_compressed.pdf
-52_CameraReadySubmission_00-Main.pdf
-54_CameraReadySubmission__NeurIPS19__DisCoRL.pdf
-56_CameraReadySubmission_Dynamical_Distance_Learning.pdf
-57_CameraReadySubmission_HRL_Ablations.pdf
-58_CameraReadySubmission_MERL_DRLW_NeurIPS.pdf
-59_CameraReadySubmission_RUDDER_convergence (2).pdf
-5_CameraReadySubmission_ftwp.pdf
-61_CameraReadySubmission_NeurIPS_2019_Workshop_deanon_camera_ready.pdf
-62_CameraReadySubmission_DRL_NeurIPS2019_final.pdf
-63_CameraReadySubmission_NeurIPS_Submission__Learning_Independently_Obtainable_Reward_Functions (13)-compressed.pdf
-64_CameraReadySubmission_Interactive_Fiction_Games__A_Colossal_Adventure.pdf
-65_CameraReadySubmission_Leno___DeepRLWorkshop_19 (5).pdf
-66_CameraReadySubmission_crl.pdf
-67_CameraReadySubmission_NIPS19__RL_in_Traffic_camera_ready (16).pdf
-68_CameraReadySubmission_selfsupervised_nips19_8pg (4).pdf
-69_CameraReadySubmission_Hanabi__DRLW_1-10.pdf
-6_CameraReadySubmission_NeurIPS2019_DeepRL_Spine_submit4.pdf
-70_CameraReadySubmission_main_final2.pdf
-70_CameraReadySubmission_supp_final2.pdf
-71_CameraReadySubmission_EPC_nips_workshop (1)_compressed.pdf
-72_CameraReadySubmission_Improving_Gradient_Estimation_in_Evolutionary_Strategies_With_Past_Descent_Directions.pdf
-74_CameraReadySubmission_neurips_2019.pdf
-76_CameraReadySubmission_DRLW2019_final.pdf
-77_CameraReadySubmission_cam_ready_paper_submission_DRLW2019_updated_sty.pdf
-77_CameraReadySubmission_cam_ready_supplementary_materials_DRLW2019_updated_sty.pdf
-78_CameraReadySubmission_drlw_adambrl.pdf
-79_CameraReadySubmission_Combining_model_free_and_model_based_by_evolutions_final.pdf
-7_CameraReadySubmission_SDCFR_Steinberger_camera.pdf
-7_CameraReadySubmission_SDCFR_Suppl_Steinberger_camera.pdf
-80_CameraReadySubmission_Optionsofinterest_deeprlworkshop_neurips2019.pdf
-81_CameraReadySubmission_DoorGym_NeurIPS_small_2.pdf
-82_CameraReadySubmission_Biologically_inspired_architectures_for_sample_efficient_reinforcement_learning__DeepRL_.pdf
-83_CameraReadySubmission_deep_skill_chaining_appendix_deep_rl_workshop_camera_ready.pdf
-83_CameraReadySubmission_deep_skill_chaining_deep_rl_workshop_camera_ready.pdf
-84_CameraReadySubmission_HRL_for_D_Kitty (5).pdf
-85_CameraReadySubmission_Multi_Agent_Hierarchical_Reinforcement_Learning.pdf
-86_CameraReadySubmission_PSXLE_NeurIPS_Revised.pdf
-87_CameraReadySubmission_main.pdf
-8_CameraReadySubmission_rlpyt_drl_workshop.pdf
-90_CameraReadySubmission_Emergent_Tool_Use_From_Multi_Agent_Autocurricula.pdf
-91_CameraReadySubmission_appunifgrad.pdf
-91_CameraReadySubmission_mainunifgrad.pdf
-92_CameraReadySubmission_havens_latent.pdf
-93_CameraReadySubmission_paper_mbrl_mismatch_drlw_cr.pdf
-94_CameraReadySubmission_drlw-2019-camera_ready.pdf
-96_CameraReadySubmission_diverse_sil_appendix_compressed.pdf
-96_CameraReadySubmission_diverse_sil_main_compressed.pdf
-99_CameraReadySubmission_Deep Reinforcement Learning on Optimal Trade Execution Problems_NeurIPS2019_CameraReady.pdf
-9_CameraReadySubmission_main.pdf
-9_CameraReadySubmission_supplementary.pdf
-
-/home/tor/rsc/ctrl-foundation/talk/etalk/optrl2019.github.io-master:
-accepted_papers.md
-assets
-awards.md
-call_for_papers.md
-_config.yml
-_data
-Gemfile
-googleba1d2c322fac4487.html
-index.md
-_layouts
-_sass
-schedule.md
-
-/home/tor/rsc/ctrl-foundation/talk/etalk/optrl2019.github.io-master/assets:
-accepted_papers
-logos
-optrl_style
-
-/home/tor/rsc/ctrl-foundation/talk/etalk/optrl2019.github.io-master/assets/accepted_papers:
-10.pdf
-11.pdf
-12.pdf
-13.pdf
-14.pdf
-15.pdf
-16.pdf
-17.pdf
-18.pdf
-19.pdf
-1.pdf
-20.pdf
-21.pdf
-22.pdf
-24.pdf
-25.pdf
-27.pdf
-29.pdf
-2.pdf
-33.pdf
-34.pdf
-35.pdf
-36.pdf
-37.pdf
-38.pdf
-39.pdf
-3.pdf
-40.pdf
-41.pdf
-42.pdf
-43.pdf
-44.pdf
-45.pdf
-48.pdf
-49.pdf
-50.pdf
-51.pdf
-52.pdf
-53.pdf
-54.pdf
-55.pdf
-5.pdf
-60.pdf
-62.pdf
-63.pdf
-65.pdf
-66.pdf
-67.pdf
-68.pdf
-69.pdf
-6.pdf
-70.pdf
-71.pdf
-72.pdf
-73.pdf
-74.pdf
-75.pdf
-7.pdf
-8.pdf
-
-/home/tor/rsc/ctrl-foundation/talk/etalk/optrl2019.github.io-master/assets/logos:
-deepmind.png
-google.png
-
-/home/tor/rsc/ctrl-foundation/talk/etalk/optrl2019.github.io-master/assets/optrl_style:
-optrl_2019.sty
-
-/home/tor/rsc/ctrl-foundation/talk/etalk/optrl2019.github.io-master/_data:
-sponsors.yml
-
-/home/tor/rsc/ctrl-foundation/talk/etalk/optrl2019.github.io-master/_layouts:
-default.html
-
-/home/tor/rsc/ctrl-foundation/talk/etalk/optrl2019.github.io-master/_sass:
-jekyll-theme-cayman.scss
-normalize.scss
-
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar:
 2020-04-29
 2020-05-06
+2020-05-13
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-04-29:
 1907.05388v2.pdf
@@ -334,6 +97,9 @@ slides_chi_jin.pdf
 2003.14089.pdf
 geist_talk_05052020_rl_theory_seminar.pdf
 RL Theory Seminar Matthieu Geist.mp4
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-13:
+1710.01688.pdf
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/silver-ppt:
 deep_rl.pdf
