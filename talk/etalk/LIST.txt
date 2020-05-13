@@ -100,6 +100,7 @@ RL Theory Seminar Matthieu Geist.mp4
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-13:
 1710.01688.pdf
+RL Theory Seminar Sarah Dean (stream).mp4
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/silver-ppt:
 deep_rl.pdf
