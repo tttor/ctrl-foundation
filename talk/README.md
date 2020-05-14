@@ -2,6 +2,7 @@
 
 * https://sites.google.com/view/rltheoryseminars/home
   * https://www.youtube.com/channel/UCfBFutC9RbKK6p--B4R9ebA
+* https://www.talkrl.com
 * [David Silver, Deep RL, ICLR 2015](https://iclr.cc/archive/www/doku.php%3Fid=iclr2015:main.html)
 * [David Silver, Deep RL, RDLM 2015](http://videolectures.net/rldm2015_silver_reinforcement_learning/)
 * [Sergey Levine, Deep Robotic Learning, RI Seminar, 2017](https://www.youtube.com/watch?v=eKaYnXQUb2g)
