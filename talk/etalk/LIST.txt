@@ -87,6 +87,7 @@ Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
 2020-04-29
 2020-05-06
 2020-05-13
+2020-05-20
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-04-29:
 1907.05388v2.pdf
@@ -101,6 +102,11 @@ RL Theory Seminar Matthieu Geist.mp4
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-13:
 1710.01688.pdf
 RL Theory Seminar Sarah Dean (stream).mp4
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-20:
+policy_grad_optimality.pdf
+RL theory seminar Daniel Russo.mp4
+slides.pdf
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/silver-ppt:
 deep_rl.pdf
