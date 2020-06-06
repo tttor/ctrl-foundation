@@ -113,6 +113,7 @@ slides.pdf
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-27:
 2002.10301.pdf
 Adithya_ZapQ_RL_Theory.pdf
+RL Theory Seminar Adithya M. Devraj.mp4
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/silver-ppt:
 deep_rl.pdf
