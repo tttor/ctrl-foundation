@@ -89,6 +89,7 @@ Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
 2020-05-13
 2020-05-20
 2020-05-27
+2020-06-10
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-04-29:
 1907.05388v2.pdf
@@ -114,6 +115,10 @@ slides.pdf
 2002.10301.pdf
 Adithya_ZapQ_RL_Theory.pdf
 RL Theory Seminar Adithya M. Devraj.mp4
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-06-10:
+1909.02769.pdf
+Adaptive_TRPO_presentation___Shie.pdf
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/silver-ppt:
 deep_rl.pdf
