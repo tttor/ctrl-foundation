@@ -20,6 +20,7 @@
 2012_Book_ReinforcementLearning.pdf
 2013_Book_Simulation-BasedAlgorithmsForM.pdf
 2013_Book_StochasticProcesses.pdf
+2013_Book_StochasticRecursiveAlgorithmsF.pdf
 2015_Book_DesignOfExperimentsForReinforc.pdf
 2015_Book_Simulation-BasedOptimization.pdf
 Algorithms for ReinforcementLearning.pdf
