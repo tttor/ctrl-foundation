@@ -1,4 +1,6 @@
 /home/tor/rsc/ctrl-foundation/book/ebook:
+10.1007%2F978-1-4615-3618-5.pdf
+10.1007%2F978-3-319-12197-0.pdf
 1811.12560.pdf
 1960-howard-dynamicprogrammingmarkovprocesses.djvu
 1981_Book_Non-negativeMatricesAndMarkovC.pdf
@@ -23,15 +25,19 @@
 2013_Book_StochasticRecursiveAlgorithmsF.pdf
 2015_Book_DesignOfExperimentsForReinforc.pdf
 2015_Book_Simulation-BasedOptimization.pdf
+Abhijit Gosavi auth. Simulation-Based Optimization Parametric Optimization Techniques and Reinforcement Learning.pdf
 Algorithms for ReinforcementLearning.pdf
 A Modern Introduction to Online Learning_1912.13213.pdf
 An Algorithmic Perspective on Imitation Learning 1811.06711.pdf
+Antonio J. Conejo, Luis Baringo Morales, S. Jalal Kazempour, Afzal S. Siddiqui (auth.)-Investment in Electricity Generation and Transmission_ Decision Making under Uncertainty-Springer International P.pdf
 A Tutorial on Linear Function Approximators for Dynamic Programming and Reinforcement Learning..pdf
 bandit
 bandit_algorithms_dec2018.pdf
 bertsekas
+Bertsekas D.P. Dynamic programming and optimal control.djvu
 (Cambridge Series in Statistical and Probabilistic Mathematics) J. R. Norris - Markov Chains-Cambridge University Press (1997).djvu
 (Chapman & Hall_CRC Texts in Statistical Science) Vidyadhar G. Kulkarni - Modeling and Analysis of Stochastic Systems, Third Edition-CRC Press_Chapman and Hall_CRC (2017).pdf
+Christopher Gatti auth. Design of Experiments for Reinforcement Learning.pdf
 (Communications and Control Engineering) Rushikesh Kamalapurkar, Patrick Walters, Joel Rosenfeld, Warren Dixon - Reinforcement Learning for Optimal Feedback Control-Springer International Publishing (.pdf
 Csaba Szepesvári Algorithms for Reinforcement Learning  .pdf
 CTCNonline.pdf
@@ -39,11 +45,15 @@ David G. Luenberger - Introduction to Dynamic Systems_ Theory, Models, and Appli
 Decision Making Under Uncertainty and Reinforcement Learning.pdf
 Dimitri P. Bertsekas, Dimitri P. Bertsekas - Nonlinear programming (1999, Athena Scientific).djvu
 Dimitri P. Bertsekas, John N. Tsitsiklis-Neuro-Dynamic Programming-Athena Scientific (1996).djvu
+Dimitri P. Bertsekas, John N. Tsitsiklis Neuro-Dynamic Programming.djvu
 Dimitris Vrakas, Ioannis Pl Vlahavas-Artificial Intelligence for Advanced Problem Solving Techniques (2008).pdf
 (Dover Books on Mathematics (Book 2)) Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
+dpchapter.pdf
 Francesco Borrelli, Alberto Bemporad, Manfred Morari-Predictive Control for Linear and Hybrid Systems (draft)  -Cambridge Univeristy Press (2011).pdf
+Frans A. Oliehoek, Christopher Amato (auth.)-A Concise Introduction to Decentralized POMDPs-Springer International Publishing (2016).pdf
 FTML2014.pdf
 Gallager R.G. - Stochastic Processes_ Theory for Applications-Cambridge University Press (2013).pdf
+Hyeong Soo Chang, Jiaqiao Hu, Michael C. Fu, Steven I. Marcus auth. Simulation-Based Algorithms for Markov Decision Processes.pdf
 (IEEE Press Series on Computational Intelligence) Frank L. Lewis, Derong Liu - Reinforcement Learning and Approximate Dynamic Programming for Feedback Control-Wiley-IEEE Press (2012).pdf
 Igor Griva, Stephen G. Nash, Ariela Sofer-Linear and nonlinear optimization-Society for Industrial and Applied Mathematics (2009).pdf
 (International Series in Operations Research & Management Science 171) Vivek S. Borkar, Vladimir Ejov, Jerzy A. Filar, Giang T. Nguyen (auth.) - Hamiltonian Cycle Problem and Markov Chains-Springer-Ve.pdf
@@ -56,27 +66,36 @@ Linn I. Sennott - Stochastic Dynamic Programming and the Control of Queueing Sys
 LIST.txt
 (London Mathematical Society student texts 52) Olle Häggström - Finite Markov Chains and Algorithmic Applications-Cambridge University Press (2002).pdf
 Lucian Busoniu, Robert Babuska, Bart De Schutter, Damien Ernst - Reinforcement Learning and Dynamic Programming Using Function Approximators (Automation and Control Engineering) (2010).pdf
+Lucian Busoniu, Robert Babuska, Bart De Schutter, Damien Ernst Reinforcement Learning and Dynamic Programming Using Function Approximators Automation and Control Engineering.pdf
 mahadevan_09.pdf
 Mahadevan S. - Learning Representation and Control in Markov Decision Processes_ New Frontiers.pdf
 Markov Chains and Stochastic Stability.pdf
+Martijn van Otterlo, Marco Wiering auth., Marco Wiering, Martijn van Otterlo eds. Reinforcement Learning State-of-the-Art.pdf
+Martin L. Puterman-Markov decision processes. Discrete stochastic dynamic programming MVspa-Wiley-Interscience (2005).pdf
+Martin L. Puterman-Markov decision processes_ Discrete stochastic dynamic programming-Wiley (2005).djvu
 (Mathematics in science and engineering 130) Stuart E. Dreyfus and Averill M. Law (Eds.) - The Art and Theory of Dynamic Programming-Academic Press (1977).pdf
 Mathematics of Statistical Sequential Decision Making.pdf
 (McGraw-Hill computer science series) Nils J Nilsson - Problem-solving methods in artificial intelligence-New York, McGraw-Hill  (1971).pdf
 mcmt2e.pdf
 (MIT Lincoln Laboratory Series) Mykel J. Kochenderfer et al. - Decision Making Under Uncertainty_ Theory and Application-The MIT Press (2015).pdf
 mpc
+Mykel J. Kochenderfer et al. Decision Making Under Uncertainty Theory and Application.pdf
 oc.pdf
 Olivier Sigaud, Olivier Buffet - Markov Decision Processes in Artificial Intelligence-Wiley-ISTE (2010).pdf
+Olivier Sigaud, Olivier Buffet-Markov Decision Processes in Artificial Intelligence-Wiley-ISTE (2010).pdf
 Olle Häggström - Finite Markov Chains and Algorithmic Applications-Cambridge University Press (2002).pdf
 Optimal Statistical Decisions.pdf
+Pedro Domingos, Daniel Lowd-Markov logic_ an interface layer for artificial intelligence-Morgan and Claypool Publishers (2009).pdf
 Peter Whittle - Optimal Control_ Basics and Beyond-Wiley (1996).pdf
 Pierre Bremaud - Markov Chains_ Gibbs Fields, Monte Carlo Simulation, and Queues-Springer (1999).pdf
 Policy Gradient Methods for Control Applications by Jan Peters_techrep.pdf
 (Prentice-Hall Information and System Sciences Series) P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986).djvu
+probabilities-expectations.pdf
 (Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming-Academic Press (1983).pdf
 (Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming (Probability and Mathematical Statistics)-Academic Press (1983).pdf
 puterman
 README.md
+Reinforcement Learning and Dynamic Programming Using Function Approximators (Automation and Control Engineering) (2010).pdf
 Reinforcement Learning State-of-the-Art.pdf
 Reinforcement Learning Theory and Algorithms.pdf
 Richard E. Bellman, Stuart E. Dreyfus - Applied Dynamic Programming (1962).pdf
@@ -85,6 +104,7 @@ Robert Gallager - Stochastic Processes_ Theory for Applications-Cambridge Univer
 Ronald A. Howard, Ali E. Abbas - Foundations of Decision Analysis-Pearson (2016).pdf
 Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
 Ronald A. Howard. - Dynamic programming and Markov processes-Technology Press of Massachusetts Institute of Technology (1960.).djvu
+Shimon Whiteson-Adaptive Representations for Reinforcement Learning (Studies in Computational Intelligence, 291)-Springer (2010).pdf
 Sigaud 2013 - Markov Decision Processes in Artificial Intelligence.pdf
 simulation_ScienceDirect_articles_02May2018_23-15-57.746
 (Springer Proceedings in Mathematics & Statistics 252) Nihat Ay, Paolo Gibilisco, František  Matúš - Information Geometry and Its Applications_ On the Occasion of Shun-ichi Amari's 80th Birthday, IGAI.pdf
@@ -94,7 +114,9 @@ sutton
 (Technology Press Research Monographs) Ronald A Howard - Dynamic programming and Markov processes-The MIT Press (1960).djvu
 (Texts in statistical science) Vidyadhar G. Kulkarni - Modeling and analysis of stochastic systems-Chapman and Hall_CRC (2017).pdf
 TS_Tutorial.pdf
+Warren B. Powell Approximate Dynamic Programming Solving the Curses of Dimensionality, 2nd Edition.pdf
 (Wiley Series in Probability and Statistics) Warren B. Powell - Approximate Dynamic Programming_ Solving the Curses of Dimensionality, 2nd Edition (Wiley Series in Probability and Statistics)-Wiley (2.pdf
+Xi-Ren Cao Stochastic Learning and Optimization A Sensitivity-Based Approach.pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/bandit:
 1904.07272.pdf
