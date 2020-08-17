@@ -11,6 +11,7 @@
 
 ## type 1: people power
 * https://github.com/joschu/modular_rl
+* Catalyst.RL: A Distributed Framework for Reproducible RL Research, Sergey Kolesnikov
 
 ### pytorch
 * https://github.com/cpnota/autonomous-learning-library
