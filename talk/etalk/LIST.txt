@@ -33,6 +33,7 @@ Extra Material — Spinning Up documentation2.pdf
 Feature Based Aggregation and Deep Reinforcement Learning.mp4
 Gao.Y.pdf
 hadavid_gecco_full_2019.pdf
+ias-talk
 icml07-brl-tutorial-part5-bpg-bac-ghavamzadeh.pdf
 ICRA2018-Abbeel-keynote.pdf
 ICRA2018---tutorial---Abbeel---Vision-Based-Robotic-Control-w-Deep-Learning.pdf
@@ -73,6 +74,7 @@ Russo_APS_Slides.pdf
 Sebastian Thrun Flying Cars, Autonomous Vehicles, and Education  Artificial Intelligence Podcast.mp4
 Sham Kakade (University of Washington) A No Regret Algorithm.mp4
 silver-ppt
+simon-rl-bootcamp-2020
 Stephen Tu on Least Squares Policy Iteration [PWL NYC].mp4
 sutton-ppt
 TD Learning - Richard S. Sutton.mp4
@@ -83,6 +85,11 @@ UAI 2015 Amsterdam Keynote David Silver.mp4
 vin_nips2016.pdf
 Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
 
+/home/tor/rsc/ctrl-foundation/talk/etalk/ias-talk:
+Latent_State_Recovery_1_hour_IAS.pptx
+Latent State Recovery in Reinforcement Learning - John Langford.mp4
+Rethinking Control - Elad Hazan.mp4
+
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar:
 2020-04-29
 2020-05-06
@@ -92,6 +99,7 @@ Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
 2020-06-10
 2020-06-17
 2020-06-24
+README.md
 RL Theory Seminar Andrea Zanette.mp4
 RL Theory Seminar Fei Feng.mp4
 
@@ -110,6 +118,7 @@ RL Theory Seminar Matthieu Geist.mp4
 RL Theory Seminar Sarah Dean (stream).mp4
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-20:
+1906.01786.pdf
 1906.01786v1.pdf
 policy_grad_optimality.pdf
 RL theory seminar Daniel Russo.mp4
@@ -136,6 +145,17 @@ rl_theory_seminar_nan.pdf
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/silver-ppt:
 deep_rl.pdf
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/simon-rl-bootcamp-2020:
+2020-09-RL20-online-learning-MDP-part1.pdf
+Bootcamp 1.pdf
+laber_simon_2020_0_1.pdf
+MDP planning tutorial pointers.pdf
+Planning and Markov Decision Processes -Part 1-.mp4
+Planning and Markov Decision Processes -Part 2-.mp4
+simons_rl_bootcamp_planning_tutorial.pdf
+Statistical Considerations in Reinforcement Learning -Part 1a-.mp4
+Statistical Considerations in Reinforcement Learning -Part 1b-.mp4
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/sutton-ppt:
 gradient-TD-2011.pdf
