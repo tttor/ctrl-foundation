@@ -102,6 +102,7 @@ Rethinking Control - Elad Hazan.mp4
 README.md
 RL Theory Seminar Andrea Zanette.mp4
 RL Theory Seminar Fei Feng.mp4
+Ruosong.pdf
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-04-29:
 1907.05388v2.pdf
