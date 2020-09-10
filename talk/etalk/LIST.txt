@@ -151,6 +151,7 @@ deep_rl.pdf
 2020-09-RL20-online-learning-MDP-part1.pdf
 Bootcamp 1.pdf
 laber_simon_2020_0_1.pdf
+lecture2_v5.pdf
 MDP planning tutorial pointers.pdf
 Planning and Markov Decision Processes -Part 1-.mp4
 Planning and Markov Decision Processes -Part 2-.mp4
