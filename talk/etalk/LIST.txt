@@ -91,6 +91,7 @@ Latent State Recovery in Reinforcement Learning - John Langford.mp4
 Rethinking Control - Elad Hazan.mp4
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar:
+2007.11849.pdf
 2020-04-29
 2020-05-06
 2020-05-13
