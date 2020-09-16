@@ -18,6 +18,7 @@
 2000_Book_ComputingToolsForModelingOptim.pdf
 2002_Book_HandbookOfMarkovDecisionProces.pdf
 2002_Book_MarkovProcessesAndControlledMa.pdf
+2003_Book_MarkovChainsAndInvariantProbab.pdf
 2007_Book_StochasticLearningAndOptimizat.pdf
 2007_Book_StochasticSimulationAlgorithms.pdf
 2012_Book_HamiltonianCycleProblemAndMark.pdf
@@ -27,6 +28,9 @@
 2013_Book_StochasticRecursiveAlgorithmsF.pdf
 2015_Book_DesignOfExperimentsForReinforc.pdf
 2015_Book_Simulation-BasedOptimization.pdf
+2018_Book_ReinforcementLearning.pdf
+2019_Book_DeepReinforcementLearning.pdf
+2020_Book_DeepReinforcementLearning.pdf
 Abhijit Gosavi auth. Simulation-Based Optimization Parametric Optimization Techniques and Reinforcement Learning.pdf
 Algorithms for ReinforcementLearning.pdf
 A Modern Introduction to Online Learning_1912.13213.pdf
