@@ -100,6 +100,7 @@ Rethinking Control - Elad Hazan.mp4
 2020-06-10
 2020-06-17
 2020-06-24
+Average_reward_MDP_with_Linear_Function_Approximation.pdf
 README.md
 RL Theory Seminar Andrea Zanette.mp4
 RL Theory Seminar Fei Feng.mp4
