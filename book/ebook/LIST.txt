@@ -83,6 +83,7 @@ Martin L. Puterman-Markov decision processes_ Discrete stochastic dynamic progra
 Mathematics of Statistical Sequential Decision Making.pdf
 (McGraw-Hill computer science series) Nils J Nilsson - Problem-solving methods in artificial intelligence-New York, McGraw-Hill  (1971).pdf
 mcmt2e.pdf
+misc
 (MIT Lincoln Laboratory Series) Mykel J. Kochenderfer et al. - Decision Making Under Uncertainty_ Theory and Application-The MIT Press (2015).pdf
 mpc
 Mykel J. Kochenderfer et al. Decision Making Under Uncertainty Theory and Application.pdf
@@ -158,6 +159,11 @@ RL_MONOGRAPH2.pdf
 RL_MONOGRAPH3.pdf
 RL_MONOGRAPH4.pdf
 RL_MONOGRAPH5.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/misc:
+Datta.pdf
+MIT6_262S11_chap03.pdf
+stochastic-I-MCII.pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/mpc:
 10.1007%2F978-0-85729-398-5.pdf
