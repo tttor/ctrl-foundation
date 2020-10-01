@@ -290,6 +290,7 @@ optimization.pdf
 rl.pdf
 
 /home/tor/rsc/ctrl-foundation/course/ecourse/zzzmisc:
+6-262-spring-2011.zip
 CMPSCI 687: Reinforcement Learning_687_F18_main.pdf
 cs234_2018_l9_annotated.pdf
 cs234_2018_l9_updated.pdf
