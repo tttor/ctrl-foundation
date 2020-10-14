@@ -76,6 +76,7 @@ Lucian Busoniu, Robert Babuska, Bart De Schutter, Damien Ernst Reinforcement Lea
 mahadevan_09.pdf
 Mahadevan S. - Learning Representation and Control in Markov Decision Processes_ New Frontiers.pdf
 Markov Chains and Stochastic Stability.pdf
+markovmixing.pdf
 Martijn van Otterlo, Marco Wiering auth., Marco Wiering, Martijn van Otterlo eds. Reinforcement Learning State-of-the-Art.pdf
 Martin L. Puterman-Markov decision processes. Discrete stochastic dynamic programming MVspa-Wiley-Interscience (2005).pdf
 Martin L. Puterman-Markov decision processes_ Discrete stochastic dynamic programming-Wiley (2005).djvu
