@@ -70,6 +70,7 @@ RI Seminar Sergey Levine Deep Robotic Learning.mp4
 rl7.pdf
 rl-theory-seminar
 RL_tutorial_18.pdf
+RLtutorialNIPS2015.pdf
 Russo_APS_Slides.pdf
 Sebastian Thrun Flying Cars, Autonomous Vehicles, and Education  Artificial Intelligence Podcast.mp4
 Sham Kakade (University of Washington) A No Regret Algorithm.mp4
