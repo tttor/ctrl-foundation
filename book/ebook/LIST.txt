@@ -175,7 +175,6 @@ stochastic-I-MCII.pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/puterman:
 mdp_puterman_2005.pdf
-MDP_Puterman_2005.pdf
 Puterman M. - Markov decision processes_ Discrete stochastic dynamic programming-Wiley (2005).djvu
 Puterman-Patrick2017_ReferenceWorkEntry_DynamicProgramming.pdf
 (Wiley Series in Probability and Statistics) Martin L. Puterman - Markov decision processes. Discrete stochastic dynamic programming MVspa-Wiley-Interscience (2005).pdf
