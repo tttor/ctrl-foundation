@@ -116,7 +116,6 @@ Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
 Ronald A. Howard. - Dynamic programming and Markov processes-Technology Press of Massachusetts Institute of Technology (1960.).djvu
 Shimon Whiteson-Adaptive Representations for Reinforcement Learning (Studies in Computational Intelligence, 291)-Springer (2010).pdf
 Sigaud 2013 - Markov Decision Processes in Artificial Intelligence.pdf
-simulation_ScienceDirect_articles_02May2018_23-15-57.746
 (Springer Proceedings in Mathematics & Statistics 252) Nihat Ay, Paolo Gibilisco, František  Matúš - Information Geometry and Its Applications_ On the Occasion of Shun-ichi Amari's 80th Birthday, IGAI.pdf
 Statistical Reinforcement Learning_ Modern Machine Learning Approaches-CRC Press (2015).pdf
 Stochastic Dynamic Programming and the Control of Queueing Systems.pdf
@@ -136,6 +135,7 @@ Bertsekas D.P. - Abstract Dynamic Programming.pdf
 Dimitri P. Bertsekas, John N. Tsitsiklis - Neuro-Dynamic Programming (Optimization and Neural Computation Series, 3)-Athena Scientific (1996).djvu
 Dimitri P. Bertsekas, John Tsitsiklis - Parallel and Distributed Computation_ Numerical Methods (Optimization and Neural Computation)  -Athena Scientific (1997).pdf
 Dimitri P. Bertsekas - Parallel and Distributed Computation_ Numerical Methods (Optimization and Neural Computation)-Athena Scientific (1997).djvu
+Dimitri P. Bertsekas_ Steven E. Shreve, Steven E. Shreve - Stochastic Optimal Control_ The Discrete-Time Case (Optimization and Neural Computation Series)-Athena Scientific (2007).djvu
 dpoc-bertsekas
 (Mathematics in Science and Engineering 125) Dimitri P. Bertsekas (Eds.) - Dynamic Programming and Stochastic Control-Academic Press (1976).djvu
 (Mathematics in Science and Engineering 125) Dimitri P. Bertsekas (Eds.) - Dynamic Programming and Stochastic Control-Academic Press (1976).pdf
@@ -166,22 +166,10 @@ RL_MONOGRAPH5.pdf
 /home/tor/rsc/ctrl-foundation/book/ebook/misc:
 Datta.pdf
 MIT6_262S11_chap03.pdf
+simulation_ScienceDirect_articles_02May2018_23-15-57.746
 stochastic-I-MCII.pdf
 
-/home/tor/rsc/ctrl-foundation/book/ebook/mpc:
-10.1007%2F978-0-85729-398-5.pdf
-10.1007%2F978-1-84882-331-0.pdf
-(Advanced Textbooks in Control and Signal Processing) Professor E. F. Camacho, Associate Professor C. Bordons (auth.)-Model Predictive control-Springer-Verlag London (2007).pdf
-
-/home/tor/rsc/ctrl-foundation/book/ebook/puterman:
-mdp_puterman_2005.pdf
-mdp_puterman_2005_uqlib.pdf
-Puterman M. - Markov decision processes_ Discrete stochastic dynamic programming-Wiley (2005).djvu
-Puterman-Patrick2017_ReferenceWorkEntry_DynamicProgramming.pdf
-(Wiley Series in Probability and Statistics) Martin L. Puterman - Markov decision processes. Discrete stochastic dynamic programming MVspa-Wiley-Interscience (2005).pdf
-(Wiley Series in Probability and Statistics) Martin L. Puterman - Markov decision processes_ Discrete stochastic dynamic programming-Wiley (2005).djvu
-
-/home/tor/rsc/ctrl-foundation/book/ebook/simulation_ScienceDirect_articles_02May2018_23-15-57.746:
+/home/tor/rsc/ctrl-foundation/book/ebook/misc/simulation_ScienceDirect_articles_02May2018_23-15-57.746:
 Chapter-10---Additional-Variance-Reduction-Techniques_2013_Simulation.pdf
 Chapter-11---Statistical-Validation-Techniques_2013_Simulation.pdf
 Chapter-12---Markov-Chain-Monte-Carlo-Methods_2013_Simulation.pdf
@@ -198,6 +186,19 @@ Copyright_2013_Simulation.pdf
 Front-Matter_2013_Simulation.pdf
 No-title-available_2013_Simulation.pdf
 Preface_2013_Simulation.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/mpc:
+10.1007%2F978-0-85729-398-5.pdf
+10.1007%2F978-1-84882-331-0.pdf
+(Advanced Textbooks in Control and Signal Processing) Professor E. F. Camacho, Associate Professor C. Bordons (auth.)-Model Predictive control-Springer-Verlag London (2007).pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/puterman:
+mdp_puterman_2005.pdf
+mdp_puterman_2005_uqlib.pdf
+Puterman M. - Markov decision processes_ Discrete stochastic dynamic programming-Wiley (2005).djvu
+Puterman-Patrick2017_ReferenceWorkEntry_DynamicProgramming.pdf
+(Wiley Series in Probability and Statistics) Martin L. Puterman - Markov decision processes. Discrete stochastic dynamic programming MVspa-Wiley-Interscience (2005).pdf
+(Wiley Series in Probability and Statistics) Martin L. Puterman - Markov decision processes_ Discrete stochastic dynamic programming-Wiley (2005).djvu
 
 /home/tor/rsc/ctrl-foundation/book/ebook/sutton:
 rlintro-1998
