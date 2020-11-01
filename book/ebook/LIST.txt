@@ -47,6 +47,7 @@ Bertsekas D.P. Dynamic programming and optimal control.djvu
 (Chapman & Hall_CRC Texts in Statistical Science) Vidyadhar G. Kulkarni - Modeling and Analysis of Stochastic Systems, Third Edition-CRC Press_Chapman and Hall_CRC (2017).pdf
 Christopher Gatti auth. Design of Experiments for Reinforcement Learning.pdf
 (Communications and Control Engineering) Rushikesh Kamalapurkar, Patrick Walters, Joel Rosenfeld, Warren Dixon - Reinforcement Learning for Optimal Feedback Control-Springer International Publishing (.pdf
+Controlled Markov Chains, Graphs, and Hamiltonicity.pdf
 Csaba Szepesvári Algorithms for Reinforcement Learning  .pdf
 CTCNonline.pdf
 David G. Luenberger - Introduction to Dynamic Systems_ Theory, Models, and Applications-Wiley (1979).pdf
