@@ -101,6 +101,7 @@ Peter Whittle - Optimal Control_ Basics and Beyond-Wiley (1996).pdf
 Pierre Bremaud - Markov Chains_ Gibbs Fields, Monte Carlo Simulation, and Queues-Springer (1999).pdf
 Policy Gradient Methods for Control Applications by Jan Peters_techrep.pdf
 (Prentice-Hall Information and System Sciences Series) P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986).djvu
+P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986)
 probabilities-expectations.pdf
 (Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming-Academic Press (1983).pdf
 (Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming (Probability and Mathematical Statistics)-Academic Press (1983).pdf
@@ -192,6 +193,24 @@ Preface_2013_Simulation.pdf
 10.1007%2F978-0-85729-398-5.pdf
 10.1007%2F978-1-84882-331-0.pdf
 (Advanced Textbooks in Control and Signal Processing) Professor E. F. Camacho, Associate Professor C. Bordons (auth.)-Model Predictive control-Springer-Verlag London (2007).pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986):
+1.9781611974263.bm.pdf
+1.9781611974263.ch10.pdf
+1.9781611974263.ch11.pdf
+1.9781611974263.ch12.pdf
+1.9781611974263.ch13.pdf
+1.9781611974263.ch1.pdf
+1.9781611974263.ch2.pdf
+1.9781611974263.ch3.pdf
+1.9781611974263.ch4.pdf
+1.9781611974263.ch5.pdf
+1.9781611974263.ch6.pdf
+1.9781611974263.ch7.pdf
+1.9781611974263.ch8.pdf
+1.9781611974263.ch9.pdf
+1.9781611974263.fm.pdf
+P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986).djvu
 
 /home/tor/rsc/ctrl-foundation/book/ebook/puterman:
 mdp_puterman_2005.pdf
