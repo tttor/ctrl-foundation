@@ -299,5 +299,6 @@ Lec5-advanced-policy-gradient-methods.pdf
 lecture_13_advanced_pg.pdf
 Lecture-notes-MDP.pdf
 lecture_slides_lec6.pdf
+Markov4.pdf
 rl06.pdf
 rl2.pdf
