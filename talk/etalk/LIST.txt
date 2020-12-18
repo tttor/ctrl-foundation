@@ -46,6 +46,7 @@ Lecture 6 - Actor Critic.pdf
 LIST.txt
 neurips_2019.pdf
 nips2012_furmston_processes_01.pdf
+nips2020-polopt
 nips-tutorial-policy-optimization-Schulman-Abbeel.pdf
 Northern Frontier In conversation with Prof. Balaraman Ravindran.mp4
 Northern Frontier In conversation with Prof. Martha White.mp4
@@ -90,6 +91,11 @@ Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
 Latent_State_Recovery_1_hour_IAS.pptx
 Latent State Recovery in Reinforcement Learning - John Langford.mp4
 Rethinking Control - Elad Hazan.mp4
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/nips2020-polopt:
+pg_tutorial_part1.pdf
+pg_tutorial_part2.pdf
+pg_tutorial_part3.pdf
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar:
 2007.11849.pdf
