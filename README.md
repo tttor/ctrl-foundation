@@ -19,3 +19,4 @@ See also:
 * https://masterscrat.github.io/rl-insights/
 * Reinforcing behaviour to birds: https://twitter.com/kareem_carr/status/1180880588376596481
 * https://github.com/Machine-Learning-Tokyo/Deep_Reinforcement_Learning
+* https://github.com/andyljones/reinforcement-learning-discord-wiki
