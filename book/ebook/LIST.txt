@@ -92,6 +92,7 @@ Mathematics of Statistical Sequential Decision Making.pdf
 mcmt2e.pdf
 misc
 (MIT Lincoln Laboratory Series) Mykel J. Kochenderfer et al. - Decision Making Under Uncertainty_ Theory and Application-The MIT Press (2015).pdf
+MonographRL_April9.pdf
 mpc
 Mykel J. Kochenderfer et al. Decision Making Under Uncertainty Theory and Application.pdf
 oc.pdf
