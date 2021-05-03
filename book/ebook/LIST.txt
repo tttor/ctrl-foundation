@@ -45,6 +45,7 @@ bandit_algorithms_dec2018.pdf
 bertsekas
 Bertsekas D.P. Dynamic programming and optimal control.djvu
 (Cambridge Series in Statistical and Probabilistic Mathematics) J. R. Norris - Markov Chains-Cambridge University Press (1997).djvu
+(Cambridge Tracts in Mathematics 83) Esa Nummelin - General Irreducible Markov Chains and Non-Negative Operators-Cambridge University Press (1984).pdf
 Chang2007_Book_Simulation-basedAlgorithmsForM.pdf
 (Chapman & Hall_CRC Texts in Statistical Science) Vidyadhar G. Kulkarni - Modeling and Analysis of Stochastic Systems, Third Edition-CRC Press_Chapman and Hall_CRC (2017).pdf
 Christopher Gatti auth. Design of Experiments for Reinforcement Learning.pdf
@@ -130,6 +131,8 @@ sutton
 (Technology Press Research Monographs) Ronald A Howard - Dynamic programming and Markov processes-The MIT Press (1960).djvu
 (Texts in statistical science) Vidyadhar G. Kulkarni - Modeling and analysis of stochastic systems-Chapman and Hall_CRC (2017).pdf
 TS_Tutorial.pdf
+(Undergraduate Texts in Mathematics) John G. Kemeny, J. Laurie Snell - Finite Markov Chains_ With a New Appendix ''Generalization of a Fundamental Matrix'' -Springer (1976).pdf
+(Undergraduate Texts in Mathematics) John G. Kemeny, J. Laurie Snell - Finite Markov Chains_ With a New Appendix _Generalization of a Fundamental Matrix_-Springer (1983).pdf
 Warren B. Powell Approximate Dynamic Programming Solving the Curses of Dimensionality, 2nd Edition.pdf
 (Wiley Series in Probability and Statistics) Warren B. Powell - Approximate Dynamic Programming_ Solving the Curses of Dimensionality, 2nd Edition (Wiley Series in Probability and Statistics)-Wiley (2.pdf
 Xi-Ren Cao Stochastic Learning and Optimization A Sensitivity-Based Approach.pdf
