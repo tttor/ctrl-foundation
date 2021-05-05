@@ -73,6 +73,7 @@ Igor Griva, Stephen G. Nash, Ariela Sofer-Linear and nonlinear optimization-Soci
 introduction_to_multi-armed_bandits.pdf
 Introduction-to-Stochastic-Dynamic-Programming-Ross.pdf
 J.R.Norris - Markov Chains-Cambridge University Press.pdf
+Kemeny1976_Book_DenumerableMarkovChains.pdf
 Konstantin E. Avrachenkov, Jerzy A. Filar, Phil G. Howlett - Analytic perturbation theory and its applications-SIAM-Society for Industrial and Applied Mathematics (2013).pdf
 Linn I. Sennott - Stochastic Dynamic Programming and the Control of Queueing Systems (1998).pdf
 Linn I. Sennott - Stochastic Dynamic Programming and the Control of Queueing Systems-Wiley-Interscience (1998).djvu
@@ -134,6 +135,7 @@ TS_Tutorial.pdf
 (Undergraduate Texts in Mathematics) John G. Kemeny, J. Laurie Snell - Finite Markov Chains_ With a New Appendix ''Generalization of a Fundamental Matrix'' -Springer (1976).pdf
 (Undergraduate Texts in Mathematics) John G. Kemeny, J. Laurie Snell - Finite Markov Chains_ With a New Appendix _Generalization of a Fundamental Matrix_-Springer (1983).pdf
 Warren B. Powell Approximate Dynamic Programming Solving the Curses of Dimensionality, 2nd Edition.pdf
+(Wiley series in probability and mathematical statistics) Stewart N. Ethier, Thomas G. Kurtz - Markov processes_ characterization and convergence-Wiley (1986).djvu
 (Wiley Series in Probability and Statistics) Warren B. Powell - Approximate Dynamic Programming_ Solving the Curses of Dimensionality, 2nd Edition (Wiley Series in Probability and Statistics)-Wiley (2.pdf
 Xi-Ren Cao Stochastic Learning and Optimization A Sensitivity-Based Approach.pdf
 
