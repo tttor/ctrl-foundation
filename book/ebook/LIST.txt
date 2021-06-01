@@ -44,6 +44,7 @@ bandit
 bandit_algorithms_dec2018.pdf
 bertsekas
 Bertsekas D.P. Dynamic programming and optimal control.djvu
+cambridge-core_markov-chains-and-stochastic-stability_31May2021.zip
 (Cambridge Series in Statistical and Probabilistic Mathematics) J. R. Norris - Markov Chains-Cambridge University Press (1997).djvu
 (Cambridge Tracts in Mathematics 83) Esa Nummelin - General Irreducible Markov Chains and Non-Negative Operators-Cambridge University Press (1984).pdf
 Chang2007_Book_Simulation-basedAlgorithmsForM.pdf
