@@ -42,6 +42,7 @@ Antonio J. Conejo, Luis Baringo Morales, S. Jalal Kazempour, Afzal S. Siddiqui (
 A Tutorial on Linear Function Approximators for Dynamic Programming and Reinforcement Learning..pdf
 bandit
 bandit_algorithms_dec2018.pdf
+bellman
 bertsekas
 Bertsekas D.P. Dynamic programming and optimal control.djvu
 cambridge-core_markov-chains-and-stochastic-stability_31May2021.zip
@@ -119,7 +120,6 @@ README.md
 Reinforcement Learning and Dynamic Programming Using Function Approximators (Automation and Control Engineering) (2010).pdf
 Reinforcement Learning State-of-the-Art.pdf
 Reinforcement Learning Theory and Algorithms.pdf
-Richard E. Bellman, Stuart E. Dreyfus - Applied Dynamic Programming (1962).pdf
 Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (2002).pdf
 rltheorybook_AJKS.pdf
 Robert Gallager - Stochastic Processes_ Theory for Applications-Cambridge University Press (2013).pdf
@@ -144,6 +144,14 @@ Xi-Ren Cao Stochastic Learning and Optimization A Sensitivity-Based Approach.pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/bandit:
 1904.07272.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/bellman:
+(Princeton Landmarks in Mathematics and Physics) Richard Bellman - Dynamic Programming-Dover Publications (2003).djvu
+Richard Bellman - Dynamic Programming-Princeton University Press (1972).djvu
+Richard Bellman - Dynamic programming-Princeton Univ Pr (1957).djvu
+Richard E. Bellman, Stuart E. Dreyfus - Applied Dynamic Programming (1962).pdf
+Richard Ernest Bellman - Applied Dynamic Programming -Princeton Univ Pr (1962).djvu
+Richard Ernest Bellman - Eye of the Hurricane_ An Autobiography-World Scientific Pub Co Inc (1984).pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/bertsekas:
 Bertsekas D.P. - Abstract Dynamic Programming.pdf
