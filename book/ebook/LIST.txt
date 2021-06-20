@@ -50,6 +50,7 @@ cambridge-core_markov-chains-and-stochastic-stability_31May2021.zip
 (Cambridge Tracts in Mathematics 83) Esa Nummelin - General Irreducible Markov Chains and Non-Negative Operators-Cambridge University Press (1984).pdf
 Cao2021_Book_FoundationsOfAverage-CostNonho.pdf
 Chang2007_Book_Simulation-basedAlgorithmsForM.pdf
+Chang2013_Book_Simulation-BasedAlgorithmsForM.pdf
 (Chapman & Hall_CRC Texts in Statistical Science) Vidyadhar G. Kulkarni - Modeling and Analysis of Stochastic Systems, Third Edition-CRC Press_Chapman and Hall_CRC (2017).pdf
 Christopher Gatti auth. Design of Experiments for Reinforcement Learning.pdf
 (Communications and Control Engineering) Rushikesh Kamalapurkar, Patrick Walters, Joel Rosenfeld, Warren Dixon - Reinforcement Learning for Optimal Feedback Control-Springer International Publishing (.pdf
