@@ -24,7 +24,10 @@
   * Aleksandrs Slivkins
 * INSIGHTS IN REINFORCEMENT LEARNING: Formal analysis and empirical evaluation of temporal-difference learning algorithms
   * Hado van Hasselt
-
+* Foundations of Reinforcement Learning with Applications in Finance
+  * Ashwin Rao, Tikhon Jelvis
+  * https://stanford.edu/~ashlearn/RLForFinanceBook/book.pdf
+  
 ## misc
 Marco Wiering, Martijn van Otterlo:
 > Two dominant books:
