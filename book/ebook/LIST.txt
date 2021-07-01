@@ -67,11 +67,13 @@ Dimitri P. Bertsekas, John N. Tsitsiklis Neuro-Dynamic Programming.djvu
 Dimitris Vrakas, Ioannis Pl Vlahavas-Artificial Intelligence for Advanced Problem Solving Techniques (2008).pdf
 (Dover Books on Mathematics (Book 2)) Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
 dpchapter.pdf
+Foundations of Reinforcement Learning with Applications in Finance book.pdf
 Francesco Borrelli, Alberto Bemporad, Manfred Morari-Predictive Control for Linear and Hybrid Systems (draft)  -Cambridge Univeristy Press (2011).pdf
 Frans A. Oliehoek, Christopher Amato (auth.)-A Concise Introduction to Decentralized POMDPs-Springer International Publishing (2016).pdf
 FTML2014.pdf
 Gallager R.G. - Stochastic Processes_ Theory for Applications-Cambridge University Press (2013).pdf
 Glasserman2003_Book_MonteCarloMethodsInFinancialEn.pdf
+hernandez
 Hyeong Soo Chang, Jiaqiao Hu, Michael C. Fu, Steven I. Marcus auth. Simulation-Based Algorithms for Markov Decision Processes.pdf
 (IEEE Press Series on Computational Intelligence) Frank L. Lewis, Derong Liu - Reinforcement Learning and Approximate Dynamic Programming for Feedback Control-Wiley-IEEE Press (2012).pdf
 Igor Griva, Stephen G. Nash, Ariela Sofer-Linear and nonlinear optimization-Society for Industrial and Applied Mathematics (2009).pdf
@@ -98,7 +100,6 @@ Martin L. Puterman-Markov decision processes_ Discrete stochastic dynamic progra
 Mathematics of Statistical Sequential Decision Making.pdf
 (McGraw-Hill computer science series) Nils J Nilsson - Problem-solving methods in artificial intelligence-New York, McGraw-Hill  (1971).pdf
 mcmt2e.pdf
-misc
 (MIT Lincoln Laboratory Series) Mykel J. Kochenderfer et al. - Decision Making Under Uncertainty_ Theory and Application-The MIT Press (2015).pdf
 mpc
 Mykel J. Kochenderfer et al. Decision Making Under Uncertainty Theory and Application.pdf
@@ -112,7 +113,6 @@ Peter Whittle - Optimal Control_ Basics and Beyond-Wiley (1996).pdf
 Pierre Bremaud - Markov Chains_ Gibbs Fields, Monte Carlo Simulation, and Queues-Springer (1999).pdf
 Policy Gradient Methods for Control Applications by Jan Peters_techrep.pdf
 (Prentice-Hall Information and System Sciences Series) P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986).djvu
-P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986)
 probabilities-expectations.pdf
 (Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming-Academic Press (1983).pdf
 (Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming (Probability and Mathematical Statistics)-Academic Press (1983).pdf
@@ -142,6 +142,7 @@ Warren B. Powell Approximate Dynamic Programming Solving the Curses of Dimension
 (Wiley series in probability and mathematical statistics) Stewart N. Ethier, Thomas G. Kurtz - Markov processes_ characterization and convergence-Wiley (1986).djvu
 (Wiley Series in Probability and Statistics) Warren B. Powell - Approximate Dynamic Programming_ Solving the Curses of Dimensionality, 2nd Edition (Wiley Series in Probability and Statistics)-Wiley (2.pdf
 Xi-Ren Cao Stochastic Learning and Optimization A Sensitivity-Based Approach.pdf
+zmisc
 
 /home/tor/rsc/ctrl-foundation/book/ebook/bandit:
 1904.07272.pdf
@@ -187,56 +188,22 @@ RL_MONOGRAPH3.pdf
 RL_MONOGRAPH4.pdf
 RL_MONOGRAPH5.pdf
 
-/home/tor/rsc/ctrl-foundation/book/ebook/misc:
-Datta.pdf
-MIT6_262S11_chap03.pdf
-simulation_ScienceDirect_articles_02May2018_23-15-57.746
-stochastic-I-MCII.pdf
-
-/home/tor/rsc/ctrl-foundation/book/ebook/misc/simulation_ScienceDirect_articles_02May2018_23-15-57.746:
-Chapter-10---Additional-Variance-Reduction-Techniques_2013_Simulation.pdf
-Chapter-11---Statistical-Validation-Techniques_2013_Simulation.pdf
-Chapter-12---Markov-Chain-Monte-Carlo-Methods_2013_Simulation.pdf
-Chapter-1---Introduction_2013_Simulation.pdf
-Chapter-2---Elements-of-Probability_2013_Simulation.pdf
-Chapter-3---Random-Numbers_2013_Simulation.pdf
-Chapter-4---Generating-Discrete-Random-Variables_2013_Simulation.pdf
-Chapter-5---Generating-Continuous-Random-Variables_2013_Simulation.pdf
-Chapter-6---The-Multivariate-Normal-Distribution-and-Copulas_2013_Simulation.pdf
-Chapter-7---The-Discrete-Event-Simulation-Approach_2013_Simulation.pdf
-Chapter-8---Statistical-Analysis-of-Simulated-Data_2013_Simulation.pdf
-Chapter-9---Variance-Reduction-Techniques_2013_Simulation.pdf
-Copyright_2013_Simulation.pdf
-Front-Matter_2013_Simulation.pdf
-No-title-available_2013_Simulation.pdf
-Preface_2013_Simulation.pdf
+/home/tor/rsc/ctrl-foundation/book/ebook/hernandez:
+González-Sánchez-Hernández-Lerma2013_Book_DiscreteTimeStochasticControlA.pdf
+Guo-Hernández-Lerma2009_Book_Continuous-TimeMarkovDecisionP.pdf
+Hernandez-Lerma-Lasserre1996_Book_Discrete-TimeMarkovControlProc.pdf
+Hernandez-Lerma-Lasserre1999_Book_FurtherTopicsOnDiscrete-TimeMa.pdf
+Hernández-Lerma-Lasserre2003_Book_MarkovChainsAndInvariantProbab.pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/mpc:
 10.1007%2F978-0-85729-398-5.pdf
 10.1007%2F978-1-84882-331-0.pdf
 (Advanced Textbooks in Control and Signal Processing) Professor E. F. Camacho, Associate Professor C. Bordons (auth.)-Model Predictive control-Springer-Verlag London (2007).pdf
 
-/home/tor/rsc/ctrl-foundation/book/ebook/P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986):
-1.9781611974263.bm.pdf
-1.9781611974263.ch10.pdf
-1.9781611974263.ch11.pdf
-1.9781611974263.ch12.pdf
-1.9781611974263.ch13.pdf
-1.9781611974263.ch1.pdf
-1.9781611974263.ch2.pdf
-1.9781611974263.ch3.pdf
-1.9781611974263.ch4.pdf
-1.9781611974263.ch5.pdf
-1.9781611974263.ch6.pdf
-1.9781611974263.ch7.pdf
-1.9781611974263.ch8.pdf
-1.9781611974263.ch9.pdf
-1.9781611974263.fm.pdf
-P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986).djvu
-
 /home/tor/rsc/ctrl-foundation/book/ebook/puterman:
 mdp_puterman_2005.pdf
 mdp_puterman_2005_uqlib.pdf
+Puterman_Chan_Chapter2.pdf
 Puterman M. - Markov decision processes_ Discrete stochastic dynamic programming-Wiley (2005).djvu
 Puterman-Patrick2017_ReferenceWorkEntry_DynamicProgramming.pdf
 (Wiley Series in Probability and Statistics) Martin L. Puterman - Markov decision processes. Discrete stochastic dynamic programming MVspa-Wiley-Interscience (2005).pdf
@@ -265,3 +232,46 @@ Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (
 /home/tor/rsc/ctrl-foundation/book/ebook/sutton/rlintro-2018:
 RLbook2018_20190115.pdf
 RLbook2018_20200224.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/zmisc:
+Datta.pdf
+MIT6_262S11_chap03.pdf
+P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986)
+simulation_ScienceDirect_articles_02May2018_23-15-57.746
+stochastic-I-MCII.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/zmisc/P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986):
+1.9781611974263.bm.pdf
+1.9781611974263.ch10.pdf
+1.9781611974263.ch11.pdf
+1.9781611974263.ch12.pdf
+1.9781611974263.ch13.pdf
+1.9781611974263.ch1.pdf
+1.9781611974263.ch2.pdf
+1.9781611974263.ch3.pdf
+1.9781611974263.ch4.pdf
+1.9781611974263.ch5.pdf
+1.9781611974263.ch6.pdf
+1.9781611974263.ch7.pdf
+1.9781611974263.ch8.pdf
+1.9781611974263.ch9.pdf
+1.9781611974263.fm.pdf
+P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986).djvu
+
+/home/tor/rsc/ctrl-foundation/book/ebook/zmisc/simulation_ScienceDirect_articles_02May2018_23-15-57.746:
+Chapter-10---Additional-Variance-Reduction-Techniques_2013_Simulation.pdf
+Chapter-11---Statistical-Validation-Techniques_2013_Simulation.pdf
+Chapter-12---Markov-Chain-Monte-Carlo-Methods_2013_Simulation.pdf
+Chapter-1---Introduction_2013_Simulation.pdf
+Chapter-2---Elements-of-Probability_2013_Simulation.pdf
+Chapter-3---Random-Numbers_2013_Simulation.pdf
+Chapter-4---Generating-Discrete-Random-Variables_2013_Simulation.pdf
+Chapter-5---Generating-Continuous-Random-Variables_2013_Simulation.pdf
+Chapter-6---The-Multivariate-Normal-Distribution-and-Copulas_2013_Simulation.pdf
+Chapter-7---The-Discrete-Event-Simulation-Approach_2013_Simulation.pdf
+Chapter-8---Statistical-Analysis-of-Simulated-Data_2013_Simulation.pdf
+Chapter-9---Variance-Reduction-Techniques_2013_Simulation.pdf
+Copyright_2013_Simulation.pdf
+Front-Matter_2013_Simulation.pdf
+No-title-available_2013_Simulation.pdf
+Preface_2013_Simulation.pdf

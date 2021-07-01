@@ -85,6 +85,7 @@ Tim Lillicrap - Data efficient deep reinforcement learning f.mp4
 Tutorial Introduction to Reinforcement Learning with Functio.mp4
 UAI 2015 Amsterdam Keynote David Silver.mp4
 vin_nips2016.pdf
+Why does a reinforcement learning agent need a discount factor_ - Quora.pdf
 Zico Kolter (Carnegie Mellon University) Cheating with neura.mp4
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/ias-talk:
