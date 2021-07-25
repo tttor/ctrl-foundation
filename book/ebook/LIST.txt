@@ -36,6 +36,7 @@
 2020_Book_DeepReinforcementLearning.pdf
 Abhijit Gosavi auth. Simulation-Based Optimization Parametric Optimization Techniques and Reinforcement Learning.pdf
 Algorithms for ReinforcementLearning.pdf
+algorrl_szepesvari_2010.md
 A Modern Introduction to Online Learning_1912.13213.pdf
 An Algorithmic Perspective on Imitation Learning 1811.06711.pdf
 Antonio J. Conejo, Luis Baringo Morales, S. Jalal Kazempour, Afzal S. Siddiqui (auth.)-Investment in Electricity Generation and Transmission_ Decision Making under Uncertainty-Springer International P.pdf
@@ -124,6 +125,7 @@ Reinforcement Learning and Dynamic Programming Using Function Approximators (Aut
 Reinforcement Learning State-of-the-Art.pdf
 Reinforcement Learning Theory and Algorithms.pdf
 Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (2002).pdf
+rlstateoftheart_wiering_2012.md
 rltheorybook_AJKS.pdf
 Robert Gallager - Stochastic Processes_ Theory for Applications-Cambridge University Press (2013).pdf
 Ronald A. Howard, Ali E. Abbas - Foundations of Decision Analysis-Pearson (2016).pdf
@@ -133,6 +135,7 @@ Shimon Whiteson-Adaptive Representations for Reinforcement Learning (Studies in 
 Sigaud 2013 - Markov Decision Processes in Artificial Intelligence.pdf
 (Springer Proceedings in Mathematics & Statistics 252) Nihat Ay, Paolo Gibilisco, František  Matúš - Information Geometry and Its Applications_ On the Occasion of Shun-ichi Amari's 80th Birthday, IGAI.pdf
 Statistical Reinforcement Learning_ Modern Machine Learning Approaches-CRC Press (2015).pdf
+statrl_sugiyama_2015.md
 Stochastic Dynamic Programming and the Control of Queueing Systems.pdf
 sutton
 (Technology Press Research Monographs) Ronald A Howard - Dynamic programming and Markov processes-The MIT Press (1960).djvu
@@ -166,6 +169,7 @@ Dimitri P. Bertsekas_ Steven E. Shreve, Steven E. Shreve - Stochastic Optimal Co
 dpoc-bertsekas
 (Mathematics in Science and Engineering 125) Dimitri P. Bertsekas (Eds.) - Dynamic Programming and Stochastic Control-Academic Press (1976).djvu
 (Mathematics in Science and Engineering 125) Dimitri P. Bertsekas (Eds.) - Dynamic Programming and Stochastic Control-Academic Press (1976).pdf
+ndp-bertsekas-1996
 netbook_Full_Book_NEW.pdf
 (Optimization and neural computation series) Dimitri P. Bertsekas, John N. Tsitsiklis - Neuro-Dynamic Programming-Athena Scientific (1996).djvu
 rlop-bertsekas
@@ -174,6 +178,10 @@ rlop-bertsekas
 Dimitri P. Bertsekas - 2_ Dynamic Programming and Optimal Control, Vol. II. 2-Athena Scientific (2007).djvu
 Dimitri P. Bertsekas - Dynamic programming and optimal control. Vol.1-Athena Scientific (2005).pdf
 Dimitri P. Bertsekas - Dynamic Programming & Optimal Control, Vol. I-Athena Scientific (2005).djvu
+
+/home/tor/rsc/ctrl-foundation/book/ebook/bertsekas/ndp-bertsekas-1996:
+ch_1_intro.md
+ch_6_approx_dp.md
 
 /home/tor/rsc/ctrl-foundation/book/ebook/bertsekas/rlop-bertsekas:
 (1) Dmitri Bertsekas - Reinforcement learning and Optimal Control - Draft version-Athena Scientific (2019).pdf
@@ -214,6 +222,7 @@ Puterman-Patrick2017_ReferenceWorkEntry_DynamicProgramming.pdf
 /home/tor/rsc/ctrl-foundation/book/ebook/sutton:
 rlintro-1998
 rlintro-2018
+rlintro-sutton-2018
 
 /home/tor/rsc/ctrl-foundation/book/ebook/sutton/rlintro-1998:
 Reinforcement_Learning_An_Introduction_----_(10_-_Dimensions_of_Reinforcement_Learning_).pdf
@@ -234,6 +243,45 @@ Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (
 /home/tor/rsc/ctrl-foundation/book/ebook/sutton/rlintro-2018:
 RLbook2018_20190115.pdf
 RLbook2018_20200224.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/sutton/rlintro-sutton-2018:
+ch_01_intro.md
+ch_03_finite_markov_decision_processes.md
+ch_04_dynamic_programming.md
+ch_05_monte_carlo_methods.md
+ch_06_temporal_difference_learning.md
+ch_07_n-step_bootstrapping.md
+ch_08_planning_and_learning.md
+ch_09_on-policy_prediction_with_approximation.md
+ch_10_on-policy_control_with_approximation.md
+ch_11_Off-policy_Methods_with_Approximation.md
+ch_12_eligibility_traces.md
+ch_13_policy_gradient_methods.md
+ch_15_neuroscience.md
+ch_17_frontiers.md
+fig
+part_01_summary.md
+part_02_intro.md
+README.md
+
+/home/tor/rsc/ctrl-foundation/book/ebook/sutton/rlintro-sutton-2018/fig:
+baseline_vs_critic.pdf
+fig_08_06.png
+fig_08_10.png
+fig_08_11.png
+fig_12_01.png
+fig_15_05.png
+pseudo_07_01_nstepTD.png
+pseudo_08_01_prioritized_sweeping.png
+pseudo_08_02_tabular_dynaQ.png
+pseudo_09_01_gradient_monte_carlo.png
+pseudo_09_01_semi_gradient_td0.png
+pseudo_12_01_online_td_lambda.png
+pseudo_12_02_semigradient_td_lambda.png
+pseudo_13_01_reinforce.png
+pseudo_13_02_reinforce_with_baseline.png
+pseudo_13_03_one_step_actor_critic.png
+pseudo_13_04_actor_critic_with_eligibility_traces.png
 
 /home/tor/rsc/ctrl-foundation/book/ebook/zmisc:
 Datta.pdf
