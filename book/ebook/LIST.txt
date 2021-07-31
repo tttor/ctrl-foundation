@@ -57,7 +57,6 @@ Christopher Gatti auth. Design of Experiments for Reinforcement Learning.pdf
 (Communications and Control Engineering) Rushikesh Kamalapurkar, Patrick Walters, Joel Rosenfeld, Warren Dixon - Reinforcement Learning for Optimal Feedback Control-Springer International Publishing (.pdf
 constrained markov decision processes_cmdp.pdf
 Controlled Markov Chains, Graphs, and Hamiltonicity.pdf
-Control Systems and Reinforcement Learning Sean Meyn MonographRL_April9.pdf
 Csaba Szepesvári Algorithms for Reinforcement Learning  .pdf
 CTCNonline.pdf
 David G. Luenberger - Introduction to Dynamic Systems_ Theory, Models, and Applications-Wiley (1979).pdf
@@ -101,6 +100,7 @@ Martin L. Puterman-Markov decision processes_ Discrete stochastic dynamic progra
 Mathematics of Statistical Sequential Decision Making.pdf
 (McGraw-Hill computer science series) Nils J Nilsson - Problem-solving methods in artificial intelligence-New York, McGraw-Hill  (1971).pdf
 mcmt2e.pdf
+meyn
 (MIT Lincoln Laboratory Series) Mykel J. Kochenderfer et al. - Decision Making Under Uncertainty_ Theory and Application-The MIT Press (2015).pdf
 MonographRL_April9.pdf
 MonographRL_July16.pdf
@@ -204,6 +204,11 @@ Guo-Hernández-Lerma2009_Book_Continuous-TimeMarkovDecisionP.pdf
 Hernandez-Lerma-Lasserre1996_Book_Discrete-TimeMarkovControlProc.pdf
 Hernandez-Lerma-Lasserre1999_Book_FurtherTopicsOnDiscrete-TimeMa.pdf
 Hernández-Lerma-Lasserre2003_Book_MarkovChainsAndInvariantProbab.pdf
+
+/home/tor/rsc/ctrl-foundation/book/ebook/meyn:
+Control Systems and Reinforcement Learning Sean Meyn MonographRL_April9.pdf
+MonographRL_July16.pdf
+MonographRL_July29.pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/mpc:
 10.1007%2F978-0-85729-398-5.pdf
