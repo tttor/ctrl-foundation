@@ -7,7 +7,6 @@
 1989_Book_AdaptiveMarkovControlProcesses.pdf
 1992_Book_ReinforcementLearning.pdf
 1993_Book_AlgorithmsForRandomGenerationA.pdf
-1993_Book_MarkovChainsAndStochasticStabi.pdf
 1996_Book_Discrete Stochastic Processes.pdf
 1996_Book_Discrete-TimeMarkovControlProc.pdf
 1996_Book_RecentAdvancesInReinforcementL.pdf
@@ -91,7 +90,6 @@ Lucian Busoniu, Robert Babuska, Bart De Schutter, Damien Ernst - Reinforcement L
 Lucian Busoniu, Robert Babuska, Bart De Schutter, Damien Ernst Reinforcement Learning and Dynamic Programming Using Function Approximators Automation and Control Engineering.pdf
 mahadevan_09.pdf
 Mahadevan S. - Learning Representation and Control in Markov Decision Processes_ New Frontiers.pdf
-Markov Chains and Stochastic Stability.pdf
 markovmixing.pdf
 Martijn van Otterlo, Marco Wiering auth., Marco Wiering, Martijn van Otterlo eds. Reinforcement Learning State-of-the-Art.pdf
 Martin L. Puterman-Markov decision processes. Discrete stochastic dynamic programming MVspa-Wiley-Interscience (2005).pdf
@@ -206,7 +204,10 @@ Hernandez-Lerma-Lasserre1999_Book_FurtherTopicsOnDiscrete-TimeMa.pdf
 Hernández-Lerma-Lasserre2003_Book_MarkovChainsAndInvariantProbab.pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/meyn:
+1993_Book_MarkovChainsAndStochasticStabi.pdf
 Control Systems and Reinforcement Learning Sean Meyn MonographRL_April9.pdf
+Markov Chains and Stochastic Stability.pdf
+MonographRL_Aug4.pdf
 MonographRL_July16.pdf
 MonographRL_July29.pdf
 
