@@ -210,6 +210,7 @@ Markov Chains and Stochastic Stability.pdf
 MonographRL_Aug4.pdf
 MonographRL_July16.pdf
 MonographRL_July29.pdf
+Sean Meyn - Control techniques for complex networks-Cambridge University Press (2008).pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/mpc:
 10.1007%2F978-0-85729-398-5.pdf
