@@ -70,6 +70,7 @@ Foundations of Reinforcement Learning with Applications in Finance book.pdf
 Francesco Borrelli, Alberto Bemporad, Manfred Morari-Predictive Control for Linear and Hybrid Systems (draft)  -Cambridge Univeristy Press (2011).pdf
 Frans A. Oliehoek, Christopher Amato (auth.)-A Concise Introduction to Decentralized POMDPs-Springer International Publishing (2016).pdf
 FTML2014.pdf
+Gagniuc, Paul A - Markov chains _ from theory to implementation and experimentation-John Wiley & Sons (2017).pdf
 Gallager R.G. - Stochastic Processes_ Theory for Applications-Cambridge University Press (2013).pdf
 Glasserman2003_Book_MonteCarloMethodsInFinancialEn.pdf
 hernandez
@@ -82,6 +83,7 @@ Introduction-to-Stochastic-Dynamic-Programming-Ross.pdf
 J.R.Norris - Markov Chains-Cambridge University Press.pdf
 Kemeny1976_Book_DenumerableMarkovChains.pdf
 Konstantin E. Avrachenkov, Jerzy A. Filar, Phil G. Howlett - Analytic perturbation theory and its applications-SIAM-Society for Industrial and Applied Mathematics (2013).pdf
+Lecture-notes-MDP_LODEWIJK KALLENBERG.pdf
 Linn I. Sennott - Stochastic Dynamic Programming and the Control of Queueing Systems (1998).pdf
 Linn I. Sennott - Stochastic Dynamic Programming and the Control of Queueing Systems-Wiley-Interscience (1998).djvu
 LIST.txt

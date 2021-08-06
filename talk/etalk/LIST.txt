@@ -14,6 +14,10 @@ Average Reward Reinforcement Learning_ an Overview.pdf
 aviv_slides.pdf
 Bruno-presentation.pdf
 carnegie-mellon-statement-of-purpose_riashatislam.pdf
+colt21_exercises.pdf
+colt21_part1.pdf
+colt21_part3.pdf
+colt21_solutions.pdf
 CS294-112 112017.mp4
 Csaba Szepesvari - Learning to Make Better Decisions Challen.mp4
 Deep Learning 5 Optimization for Machine Learning.mp4
