@@ -131,6 +131,7 @@ Robert Gallager - Stochastic Processes_ Theory for Applications-Cambridge Univer
 Ronald A. Howard, Ali E. Abbas - Foundations of Decision Analysis-Pearson (2016).pdf
 Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
 Ronald A. Howard. - Dynamic programming and Markov processes-Technology Press of Massachusetts Institute of Technology (1960.).djvu
+Rosenblatt1971_Book_MarkovProcessesStructureAndAsy.pdf
 Shimon Whiteson-Adaptive Representations for Reinforcement Learning (Studies in Computational Intelligence, 291)-Springer (2010).pdf
 Sigaud 2013 - Markov Decision Processes in Artificial Intelligence.pdf
 (Springer Proceedings in Mathematics & Statistics 252) Nihat Ay, Paolo Gibilisco, František  Matúš - Information Geometry and Its Applications_ On the Occasion of Shun-ichi Amari's 80th Birthday, IGAI.pdf
@@ -140,6 +141,7 @@ Stochastic Dynamic Programming and the Control of Queueing Systems.pdf
 sutton
 (Technology Press Research Monographs) Ronald A Howard - Dynamic programming and Markov processes-The MIT Press (1960).djvu
 (Texts in statistical science) Vidyadhar G. Kulkarni - Modeling and analysis of stochastic systems-Chapman and Hall_CRC (2017).pdf
+Theodore J. Sheskin - Markov Chains and Decision Processes for Engineers and Managers-CRC Press (2010).pdf
 TS_Tutorial.pdf
 (Undergraduate Texts in Mathematics) John G. Kemeny, J. Laurie Snell - Finite Markov Chains_ With a New Appendix ''Generalization of a Fundamental Matrix'' -Springer (1976).pdf
 (Undergraduate Texts in Mathematics) John G. Kemeny, J. Laurie Snell - Finite Markov Chains_ With a New Appendix _Generalization of a Fundamental Matrix_-Springer (1983).pdf
