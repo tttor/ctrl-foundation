@@ -38,6 +38,7 @@ Algorithms for ReinforcementLearning.pdf
 algorrl_szepesvari_2010.md
 A Modern Introduction to Online Learning_1912.13213.pdf
 An Algorithmic Perspective on Imitation Learning 1811.06711.pdf
+anderstolver_anintroductionmarkovchainsto.pdf
 Antonio J. Conejo, Luis Baringo Morales, S. Jalal Kazempour, Afzal S. Siddiqui (auth.)-Investment in Electricity Generation and Transmission_ Decision Making under Uncertainty-Springer International P.pdf
 A Tutorial on Linear Function Approximators for Dynamic Programming and Reinforcement Learning..pdf
 bandit
