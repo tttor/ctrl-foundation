@@ -25,7 +25,8 @@
 * Foundations of Reinforcement Learning with Applications in Finance
   * Ashwin Rao, Tikhon Jelvis
   * https://stanford.edu/~ashlearn/RLForFinanceBook/book.pdf
-  
+*  W. B. Powell. Reinforcement Learning and Stochastic Optimization.
+  * https://castlelab.princeton.edu/rlso/
 ## misc
 Marco Wiering, Martijn van Otterlo:
 > Two dominant books:
