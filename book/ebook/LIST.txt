@@ -33,6 +33,7 @@
 2018_Book_ReinforcementLearning.pdf
 2019_Book_DeepReinforcementLearning.pdf
 2020_Book_DeepReinforcementLearning.pdf
+2021_Book_HandbookOfReinforcementLearnin.pdf
 Abhijit Gosavi auth. Simulation-Based Optimization Parametric Optimization Techniques and Reinforcement Learning.pdf
 Algorithms for ReinforcementLearning.pdf
 algorrl_szepesvari_2010.md
@@ -46,6 +47,7 @@ bandit_algorithms_dec2018.pdf
 bellman
 bertsekas
 Bertsekas D.P. Dynamic programming and optimal control.djvu
+cambridge-core_bandit-algorithms_11Aug2021.zip
 cambridge-core_markov-chains-and-stochastic-stability_31May2021.zip
 (Cambridge Series in Statistical and Probabilistic Mathematics) J. R. Norris - Markov Chains-Cambridge University Press (1997).djvu
 (Cambridge Tracts in Mathematics 83) Esa Nummelin - General Irreducible Markov Chains and Non-Negative Operators-Cambridge University Press (1984).pdf
@@ -82,6 +84,8 @@ Igor Griva, Stephen G. Nash, Ariela Sofer-Linear and nonlinear optimization-Soci
 introduction_to_multi-armed_bandits.pdf
 Introduction-to-Stochastic-Dynamic-Programming-Ross.pdf
 J.R.Norris - Markov Chains-Cambridge University Press.pdf
+Karl J. Åström and Richard M. Murray - Feedback Systems_ An Introduction for Scientists and Engineers-Princeton University Press (2019).pdf
+Karl Johan Astrom, Richard M. Murray - Feedback systems_ An introduction for scientists and engineers-Princeton University Press (2008).pdf
 Kemeny1976_Book_DenumerableMarkovChains.pdf
 Konstantin E. Avrachenkov, Jerzy A. Filar, Phil G. Howlett - Analytic perturbation theory and its applications-SIAM-Society for Industrial and Applied Mathematics (2013).pdf
 Lecture-notes-MDP_LODEWIJK KALLENBERG.pdf
@@ -116,6 +120,7 @@ Pedro Domingos, Daniel Lowd-Markov logic_ an interface layer for artificial inte
 Peter Whittle - Optimal Control_ Basics and Beyond-Wiley (1996).pdf
 Pierre Bremaud - Markov Chains_ Gibbs Fields, Monte Carlo Simulation, and Queues-Springer (1999).pdf
 Policy Gradient Methods for Control Applications by Jan Peters_techrep.pdf
+Powell-Sequential_Decision_Analytics_and_Modeling_2021.pdf
 (Prentice-Hall Information and System Sciences Series) P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986).djvu
 probabilities-expectations.pdf
 (Probability and Mathematical Statistics) Sheldon Ross - Introduction to Stochastic Dynamic Programming-Academic Press (1983).pdf
