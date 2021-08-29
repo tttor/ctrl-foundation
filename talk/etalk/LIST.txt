@@ -35,6 +35,7 @@ Emma Brunskill (Stanford University) Efficient Reinforcement.mp4
 Emo Todorov (University of Washington) Acceleration-based me.mp4
 Extra Material — Spinning Up documentation2.pdf
 Feature Based Aggregation and Deep Reinforcement Learning.mp4
+foundations-deep-rl-abbeel.zip
 Gao.Y.pdf
 hadavid_gecco_full_2019.pdf
 ias-talk
