@@ -132,7 +132,7 @@ Reinforcement Learning Theory and Algorithms.pdf
 Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (2002).pdf
 rlstateoftheart_wiering_2012.md
 rltheorybook_AJKS_20210906.pdf
-rltheorybook_AJKS.pdf
+rltheorybook_AJKS_20210909.pdf
 Robert Gallager - Stochastic Processes_ Theory for Applications-Cambridge University Press (2013).pdf
 Ronald A. Howard, Ali E. Abbas - Foundations of Decision Analysis-Pearson (2016).pdf
 Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
