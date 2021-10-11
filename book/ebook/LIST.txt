@@ -233,6 +233,7 @@ Sean Meyn - Control techniques for complex networks-Cambridge University Press (
 /home/tor/rsc/ctrl-foundation/book/ebook/puterman:
 mdp_puterman_2005.pdf
 mdp_puterman_2005_uqlib.pdf
+Puterman_Chan_2021_Chapter3.pdf
 Puterman_Chan_Chapter2.pdf
 Puterman M. - Markov decision processes_ Discrete stochastic dynamic programming-Wiley (2005).djvu
 Puterman-Patrick2017_ReferenceWorkEntry_DynamicProgramming.pdf
