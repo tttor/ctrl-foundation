@@ -308,6 +308,7 @@ pseudo_13_04_actor_critic_with_eligibility_traces.png
 Datta.pdf
 MIT6_262S11_chap03.pdf
 P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986)
+rlso
 simulation_ScienceDirect_articles_02May2018_23-15-57.746
 stochastic-I-MCII.pdf
 
@@ -328,6 +329,10 @@ stochastic-I-MCII.pdf
 1.9781611974263.ch9.pdf
 1.9781611974263.fm.pdf
 P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986).djvu
+
+/home/tor/rsc/ctrl-foundation/book/ebook/zmisc/rlso:
+RLSO-Cover-Chapter10-Sept32021.pdf
+RLSO-Cover-TableofContents-Sept32021.pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/zmisc/simulation_ScienceDirect_articles_02May2018_23-15-57.746:
 Chapter-10---Additional-Variance-Reduction-Techniques_2013_Simulation.pdf
