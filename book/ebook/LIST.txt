@@ -170,6 +170,7 @@ Richard Ernest Bellman - Applied Dynamic Programming -Princeton Univ Pr (1962).d
 Richard Ernest Bellman - Eye of the Hurricane_ An Autobiography-World Scientific Pub Co Inc (1984).pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/bertsekas:
+AbstractDP_ED3_TEXT_2021.pdf
 Bertsekas D.P. - Abstract Dynamic Programming.pdf
 Dimitri P. Bertsekas, Dimitri P. Bertsekas - Nonlinear programming (1999, Athena Scientific).djvu
 Dimitri P. Bertsekas, John N. Tsitsiklis-Neuro-Dynamic Programming-Athena Scientific (1996).djvu
