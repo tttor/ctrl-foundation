@@ -96,6 +96,7 @@ Lucian Busoniu, Robert Babuska, Bart De Schutter, Damien Ernst - Reinforcement L
 Lucian Busoniu, Robert Babuska, Bart De Schutter, Damien Ernst Reinforcement Learning and Dynamic Programming Using Function Approximators Automation and Control Engineering.pdf
 mahadevan_09.pdf
 Mahadevan S. - Learning Representation and Control in Markov Decision Processes_ New Frontiers.pdf
+Mark French, Csaba Szepesvári, Eric Rogers - Performance of Nonlinear Approximate Adaptive Controllers 0471498092-Wiley (2003).pdf
 markovmixing.pdf
 Martijn van Otterlo, Marco Wiering auth., Marco Wiering, Martijn van Otterlo eds. Reinforcement Learning State-of-the-Art.pdf
 Martin L. Puterman-Markov decision processes. Discrete stochastic dynamic programming MVspa-Wiley-Interscience (2005).pdf
@@ -309,6 +310,7 @@ pseudo_13_04_actor_critic_with_eligibility_traces.png
 /home/tor/rsc/ctrl-foundation/book/ebook/zmisc:
 Datta.pdf
 MIT6_262S11_chap03.pdf
+Mohit Sewak - Deep Reinforcement Learning_ Frontiers of Artificial Intelligence-Springer (2019).pdf
 P.R. Kumar, Pravin Varaiya - Stochastic Systems_ Estimation, Identification, and Adaptive Control-Prentice Hall (1986)
 rlso
 simulation_ScienceDirect_articles_02May2018_23-15-57.746
