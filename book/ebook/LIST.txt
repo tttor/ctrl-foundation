@@ -181,6 +181,7 @@ Dimitri P. Bertsekas, John Tsitsiklis - Parallel and Distributed Computation_ Nu
 Dimitri P. Bertsekas - Parallel and Distributed Computation_ Numerical Methods (Optimization and Neural Computation)-Athena Scientific (1997).djvu
 Dimitri P. Bertsekas_ Steven E. Shreve, Steven E. Shreve - Stochastic Optimal Control_ The Discrete-Time Case (Optimization and Neural Computation Series)-Athena Scientific (2007).djvu
 dpoc-bertsekas
+intro2prob
 (Mathematics in Science and Engineering 125) Dimitri P. Bertsekas (Eds.) - Dynamic Programming and Stochastic Control-Academic Press (1976).djvu
 (Mathematics in Science and Engineering 125) Dimitri P. Bertsekas (Eds.) - Dynamic Programming and Stochastic Control-Academic Press (1976).pdf
 ndp-bertsekas-1996
@@ -192,6 +193,10 @@ rlop-bertsekas
 Dimitri P. Bertsekas - 2_ Dynamic Programming and Optimal Control, Vol. II. 2-Athena Scientific (2007).djvu
 Dimitri P. Bertsekas - Dynamic programming and optimal control. Vol.1-Athena Scientific (2005).pdf
 Dimitri P. Bertsekas - Dynamic Programming & Optimal Control, Vol. I-Athena Scientific (2005).djvu
+
+/home/tor/rsc/ctrl-foundation/book/ebook/bertsekas/intro2prob:
+Dimitri P. Bertsekas and John N. Tsitsiklis-Introduction to Probability  -Athena Scientific (2002).pdf
+Introduction to Probability, 2nd Edition-Athena Scientific (2008).pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/bertsekas/ndp-bertsekas-1996:
 ch_1_intro.md
