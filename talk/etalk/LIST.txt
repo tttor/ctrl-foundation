@@ -104,6 +104,11 @@ pg_tutorial_part2.pdf
 pg_tutorial_part3.pdf
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar:
+2020
+2022
+README.md
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020:
 2007.11849.pdf
 2020-04-29
 2020-05-06
@@ -114,51 +119,54 @@ pg_tutorial_part3.pdf
 2020-06-17
 2020-06-24
 Average_reward_MDP_with_Linear_Function_Approximation.pdf
-README.md
 RL Theory Seminar Andrea Zanette.mp4
 RL Theory Seminar Fei Feng.mp4
 Ruosong.pdf
 zhuoran_yang_slides.pdf
 
-/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-04-29:
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020/2020-04-29:
 1907.05388v2.pdf
 RL Theory Seminar Chi Jin.mp4
 slides_chi_jin.pdf
 
-/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-06:
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020/2020-05-06:
 2003.14089.pdf
 geist_talk_05052020_rl_theory_seminar.pdf
 RL Theory Seminar Matthieu Geist.mp4
 
-/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-13:
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020/2020-05-13:
 1710.01688.pdf
 RL Theory Seminar Sarah Dean (stream).mp4
 
-/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-20:
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020/2020-05-20:
 1906.01786.pdf
 1906.01786v1.pdf
 policy_grad_optimality.pdf
 RL theory seminar Daniel Russo.mp4
 slides.pdf
 
-/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-05-27:
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020/2020-05-27:
 2002.10301.pdf
 Adithya_ZapQ_RL_Theory.pdf
 RL Theory Seminar Adithya M. Devraj.mp4
 
-/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-06-10:
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020/2020-06-10:
 1909.02769.pdf
 Adaptive_TRPO_presentation___Shie.pdf
 
-/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-06-17:
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020/2020-06-17:
 1912.02270.pdf
 2020-Theory RL-talk-Niao.pdf
 RL Theory Seminar Niao He.mp4
 
-/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020-06-24:
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2020/2020-06-24:
 1905.00360.pdf
 RL Theory Seminar Nan Jiang.mp4
 rl_theory_seminar_nan.pdf
+
+/home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2022:
+Screenshot from 2022-02-16 04-26-27.png
+wagenmaker_rltheory_slides.pdf
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/silver-ppt:
 deep_rl.pdf
