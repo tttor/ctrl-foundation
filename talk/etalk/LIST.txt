@@ -165,6 +165,7 @@ RL Theory Seminar Nan Jiang.mp4
 rl_theory_seminar_nan.pdf
 
 /home/tor/rsc/ctrl-foundation/talk/etalk/rl-theory-seminar/2022:
+SA_BorkarMeynTheorem_Feb2022.pdf
 Screenshot from 2022-02-16 04-26-27.png
 wagenmaker_rltheory_slides.pdf
 
