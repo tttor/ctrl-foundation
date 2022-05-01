@@ -64,6 +64,7 @@ CTCNonline.pdf
 David G. Luenberger - Introduction to Dynamic Systems_ Theory, Models, and Applications-Wiley (1979).pdf
 Decision Making Under Uncertainty and Reinforcement Learning.pdf
 Dimitris Vrakas, Ioannis Pl Vlahavas-Artificial Intelligence for Advanced Problem Solving Techniques (2008).pdf
+dm_Algorithms for Decision Making.pdf
 Douc2018_Book_MarkovChains.pdf
 (Dover Books on Mathematics (Book 2)) Ronald A. Howard - Dynamic Probabilistic Systems Volume 2. 2-Dover (2007).pdf
 dpchapter.pdf
@@ -277,6 +278,7 @@ Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (
 /home/tor/rsc/ctrl-foundation/book/ebook/sutton/rlintro-2018:
 RLbook2018_20190115.pdf
 RLbook2018_20200224.pdf
+RLbook2020_apr2022.pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/sutton/rlintro-sutton-2018:
 ch_01_intro.md
