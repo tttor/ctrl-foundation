@@ -155,6 +155,7 @@ TS_Tutorial.pdf
 (Undergraduate Texts in Mathematics) John G. Kemeny, J. Laurie Snell - Finite Markov Chains_ With a New Appendix ''Generalization of a Fundamental Matrix'' -Springer (1976).pdf
 (Undergraduate Texts in Mathematics) John G. Kemeny, J. Laurie Snell - Finite Markov Chains_ With a New Appendix _Generalization of a Fundamental Matrix_-Springer (1983).pdf
 Warren B. Powell Approximate Dynamic Programming Solving the Curses of Dimensionality, 2nd Edition.pdf
+(Wiley Classics Library) Morris H. DeGroot - Optimal statistical decisions-Wiley-Interscience (2004).djvu
 (Wiley series in probability and mathematical statistics) Stewart N. Ethier, Thomas G. Kurtz - Markov processes_ characterization and convergence-Wiley (1986).djvu
 (Wiley Series in Probability and Statistics) Warren B. Powell - Approximate Dynamic Programming_ Solving the Curses of Dimensionality, 2nd Edition (Wiley Series in Probability and Statistics)-Wiley (2.pdf
 Xi-Ren Cao Stochastic Learning and Optimization A Sensitivity-Based Approach.pdf
