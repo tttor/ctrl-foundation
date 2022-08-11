@@ -18,8 +18,10 @@
 2002_Book_HandbookOfMarkovDecisionProces.pdf
 2002_Book_MarkovProcessesAndControlledMa.pdf
 2003_Book_MarkovChainsAndInvariantProbab.pdf
+2006_Book_DecisionTheoryAndMulti-AgentPl.pdf
 2007_Book_StochasticLearningAndOptimizat.pdf
 2007_Book_StochasticSimulationAlgorithms.pdf
+2010_Book_UncertaintyAndEnvironmentalDec.pdf
 2012_Book_HamiltonianCycleProblemAndMark.pdf
 2012_Book_ReinforcementLearning.pdf
 2013_Book_Simulation-BasedAlgorithmsForM.pdf
@@ -153,6 +155,7 @@ sutton
 (Texts in statistical science) Vidyadhar G. Kulkarni - Modeling and analysis of stochastic systems-Chapman and Hall_CRC (2017).pdf
 Theodore J. Sheskin - Markov Chains and Decision Processes for Engineers and Managers-CRC Press (2010).pdf
 TS_Tutorial.pdf
+Turnpike Phenomenon.pdf
 (Undergraduate Texts in Mathematics) John G. Kemeny, J. Laurie Snell - Finite Markov Chains_ With a New Appendix ''Generalization of a Fundamental Matrix'' -Springer (1976).pdf
 (Undergraduate Texts in Mathematics) John G. Kemeny, J. Laurie Snell - Finite Markov Chains_ With a New Appendix _Generalization of a Fundamental Matrix_-Springer (1983).pdf
 Warren B. Powell Approximate Dynamic Programming Solving the Curses of Dimensionality, 2nd Edition.pdf
