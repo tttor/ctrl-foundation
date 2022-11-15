@@ -86,6 +86,7 @@ Igor Griva, Stephen G. Nash, Ariela Sofer-Linear and nonlinear optimization-Soci
 (International Series in Operations Research & Management Science 171) Vivek S. Borkar, Vladimir Ejov, Jerzy A. Filar, Giang T. Nguyen (auth.) - Hamiltonian Cycle Problem and Markov Chains-Springer-Ve.pdf
 introduction_to_multi-armed_bandits.pdf
 Introduction-to-Stochastic-Dynamic-Programming-Ross.pdf
+Jr. Arthur E. Bryson, Yu-Chi Ho - Applied Optimal Control_ Optimization, Estimation and Control-Taylor & Francis (1975).djvu
 J.R.Norris - Markov Chains-Cambridge University Press.pdf
 Karl J. Åström and Richard M. Murray - Feedback Systems_ An Introduction for Scientists and Engineers-Princeton University Press (2019).pdf
 Karl Johan Astrom, Richard M. Murray - Feedback systems_ An introduction for scientists and engineers-Princeton University Press (2008).pdf
@@ -254,6 +255,7 @@ Sean Meyn - Control techniques for complex networks-Cambridge University Press (
 (Advanced Textbooks in Control and Signal Processing) Professor E. F. Camacho, Associate Professor C. Bordons (auth.)-Model Predictive control-Springer-Verlag London (2007).pdf
 
 /home/tor/rsc/ctrl-foundation/book/ebook/puterman:
+Computing Tools for Modeling,Optimization and Simulation_978-1-4615-4567-5.pdf
 mdp_puterman_2005.pdf
 mdp_puterman_2005_uqlib.pdf
 Puterman M. - Markov decision processes_ Discrete stochastic dynamic programming-Wiley (2005).djvu
