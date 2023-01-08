@@ -120,6 +120,7 @@ oc.pdf
 Olivier Sigaud, Olivier Buffet - Markov Decision Processes in Artificial Intelligence-Wiley-ISTE (2010).pdf
 Olivier Sigaud, Olivier Buffet-Markov Decision Processes in Artificial Intelligence-Wiley-ISTE (2010).pdf
 Olle Häggström - Finite Markov Chains and Algorithmic Applications-Cambridge University Press (2002).pdf
+Online Nonstochastic Control_2211.09619.pdf
 Optimal Statistical Decisions.pdf
 Pedro Domingos, Daniel Lowd-Markov logic_ an interface layer for artificial intelligence-Morgan and Claypool Publishers (2009).pdf
 Peter Whittle - Optimal Control_ Basics and Beyond-Wiley (1996).pdf
