@@ -137,6 +137,7 @@ Reinforcement Learning and Dynamic Programming Using Function Approximators (Aut
 Reinforcement Learning State-of-the-Art.pdf
 Reinforcement Learning Theory and Algorithms.pdf
 Richard S. Sutton, Andrew G. Barto-Reinforcement Learning. An Introduction-MIT (2002).pdf
+RL_Foundations_Feb15.pdf
 rlstateoftheart_wiering_2012.md
 rltheorybook_AJKS_20210906.pdf
 rltheorybook_AJKS_20210909.pdf
